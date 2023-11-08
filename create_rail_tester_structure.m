@@ -75,6 +75,10 @@ if proc_options.raw_data_zero_dead_time
 % disp (['Raw data zero dead time =     ',num2str(rail_tester.raw_data_zero_dead_time)])
 % just to check what it is
 
+correct_time_pts = rail_tester.raw_data_zero_dead_time*rail_tester.sample_freq; %this is how many points to shift to set zero to middle of pulse
+test_data.raw_data.time_data(:,:,:)=vertcat(test_data.raw_data.time_data(correct_time_pts:end,:,:),zeros(correct_time_pts-1,size(test_data.raw_data.time_data,2),size(test_data.raw_data.time_data,3)));
+
+
 else
     rail_tester.raw_data_zero_dead_time = 0; %Just zero out the input signal cross talk.
 end %if proc_options.raw_data_zero_dead_time
