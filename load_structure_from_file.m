@@ -16,6 +16,7 @@ end %switch(nargin)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 raw_data    =  get_raw_data(file_name);
+%keyboard
 data_       =  process_raw_data(raw_data);
 if nargin ==2
 
@@ -32,6 +33,7 @@ counter = 0;
 for index = 1:length(raw_data)
 
 if raw_data{index}(1) == '%'
+
 if length(strfind(raw_data{1},'%'))==1
 disp('warning there should be a terminating % on the variable name string')   
 end
@@ -45,6 +47,7 @@ variable_names_line_number (counter+1) = length(raw_data) + 1;
 
 for index = 1: length(variable_names)
 variable_name_temp = remove_the_percents(variable_names{index});
+
 variable_val    = get_variable_val(variable_names_line_number(index)+ 1 ,variable_names_line_number(index+1)-1,raw_data);
 eval (['data_.',variable_name_temp,' = variable_val;']);
 end %for index = 1: length(variable_names)
