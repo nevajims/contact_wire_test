@@ -1,9 +1,8 @@
-function [test_data]  =   save_in_file_structure (test_data,default_options)
+function [test_data]  =   save_in_file_structure (slab_root, test_data,default_options)
+
 
 p_w_d =  pwd;
-
-cd([pwd,default_options.raw_data_file_path])
-
+cd([slab_root,default_options.raw_data_file_path])
 
 [year_ , month_ , day_ ] =  ymd(datetime) ;
 O_S =   test_data.fixed_Operator_Settings ;
@@ -58,7 +57,8 @@ file_with_path = [pwd,'\',file_name_];
 
 test_data.file_with_path = file_with_path;
 save(file_name_,'test_data')
-msgbox(['file saved....     ',file_with_path,'.'])
+
+% msgbox(['file saved....     ',file_with_path,'.'])
 
 cd(p_w_d)
 
