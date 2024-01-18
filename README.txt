@@ -1,6 +1,6 @@
 Usage
 =====
-
+Testing to see if I can commit and push from matlab. MJE 18/1/24
 Unzip whole thing into folder and point matlab at this function:
 
 [testdata, err] = GetDataFromDevice(cfg)
