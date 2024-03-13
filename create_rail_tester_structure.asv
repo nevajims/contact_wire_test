@@ -48,10 +48,8 @@ load(rail_tester.fe_fname);
 [SAFE_LRUD]                        =  get_SAFE_LRUD(reshaped_proc_data.mesh , 0)             ;
 rail_tester.array.trans_node_list  =  [SAFE_LRUD(3),SAFE_LRUD(2),SAFE_LRUD(4),SAFE_LRUD(1)]  ;
 rail_tester.mesh                   =  reshaped_proc_data.mesh                                ;
-    
     % stick FE data into right format
-    % Get the mode names and put in blanks if not defined
-    
+    %Get the mode names and put in blanks if not defined
     if ~(size(reshaped_proc_data.mode_names,2)==reshaped_proc_data.solve_details.no_modes)
         for ii = 1:reshaped_proc_data.solve_details.no_modes
             tempmodenames(ii)="";

@@ -19,4 +19,6 @@ TTI
 1
 %feature_distance_m%
 0.66
+%wear_level_mm%
+0
 END

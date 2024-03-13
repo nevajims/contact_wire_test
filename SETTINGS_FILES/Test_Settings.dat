@@ -102,10 +102,17 @@ Gauss
 1
 %Model_data.fe_fnames% -2 types 120(1)and 107(2) -  107 file still to be created
 \SAFE_solutions\AC-120_SOLVED_1.mat
-\SAFE_solutions\AC-107_SOLVED_1.mat
-%Model_data.trans_node_list% first row for 120 2nd row for 107 (to be created)
-362,729,371,2
-362,729,371,2
-%Model_data.real_length%
+\SAFE_solutions\AC-107_SOLVED.mat
+\SAFE_solutions\AC-107 - 1mm_rem_SOLVED.mat
+\SAFE_solutions\AC-107 - 2mm_rem_SOLVED.mat
+\SAFE_solutions\AC-107 - 3mm_rem_SOLVED.mat
+\SAFE_solutions\AC-107 - 4mm_rem_SOLVED.mat
+\SAFE_solutions\AC-120 - 1mm_rem_SOLVED.mat
+\SAFE_solutions\AC-120 - 2mm_rem_SOLVED.mat
+\SAFE_solutions\AC-120 - 3mm_rem_SOLVED.mat
+\SAFE_solutions\AC-120 - 4mm_rem_SOLVED.mat
+% Model_data.trans_node_list% first row for 120 2nd row for 107 (to be created)
+0
+% Model_data.real_length%
 -3,3
 END

@@ -82,6 +82,15 @@ switch(field_)
     messge_ = 'must be a number';
     end %
     
+    case('wear_level_mm')    
+    if Value_ == 0 || Value_ == 1 || Value_ == 2 || Value_ == 3 || Value_ == 4        
+    check_ok = 1; 
+    messge_ = '';
+    else
+    check_ok = 0; 
+    messge_ = 'must be a 0 , 1 , 2 , 3 or 4';
+    end %
+     
     otherwise
     check_ok = 0;
     messge_ = 'Field name is not in the structure' ; 

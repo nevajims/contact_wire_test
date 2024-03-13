@@ -8,7 +8,8 @@ close
 [file_, path_ , ok_] = uigetfile('*.mat') ;
 
 if(ok_)
-load(file_)
+
+load([path_,file_])
 
 mesh_ = reshaped_proc_data.mesh ;
 trans_node_list = mesh_.LRUD_node_nos;
@@ -45,15 +46,11 @@ switch(answer_)
 
     case('Yes')
     reshaped_proc_data.mesh.LRUD_node_nos = trans_node_list_new;
-
-
-    save (file_ ,'reshaped_proc_data') 
+    save ([path_,file_ ],'reshaped_proc_data') 
   % saves only the variables or fields of a structure array specified by variables.
-    disp(['File Saved....',file_,'.'])        
-
+    disp(['File Saved....',[path_,file_ ],'.'])        
     otherwise
     disp(['values not changed....',file_,'.'])        
-
 end %switch(answer_)
 
 end % function   check_LRUD()
