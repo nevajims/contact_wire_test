@@ -12,7 +12,7 @@ START
 %Sampling.Start_Offset%
 0
 %Sampling.Num_Averages%
-1
+4
 %Sampling.RepeatDelay_mS%
 0
 %Sampling.adc_Range_options%
@@ -112,7 +112,8 @@ Gauss
 \SAFE_solutions\AC-120 - 3mm_rem_SOLVED.mat
 \SAFE_solutions\AC-120 - 4mm_rem_SOLVED.mat
 % Model_data.trans_node_list% first row for 120 2nd row for 107 (to be created)
-0
+362,729,371,2
+379,748,373,4
 % Model_data.real_length%
 -3,3
 END

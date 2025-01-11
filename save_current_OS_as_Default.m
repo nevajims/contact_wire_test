@@ -4,6 +4,7 @@ function [OK_ ] = save_current_OS_as_Default(default_options,Current_Operator_Se
 % Save current defaults in new file
 
 default_Operator_Settings   =  load_structure_from_file([pwd,default_options.Operator_Settings_fname],...
+...
 default_options.Operator_expected_fields);
 p_w_d = pwd;
 

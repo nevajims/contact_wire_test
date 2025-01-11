@@ -33,48 +33,65 @@ cd('daq');
 
 cmdline = strcat("RightLinesWrapper.exe", " ", json);
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Jim I've edited the next section for the new DAQ (on desktop)
+% Just uncomment single % down to end and remove "[status,text] =" to revert
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%Open the app modally. Code pauses here until it closes
-system(cmdline);
-
- 
-
-%RETRIEVE THE SAVED DATA
-%its in the system user temp folder (tempdir)
-datapath = strcat(tempdir,cfg.Test_Settings.filename);
+%%Open the app modally. Code pauses here until it closes
+[status,text] = system(cmdline);
 
 
-    if isfile(datapath)
 
-        text = fileread(datapath);
-       testdata = jsondecode(text);
+%%RETRIEVE THE SAVED DATA
+%%its in the system user temp folder (tempdir)
+%datapath = strcat(tempdir,cfg.Test_Settings.filename);
+%%datapath = strcat('C:\Users\Dev\',cfg.Test_Settings.filename);
+%%disp('remove this (and above)')
 
+%    if isfile(datapath)
+
+
+
+        %text = fileread(datapath);
+if ~isempty(text)
+        testdata = jsondecode(text);
         hash = testdata.hash;
 
-        %check hashes compare. This is to avoid it failing to save and then retrieving a previous file (Err = 2)
-
-        if (strcmp(cfg.Test_Settings.hash,hash) ~= 1)
-
-            %file on disk is not file requested
-
-            err = 2;
-
-        end       
+        %%check hashes compare. This is to avoid it failing to save and then retrieving a previous file (Err = 2)
 
         time_data = testdata;
-        
-        %Error code 0 = all good
-
+        %%Error code 0 = all good
         err = 0;
 
-    else
-        %Error Code = 1 : no file at all
+        if (strcmp(cfg.Test_Settings.hash,hash) ~= 1)
+          %% msgbox('file on disk is not file requested' )
+          %%  file on disk is not file requested
+            err = 2;
+        end   
 
-        err = 1;
+%    else
+%        %Error Code = 1 : no file at all
+%        msgbox('Error Code = 1 : no file at all' )
+%        time_data = [];
+%        err = 1;
+%
+%    end
+   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%]
+% End of Edits
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%]
 
-    end
 
- cd(p_w_d)
+% testdata.serial_number  ACCESS WITH THIS
+else
+time_data = [];
+err = 1 ; 
+end %if ~isempty(text)
+
+cd(p_w_d)
 
 %End func
 

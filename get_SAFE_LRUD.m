@@ -3,7 +3,7 @@ function [SAFE_LRUD]  =  get_SAFE_LRUD(mesh_ , show_mesh)
 %  re calculate wih the id values assuming width unchanged from original
 %  may need the outside nodes 
 %  
-show_text = 1;
+show_text = 0;
 
 [min_x_val ,~] =      min(mesh_.nd.pos(:,1))   ;
 [max_x_val ,~] =      max(mesh_.nd.pos(:,1))   ;
@@ -28,7 +28,6 @@ D_ideal_point = [Trans_x,min_y_val];
 % New Part jim 2023  for worn wires
 
 
-
 [L_dist_to_ideal,L_node ] =  min((((mesh_.nd.pos(:,1))- L_ideal_point(1)).^2 + (mesh_.nd.pos(:,2)- L_ideal_point(2)).^2).^0.5);
 [R_dist_to_ideal,R_node ] =  min((((mesh_.nd.pos(:,1))- R_ideal_point(1)).^2 + (mesh_.nd.pos(:,2)- R_ideal_point(2)).^2).^0.5);
 [U_dist_to_ideal,U_node ] =  min((((mesh_.nd.pos(:,1))- U_ideal_point(1)).^2 + (mesh_.nd.pos(:,2)- U_ideal_point(2)).^2).^0.5);
@@ -37,11 +36,8 @@ D_ideal_point = [Trans_x,min_y_val];
 SAFE_LRUD         =  [L_node,R_node,U_node,D_node]  ; 
 
 if show_text == 1
-
 disp(['L node, R node, U node, D node (nos in the hist file)   =  '  ,   num2str(L_node),', ', num2str(R_node),', ',num2str(U_node),', ',num2str(D_node)'.'])  
 disp(['Transducer order: ',num2str(U_node),', ' num2str(R_node),', ',num2str(D_node),',', num2str(L_node),'.']   )
-
-
 end % if show_text == 1
 
 

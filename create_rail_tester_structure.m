@@ -1,4 +1,6 @@
-function [ rail_tester,loaded_fe_file_ok ]  =  create_rail_tester_structure(default_options,test_data,proc_options)
+function [ rail_tester,loaded_fe_file_ok ]  =  create_rail_tester_structure (default_options,test_data,proc_options)
+
+
 %    test_data.fixed_Test_Settings.Instrument_attributes
 %
 %     number_of_transducers: 12
@@ -6,9 +8,10 @@ function [ rail_tester,loaded_fe_file_ok ]  =  create_rail_tester_structure(defa
 %                 trans_pos: [1 2 3 4 1 2 3 4 1 2 3 4]
 %     trans_pos_orientation: [12×3 double]
 %             trans_row_pos: [0.0120 0 -0.0120]
-%
 
-    % check  for existence of the wear field
+
+
+% check  for existence of the wear field
     % isfield(a.r,'u')
         
     if isfield(test_data.fixed_Operator_Settings, 'wear_level_mm') == 0
@@ -22,21 +25,18 @@ function [ rail_tester,loaded_fe_file_ok ]  =  create_rail_tester_structure(defa
     rail_tester.array.trans_row                     =   test_data.fixed_Test_Settings.Instrument_attributes.trans_row             ;
 	rail_tester.array.trans_pos_orientations        =   test_data.fixed_Test_Settings.Instrument_attributes.trans_pos_orientation ;
     rail_tester.array.delay                         =   test_data.fixed_Test_Settings.TIPI_LEGACY.delay_factor                    ;
-
-    
     %  gets the
     fe_file_number__  =   get_fe_file_number(test_data.fixed_Operator_Settings);
-    rail_tester.fe_fname                            =   test_data.fixed_Test_Settings.Model_data.fe_fnames{fe_file_number__}          ;
-    
-    
 
+    rail_tester.fe_fname                            =   test_data.fixed_Test_Settings.Model_data.fe_fnames{fe_file_number__}          ;
+        
     %  Do this on the fly
     % rail_tester.array.trans_node_list               =   test_data.fixed_Test_Settings.Model_data.trans_node_list(fe_file_number__,:)  ;
     %  Do this on the fly
-    
     rail_tester.real_length                         =   test_data.fixed_Test_Settings.Model_data.real_length                                                                     ;
     rail_tester.fe_fname                            =   [pwd,rail_tester.fe_fname]        ;
-    
+
+
 
 if ~exist(rail_tester.fe_fname,'file')
 msgbox(rail_tester.fe_fname )
@@ -44,7 +44,6 @@ msgbox('FE file not found');
 loaded_fe_file_ok = 0;
 else
 load(rail_tester.fe_fname);
-
 [SAFE_LRUD]                        =  get_SAFE_LRUD(reshaped_proc_data.mesh , 0)             ;
 rail_tester.array.trans_node_list  =  [SAFE_LRUD(3),SAFE_LRUD(2),SAFE_LRUD(4),SAFE_LRUD(1)]  ;
 rail_tester.mesh                   =  reshaped_proc_data.mesh                                ;

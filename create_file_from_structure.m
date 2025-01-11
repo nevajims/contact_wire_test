@@ -1,21 +1,20 @@
 function OK_ =   create_file_from_structure(varargin)
 
 % OK_ =  create_file_from_structure(stucture_2_save,'file_name.dat', 'path'); 
-[structure_ ,filename_,filepath_]   = process_inputs(varargin,nargin);
+
+[structure_ ,filename_and_path]   = process_inputs(varargin,nargin);
 
 % if the file name exists make it  filename_1  filename_2   etc
 % file_name(filename_,filepath_);
 % open the file name for writing 
-OK_ =  write_data_to_file(structure_ ,filename_,filepath_);
+OK_ =  write_data_to_file(structure_ ,filename_and_path);
 
 end %function  OK_ =   create_file_from_structure(varargin)
 
-
-
-function  OK_ =  write_data_to_file(structure_ ,filename_,filepath_)
-p_w_d = pwd;
-cd(filepath_)
-fileID = fopen(filename_,'w');
+function  OK_ =  write_data_to_file(structure_ ,filename_and_path)
+%p_w_d = pwd;
+%cd(filepath_)
+fileID = fopen(filename_and_path,'w');
 
 %try
 fprintf(fileID,'START\n');
@@ -30,13 +29,28 @@ fprint_the_value(val_,fileID);
 else
 % its a struct    
 eval(['sub_field_names = fields(structure_.',field_names{index},');'] )
+
 for index_2 = 1: length(sub_field_names)
 fprintf(fileID,['%%',field_names{index},'.',sub_field_names{index_2},'%%\n']);
 val_ = eval(['structure_.',field_names{index},'.',sub_field_names{index_2}]);
+
+%if strcmp(class(val_),'double')
+%disp(['type = ',class(val_)] )
+
 fprint_the_value(val_,fileID)
+%elseif strcmp(class(val_),'cell')
+%fprint_the_value(val_{index3},fileID)
+
+%else
+%end %if strcmp(class(val_),'double')
+
 end %for index_2 = 1: length(sub_field_names)
+
 end %if    eval(['isstruct(structure_.',field_names{index},')'])
 end %for index = 1:length(structure)
+
+
+
 fprintf(fileID,'END\n');
 OK_ = 1;
 %catch
@@ -44,8 +58,10 @@ OK_ = 1;
 %OK_ = 0;
 %end %try
 fclose(fileID);
-cd (p_w_d )
+
+%cd (p_w_d )
 end %function  OK_ =  write_data_to_file(structure_ ,filename_,filepath_)
+
 
 function fprint_the_value( val_, fileID)
 
@@ -64,16 +80,21 @@ fprintf(fileID,[allOneString(1:end-1),'\n']);
 end %if sum(a- floor(a))==0    
 
 elseif isstr(sub_val)
+%disp([double_forward_slash(sub_val),'\n'])    
 fprintf(fileID,[double_forward_slash(sub_val),'\n']);
 elseif iscell(sub_val)
 
 for index2 = 1:length(sub_val)
+%disp([double_forward_slash(sub_val{index2}),'\n'])    
 fprintf(fileID,[double_forward_slash(sub_val{index2}),'\n']);
 end %for index = 1:length(sub_val)
    
 end % if ~isstr(sub_val)
 end %for index = 1:size(val_,1)
 end %function fprint_the_value( field_value)
+
+
+
 
 function no_decimals = find_the_decimal_places(sub_val)
 decimals_found =0;
@@ -92,14 +113,15 @@ end %function decimal_places = find_the_decimal_places(sub_val);
 function new_text = double_forward_slash(text)
 % Puts an extra \ in wherever there is a \ (so it comes out correctly on frintf
 
-
 slashes = find(text=='\');
 if length(slashes) == 0
 new_text = text;
 else
-if slashes(1) ~=1
+
+%if slashes(1) ~=1
 slashes = [1,slashes];
-end %if slashes(1) ~=1
+%end %if slashes(1) ~=1
+
 if slashes(end) ~= length(text)
 slashes = [slashes,length(text)];
 end %if slashes(1) ~=1
@@ -143,20 +165,29 @@ end %if ~exist(filename_)
 cd(p_w_d)
 end%function filename_ = check_file_name (filename_,filepath_);
 
-function [structure_ ,filename_,filepath_]   = process_inputs (varargin__,nargin__)
+function [structure_ ,filename_and_path]   = process_inputs (varargin__,nargin__)
 switch(nargin__)
     case(1)
 structure_           = varargin__{1} ;  
-filename_            = 'ascii_data_file.dat' ;     
-filepath_            = 'P:\Experimental setup files';  
+%filename_            = 'ascii_data_file.dat' ;     
+%filepath_            =   
+filename_and_path    = 'P:\Experimental setup files\ascii_data_file.dat';
+
     case(2)
 structure_           = varargin__{1} ;  
-filename_            = varargin__{2} ;  
-filepath_            = 'P:\Experimental setup files';  
+filename_and_path    = varargin__{2} ;  
+
+%filepath_            = 'P:\Experimental setup files';  
+
     case(3)
+
 structure_           = varargin__{1} ;  
-filename_            = varargin__{2} ;   
-filepath_            = varargin__{3} ;  
+
+temp_path = varargin__{3};
+if ~strcmp(temp_path(end),'\')
+temp_path = [temp_path,'\'];
+end %if ~strcmp(varargin__{3}(end),'\')
+filename_and_path= [temp_path,varargin__{2}];
 end %switch(nargin)
 
 end

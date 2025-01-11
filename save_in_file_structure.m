@@ -1,6 +1,5 @@
 function [test_data]  =   save_in_file_structure (slab_root, test_data,default_options)
 
-
 p_w_d =  pwd;
 cd([slab_root,default_options.raw_data_file_path])
 
@@ -28,7 +27,9 @@ else
 cd (num2str(day_))
 end %if ~exist(num2str(year_))
 % now create
+
 Auto_generated_file_stub  = ['CW_test_',replace_space(O_S.Name),'__',replace_space(O_S.Site_name)]     ;
+
 % Auto_generated_file_stub  = ['CW_test_',O_S.Name,'__',O_S.Site_name]                                     ;
 
 temp_          =    dir([Auto_generated_file_stub,'*.*'])         ;
@@ -54,12 +55,10 @@ end
 file_name_ =  [Auto_generated_file_stub,'$',num2str(new_file_number),'$.mat'];
 file_with_path = [pwd,'\',file_name_];
 
-
 test_data.file_with_path = file_with_path;
+
 save(file_name_,'test_data')
-
 % msgbox(['file saved....     ',file_with_path,'.'])
-
 cd(p_w_d)
 
 end % function   ok_  =   save_in_file_structure (test_file)

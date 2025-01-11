@@ -14,13 +14,9 @@ function [raw_data,err] =  run_alva_DAQ(Test_Settings)
 % testdata = temp_2.testdata;                                  %  just load a file at this stage     
 
 
-[testdata, err] = GetDataFromDevice(Test_Settings); % real
-
-
-
 %[testdata, err] = GetDataFromDevice_2();   % fake data
 
-if err~=0 msgbox('warning from device- '); end 
+%if err~=0 msgbox('warning from device- '); end 
 
 
 %---------------------------------------
@@ -39,8 +35,11 @@ if err~=0 msgbox('warning from device- '); end
 
 
 
-if err ==0
+[testdata, err] = GetDataFromDevice(Test_Settings); % real
 
+
+
+if err ==0
 raw_data.time = (1/Test_Settings.Sampling.Sample_RateHz)*[0:Test_Settings.Sampling.Num_Samples-1]' ;
 
   %
@@ -48,8 +47,6 @@ raw_data.time = (1/Test_Settings.Sampling.Sample_RateHz)*[0:Test_Settings.Sampli
    if Test_Settings.Sampling.Num_Samples  ~=  length(testdata.test{1})
    disp('warning Test_Settings.Sampling.Num_Samples  ~=  length(testdata.test{1})')
   end %  if Test_Settings.Sampling.Num_Samples  ~=  length(testdata.test{1})
-
-
 
   temp_3 = zeros(length(testdata.test{1}),12,12);
 
@@ -61,7 +58,9 @@ raw_data.time = (1/Test_Settings.Sampling.Sample_RateHz)*[0:Test_Settings.Sampli
 
   raw_data.time_data = temp_3;
   raw_data.cap_test_result = testdata.dataz;
+else
 
+raw_data = [];
 
 end %  if err ==0
 

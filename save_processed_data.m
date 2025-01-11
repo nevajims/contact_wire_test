@@ -6,9 +6,10 @@ p_w_d = pwd;
 
 if exist([current_test_folder,'Processed_data']) == 0
 mkdir([current_test_folder,'Processed_data'])
-end     % if exist([current_test_folder,'Processed_data'])==0
+end     % if exist([current_test_folder,'Processed_data']) == 0
 
 cd([current_test_folder,'Processed_data'])
+
 numb_files = length(dir(['PD_',TD_name,'_*','.mat']));
 sug_file_name_ = ['PD_',TD_name,'_',num2str(numb_files+1),'.mat'];
 
