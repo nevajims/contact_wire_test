@@ -1,0 +1,84 @@
+-----------------------------------------------------------------
+PD_CW_test_Jim_Evans__H4CE$3$_1.mat
+-----------------------------------------------------------------
+Peak location: 789.4511 mm.
+Number of tests for each data set
+Tag = not cracked(8)
+Tag = small(16)
+Tag = med(16)
+Tag = large(8)
+normalising_mode_pair: 1/1.
+The AI predicts that this results is:   med .
+The dist from mean predicts that the result is:   med .
+The log likelyhood predicts that the result is:   med .
+-----------------------------------------------------------------
+Distance from mean
+-----------------------------------------------------------------
+Dist from mean for each mode pair
+-----------------------------------------------------------------
+                    <strong>2-4</strong>         <strong>4-2</strong>        <strong>Mean</strong> 
+                   <strong>______</strong>    <strong>_________</strong>    <strong>______</strong>
+
+    <strong>not cracked</strong>    30.805       32.065    31.435
+    <strong>small      </strong>    22.511       20.248     21.38
+    <strong>med        </strong>    2.4413    0.0022731    1.2218
+    <strong>large      </strong>    46.012        53.73    49.871
+
+
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+Ranking for dist from mean
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+                   <strong>2-4</strong>    <strong>4-2</strong>    <strong>Mean</strong>
+                   <strong>___</strong>    <strong>___</strong>    <strong>____</strong>
+
+    <strong>not cracked</strong>     3      3      3  
+    <strong>small      </strong>     2      2      2  
+    <strong>med        </strong>     1      1      1  
+    <strong>large      </strong>     4      4      4  
+
+
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+Log Likelyhood
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+                    <strong>2-4</strong>      <strong>4-2</strong>     <strong>Mean</strong> 
+                   <strong>_____</strong>    <strong>_____</strong>    <strong>_____</strong>
+
+    <strong>not cracked</strong>    34.27    33.37    33.82
+    <strong>small      </strong>    18.38       12    15.19
+    <strong>med        </strong>     0.96     0.92     0.94
+    <strong>large      </strong>     1.97     2.08    2.025
+
+
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+Within range (+/- 2 * std).
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+                   <strong>2-4</strong>    <strong>4-2</strong>    <strong>Mean</strong>
+                   <strong>___</strong>    <strong>___</strong>    <strong>____</strong>
+
+    <strong>not cracked</strong>     0      0      0  
+    <strong>small      </strong>     0      0      0  
+    <strong>med        </strong>     1      1      1  
+    <strong>large      </strong>     1      1      1  
+
+
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+No. of STD dist from mean
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+                   <strong>2-4</strong>     <strong>4-2</strong>     <strong>Mean</strong>
+                   <strong>____</strong>    <strong>____</strong>    <strong>____</strong>
+
+    <strong>not cracked</strong>    8.17    8.06    8.11
+    <strong>small      </strong>    5.91    4.71    5.31
+    <strong>med        </strong>    0.28       0    0.14
+    <strong>large      </strong>    1.45    1.52    1.48
+
+
+-----------------------------------------------------------------

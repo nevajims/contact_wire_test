@@ -1,0 +1,161 @@
+<deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
+  <configuration file="P:\GITHUBS\contact_wire_test\WPA_V2.prj" location="P:\GITHUBS\contact_wire_test" name="WPA_V2" target="target.ezdeploy.standalone" target-name="Application Compiler">
+    <param.appname>WPA_V2</param.appname>
+    <param.icon />
+    <param.icons />
+    <param.version>1.0</param.version>
+    <param.authnamewatermark />
+    <param.email />
+    <param.company />
+    <param.summary />
+    <param.description />
+    <param.screenshot />
+    <param.guid />
+    <param.installpath.string>\WPA_V2\</param.installpath.string>
+    <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
+    <param.logo />
+    <param.install.notes />
+    <param.target.install.notes />
+    <param.intermediate>${PROJECT_ROOT}\WPA_V2\for_testing</param.intermediate>
+    <param.files.only>${PROJECT_ROOT}\WPA_V2\for_redistribution_files_only</param.files.only>
+    <param.output>${PROJECT_ROOT}\WPA_V2\for_redistribution</param.output>
+    <param.logdir>${PROJECT_ROOT}\WPA_V2</param.logdir>
+    <param.enable.clean.build>false</param.enable.clean.build>
+    <param.user.defined.mcr.options />
+    <param.target.type>subtarget.standalone</param.target.type>
+    <param.support.packages />
+    <param.web.mcr>true</param.web.mcr>
+    <param.package.mcr>false</param.package.mcr>
+    <param.no.mcr>false</param.no.mcr>
+    <param.web.mcr.name>MyAppInstaller_web</param.web.mcr.name>
+    <param.package.mcr.name>MyAppInstaller_mcr</param.package.mcr.name>
+    <param.no.mcr.name>MyAppInstaller_app</param.no.mcr.name>
+    <param.windows.command.prompt>true</param.windows.command.prompt>
+    <param.create.log>false</param.create.log>
+    <param.log.file />
+    <param.native.matlab>false</param.native.matlab>
+    <param.checkbox>false</param.checkbox>
+    <param.example />
+    <param.help.text>Syntax 
+	 WPA_V2 -? 
+	 WPA_V2 app 
+ Input Arguments 
+	 -?  print help on how to use the application 
+	 app  input arguments</param.help.text>
+    <unset>
+      <param.icon />
+      <param.icons />
+      <param.version />
+      <param.authnamewatermark />
+      <param.email />
+      <param.company />
+      <param.summary />
+      <param.description />
+      <param.screenshot />
+      <param.guid />
+      <param.installpath.string />
+      <param.installpath.combo />
+      <param.logo />
+      <param.install.notes />
+      <param.target.install.notes />
+      <param.intermediate />
+      <param.files.only />
+      <param.output />
+      <param.logdir />
+      <param.enable.clean.build />
+      <param.user.defined.mcr.options />
+      <param.target.type />
+      <param.support.packages />
+      <param.web.mcr />
+      <param.package.mcr />
+      <param.no.mcr />
+      <param.web.mcr.name />
+      <param.package.mcr.name />
+      <param.no.mcr.name />
+      <param.windows.command.prompt />
+      <param.create.log />
+      <param.log.file />
+      <param.native.matlab />
+      <param.checkbox />
+      <param.example />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\WinAPP\WPA_V2.m</file>
+    </fileset.main>
+    <fileset.resources />
+    <fileset.package />
+    <fileset.depfun>
+      <file>P:\GITHUBS\contact_AI\set_default_fields.m</file>
+      <file>${PROJECT_ROOT}\convert_plot_options2_old_strct.m</file>
+      <file>${PROJECT_ROOT}\convert_test_strct.m</file>
+      <file>${PROJECT_ROOT}\convert_to_snr_struct.m</file>
+      <file>${PROJECT_ROOT}\create_rail_tester_structure.m</file>
+      <file>${PROJECT_ROOT}\display_trans_positions.m</file>
+      <file>${PROJECT_ROOT}\fn_get_grid_data.m</file>
+      <file>${PROJECT_ROOT}\fn_process_rail_data.m</file>
+      <file>${PROJECT_ROOT}\get_SAFE_LRUD.m</file>
+      <file>${PROJECT_ROOT}\GetDataFromDevice.m</file>
+      <file>${PROJECT_ROOT}\ICON2.png</file>
+      <file>${PROJECT_ROOT}\load_mat_structure_from_file.m</file>
+      <file>${PROJECT_ROOT}\load_structure_from_file.m</file>
+      <file>${PROJECT_ROOT}\login_window.m</file>
+      <file>${PROJECT_ROOT}\lookup_NS_details.m</file>
+      <file>${PROJECT_ROOT}\pauls-new-functions\fn_apply_dist_warps.m</file>
+      <file>${PROJECT_ROOT}\pauls-new-functions\fn_calc_warp_factors.m</file>
+      <file>${PROJECT_ROOT}\pauls-new-functions\fn_convert_freq_to_time_dom.m</file>
+      <file>${PROJECT_ROOT}\pauls-new-functions\fn_convert_time_to_dist.m</file>
+      <file>${PROJECT_ROOT}\pauls-new-functions\fn_convert_to_freq_domain.m</file>
+      <file>${PROJECT_ROOT}\pauls-new-functions\fn_coupling_comp.m</file>
+      <file>${PROJECT_ROOT}\pauls-new-functions\fn_filter_freq_domain_data.m</file>
+      <file>${PROJECT_ROOT}\pauls-new-functions\fn_inv_mode_shape_matrices3D.m</file>
+      <file>${PROJECT_ROOT}\pauls-new-functions\fn_mode_extract_freq_dom.m</file>
+      <file>${PROJECT_ROOT}\pauls-new-functions\fn_remove_pulse_echo_data.m</file>
+      <file>${PROJECT_ROOT}\pauls-new-functions\fn_set_default_fields.m</file>
+      <file>${PROJECT_ROOT}\pauls-new-functions\fn_show_coupling_graph.m</file>
+      <file>${PROJECT_ROOT}\pauls-new-functions\fn_smart_warps.m</file>
+      <file>${PROJECT_ROOT}\pauls-new-functions\fn_zero_dead_zone.m</file>
+      <file>${PROJECT_ROOT}\pauls-new-functions\gaussian.m</file>
+      <file>${PROJECT_ROOT}\plot_predict_processed.m</file>
+      <file>${PROJECT_ROOT}\plot_SNR_Raw.m</file>
+      <file>${PROJECT_ROOT}\Produce_Test_report.m</file>
+      <file>${PROJECT_ROOT}\remove_.m</file>
+      <file>${PROJECT_ROOT}\run_alva_DAQ.m</file>
+      <file>${PROJECT_ROOT}\save_in_file_structure.m</file>
+      <file>${PROJECT_ROOT}\save_mat_structure_to_file.m</file>
+      <file>${PROJECT_ROOT}\set_display_settings.m</file>
+      <file>${PROJECT_ROOT}\set_key_test_settings.m</file>
+      <file>${PROJECT_ROOT}\set_key_test_settings_BASICU.m</file>
+      <file>${PROJECT_ROOT}\set_plot_options.m</file>
+      <file>${PROJECT_ROOT}\set_plot_options_BASICU.m</file>
+      <file>${PROJECT_ROOT}\set_SNR_settings.m</file>
+      <file>${PROJECT_ROOT}\set_test_parameters_essential.m</file>
+      <file>${PROJECT_ROOT}\show_mesh.m</file>
+      <file>${PROJECT_ROOT}\showdispersion.m</file>
+    </fileset.depfun>
+    <build-deliverables>
+      <file location="${PROJECT_ROOT}\WPA_V2\for_testing" name="splash.png" optional="false">P:\GITHUBS\contact_wire_test\WPA_V2\for_testing\splash.png</file>
+      <file location="${PROJECT_ROOT}\WPA_V2\for_testing" name="WPA_V2.exe" optional="false">P:\GITHUBS\contact_wire_test\WPA_V2\for_testing\WPA_V2.exe</file>
+      <file location="${PROJECT_ROOT}\WPA_V2\for_testing" name="readme.txt" optional="true">P:\GITHUBS\contact_wire_test\WPA_V2\for_testing\readme.txt</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\MATLAB\R2023b</root>
+      <toolboxes />
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.0</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>

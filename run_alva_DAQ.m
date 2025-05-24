@@ -39,6 +39,7 @@ function [raw_data,err] =  run_alva_DAQ(Test_Settings)
 
 
 
+
 if err ==0
 raw_data.time = (1/Test_Settings.Sampling.Sample_RateHz)*[0:Test_Settings.Sampling.Num_Samples-1]' ;
 
@@ -50,14 +51,33 @@ raw_data.time = (1/Test_Settings.Sampling.Sample_RateHz)*[0:Test_Settings.Sampli
 
   temp_3 = zeros(length(testdata.test{1}),12,12);
 
-  for index_1 = 1:12
+  for index_1 = 2:13
   for index_2 = 1:12
-  temp_3(:,index_1,index_2) = testdata.test{index_1}(index_2,:)';
+  temp_3(:,index_1-1,index_2) = testdata.test{index_1}(index_2,:)';
   end % for index_2 = 1:12
-  end % for index_1 = 1:12
+  end % for index_1 = 2:13
 
+  for index_3 = 1:12
+  temp_4(:,index_3) = testdata.test{1}(index_3,:)';
+  end %for index_3 = 1:12
+    
+
+  % now do the SNR bit 
   raw_data.time_data = temp_3;
+  
+   % temp hack --------------------   for problem with pulse on 1st channel
+   % in noise
+
+   raw_data.noise_data = temp_4;  
+   %raw_data.noise_data = [temp_4(:,2),temp_4(:,2:12)];
+     %-------------------------------------------------------------------
+
+
   raw_data.cap_test_result = testdata.dataz;
+  raw_data.serial_number =  testdata.serial_number;
+  
+
+
 else
 
 raw_data = [];

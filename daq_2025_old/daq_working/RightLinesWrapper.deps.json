@@ -1,0 +1,184 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "RightLinesWrapper/1.0.0": {
+        "dependencies": {
+          "FftSharp": "2.1.0",
+          "NLog": "5.1.5",
+          "Newtonsoft.Json": "13.0.3",
+          "ScottPlot.WinForms": "4.1.63",
+          "VolumeDisplay": "1.0.0",
+          "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.22621.34"
+        },
+        "runtime": {
+          "RightLinesWrapper.dll": {}
+        }
+      },
+      "runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.22621.34": {
+        "runtime": {
+          "Microsoft.Windows.SDK.NET.dll": {
+            "assemblyVersion": "10.0.22621.30",
+            "fileVersion": "10.0.22621.34"
+          },
+          "WinRT.Runtime.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.8.46841"
+          }
+        }
+      },
+      "FftSharp/2.1.0": {
+        "runtime": {
+          "lib/net6.0/FftSharp.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/3.1.4": {},
+      "Microsoft.Win32.SystemEvents/4.7.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "3.1.4"
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.3.27908"
+          }
+        }
+      },
+      "NLog/5.1.5": {
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.1.5.1789"
+          }
+        }
+      },
+      "ScottPlot/4.1.63": {
+        "dependencies": {
+          "System.Drawing.Common": "4.7.2",
+          "System.Numerics.Vectors": "4.5.0"
+        },
+        "runtime": {
+          "lib/net6.0/ScottPlot.dll": {
+            "assemblyVersion": "4.1.63.0",
+            "fileVersion": "4.1.63.0"
+          }
+        }
+      },
+      "ScottPlot.WinForms/4.1.63": {
+        "dependencies": {
+          "ScottPlot": "4.1.63"
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/ScottPlot.WinForms.dll": {
+            "assemblyVersion": "4.1.63.0",
+            "fileVersion": "4.1.63.0"
+          }
+        }
+      },
+      "System.Drawing.Common/4.7.2": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "3.1.4",
+          "Microsoft.Win32.SystemEvents": "4.7.0"
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {},
+      "VolumeDisplay/1.0.0": {
+        "runtime": {
+          "VolumeDisplay.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RightLinesWrapper/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.22621.34": {
+      "type": "runtimepack",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FftSharp/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SXjcF9LR7DG5qe6SlH+VhGUZ4Sp3X1T86KA/9Ra3RaFoWITRmsvt9e57Yi8Fkaza/2r/153e+AfjdNVr1x9Ypw==",
+      "path": "fftsharp/2.1.0",
+      "hashPath": "fftsharp.2.1.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/3.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9/y05/CuxE+j184Nr4KihhB9KcUkvGojmD4JV4Vt/mHhVZR+eOCD5WCM+CXye9K0OFMsaPXbN+IcaIpjgBGZmg==",
+      "path": "microsoft.netcore.platforms/3.1.4",
+      "hashPath": "microsoft.netcore.platforms.3.1.4.nupkg.sha512"
+    },
+    "Microsoft.Win32.SystemEvents/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mtVirZr++rq+XCDITMUdnETD59XoeMxSpLRIII7JRI6Yj0LEDiO1pPn0ktlnIj12Ix8bfvQqQDMMIF9wC98oCA==",
+      "path": "microsoft.win32.systemevents/4.7.0",
+      "hashPath": "microsoft.win32.systemevents.4.7.0.nupkg.sha512"
+    },
+    "Newtonsoft.Json/13.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "path": "newtonsoft.json/13.0.3",
+      "hashPath": "newtonsoft.json.13.0.3.nupkg.sha512"
+    },
+    "NLog/5.1.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZITyL6pD8f7w6ahHoP7DC4KpsyZMVuSsP7lmMo9WOYg/65/yEqpCteEOWI9lOIqJB2i8/obIj1ivIAOiMt4+eg==",
+      "path": "nlog/5.1.5",
+      "hashPath": "nlog.5.1.5.nupkg.sha512"
+    },
+    "ScottPlot/4.1.63": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ph9TskhXC31lySsZLDRzo5g1ujG1GnMDM/xPFeU6ntP2c58WEvf0nP7Pe5hAT7E5t7kwM0SAn0rsAqK6++PP5w==",
+      "path": "scottplot/4.1.63",
+      "hashPath": "scottplot.4.1.63.nupkg.sha512"
+    },
+    "ScottPlot.WinForms/4.1.63": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ldi7Rs9UpchKIFG+hLQ4WWUaSMEHxFZWIZt+fbJ0Tgmy9YMWIqBwbnqZt+2Mq3a4ZawZof0T3nMj6WMYwCK6ew==",
+      "path": "scottplot.winforms/4.1.63",
+      "hashPath": "scottplot.winforms.4.1.63.nupkg.sha512"
+    },
+    "System.Drawing.Common/4.7.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-I2y4KBK3VCvU/WqE2xv7NjQ67maXHttkFSHYKgU2evrG9Yqh0oFjfORXt5hZTk+BVjdyFo2h0/YQZsca33BGmg==",
+      "path": "system.drawing.common/4.7.2",
+      "hashPath": "system.drawing.common.4.7.2.nupkg.sha512"
+    },
+    "System.Numerics.Vectors/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+      "path": "system.numerics.vectors/4.5.0",
+      "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
+    },
+    "VolumeDisplay/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

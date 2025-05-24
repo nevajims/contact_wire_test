@@ -1,0 +1,32 @@
+2024-06-26 22:20:02.8904|INFO|RightLinesWrapper.MyLogger|----------------
+2024-06-26 22:20:03.1625|INFO|RightLinesWrapper.MyLogger|Initialised form
+2024-06-26 22:20:03.2807|INFO|RightLinesWrapper.MyLogger|Using Saved settings
+2024-06-26 22:20:03.6651|INFO|RightLinesWrapper.MyLogger|Saved settings used.
+2024-06-26 22:20:03.6736|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2024-06-26 22:20:03.7391|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2024-06-26 22:20:04.5474|INFO|RightLinesWrapper.MyLogger|Request params
+2024-06-26 22:20:04.5474|INFO|RightLinesWrapper.MyLogger|params received: False
+2024-06-26 22:20:04.5474|ERROR|RightLinesWrapper.MyLogger|GetParameters error. Returned cache.
+2024-06-26 22:20:04.5474|INFO|RightLinesWrapper.MyLogger|Set Params..
+2024-06-26 22:20:04.5474|INFO|RightLinesWrapper.MyLogger|$ Monitor Starting...
+2024-06-26 22:20:04.6993|INFO|RightLinesWrapper.MyLogger|Params set..False
+2024-06-26 22:20:04.8927|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2024-06-26 22:20:05.3587|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2024-06-26 22:20:06.3490|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2024-06-26 22:20:06.7794|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2024-06-26 22:20:07.7707|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2024-06-26 22:20:08.1113|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2024-06-26 22:20:08.4119|INFO|RightLinesWrapper.MyLogger|Set Params..
+2024-06-26 22:20:08.4119|INFO|RightLinesWrapper.MyLogger|Monitor timer stopped. Parameters reset.
+2024-06-26 22:20:08.4119|INFO|RightLinesWrapper.MyLogger|Set Params..
+2024-06-26 22:20:08.4283|INFO|RightLinesWrapper.MyLogger|Monitor timer stopped. Parameters reset.
+2024-06-26 22:20:08.6266|INFO|RightLinesWrapper.MyLogger|Params set..False
+2024-06-26 22:20:08.6266|INFO|RightLinesWrapper.MyLogger|Params set..False
+2024-06-26 22:20:09.1259|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2024-06-26 22:20:09.4145|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2024-06-26 22:20:10.4133|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2024-06-26 22:20:10.6971|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2024-06-26 22:20:11.0091|INFO|RightLinesWrapper.MyLogger|Saving settings
+2024-06-26 22:20:11.0711|INFO|RightLinesWrapper.MyLogger|Settings saved
+2024-06-26 22:20:11.0914|INFO|RightLinesWrapper.MyLogger|## Dispose RLC. Disposed? False
+2024-06-26 22:20:11.1039|INFO|RightLinesWrapper.MyLogger|## RLC Disposed

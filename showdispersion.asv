@@ -1,0 +1,45 @@
+function showdispersion(plot_options,rail_tester)
+
+if plot_options.showdispersion %plot dispersion curves for referencerail_tester.raw_data.tx = rail_tester.raw_data.tx(:); 
+
+    rail_tester.raw_data.rx = rail_tester.raw_data.rx(:);
+
+%    figure; 
+Pix_SS = get(0,'screensize');
+x_mult = Pix_SS(3)/1920;
+y_mult = Pix_SS(4)/1080;
+
+fig = uifigure('Resize','off','Units','normalized','Position',[0.1,0.1,0.25,0.4],'Name', 'Dispersion Curves- 1st 4 modes');
+fig.Icon = 'ICON2.png';
+px_LH = 0; py_LH = 0; px_SZ = 490; py_SZ = 490;
+ax_LH = 10; ay_LH = 30; ax_SZ = 450; ay_SZ = 370;
+p1 = uipanel(fig,'Position',[x_mult*px_LH y_mult*py_LH x_mult*px_SZ y_mult*py_SZ]);
+p1.BorderColor = [1,1,1];
+ax = uiaxes(p1,'Position',[x_mult*ax_LH y_mult*ay_LH x_mult*ax_SZ y_mult*ay_SZ]);
+ax.Box    = 'on' ;
+
+
+    for i = 1:length(rail_tester.disperse.mode)
+        %disp(num2str(i))        
+        plot(ax,rail_tester.disperse.mode(i).freq / 1e3,rail_tester.disperse.mode(i).vph);
+        temp_(i)= max(rail_tester.disperse.mode(i).freq); %find the limit of the frequency range
+        legend_text{i} = sprintf('%s',rail_tester.disperse.mode(i).name); 
+        hold(ax,'on');             
+        % hold on; 
+    end
+    
+    
+    ax.YLim   =  [0,5e3];
+    ax.XLim   =  [0,min(temp_)/1e3];
+    ax.XLabel.String = 'Frequency (kHz)' ;
+    ax.YLabel.String = 'Phase velocity (m/s)';
+    %ax.Legend = legend_text ;
+    legend(ax, legend_text)
+    ax.XLabel.FontSize = 12 *( y_mult );
+    ax.YLabel.FontSize = 12 *( y_mult );
+keyboard
+
+
+end % if plot_options.showdispersion %plot dispersion curves for reference
+
+end %  function   showdispersion

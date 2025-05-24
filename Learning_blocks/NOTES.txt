@@ -1,0 +1,27 @@
+
+
+
+From folder::
+P:\GITHUBS\AIDATA\107DB _all and wallsall
+This one has walsal data
+Block_data_5_Labs_11_threshVALS_116_tests_3.mat
+{'clear'  'clear'  'monitor'  'change'  'change'}
+rename to:
+LS_CMC_with.mat
+-----------------------------------------
+Created a new one from 
+P:\GITHUBS\AIDATA\107DB_no wallsal
+original name
+Block_data_5_Labs_11_threshVALS_102_tests_2.mat
+{'clear'  'clear'  'monitor'  'change'  'change'}
+rename to:
+LS_CMC.mat
+-----------------------------------------
+From
+P:\GITHUBS\AIDATA\107DB_0_4_new_withHS__extra
+Block_data_5_Labs_11_threshVALS_100_tests_8.mat
+{'clear'  'clear'  'clear'  'monitor'  'change'}
+rename to:
+rename to:
+LS_CMC_withX.mat
+-----------------------------------------

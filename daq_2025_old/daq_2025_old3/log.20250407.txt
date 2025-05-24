@@ -1,0 +1,947 @@
+2025-04-07 10:24:42.1936|INFO|RightLinesWrapper.MyLogger|------------------------------------------
+2025-04-07 10:24:42.2531|INFO|RightLinesWrapper.MyLogger|Initialised form
+2025-04-07 10:24:42.2954|INFO|RightLinesWrapper.MyLogger|Using Saved settings
+2025-04-07 10:24:42.5622|INFO|RightLinesWrapper.MyLogger|Saved settings used.
+2025-04-07 10:24:42.5622|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-04-07 10:24:43.0482|INFO|RightLinesWrapper.MyLogger|Imepdance callback set.
+2025-04-07 10:24:43.0482|INFO|RightLinesWrapper.MyLogger|Callbacks hooked up.
+2025-04-07 10:24:43.1635|INFO|RightLinesWrapper.MyLogger|Local parameters synced.
+2025-04-07 10:24:43.1635|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:43.1635|INFO|RightLinesWrapper.MyLogger|# RLC Created. state: READY
+2025-04-07 10:24:43.1635|INFO|RightLinesWrapper.MyLogger|Set state: OPERATIONAL
+2025-04-07 10:24:43.8928|INFO|RightLinesWrapper.MyLogger|Set Params..
+2025-04-07 10:24:44.1250|INFO|RightLinesWrapper.MyLogger|$ Monitor Starting...
+2025-04-07 10:24:44.3530|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:44.3530|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:44.3530|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:44.3781|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:44.4664|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:44.4664|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:44.4778|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:44.5456|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:44.5456|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:44.5456|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:44.5643|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:44.5967|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:44.5967|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:44.5967|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:44.6807|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:44.6807|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:44.6807|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:44.7033|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:44.7353|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:44.7353|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:44.7361|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:44.7959|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:44.7959|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:44.7959|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:44.8116|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:44.8480|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:44.8480|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:44.8480|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:44.9102|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:44.9102|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:44.9102|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:44.9374|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:44.9703|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:44.9703|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:44.9703|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:45.0488|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:45.0488|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:45.0488|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:45.0761|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:45.1073|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:45.1073|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:45.1073|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:45.1921|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:45.1921|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:45.1921|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:45.2146|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:45.2476|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:45.2476|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:45.2544|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:45.3504|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:45.3504|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:45.3504|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:45.3695|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:45.4020|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:45.4020|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:45.4020|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:45.4924|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:45.4924|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:45.4924|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:45.5071|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:45.5391|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:45.5391|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:45.5391|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:45.6238|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:45.6238|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:45.6238|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:45.6456|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:45.6835|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:45.6835|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:45.6835|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:45.7675|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:45.7675|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:45.7675|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:45.7973|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:45.8328|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:45.8328|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:45.8328|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:45.8927|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:45.8927|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:45.8927|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:45.9199|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:45.9516|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:45.9516|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:45.9516|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:46.0398|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:46.0398|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:46.0398|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:46.0605|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:46.0924|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:46.0924|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:46.0924|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:46.1843|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:46.1843|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:46.1843|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:46.1987|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:46.2313|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:46.2313|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:46.2313|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:46.3237|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:46.3237|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:46.3237|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:46.3393|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:46.3707|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:46.3707|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:46.3707|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:46.4497|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:46.4497|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:46.4497|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:46.4623|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:46.4932|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:46.4932|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:46.4932|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:46.5607|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:46.5607|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:46.5607|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:46.5848|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:46.6163|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:46.6163|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:46.6163|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:46.6812|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:46.6812|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:46.6812|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:46.7052|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:46.7369|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:46.7369|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:46.7369|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:46.8358|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:46.8358|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:46.8358|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:46.8602|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:46.8918|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:46.8918|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:46.8923|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:46.9813|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:46.9813|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:46.9813|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:46.9966|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:47.0372|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:47.0372|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:47.0372|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:47.1177|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:47.1177|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:47.1177|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:47.1358|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:47.1690|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:47.1690|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:47.1690|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:47.2367|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:47.2367|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:47.2367|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:47.2593|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:47.2935|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:47.2935|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:47.2935|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:47.3447|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:47.3447|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:47.3447|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:47.3660|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:47.3983|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:47.3983|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:47.3983|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:47.4655|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:47.4655|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:47.4655|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:47.4898|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:47.5212|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:47.5212|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:47.5212|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:47.6294|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:47.6294|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:47.6294|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:47.6458|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:47.6783|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:47.6783|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:47.6783|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:47.7435|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:47.7435|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:47.7435|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:47.7698|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:47.8022|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:47.8022|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:47.8022|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:47.8867|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:47.8867|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:47.8867|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:47.9097|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:47.9417|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:47.9417|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:47.9417|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:48.0137|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:48.0137|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:48.0137|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:48.0353|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:48.0720|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:48.0720|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:48.0720|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:48.1742|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:48.1742|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:48.1742|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:48.1897|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:48.2240|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:48.2240|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:48.2240|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:48.2994|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:48.2994|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:48.2994|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:48.3285|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:48.3600|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:48.3600|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:48.3600|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:48.4455|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:48.4455|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:48.4455|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:48.4678|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:48.4998|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:48.4998|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:48.4998|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:48.6025|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:48.6025|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:48.6025|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:48.6225|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:48.6540|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:48.6540|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:48.6540|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:48.7322|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:48.7322|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:48.7322|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:48.7444|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:48.7768|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:48.7768|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:48.7768|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:48.8615|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:48.8615|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:48.8615|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:48.8814|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:48.9132|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:48.9132|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:48.9132|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:49.0195|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:49.0195|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:49.0195|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:49.0363|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:49.0680|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:49.0680|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:49.0680|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:49.1778|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:49.1778|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:49.1778|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:49.1917|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:49.2235|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:49.2235|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:49.2235|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:49.3074|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:49.3074|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:49.3074|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:49.3293|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:49.3617|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:49.3617|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:49.3617|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:49.4576|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:49.4576|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:49.4576|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:49.4812|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:49.5136|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:49.5136|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:49.5136|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:49.6249|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:49.6249|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:49.6249|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:49.6533|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:49.6849|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:49.6849|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:49.6849|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:49.7836|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:49.7836|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:49.7836|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:49.8058|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:49.8378|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:49.8378|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:49.8378|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:49.9524|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:49.9524|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:49.9524|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:49.9754|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:50.0121|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:50.0121|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:50.0121|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:50.1097|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:50.1097|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:50.1097|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:50.1280|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:50.1596|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:50.1596|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:50.1596|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:50.2663|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:50.2663|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:50.2663|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:50.2807|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:50.3131|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:50.3131|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:50.3144|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:50.3896|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:50.3896|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:50.3896|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:50.4053|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:50.4371|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:50.4371|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:50.4394|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:50.5401|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:24:50.5401|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:24:50.5401|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:24:50.5605|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:24:50.5930|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:24:50.5930|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:24:50.5930|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:24:50.6961|INFO|RightLinesWrapper.MyLogger|Monitor timer stopped. Parameters reset.
+2025-04-07 10:24:50.7174|INFO|RightLinesWrapper.MyLogger|Monitor timer stopped. Parameters reset.
+2025-04-07 10:24:50.7981|INFO|RightLinesWrapper.MyLogger|Set Params..
+2025-04-07 10:25:34.7125|INFO|RightLinesWrapper.MyLogger|------------------------------------------
+2025-04-07 10:25:34.7466|INFO|RightLinesWrapper.MyLogger|Initialised form
+2025-04-07 10:25:34.7667|INFO|RightLinesWrapper.MyLogger|Using Saved settings
+2025-04-07 10:25:35.0440|INFO|RightLinesWrapper.MyLogger|Saved settings used.
+2025-04-07 10:25:35.0440|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-04-07 10:25:35.2319|INFO|RightLinesWrapper.MyLogger|Imepdance callback set.
+2025-04-07 10:25:35.2319|INFO|RightLinesWrapper.MyLogger|Callbacks hooked up.
+2025-04-07 10:25:35.3514|INFO|RightLinesWrapper.MyLogger|Local parameters synced.
+2025-04-07 10:25:35.3514|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:35.3514|INFO|RightLinesWrapper.MyLogger|# RLC Created. state: READY
+2025-04-07 10:25:35.3514|INFO|RightLinesWrapper.MyLogger|Set state: OPERATIONAL
+2025-04-07 10:25:36.1280|INFO|RightLinesWrapper.MyLogger|Set Params..
+2025-04-07 10:25:36.2959|INFO|RightLinesWrapper.MyLogger|$ Monitor Starting...
+2025-04-07 10:25:36.5046|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:36.5046|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:36.5046|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:36.5307|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:36.6197|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:36.6197|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:36.6311|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:36.6845|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:36.6845|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:36.6845|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:36.7001|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:36.7327|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:36.7327|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:36.7327|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:36.8064|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:36.8064|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:36.8064|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:36.8230|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:36.8554|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:36.8554|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:36.8554|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:36.9630|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:36.9630|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:36.9630|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:36.9789|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:37.0151|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:37.0151|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:37.0151|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:37.0799|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:37.0799|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:37.0799|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:37.1030|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:37.1362|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:37.1362|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:37.1362|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:37.1984|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:37.1984|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:37.1984|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:37.2118|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:37.2437|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:37.2437|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:37.2437|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:37.3066|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:37.3066|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:37.3066|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:37.3331|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:37.3655|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:37.3655|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:37.3655|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:37.4489|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:37.4489|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:37.4489|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:37.4710|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:37.5044|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:37.5044|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:37.5044|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:37.6101|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:37.6101|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:37.6101|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:37.6389|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:37.6707|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:37.6707|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:37.6707|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:37.7287|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:37.7287|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:37.7287|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:37.7494|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:37.7817|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:37.7817|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:37.7836|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:37.8346|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:37.8346|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:37.8346|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:37.8590|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:37.8912|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:37.8912|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:37.8912|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:37.9535|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:37.9535|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:37.9535|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:37.9810|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:38.0155|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:38.0155|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:38.0160|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:38.0847|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:38.0847|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:38.0847|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:38.1059|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:38.1385|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:38.1385|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:38.1385|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:38.1838|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:38.1838|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:38.1838|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:38.1989|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:38.2314|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:38.2314|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:38.2314|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:38.2759|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:38.2759|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:38.2759|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:38.2914|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:38.3231|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:38.3231|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:38.3231|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:38.3847|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:38.3847|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:38.3847|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:38.4001|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:38.4329|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:38.4329|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:38.4329|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:38.4928|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:38.4928|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:38.4928|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:38.5080|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:38.5403|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:38.5403|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:38.5403|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:38.6229|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:38.6229|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:38.6229|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:38.6480|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:38.6798|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:38.6798|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:38.6798|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:38.7708|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:38.7708|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:38.7708|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:38.7875|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:38.8193|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:38.8193|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:38.8193|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:38.9243|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:38.9243|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:38.9243|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:38.9402|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:38.9733|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:38.9733|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:38.9733|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:39.0474|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:39.0474|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:39.0474|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:39.0784|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:39.1099|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:39.1099|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:39.1105|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:39.1794|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:39.1794|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:39.1794|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:39.1998|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:39.2323|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:39.2323|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:39.2323|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:39.3186|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:39.3186|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:39.3186|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:39.3392|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:39.3711|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:39.3711|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:39.3711|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:39.4770|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:39.4770|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:39.4770|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:39.4922|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:39.5247|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:39.5247|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:39.5247|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:39.5954|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:39.5954|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:39.5954|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:39.6152|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:39.6469|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:39.6469|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:39.6469|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:39.7400|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:39.7400|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:39.7400|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:39.7535|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:39.7849|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:39.7849|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:39.7849|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:39.8648|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:39.8648|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:39.8648|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:39.8793|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:39.9129|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:39.9129|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:39.9129|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:40.0172|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:40.0172|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:40.0172|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:40.0335|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:40.0655|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:40.0655|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:40.0655|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:40.1509|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:40.1509|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:40.1509|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:40.1725|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:40.2042|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:40.2042|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:40.2042|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:40.2767|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:40.2767|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:40.2767|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:40.2958|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:40.3294|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:40.3294|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:40.3294|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:40.4067|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:40.4067|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:40.4067|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:40.4325|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:40.4648|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:40.4648|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:40.4648|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:40.5717|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:40.5717|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:40.5717|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:40.5882|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:40.6202|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:40.6202|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:40.6202|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:40.7013|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:40.7013|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:40.7013|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:40.7269|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:40.7599|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:40.7599|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:40.7599|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:40.8458|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:40.8458|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:40.8458|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:40.8666|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:40.8984|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:40.8984|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:40.8984|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:41.0036|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:41.0036|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:41.0036|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:41.0191|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:41.0562|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:41.0562|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:41.0562|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:41.1255|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:41.1255|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:41.1255|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:41.1411|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:41.1738|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:41.1738|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:41.1738|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:41.2199|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:41.2199|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:41.2199|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:41.2499|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:41.2838|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:41.2838|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:41.2838|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:41.3455|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:41.3455|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:41.3455|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:41.3727|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:41.4096|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:41.4096|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:41.4096|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:41.4908|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:41.4908|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:41.4908|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:41.5139|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:41.5476|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:41.5476|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:41.5476|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:41.6133|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:41.6133|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:41.6133|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:41.6363|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:41.6687|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:41.6687|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:41.6687|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:41.7732|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:41.7732|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:41.7732|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:41.7895|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:41.8229|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:41.8229|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:41.8229|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:41.9002|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:41.9002|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:41.9002|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:41.9126|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:41.9449|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:41.9449|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:41.9449|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:42.0088|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:42.0088|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:42.0088|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:42.0211|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:42.0531|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:42.0531|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:42.0531|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:42.1348|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:42.1348|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:42.1348|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:42.1588|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:42.1918|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:42.1918|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:42.1918|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:42.2717|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:42.2717|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:42.2717|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:42.2983|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:42.3305|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:42.3305|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:42.3305|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:42.4370|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:42.4370|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:42.4370|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:42.4524|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:42.4853|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:42.4853|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:42.4853|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:42.5772|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:42.5772|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:42.5772|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:42.5908|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:42.6244|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:42.6244|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:42.6244|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:42.6893|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:42.6893|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:42.6893|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:42.7155|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:42.7472|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:42.7472|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:42.7472|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:42.8217|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:42.8217|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:42.8217|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:42.8374|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:42.8690|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:42.8690|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:42.8690|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:42.9751|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:42.9751|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:42.9751|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:42.9914|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:43.0231|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:43.0231|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:43.0231|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:43.0960|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:43.0960|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:43.0960|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:43.1156|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:43.1481|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:43.1481|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:43.1481|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:43.2256|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:43.2256|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:43.2256|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:43.2385|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:43.2702|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:43.2702|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:43.2702|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:43.3542|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:43.3542|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:43.3542|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:43.3767|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:43.4083|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:43.4083|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:43.4083|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:43.5026|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:43.5026|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:43.5026|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:43.5292|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:43.5701|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:43.5701|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:43.5701|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:43.6488|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:43.6488|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:43.6488|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:43.6678|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:43.7006|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:43.7006|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:43.7006|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:43.7544|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:43.7544|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:43.7544|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:43.7736|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:43.8079|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:43.8079|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:43.8079|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:43.8781|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:43.8781|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:43.8781|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:43.8966|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:43.9283|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:43.9283|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:43.9283|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:44.0078|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:44.0078|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:44.0078|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:44.0200|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:44.0515|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:44.0515|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:44.0515|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:44.1181|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:44.1181|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:44.1181|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:44.1426|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:44.1739|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:44.1739|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:44.1739|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:44.2572|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:44.2572|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:44.2572|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:44.2803|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:44.3119|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:44.3119|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:44.3119|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:44.4017|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:44.4017|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:44.4017|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:44.4183|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:44.4500|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:44.4500|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:44.4500|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:44.5483|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:44.5483|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:44.5483|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:44.5735|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:44.6061|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:44.6061|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:44.6061|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:44.6764|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:44.6764|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:44.6764|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:44.6961|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:44.7344|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:44.7344|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:44.7344|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:44.8331|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:44.8331|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:44.8331|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:44.8485|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:44.8813|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:44.8813|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:44.8813|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:44.9741|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:44.9741|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:44.9741|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:44.9870|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:45.0240|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:45.0240|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:45.0240|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:45.1042|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:45.1042|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:45.1042|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:45.1263|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:45.1584|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:45.1584|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:45.1584|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:45.2787|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:45.2787|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:45.2787|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:45.2949|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:45.3259|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:45.3259|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:45.3259|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:45.4227|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:45.4227|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:45.4227|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:45.4510|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:45.4829|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:45.4829|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:45.4829|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:45.5889|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:45.5889|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:45.5889|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:45.6018|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:45.6336|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:45.6336|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:45.6336|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:45.7087|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:45.7087|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:45.7087|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:45.7249|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:45.7574|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:45.7574|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:45.7574|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:45.8641|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:45.8641|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:45.8641|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:45.8780|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:45.9110|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:45.9110|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:45.9110|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:46.0127|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:46.0127|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:46.0127|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:46.0342|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:46.0804|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:46.0804|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:46.0804|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:46.1860|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:46.1860|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:46.1860|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:46.2028|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:46.2366|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:46.2366|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:46.2366|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:46.3316|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:46.3316|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:46.3316|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:46.3579|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:46.3909|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:46.3909|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:46.3921|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:46.4951|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:46.4951|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:46.4951|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:46.5147|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:46.5463|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:46.5463|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:46.5463|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:46.6305|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:46.6305|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:46.6305|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:46.6539|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:46.6881|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:46.6881|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:46.6891|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:46.7648|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:46.7648|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:46.7648|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:46.7917|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:46.8252|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:46.8252|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:46.8252|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:46.9214|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:46.9214|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:46.9214|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:46.9462|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:46.9782|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:46.9782|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:46.9782|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:47.0573|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:47.0573|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:47.0573|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:47.0822|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:47.1151|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:47.1151|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:47.1151|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:47.1922|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:47.1922|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:47.1922|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:47.2043|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:47.2356|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:47.2356|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:47.2356|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:47.3306|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:47.3306|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:47.3306|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:47.3580|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:47.3895|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:47.3895|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:47.3895|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:47.4722|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:47.4722|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:47.4722|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:47.4974|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:47.5325|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:47.5325|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:47.5325|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:47.6289|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:47.6289|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:47.6289|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:47.6543|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:47.6906|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:47.6906|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:47.6906|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:47.8072|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:47.8072|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:47.8072|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:47.8237|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:47.8556|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:47.8556|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:47.8556|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:47.9294|INFO|RightLinesWrapper.MyLogger|@ Doing Monitor test
+2025-04-07 10:25:47.9294|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2025-04-07 10:25:47.9294|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2025-04-07 10:25:47.9525|INFO|RightLinesWrapper.MyLogger|Monitor timer stopped. Parameters reset.
+2025-04-07 10:25:47.9775|INFO|RightLinesWrapper.MyLogger|Monitor timer stopped. Parameters reset.
+2025-04-07 10:25:48.0458|INFO|RightLinesWrapper.MyLogger|Set Params..
+2025-04-07 10:25:48.0458|INFO|RightLinesWrapper.MyLogger|Measurement started. Awaiting tcs completion..
+2025-04-07 10:25:48.6759|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2025-04-07 10:25:48.6759|INFO|RightLinesWrapper.MyLogger|Data count: 14
+2025-04-07 10:25:48.7015|INFO|RightLinesWrapper.MyLogger|@@ Finished test
+2025-04-07 10:25:50.1572|INFO|RightLinesWrapper.MyLogger|Set test state: CANCEL
+2025-04-07 10:25:50.1572|INFO|RightLinesWrapper.MyLogger|Saving settings
+2025-04-07 10:25:50.1754|INFO|RightLinesWrapper.MyLogger|Settings saved
+2025-04-07 10:25:50.1898|INFO|RightLinesWrapper.MyLogger|## Dispose RLC. Disposed? False
+2025-04-07 10:25:50.1898|INFO|RightLinesWrapper.MyLogger|Power..False

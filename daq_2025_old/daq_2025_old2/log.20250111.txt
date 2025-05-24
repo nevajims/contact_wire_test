@@ -1,0 +1,28 @@
+2025-01-11 14:37:51.6873|INFO|RightLinesWrapper.MyLogger|------------------------------------------
+2025-01-11 14:37:51.7457|INFO|RightLinesWrapper.MyLogger|Initialised form
+2025-01-11 14:37:51.7926|INFO|RightLinesWrapper.MyLogger|Using Saved settings
+2025-01-11 14:37:52.0235|INFO|RightLinesWrapper.MyLogger|Saved settings used.
+2025-01-11 14:37:52.0248|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-01-11 14:37:52.4602|ERROR|RightLinesWrapper.MyLogger|Failed to create new controller
+2025-01-11 14:37:57.9628|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-01-11 14:37:58.2371|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-01-11 14:37:58.4086|ERROR|RightLinesWrapper.MyLogger|Failed to create new controller
+2025-01-11 14:37:58.4086|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-01-11 14:37:59.4016|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-01-11 14:37:59.5530|ERROR|RightLinesWrapper.MyLogger|Failed to create new controller
+2025-01-11 14:37:59.5530|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-01-11 14:38:00.5546|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-01-11 14:38:00.7134|ERROR|RightLinesWrapper.MyLogger|Failed to create new controller
+2025-01-11 14:38:00.7134|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-01-11 14:38:01.7250|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-01-11 14:38:01.8710|ERROR|RightLinesWrapper.MyLogger|Failed to create new controller
+2025-01-11 14:38:01.8710|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-01-11 14:38:02.8668|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-01-11 14:38:03.0120|ERROR|RightLinesWrapper.MyLogger|Failed to create new controller
+2025-01-11 14:38:03.0120|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-01-11 14:38:04.0220|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-01-11 14:38:04.1621|ERROR|RightLinesWrapper.MyLogger|Failed to create new controller
+2025-01-11 14:38:04.1621|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-01-11 14:38:04.5224|INFO|RightLinesWrapper.MyLogger|Set test state: CANCEL
+2025-01-11 14:38:04.5224|INFO|RightLinesWrapper.MyLogger|Saving settings
+2025-01-11 14:38:04.5401|INFO|RightLinesWrapper.MyLogger|Settings saved

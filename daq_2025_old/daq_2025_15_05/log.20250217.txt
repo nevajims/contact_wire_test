@@ -1,0 +1,47 @@
+2025-02-17 17:36:59.0726|INFO|RightLinesWrapper.MyLogger|------------------------------------------
+2025-02-17 17:36:59.1387|INFO|RightLinesWrapper.MyLogger|Initialised form
+2025-02-17 17:36:59.1620|INFO|RightLinesWrapper.MyLogger|Using Saved settings
+2025-02-17 17:36:59.3398|INFO|RightLinesWrapper.MyLogger|Saved settings used.
+2025-02-17 17:36:59.3407|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-02-17 17:36:59.5957|ERROR|RightLinesWrapper.MyLogger|Failed to create new controller
+2025-02-17 17:37:02.0557|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-02-17 17:37:02.3737|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-02-17 17:37:02.5178|ERROR|RightLinesWrapper.MyLogger|Failed to create new controller
+2025-02-17 17:37:02.5178|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-02-17 17:37:03.5177|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-02-17 17:37:03.6406|ERROR|RightLinesWrapper.MyLogger|Failed to create new controller
+2025-02-17 17:37:03.6406|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-02-17 17:37:04.6465|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-02-17 17:37:04.8342|ERROR|RightLinesWrapper.MyLogger|Failed to create new controller
+2025-02-17 17:37:04.8342|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-02-17 17:37:05.8278|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-02-17 17:37:05.9756|ERROR|RightLinesWrapper.MyLogger|Failed to create new controller
+2025-02-17 17:37:05.9756|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-02-17 17:37:06.9702|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-02-17 17:37:07.1124|ERROR|RightLinesWrapper.MyLogger|Failed to create new controller
+2025-02-17 17:37:07.1124|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-02-17 17:37:08.1190|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-02-17 17:37:08.2746|ERROR|RightLinesWrapper.MyLogger|Failed to create new controller
+2025-02-17 17:37:08.2746|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-02-17 17:37:09.2729|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-02-17 17:37:09.4288|ERROR|RightLinesWrapper.MyLogger|Failed to create new controller
+2025-02-17 17:37:09.4288|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-02-17 17:37:10.4218|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-02-17 17:37:10.5721|ERROR|RightLinesWrapper.MyLogger|Failed to create new controller
+2025-02-17 17:37:10.5721|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-02-17 17:37:11.5800|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-02-17 17:37:11.7274|ERROR|RightLinesWrapper.MyLogger|Failed to create new controller
+2025-02-17 17:37:11.7274|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-02-17 17:38:21.3386|INFO|RightLinesWrapper.MyLogger|------------------------------------------
+2025-02-17 17:38:21.3733|INFO|RightLinesWrapper.MyLogger|Initialised form
+2025-02-17 17:38:21.3970|INFO|RightLinesWrapper.MyLogger|Using Saved settings
+2025-02-17 17:38:21.5521|INFO|RightLinesWrapper.MyLogger|Saved settings used.
+2025-02-17 17:38:21.5521|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-02-17 17:38:21.7793|ERROR|RightLinesWrapper.MyLogger|Failed to create new controller
+2025-02-17 17:38:23.2893|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-02-17 17:38:23.5881|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-02-17 17:38:23.7405|ERROR|RightLinesWrapper.MyLogger|Failed to create new controller
+2025-02-17 17:38:23.7405|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-02-17 17:38:24.7381|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-02-17 17:38:24.8433|ERROR|RightLinesWrapper.MyLogger|Failed to create new controller
+2025-02-17 17:38:24.8433|INFO|RightLinesWrapper.MyLogger|Set state: INIT

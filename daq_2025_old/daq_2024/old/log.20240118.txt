@@ -1,0 +1,1034 @@
+2024-01-18 14:19:17.1866|INFO|RightLinesWrapper.MyLogger|----------------
+2024-01-18 14:19:17.3121|INFO|RightLinesWrapper.MyLogger|Initialised form
+2024-01-18 14:19:17.3773|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2024-01-18 14:19:17.5861|INFO|RightLinesWrapper.MyLogger|Using commandline settings
+2024-01-18 14:19:17.5861|INFO|RightLinesWrapper.MyLogger|{"Sampling":{"Sample_RateHz":500000,"Num_Samples":2048,"Start_Offset":0,"Num_Averages":1,"RepeatDelay_mS":0,"adc_Range_options":[2.5,5,10],"adc_Range_":1},"Impedence":{"StartFrequency":1000,"EndFrequency":100000,"IdleFrequency":1000,"num_points":30,"num_samples":1024},"Toneburst":{"Shape_options":["Square","Triang","Hanning","Gauss"],"Shape":4,"Frequency":50000,"num_cycles":6,"Phase_deg":0,"Tx_mute_samples":0,"Tx_Channel":1,"Attenuation_dB":0},"Instrument_attributes":{"number_of_transducers":12,"trans_row":[1,1,1,1,2,2,2,2,3,3,3,3],"trans_pos":[1,2,3,4,1,2,3,4,1,2,3,4],"trans_pos_orientation":[[0,0,1],[0,-1,0],[0,0,1],[0,1,0],[1,0,0],[0,-1,0],[-1,0,0],[0,1,0],[1,0,0],[0,0,-1],[-1,0,0],[0,0,-1]],"trans_row_pos":[0.012,0,-0.012]},"TIPI_LEGACY":{"No_of_instruments":4,"SNs":[33690,34373,33634,37075],"channels":[[13,14,0,0],[1,2,3,4],[5,6,7,8],[9,10,11,12]],"ActiveChannels":12,"delay_factor":0,"sens":0.2,"resolution":14,"afg_pts":32,"sig_amp":12,"meas_delay":0,"averages_no":16,"pretrig":0,"stretch_factor":1},"Model_data":{"fe_fnames":["//SAFE_solutions//AC-120_SOLVED_1.mat","//SAFE_solutions//AC-107_SOLVED_1.mat"],"trans_node_list":[[362,729,371,2],[362,729,371,2]],"real_length":[-3,3]},"filename":"rl_temp.dat","hash":"127 18-Jan-2024 14:19:14"}
+2024-01-18 14:19:17.8686|INFO|RightLinesWrapper.MyLogger|Commandline settings used.
+2024-01-18 14:19:17.8686|INFO|RightLinesWrapper.MyLogger|Set state: OPERATIONAL
+2024-01-18 14:19:18.0644|INFO|RightLinesWrapper.MyLogger|Set data ready callback..
+2024-01-18 14:19:18.0644|INFO|RightLinesWrapper.MyLogger|Data ready callback set
+2024-01-18 14:19:18.0644|INFO|RightLinesWrapper.MyLogger|Imepdance callback set.
+2024-01-18 14:19:18.0678|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:19:18.0678|INFO|RightLinesWrapper.MyLogger|# RLC Created. state: READY
+2024-01-18 14:19:18.8688|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:19:18.8688|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:19:19.8787|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:19:19.8797|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:19:20.4388|INFO|RightLinesWrapper.MyLogger|Set console: control: INIT state: FAIL
+2024-01-18 14:19:20.4872|INFO|RightLinesWrapper.MyLogger|Power..True
+2024-01-18 14:19:20.4880|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:19:20.4880|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:19:20.4880|INFO|RightLinesWrapper.MyLogger|Power changed: True
+2024-01-18 14:19:20.4880|INFO|RightLinesWrapper.MyLogger|Power..False
+2024-01-18 14:19:20.4880|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:19:20.4880|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:19:20.4880|INFO|RightLinesWrapper.MyLogger|Power..True
+2024-01-18 14:19:20.4880|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:19:20.4880|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:19:20.4880|INFO|RightLinesWrapper.MyLogger|Power changed: True
+2024-01-18 14:19:20.4880|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:19:20.5217|INFO|RightLinesWrapper.MyLogger|## Run controller. Single run: False
+2024-01-18 14:19:20.5217|INFO|RightLinesWrapper.MyLogger|Power..True
+2024-01-18 14:19:20.5217|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:19:20.5217|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:19:20.5217|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:19:20.5217|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:19:20.5217|INFO|RightLinesWrapper.MyLogger|Run controller
+2024-01-18 14:19:20.5217|INFO|RightLinesWrapper.MyLogger|Set console: control: INIT state: FAIL
+2024-01-18 14:19:20.5640|INFO|RightLinesWrapper.MyLogger|Start Inductance test Thread Id:1
+2024-01-18 14:19:20.5640|INFO|RightLinesWrapper.MyLogger|Set console: control: IMPEDANCE state: RUN
+2024-01-18 14:19:20.5640|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:19:20.5640|INFO|RightLinesWrapper.MyLogger|Starting impedance test..
+2024-01-18 14:19:22.8629|INFO|RightLinesWrapper.MyLogger|Impedance data ready. Success: True
+2024-01-18 14:19:22.8713|INFO|RightLinesWrapper.MyLogger|# Impedance Ready
+2024-01-18 14:19:22.8713|INFO|RightLinesWrapper.MyLogger|Impedance done..
+2024-01-18 14:19:22.8713|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:19:22.8713|INFO|RightLinesWrapper.MyLogger|Inductance test produced data? True
+2024-01-18 14:19:22.8713|INFO|RightLinesWrapper.MyLogger|Impedance data received
+2024-01-18 14:19:22.9106|INFO|RightLinesWrapper.MyLogger|Impedance data processed
+2024-01-18 14:19:22.9435|INFO|RightLinesWrapper.MyLogger|Impedance data complete. Valid: 2
+2024-01-18 14:19:22.9435|INFO|RightLinesWrapper.MyLogger|Set console: control: IMPEDANCE state: FAIL
+2024-01-18 14:19:22.9435|INFO|RightLinesWrapper.MyLogger|Set console: control: SETUP state: RUN
+2024-01-18 14:19:22.9435|INFO|RightLinesWrapper.MyLogger|Set tone burst request..
+2024-01-18 14:19:22.9435|INFO|RightLinesWrapper.MyLogger|Send toneburst..
+2024-01-18 14:19:22.9435|INFO|RightLinesWrapper.MyLogger|Gen tone burst...
+2024-01-18 14:19:23.0716|INFO|RightLinesWrapper.MyLogger|Tone burst generated.
+2024-01-18 14:19:23.0716|INFO|RightLinesWrapper.MyLogger|Set toneburst..
+2024-01-18 14:19:23.0716|INFO|RightLinesWrapper.MyLogger|Toneburst done..
+2024-01-18 14:19:23.0716|INFO|RightLinesWrapper.MyLogger|TB sent.
+2024-01-18 14:19:23.0716|INFO|RightLinesWrapper.MyLogger|Tone burst success? True
+2024-01-18 14:19:23.0716|INFO|RightLinesWrapper.MyLogger|Set Params..
+2024-01-18 14:19:23.0864|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:19:23.0864|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:19:23.1924|INFO|RightLinesWrapper.MyLogger|Params set..True
+2024-01-18 14:19:23.1924|INFO|RightLinesWrapper.MyLogger|Setup device with params: True
+2024-01-18 14:19:23.1924|INFO|RightLinesWrapper.MyLogger|Set console: control: SETUP state: OK
+2024-01-18 14:19:23.1924|INFO|RightLinesWrapper.MyLogger|Set console: control: TEST state: RUN
+2024-01-18 14:19:23.1924|INFO|RightLinesWrapper.MyLogger|# Start taking measurements...
+2024-01-18 14:19:23.1924|INFO|RightLinesWrapper.MyLogger|Channel test: from 1 to 12
+2024-01-18 14:19:23.1924|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:19:23.1924|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:19:23.1924|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:19:23.1924|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:19:23.1924|INFO|RightLinesWrapper.MyLogger|Set Tx 1
+2024-01-18 14:19:23.1924|INFO|RightLinesWrapper.MyLogger|Tx set :1
+2024-01-18 14:19:23.2116|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:19:23.2116|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:19:23.3103|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:19:23.3256|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:19:23.3535|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:19:23.3535|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:19:23.3535|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:19:23.3535|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:19:23.3535|INFO|RightLinesWrapper.MyLogger|Set Tx 2
+2024-01-18 14:19:23.3535|INFO|RightLinesWrapper.MyLogger|Tx set :2
+2024-01-18 14:19:23.3535|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:19:23.3535|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:19:23.4191|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:19:23.4436|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:19:23.4657|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:19:23.4657|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:19:23.4657|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:19:23.4657|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:19:23.4657|INFO|RightLinesWrapper.MyLogger|Set Tx 3
+2024-01-18 14:19:23.4657|INFO|RightLinesWrapper.MyLogger|Tx set :3
+2024-01-18 14:19:23.4657|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:19:23.4657|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:19:23.5425|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:19:23.5570|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:19:23.5912|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:19:23.5912|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:19:23.5912|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:19:23.5912|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:19:23.5912|INFO|RightLinesWrapper.MyLogger|Set Tx 4
+2024-01-18 14:19:23.5912|INFO|RightLinesWrapper.MyLogger|Tx set :4
+2024-01-18 14:19:23.5912|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:19:23.5912|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:19:23.6558|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:19:23.6730|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:19:23.7083|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:19:23.7083|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:19:23.7083|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:19:23.7083|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:19:23.7083|INFO|RightLinesWrapper.MyLogger|Set Tx 5
+2024-01-18 14:19:23.7083|INFO|RightLinesWrapper.MyLogger|Tx set :5
+2024-01-18 14:19:23.7083|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:19:23.7083|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:19:23.7727|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:19:23.7865|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:19:23.8213|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:19:23.8213|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:19:23.8213|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:19:23.8213|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:19:23.8213|INFO|RightLinesWrapper.MyLogger|Set Tx 6
+2024-01-18 14:19:23.8213|INFO|RightLinesWrapper.MyLogger|Tx set :6
+2024-01-18 14:19:23.8213|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:19:23.8213|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:19:23.8872|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:19:23.9035|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:19:23.9277|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:19:23.9277|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:19:23.9277|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:19:23.9277|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:19:23.9277|INFO|RightLinesWrapper.MyLogger|Set Tx 7
+2024-01-18 14:19:23.9277|INFO|RightLinesWrapper.MyLogger|Tx set :7
+2024-01-18 14:19:23.9277|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:19:23.9277|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:19:24.0052|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:19:24.0196|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:19:24.0536|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:19:24.0536|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:19:24.0536|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:19:24.0536|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:19:24.0536|INFO|RightLinesWrapper.MyLogger|Set Tx 8
+2024-01-18 14:19:24.0536|INFO|RightLinesWrapper.MyLogger|Tx set :8
+2024-01-18 14:19:24.0536|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:19:24.0536|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:19:24.1180|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:19:24.1340|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:19:24.1679|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:19:24.1679|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:19:24.1679|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:19:24.1679|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:19:24.1679|INFO|RightLinesWrapper.MyLogger|Set Tx 9
+2024-01-18 14:19:24.1679|INFO|RightLinesWrapper.MyLogger|Tx set :9
+2024-01-18 14:19:24.1679|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:19:24.1679|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:19:24.2342|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:19:24.2492|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:19:24.2843|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:19:24.2843|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:19:24.2843|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:19:24.2843|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:19:24.2843|INFO|RightLinesWrapper.MyLogger|Set Tx 10
+2024-01-18 14:19:24.2843|INFO|RightLinesWrapper.MyLogger|Tx set :10
+2024-01-18 14:19:24.2843|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:19:24.2843|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:19:24.3679|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:19:24.3832|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:19:24.4177|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:19:24.4177|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:19:24.4177|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:19:24.4177|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:19:24.4177|INFO|RightLinesWrapper.MyLogger|Set Tx 11
+2024-01-18 14:19:24.4177|INFO|RightLinesWrapper.MyLogger|Tx set :11
+2024-01-18 14:19:24.4177|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:19:24.4177|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:19:24.4995|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:19:24.5145|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:19:24.5495|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:19:24.5495|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:19:24.5495|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:19:24.5495|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:19:24.5495|INFO|RightLinesWrapper.MyLogger|Set Tx 12
+2024-01-18 14:19:24.5495|INFO|RightLinesWrapper.MyLogger|Tx set :12
+2024-01-18 14:19:24.5495|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:19:24.5495|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:19:24.6276|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:19:24.6415|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:19:24.6755|INFO|RightLinesWrapper.MyLogger|# Measurements complete.
+2024-01-18 14:19:24.6755|INFO|RightLinesWrapper.MyLogger|Test complete
+2024-01-18 14:19:24.6755|INFO|RightLinesWrapper.MyLogger|Set console: control: TEST state: OK
+2024-01-18 14:19:24.6817|INFO|RightLinesWrapper.MyLogger|Set console: control: SAVE state: RUN
+2024-01-18 14:19:24.7864|INFO|RightLinesWrapper.MyLogger|Set console: control: SAVE state: OK
+2024-01-18 14:19:24.7864|INFO|RightLinesWrapper.MyLogger|Saving data : True
+2024-01-18 14:19:24.7864|INFO|RightLinesWrapper.MyLogger|Saving settings
+2024-01-18 14:19:24.9873|INFO|RightLinesWrapper.MyLogger|Settings saved
+2024-01-18 14:19:25.0034|INFO|RightLinesWrapper.MyLogger|## Dispose RLC. Disposed? False
+2024-01-18 14:19:25.0034|INFO|RightLinesWrapper.MyLogger|Power..False
+2024-01-18 14:19:25.0046|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:19:25.0046|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:19:25.0046|INFO|RightLinesWrapper.MyLogger|Power changed: False
+2024-01-18 14:19:25.0483|INFO|RightLinesWrapper.MyLogger|## RLC Disposed
+2024-01-18 14:30:13.6816|INFO|RightLinesWrapper.MyLogger|----------------
+2024-01-18 14:30:13.6973|INFO|RightLinesWrapper.MyLogger|Initialised form
+2024-01-18 14:30:13.7302|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2024-01-18 14:30:13.8428|INFO|RightLinesWrapper.MyLogger|Using commandline settings
+2024-01-18 14:30:13.8428|INFO|RightLinesWrapper.MyLogger|{"Sampling":{"Sample_RateHz":500000,"Num_Samples":2048,"Start_Offset":0,"Num_Averages":1,"RepeatDelay_mS":0,"adc_Range_options":[2.5,5,10],"adc_Range_":1},"Impedence":{"StartFrequency":1000,"EndFrequency":100000,"IdleFrequency":1000,"num_points":30,"num_samples":1024},"Toneburst":{"Shape_options":["Square","Triang","Hanning","Gauss"],"Shape":4,"Frequency":50000,"num_cycles":6,"Phase_deg":0,"Tx_mute_samples":0,"Tx_Channel":1,"Attenuation_dB":0},"Instrument_attributes":{"number_of_transducers":12,"trans_row":[1,1,1,1,2,2,2,2,3,3,3,3],"trans_pos":[1,2,3,4,1,2,3,4,1,2,3,4],"trans_pos_orientation":[[0,0,1],[0,-1,0],[0,0,1],[0,1,0],[1,0,0],[0,-1,0],[-1,0,0],[0,1,0],[1,0,0],[0,0,-1],[-1,0,0],[0,0,-1]],"trans_row_pos":[0.012,0,-0.012]},"TIPI_LEGACY":{"No_of_instruments":4,"SNs":[33690,34373,33634,37075],"channels":[[13,14,0,0],[1,2,3,4],[5,6,7,8],[9,10,11,12]],"ActiveChannels":12,"delay_factor":0,"sens":0.2,"resolution":14,"afg_pts":32,"sig_amp":12,"meas_delay":0,"averages_no":16,"pretrig":0,"stretch_factor":1},"Model_data":{"fe_fnames":["//SAFE_solutions//AC-120_SOLVED_1.mat","//SAFE_solutions//AC-107_SOLVED_1.mat"],"trans_node_list":[[362,729,371,2],[362,729,371,2]],"real_length":[-3,3]},"filename":"rl_temp.dat","hash":"633 18-Jan-2024 14:30:12"}
+2024-01-18 14:30:14.0390|INFO|RightLinesWrapper.MyLogger|Commandline settings used.
+2024-01-18 14:30:14.0390|INFO|RightLinesWrapper.MyLogger|Set state: OPERATIONAL
+2024-01-18 14:30:14.2203|INFO|RightLinesWrapper.MyLogger|Set data ready callback..
+2024-01-18 14:30:14.2203|INFO|RightLinesWrapper.MyLogger|Data ready callback set
+2024-01-18 14:30:14.2232|INFO|RightLinesWrapper.MyLogger|Imepdance callback set.
+2024-01-18 14:30:14.2232|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:30:14.2232|INFO|RightLinesWrapper.MyLogger|# RLC Created. state: READY
+2024-01-18 14:30:15.0454|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:30:15.0454|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:30:16.0494|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:30:16.0510|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:30:16.0843|INFO|RightLinesWrapper.MyLogger|Set console: control: INIT state: FAIL
+2024-01-18 14:30:16.1150|INFO|RightLinesWrapper.MyLogger|Power..True
+2024-01-18 14:30:16.1150|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:30:16.1150|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:30:16.1150|INFO|RightLinesWrapper.MyLogger|Power changed: True
+2024-01-18 14:30:16.1150|INFO|RightLinesWrapper.MyLogger|Power..False
+2024-01-18 14:30:16.1150|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:30:16.1150|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:30:16.1150|INFO|RightLinesWrapper.MyLogger|Power..True
+2024-01-18 14:30:16.1150|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:30:16.1150|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:30:16.1150|INFO|RightLinesWrapper.MyLogger|Power changed: True
+2024-01-18 14:30:16.1150|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:30:16.1743|INFO|RightLinesWrapper.MyLogger|## Run controller. Single run: False
+2024-01-18 14:30:16.1743|INFO|RightLinesWrapper.MyLogger|Power..True
+2024-01-18 14:30:16.1743|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:30:16.1743|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:30:16.1743|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:30:16.1743|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:30:16.1743|INFO|RightLinesWrapper.MyLogger|Run controller
+2024-01-18 14:30:16.1743|INFO|RightLinesWrapper.MyLogger|Set console: control: INIT state: FAIL
+2024-01-18 14:30:16.2311|INFO|RightLinesWrapper.MyLogger|Start Inductance test Thread Id:1
+2024-01-18 14:30:16.2311|INFO|RightLinesWrapper.MyLogger|Set console: control: IMPEDANCE state: RUN
+2024-01-18 14:30:16.2311|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:30:16.2311|INFO|RightLinesWrapper.MyLogger|Starting impedance test..
+2024-01-18 14:30:18.5589|INFO|RightLinesWrapper.MyLogger|Impedance data ready. Success: True
+2024-01-18 14:30:18.5589|INFO|RightLinesWrapper.MyLogger|# Impedance Ready
+2024-01-18 14:30:18.5589|INFO|RightLinesWrapper.MyLogger|Impedance done..
+2024-01-18 14:30:18.5589|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:30:18.5589|INFO|RightLinesWrapper.MyLogger|Inductance test produced data? True
+2024-01-18 14:30:18.5589|INFO|RightLinesWrapper.MyLogger|Impedance data received
+2024-01-18 14:30:18.6517|INFO|RightLinesWrapper.MyLogger|Impedance data processed
+2024-01-18 14:30:18.7023|INFO|RightLinesWrapper.MyLogger|Impedance data complete. Valid: 2
+2024-01-18 14:30:18.7023|INFO|RightLinesWrapper.MyLogger|Set console: control: IMPEDANCE state: FAIL
+2024-01-18 14:30:18.7023|INFO|RightLinesWrapper.MyLogger|Set console: control: SETUP state: RUN
+2024-01-18 14:30:18.7106|INFO|RightLinesWrapper.MyLogger|Set tone burst request..
+2024-01-18 14:30:18.7106|INFO|RightLinesWrapper.MyLogger|Send toneburst..
+2024-01-18 14:30:18.7106|INFO|RightLinesWrapper.MyLogger|Gen tone burst...
+2024-01-18 14:30:18.7566|INFO|RightLinesWrapper.MyLogger|Tone burst generated.
+2024-01-18 14:30:18.7566|INFO|RightLinesWrapper.MyLogger|Set toneburst..
+2024-01-18 14:30:18.7566|INFO|RightLinesWrapper.MyLogger|Toneburst done..
+2024-01-18 14:30:18.7566|INFO|RightLinesWrapper.MyLogger|TB sent.
+2024-01-18 14:30:18.7566|INFO|RightLinesWrapper.MyLogger|Tone burst success? True
+2024-01-18 14:30:18.7566|INFO|RightLinesWrapper.MyLogger|Set Params..
+2024-01-18 14:30:18.8716|INFO|RightLinesWrapper.MyLogger|Params set..True
+2024-01-18 14:30:18.8716|INFO|RightLinesWrapper.MyLogger|Setup device with params: True
+2024-01-18 14:30:18.8716|INFO|RightLinesWrapper.MyLogger|Set console: control: SETUP state: OK
+2024-01-18 14:30:18.8716|INFO|RightLinesWrapper.MyLogger|Set console: control: TEST state: RUN
+2024-01-18 14:30:18.8716|INFO|RightLinesWrapper.MyLogger|# Start taking measurements...
+2024-01-18 14:30:18.8716|INFO|RightLinesWrapper.MyLogger|Channel test: from 1 to 12
+2024-01-18 14:30:18.8716|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:30:18.8716|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:30:18.8871|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:30:18.8871|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:30:18.8871|INFO|RightLinesWrapper.MyLogger|Set Tx 1
+2024-01-18 14:30:18.8871|INFO|RightLinesWrapper.MyLogger|Tx set :1
+2024-01-18 14:30:18.8871|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:30:18.8871|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:30:18.9868|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:30:19.0031|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:30:19.0306|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:30:19.0306|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:30:19.0306|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:30:19.0306|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:30:19.0306|INFO|RightLinesWrapper.MyLogger|Set Tx 2
+2024-01-18 14:30:19.0306|INFO|RightLinesWrapper.MyLogger|Tx set :2
+2024-01-18 14:30:19.0306|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:30:19.0306|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:30:19.1001|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:30:19.1211|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:30:19.1555|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:30:19.1555|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:30:19.1555|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:30:19.1555|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:30:19.1555|INFO|RightLinesWrapper.MyLogger|Set Tx 3
+2024-01-18 14:30:19.1555|INFO|RightLinesWrapper.MyLogger|Tx set :3
+2024-01-18 14:30:19.1555|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:30:19.1555|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:30:19.2329|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:30:19.2482|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:30:19.2776|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:30:19.2776|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:30:19.2776|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:30:19.2776|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:30:19.2776|INFO|RightLinesWrapper.MyLogger|Set Tx 4
+2024-01-18 14:30:19.2776|INFO|RightLinesWrapper.MyLogger|Tx set :4
+2024-01-18 14:30:19.2776|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:30:19.2776|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:30:19.3464|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:30:19.3604|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:30:19.3955|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:30:19.3955|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:30:19.3955|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:30:19.3955|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:30:19.3955|INFO|RightLinesWrapper.MyLogger|Set Tx 5
+2024-01-18 14:30:19.3955|INFO|RightLinesWrapper.MyLogger|Tx set :5
+2024-01-18 14:30:19.3955|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:30:19.3955|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:30:19.4676|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:30:19.4824|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:30:19.5170|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:30:19.5170|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:30:19.5170|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:30:19.5170|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:30:19.5170|INFO|RightLinesWrapper.MyLogger|Set Tx 6
+2024-01-18 14:30:19.5170|INFO|RightLinesWrapper.MyLogger|Tx set :6
+2024-01-18 14:30:19.5170|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:30:19.5170|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:30:19.5818|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:30:19.6137|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:30:19.6486|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:30:19.6486|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:30:19.6486|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:30:19.6486|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:30:19.6486|INFO|RightLinesWrapper.MyLogger|Set Tx 7
+2024-01-18 14:30:19.6486|INFO|RightLinesWrapper.MyLogger|Tx set :7
+2024-01-18 14:30:19.6486|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:30:19.6486|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:30:19.7134|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:30:19.7299|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:30:19.7643|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:30:19.7643|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:30:19.7643|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:30:19.7643|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:30:19.7643|INFO|RightLinesWrapper.MyLogger|Set Tx 8
+2024-01-18 14:30:19.7643|INFO|RightLinesWrapper.MyLogger|Tx set :8
+2024-01-18 14:30:19.7643|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:30:19.7643|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:30:19.8268|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:30:19.8454|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:30:19.8793|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:30:19.8801|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:30:19.8801|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:30:19.8801|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:30:19.8801|INFO|RightLinesWrapper.MyLogger|Set Tx 9
+2024-01-18 14:30:19.8801|INFO|RightLinesWrapper.MyLogger|Tx set :9
+2024-01-18 14:30:19.8801|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:30:19.8801|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:30:19.9463|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:30:19.9605|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:30:19.9953|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:30:19.9953|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:30:19.9953|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:30:19.9953|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:30:19.9953|INFO|RightLinesWrapper.MyLogger|Set Tx 10
+2024-01-18 14:30:19.9953|INFO|RightLinesWrapper.MyLogger|Tx set :10
+2024-01-18 14:30:19.9953|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:30:19.9953|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:30:20.0591|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:30:20.0753|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:30:20.1084|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:30:20.1084|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:30:20.1084|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:30:20.1084|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:30:20.1084|INFO|RightLinesWrapper.MyLogger|Set Tx 11
+2024-01-18 14:30:20.1084|INFO|RightLinesWrapper.MyLogger|Tx set :11
+2024-01-18 14:30:20.1084|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:30:20.1084|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:30:20.1748|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:30:20.1885|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:30:20.2224|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:30:20.2224|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:30:20.2224|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:30:20.2242|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:30:20.2242|INFO|RightLinesWrapper.MyLogger|Set Tx 12
+2024-01-18 14:30:20.2242|INFO|RightLinesWrapper.MyLogger|Tx set :12
+2024-01-18 14:30:20.2242|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:30:20.2242|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:30:20.2907|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:30:20.3075|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:30:20.3421|INFO|RightLinesWrapper.MyLogger|# Measurements complete.
+2024-01-18 14:30:20.3421|INFO|RightLinesWrapper.MyLogger|Test complete
+2024-01-18 14:30:20.3421|INFO|RightLinesWrapper.MyLogger|Set console: control: TEST state: OK
+2024-01-18 14:30:20.3421|INFO|RightLinesWrapper.MyLogger|Set console: control: SAVE state: RUN
+2024-01-18 14:30:20.4434|INFO|RightLinesWrapper.MyLogger|Set console: control: SAVE state: OK
+2024-01-18 14:30:20.4434|INFO|RightLinesWrapper.MyLogger|Saving data : True
+2024-01-18 14:30:20.4434|INFO|RightLinesWrapper.MyLogger|Saving settings
+2024-01-18 14:30:20.4811|INFO|RightLinesWrapper.MyLogger|Settings saved
+2024-01-18 14:30:20.4916|INFO|RightLinesWrapper.MyLogger|## Dispose RLC. Disposed? False
+2024-01-18 14:30:20.4916|INFO|RightLinesWrapper.MyLogger|Power..False
+2024-01-18 14:30:20.4916|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:30:20.4916|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:30:20.4916|INFO|RightLinesWrapper.MyLogger|Power changed: False
+2024-01-18 14:30:20.5238|INFO|RightLinesWrapper.MyLogger|## RLC Disposed
+2024-01-18 14:32:56.6386|INFO|RightLinesWrapper.MyLogger|----------------
+2024-01-18 14:32:56.6538|INFO|RightLinesWrapper.MyLogger|Initialised form
+2024-01-18 14:32:56.6858|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2024-01-18 14:32:56.7930|INFO|RightLinesWrapper.MyLogger|Using commandline settings
+2024-01-18 14:32:56.7930|INFO|RightLinesWrapper.MyLogger|{"Sampling":{"Sample_RateHz":500000,"Num_Samples":2048,"Start_Offset":0,"Num_Averages":1,"RepeatDelay_mS":0,"adc_Range_options":[2.5,5,10],"adc_Range_":1},"Impedence":{"StartFrequency":1000,"EndFrequency":100000,"IdleFrequency":1000,"num_points":30,"num_samples":1024},"Toneburst":{"Shape_options":["Square","Triang","Hanning","Gauss"],"Shape":4,"Frequency":50000,"num_cycles":6,"Phase_deg":0,"Tx_mute_samples":0,"Tx_Channel":1,"Attenuation_dB":0},"Instrument_attributes":{"number_of_transducers":12,"trans_row":[1,1,1,1,2,2,2,2,3,3,3,3],"trans_pos":[1,2,3,4,1,2,3,4,1,2,3,4],"trans_pos_orientation":[[0,0,1],[0,-1,0],[0,0,1],[0,1,0],[1,0,0],[0,-1,0],[-1,0,0],[0,1,0],[1,0,0],[0,0,-1],[-1,0,0],[0,0,-1]],"trans_row_pos":[0.012,0,-0.012]},"TIPI_LEGACY":{"No_of_instruments":4,"SNs":[33690,34373,33634,37075],"channels":[[13,14,0,0],[1,2,3,4],[5,6,7,8],[9,10,11,12]],"ActiveChannels":12,"delay_factor":0,"sens":0.2,"resolution":14,"afg_pts":32,"sig_amp":12,"meas_delay":0,"averages_no":16,"pretrig":0,"stretch_factor":1},"Model_data":{"fe_fnames":["//SAFE_solutions//AC-120_SOLVED_1.mat","//SAFE_solutions//AC-107_SOLVED_1.mat"],"trans_node_list":[[362,729,371,2],[362,729,371,2]],"real_length":[-3,3]},"filename":"rl_temp.dat","hash":"279 18-Jan-2024 14:32:55"}
+2024-01-18 14:32:56.9866|INFO|RightLinesWrapper.MyLogger|Commandline settings used.
+2024-01-18 14:32:56.9884|INFO|RightLinesWrapper.MyLogger|Set state: OPERATIONAL
+2024-01-18 14:32:57.1544|INFO|RightLinesWrapper.MyLogger|Set data ready callback..
+2024-01-18 14:32:57.1544|INFO|RightLinesWrapper.MyLogger|Data ready callback set
+2024-01-18 14:32:57.1544|INFO|RightLinesWrapper.MyLogger|Imepdance callback set.
+2024-01-18 14:32:57.1544|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:32:57.1544|INFO|RightLinesWrapper.MyLogger|# RLC Created. state: READY
+2024-01-18 14:32:58.0116|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:32:58.0116|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:32:59.0146|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:32:59.0146|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:00.0176|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:00.0176|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:01.0183|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:01.0183|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:02.0211|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:02.0211|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:03.0308|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:03.0308|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:04.0306|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:04.0306|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:05.0343|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:05.0343|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:06.0340|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:06.0368|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:07.0377|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:07.0377|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:08.0471|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:08.0471|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:09.0365|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:09.0365|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:10.0420|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:10.0420|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:11.0396|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:11.0396|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:12.0478|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:12.0478|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:13.0447|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:13.0447|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:14.0535|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:14.0535|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:14.7947|INFO|RightLinesWrapper.MyLogger|Set console: control: INIT state: FAIL
+2024-01-18 14:33:14.8299|INFO|RightLinesWrapper.MyLogger|Power..True
+2024-01-18 14:33:14.8299|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:14.8299|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:14.8299|INFO|RightLinesWrapper.MyLogger|Power changed: True
+2024-01-18 14:33:14.8329|INFO|RightLinesWrapper.MyLogger|Power..False
+2024-01-18 14:33:14.8329|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:14.8329|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:14.8329|INFO|RightLinesWrapper.MyLogger|Power..True
+2024-01-18 14:33:14.8329|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:14.8329|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:14.8329|INFO|RightLinesWrapper.MyLogger|Power changed: True
+2024-01-18 14:33:14.8329|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:33:14.9020|INFO|RightLinesWrapper.MyLogger|## Run controller. Single run: False
+2024-01-18 14:33:14.9020|INFO|RightLinesWrapper.MyLogger|Power..True
+2024-01-18 14:33:14.9020|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:14.9020|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:14.9020|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:14.9020|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:14.9020|INFO|RightLinesWrapper.MyLogger|Run controller
+2024-01-18 14:33:14.9020|INFO|RightLinesWrapper.MyLogger|Set console: control: INIT state: FAIL
+2024-01-18 14:33:14.9655|INFO|RightLinesWrapper.MyLogger|Start Inductance test Thread Id:1
+2024-01-18 14:33:14.9655|INFO|RightLinesWrapper.MyLogger|Set console: control: IMPEDANCE state: RUN
+2024-01-18 14:33:14.9720|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:33:14.9729|INFO|RightLinesWrapper.MyLogger|Starting impedance test..
+2024-01-18 14:33:17.2932|INFO|RightLinesWrapper.MyLogger|Impedance data ready. Success: True
+2024-01-18 14:33:17.2932|INFO|RightLinesWrapper.MyLogger|# Impedance Ready
+2024-01-18 14:33:17.2932|INFO|RightLinesWrapper.MyLogger|Impedance done..
+2024-01-18 14:33:17.2932|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:33:17.2932|INFO|RightLinesWrapper.MyLogger|Inductance test produced data? True
+2024-01-18 14:33:17.2932|INFO|RightLinesWrapper.MyLogger|Impedance data received
+2024-01-18 14:33:17.3541|INFO|RightLinesWrapper.MyLogger|Impedance data processed
+2024-01-18 14:33:17.3847|INFO|RightLinesWrapper.MyLogger|Impedance data complete. Valid: 2
+2024-01-18 14:33:17.3847|INFO|RightLinesWrapper.MyLogger|Set console: control: IMPEDANCE state: FAIL
+2024-01-18 14:33:17.3847|INFO|RightLinesWrapper.MyLogger|Set console: control: SETUP state: RUN
+2024-01-18 14:33:17.3847|INFO|RightLinesWrapper.MyLogger|Set tone burst request..
+2024-01-18 14:33:17.3952|INFO|RightLinesWrapper.MyLogger|Send toneburst..
+2024-01-18 14:33:17.3952|INFO|RightLinesWrapper.MyLogger|Gen tone burst...
+2024-01-18 14:33:17.4391|INFO|RightLinesWrapper.MyLogger|Tone burst generated.
+2024-01-18 14:33:17.4391|INFO|RightLinesWrapper.MyLogger|Set toneburst..
+2024-01-18 14:33:17.4391|INFO|RightLinesWrapper.MyLogger|Toneburst done..
+2024-01-18 14:33:17.4391|INFO|RightLinesWrapper.MyLogger|TB sent.
+2024-01-18 14:33:17.4391|INFO|RightLinesWrapper.MyLogger|Tone burst success? True
+2024-01-18 14:33:17.4391|INFO|RightLinesWrapper.MyLogger|Set Params..
+2024-01-18 14:33:17.5624|INFO|RightLinesWrapper.MyLogger|Params set..True
+2024-01-18 14:33:17.5624|INFO|RightLinesWrapper.MyLogger|Setup device with params: True
+2024-01-18 14:33:17.5624|INFO|RightLinesWrapper.MyLogger|Set console: control: SETUP state: OK
+2024-01-18 14:33:17.5689|INFO|RightLinesWrapper.MyLogger|Set console: control: TEST state: RUN
+2024-01-18 14:33:17.5689|INFO|RightLinesWrapper.MyLogger|# Start taking measurements...
+2024-01-18 14:33:17.5689|INFO|RightLinesWrapper.MyLogger|Channel test: from 1 to 12
+2024-01-18 14:33:17.5689|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:33:17.5689|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:33:17.5689|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:17.5689|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:17.5689|INFO|RightLinesWrapper.MyLogger|Set Tx 1
+2024-01-18 14:33:17.5689|INFO|RightLinesWrapper.MyLogger|Tx set :1
+2024-01-18 14:33:17.5689|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:33:17.5838|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:33:17.6830|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:33:17.6996|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:33:17.7266|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:33:17.7266|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:33:17.7266|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:17.7266|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:17.7266|INFO|RightLinesWrapper.MyLogger|Set Tx 2
+2024-01-18 14:33:17.7266|INFO|RightLinesWrapper.MyLogger|Tx set :2
+2024-01-18 14:33:17.7266|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:33:17.7266|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:33:17.7923|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:33:17.8072|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:33:17.8413|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:33:17.8413|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:33:17.8413|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:17.8413|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:17.8413|INFO|RightLinesWrapper.MyLogger|Set Tx 3
+2024-01-18 14:33:17.8413|INFO|RightLinesWrapper.MyLogger|Tx set :3
+2024-01-18 14:33:17.8413|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:33:17.8413|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:33:17.9046|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:33:17.9203|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:33:17.9548|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:33:17.9548|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:33:17.9548|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:17.9548|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:17.9548|INFO|RightLinesWrapper.MyLogger|Set Tx 4
+2024-01-18 14:33:17.9576|INFO|RightLinesWrapper.MyLogger|Tx set :4
+2024-01-18 14:33:17.9576|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:33:17.9576|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:33:18.0269|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:33:18.0431|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:33:18.0772|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:33:18.0780|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:33:18.0780|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:18.0780|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:18.0780|INFO|RightLinesWrapper.MyLogger|Set Tx 5
+2024-01-18 14:33:18.0780|INFO|RightLinesWrapper.MyLogger|Tx set :5
+2024-01-18 14:33:18.0780|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:33:18.0780|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:33:18.1545|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:33:18.1717|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:33:18.2069|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:33:18.2069|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:33:18.2069|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:18.2069|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:18.2096|INFO|RightLinesWrapper.MyLogger|Set Tx 6
+2024-01-18 14:33:18.2096|INFO|RightLinesWrapper.MyLogger|Tx set :6
+2024-01-18 14:33:18.2096|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:33:18.2096|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:33:18.2705|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:33:18.3105|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:33:18.3464|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:33:18.3464|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:33:18.3464|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:18.3464|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:18.3464|INFO|RightLinesWrapper.MyLogger|Set Tx 7
+2024-01-18 14:33:18.3464|INFO|RightLinesWrapper.MyLogger|Tx set :7
+2024-01-18 14:33:18.3464|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:33:18.3464|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:33:18.4163|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:33:18.4302|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:33:18.4677|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:33:18.4677|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:33:18.4677|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:18.4677|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:18.4677|INFO|RightLinesWrapper.MyLogger|Set Tx 8
+2024-01-18 14:33:18.4677|INFO|RightLinesWrapper.MyLogger|Tx set :8
+2024-01-18 14:33:18.4677|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:33:18.4677|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:33:18.5413|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:33:18.5572|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:33:18.5905|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:33:18.5905|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:33:18.5905|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:18.5905|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:18.5905|INFO|RightLinesWrapper.MyLogger|Set Tx 9
+2024-01-18 14:33:18.5905|INFO|RightLinesWrapper.MyLogger|Tx set :9
+2024-01-18 14:33:18.5905|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:33:18.5905|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:33:18.6532|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:33:18.6680|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:33:18.7028|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:33:18.7028|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:33:18.7028|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:18.7028|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:18.7028|INFO|RightLinesWrapper.MyLogger|Set Tx 10
+2024-01-18 14:33:18.7028|INFO|RightLinesWrapper.MyLogger|Tx set :10
+2024-01-18 14:33:18.7028|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:33:18.7028|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:33:18.7663|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:33:18.7916|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:33:18.8247|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:33:18.8247|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:33:18.8247|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:18.8247|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:18.8247|INFO|RightLinesWrapper.MyLogger|Set Tx 11
+2024-01-18 14:33:18.8247|INFO|RightLinesWrapper.MyLogger|Tx set :11
+2024-01-18 14:33:18.8247|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:33:18.8247|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:33:18.8967|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:33:18.9438|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:33:18.9752|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:33:18.9752|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:33:18.9752|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:18.9752|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:18.9752|INFO|RightLinesWrapper.MyLogger|Set Tx 12
+2024-01-18 14:33:18.9752|INFO|RightLinesWrapper.MyLogger|Tx set :12
+2024-01-18 14:33:18.9752|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:33:18.9752|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:33:19.0473|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:33:19.0615|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:33:19.0846|INFO|RightLinesWrapper.MyLogger|# Measurements complete.
+2024-01-18 14:33:19.0846|INFO|RightLinesWrapper.MyLogger|Test complete
+2024-01-18 14:33:19.0846|INFO|RightLinesWrapper.MyLogger|Set console: control: TEST state: OK
+2024-01-18 14:33:19.0846|INFO|RightLinesWrapper.MyLogger|Set console: control: SAVE state: RUN
+2024-01-18 14:33:19.1840|INFO|RightLinesWrapper.MyLogger|Set console: control: SAVE state: OK
+2024-01-18 14:33:19.1840|INFO|RightLinesWrapper.MyLogger|Saving data : True
+2024-01-18 14:33:19.1840|INFO|RightLinesWrapper.MyLogger|Saving settings
+2024-01-18 14:33:19.2226|INFO|RightLinesWrapper.MyLogger|Settings saved
+2024-01-18 14:33:19.2338|INFO|RightLinesWrapper.MyLogger|## Dispose RLC. Disposed? False
+2024-01-18 14:33:19.2338|INFO|RightLinesWrapper.MyLogger|Power..False
+2024-01-18 14:33:19.2338|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:33:19.2338|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:33:19.2338|INFO|RightLinesWrapper.MyLogger|Power changed: False
+2024-01-18 14:33:19.2664|INFO|RightLinesWrapper.MyLogger|## RLC Disposed
+2024-01-18 14:34:15.3167|INFO|RightLinesWrapper.MyLogger|----------------
+2024-01-18 14:34:15.3322|INFO|RightLinesWrapper.MyLogger|Initialised form
+2024-01-18 14:34:15.3729|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2024-01-18 14:34:15.4768|INFO|RightLinesWrapper.MyLogger|Using commandline settings
+2024-01-18 14:34:15.4768|INFO|RightLinesWrapper.MyLogger|{"Sampling":{"Sample_RateHz":500000,"Num_Samples":2048,"Start_Offset":0,"Num_Averages":1,"RepeatDelay_mS":0,"adc_Range_options":[2.5,5,10],"adc_Range_":1},"Impedence":{"StartFrequency":1000,"EndFrequency":100000,"IdleFrequency":1000,"num_points":30,"num_samples":1024},"Toneburst":{"Shape_options":["Square","Triang","Hanning","Gauss"],"Shape":4,"Frequency":50000,"num_cycles":6,"Phase_deg":0,"Tx_mute_samples":0,"Tx_Channel":1,"Attenuation_dB":0},"Instrument_attributes":{"number_of_transducers":12,"trans_row":[1,1,1,1,2,2,2,2,3,3,3,3],"trans_pos":[1,2,3,4,1,2,3,4,1,2,3,4],"trans_pos_orientation":[[0,0,1],[0,-1,0],[0,0,1],[0,1,0],[1,0,0],[0,-1,0],[-1,0,0],[0,1,0],[1,0,0],[0,0,-1],[-1,0,0],[0,0,-1]],"trans_row_pos":[0.012,0,-0.012]},"TIPI_LEGACY":{"No_of_instruments":4,"SNs":[33690,34373,33634,37075],"channels":[[13,14,0,0],[1,2,3,4],[5,6,7,8],[9,10,11,12]],"ActiveChannels":12,"delay_factor":0,"sens":0.2,"resolution":14,"afg_pts":32,"sig_amp":12,"meas_delay":0,"averages_no":16,"pretrig":0,"stretch_factor":1},"Model_data":{"fe_fnames":["//SAFE_solutions//AC-120_SOLVED_1.mat","//SAFE_solutions//AC-107_SOLVED_1.mat"],"trans_node_list":[[362,729,371,2],[362,729,371,2]],"real_length":[-3,3]},"filename":"rl_temp.dat","hash":"547 18-Jan-2024 14:34:14"}
+2024-01-18 14:34:15.6639|INFO|RightLinesWrapper.MyLogger|Commandline settings used.
+2024-01-18 14:34:15.6639|INFO|RightLinesWrapper.MyLogger|Set state: OPERATIONAL
+2024-01-18 14:34:15.8587|INFO|RightLinesWrapper.MyLogger|Set data ready callback..
+2024-01-18 14:34:15.8587|INFO|RightLinesWrapper.MyLogger|Data ready callback set
+2024-01-18 14:34:15.8587|INFO|RightLinesWrapper.MyLogger|Imepdance callback set.
+2024-01-18 14:34:15.8587|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:34:15.8587|INFO|RightLinesWrapper.MyLogger|# RLC Created. state: READY
+2024-01-18 14:34:16.6838|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:34:16.6838|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:34:17.6804|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:34:17.6804|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:34:18.2026|INFO|RightLinesWrapper.MyLogger|Set console: control: INIT state: FAIL
+2024-01-18 14:34:18.2347|INFO|RightLinesWrapper.MyLogger|Power..True
+2024-01-18 14:34:18.2347|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:34:18.2370|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:34:18.2385|INFO|RightLinesWrapper.MyLogger|Power changed: True
+2024-01-18 14:34:18.2385|INFO|RightLinesWrapper.MyLogger|Power..False
+2024-01-18 14:34:18.2385|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:34:18.2385|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:34:18.2385|INFO|RightLinesWrapper.MyLogger|Power..True
+2024-01-18 14:34:18.2385|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:34:18.2385|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:34:18.2385|INFO|RightLinesWrapper.MyLogger|Power changed: True
+2024-01-18 14:34:18.2385|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:34:18.2880|INFO|RightLinesWrapper.MyLogger|## Run controller. Single run: False
+2024-01-18 14:34:18.2880|INFO|RightLinesWrapper.MyLogger|Power..True
+2024-01-18 14:34:18.2880|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:34:18.2880|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:34:18.2880|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:34:18.2880|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:34:18.2880|INFO|RightLinesWrapper.MyLogger|Run controller
+2024-01-18 14:34:18.2880|INFO|RightLinesWrapper.MyLogger|Set console: control: INIT state: FAIL
+2024-01-18 14:34:18.3433|INFO|RightLinesWrapper.MyLogger|Start Inductance test Thread Id:1
+2024-01-18 14:34:18.3433|INFO|RightLinesWrapper.MyLogger|Set console: control: IMPEDANCE state: RUN
+2024-01-18 14:34:18.3503|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:34:18.3503|INFO|RightLinesWrapper.MyLogger|Starting impedance test..
+2024-01-18 14:34:20.6488|INFO|RightLinesWrapper.MyLogger|Impedance data ready. Success: True
+2024-01-18 14:34:20.6488|INFO|RightLinesWrapper.MyLogger|# Impedance Ready
+2024-01-18 14:34:20.6488|INFO|RightLinesWrapper.MyLogger|Impedance done..
+2024-01-18 14:34:20.6488|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:34:20.6488|INFO|RightLinesWrapper.MyLogger|Inductance test produced data? True
+2024-01-18 14:34:20.6488|INFO|RightLinesWrapper.MyLogger|Impedance data received
+2024-01-18 14:34:20.7139|INFO|RightLinesWrapper.MyLogger|Impedance data processed
+2024-01-18 14:34:20.7689|INFO|RightLinesWrapper.MyLogger|Impedance data complete. Valid: 2
+2024-01-18 14:34:20.7689|INFO|RightLinesWrapper.MyLogger|Set console: control: IMPEDANCE state: FAIL
+2024-01-18 14:34:20.7757|INFO|RightLinesWrapper.MyLogger|Set console: control: SETUP state: RUN
+2024-01-18 14:34:20.7757|INFO|RightLinesWrapper.MyLogger|Set tone burst request..
+2024-01-18 14:34:20.7757|INFO|RightLinesWrapper.MyLogger|Send toneburst..
+2024-01-18 14:34:20.7757|INFO|RightLinesWrapper.MyLogger|Gen tone burst...
+2024-01-18 14:34:20.8188|INFO|RightLinesWrapper.MyLogger|Tone burst generated.
+2024-01-18 14:34:20.8188|INFO|RightLinesWrapper.MyLogger|Set toneburst..
+2024-01-18 14:34:20.8188|INFO|RightLinesWrapper.MyLogger|Toneburst done..
+2024-01-18 14:34:20.8188|INFO|RightLinesWrapper.MyLogger|TB sent.
+2024-01-18 14:34:20.8188|INFO|RightLinesWrapper.MyLogger|Tone burst success? True
+2024-01-18 14:34:20.8188|INFO|RightLinesWrapper.MyLogger|Set Params..
+2024-01-18 14:34:20.8188|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:34:20.8327|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:34:20.9346|INFO|RightLinesWrapper.MyLogger|Params set..True
+2024-01-18 14:34:20.9346|INFO|RightLinesWrapper.MyLogger|Setup device with params: True
+2024-01-18 14:34:20.9346|INFO|RightLinesWrapper.MyLogger|Set console: control: SETUP state: OK
+2024-01-18 14:34:20.9346|INFO|RightLinesWrapper.MyLogger|Set console: control: TEST state: RUN
+2024-01-18 14:34:20.9346|INFO|RightLinesWrapper.MyLogger|# Start taking measurements...
+2024-01-18 14:34:20.9346|INFO|RightLinesWrapper.MyLogger|Channel test: from 1 to 12
+2024-01-18 14:34:20.9346|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:34:20.9346|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:34:20.9346|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:34:20.9346|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:34:20.9346|INFO|RightLinesWrapper.MyLogger|Set Tx 1
+2024-01-18 14:34:20.9346|INFO|RightLinesWrapper.MyLogger|Tx set :1
+2024-01-18 14:34:20.9346|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:34:20.9346|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:34:21.0430|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:34:21.0578|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:34:21.0812|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:34:21.0812|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:34:21.0824|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:34:21.0824|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:34:21.0824|INFO|RightLinesWrapper.MyLogger|Set Tx 2
+2024-01-18 14:34:21.0824|INFO|RightLinesWrapper.MyLogger|Tx set :2
+2024-01-18 14:34:21.0824|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:34:21.0824|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:34:21.1430|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:34:21.1566|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:34:21.1909|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:34:21.1909|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:34:21.1909|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:34:21.1909|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:34:21.1909|INFO|RightLinesWrapper.MyLogger|Set Tx 3
+2024-01-18 14:34:21.1909|INFO|RightLinesWrapper.MyLogger|Tx set :3
+2024-01-18 14:34:21.1909|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:34:21.1909|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:34:21.2677|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:34:21.2822|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:34:21.3046|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:34:21.3046|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:34:21.3046|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:34:21.3046|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:34:21.3046|INFO|RightLinesWrapper.MyLogger|Set Tx 4
+2024-01-18 14:34:21.3046|INFO|RightLinesWrapper.MyLogger|Tx set :4
+2024-01-18 14:34:21.3046|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:34:21.3046|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:34:21.3661|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:34:21.3815|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:34:21.3962|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:34:21.3962|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:34:21.3962|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:34:21.3962|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:34:21.3962|INFO|RightLinesWrapper.MyLogger|Set Tx 5
+2024-01-18 14:34:21.3962|INFO|RightLinesWrapper.MyLogger|Tx set :5
+2024-01-18 14:34:21.3962|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:34:21.3962|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:34:21.4643|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:34:21.4805|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:34:21.5149|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:34:21.5149|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:34:21.5149|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:34:21.5149|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:34:21.5149|INFO|RightLinesWrapper.MyLogger|Set Tx 6
+2024-01-18 14:34:21.5149|INFO|RightLinesWrapper.MyLogger|Tx set :6
+2024-01-18 14:34:21.5149|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:34:21.5149|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:34:21.5861|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:34:21.6043|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:34:21.6346|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:34:21.6346|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:34:21.6346|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:34:21.6346|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:34:21.6346|INFO|RightLinesWrapper.MyLogger|Set Tx 7
+2024-01-18 14:34:21.6346|INFO|RightLinesWrapper.MyLogger|Tx set :7
+2024-01-18 14:34:21.6346|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:34:21.6346|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:34:21.7113|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:34:21.7271|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:34:21.7617|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:34:21.7617|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:34:21.7617|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:34:21.7617|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:34:21.7617|INFO|RightLinesWrapper.MyLogger|Set Tx 8
+2024-01-18 14:34:21.7617|INFO|RightLinesWrapper.MyLogger|Tx set :8
+2024-01-18 14:34:21.7617|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:34:21.7617|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:34:21.8458|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:34:21.8604|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:34:21.8952|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:34:21.8952|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:34:21.8952|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:34:21.8952|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:34:21.8952|INFO|RightLinesWrapper.MyLogger|Set Tx 9
+2024-01-18 14:34:21.8952|INFO|RightLinesWrapper.MyLogger|Tx set :9
+2024-01-18 14:34:21.8952|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:34:21.8952|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:34:21.9592|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:34:21.9755|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:34:22.0124|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:34:22.0124|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:34:22.0124|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:34:22.0124|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:34:22.0124|INFO|RightLinesWrapper.MyLogger|Set Tx 10
+2024-01-18 14:34:22.0124|INFO|RightLinesWrapper.MyLogger|Tx set :10
+2024-01-18 14:34:22.0124|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:34:22.0124|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:34:22.0760|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:34:22.0911|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:34:22.1222|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:34:22.1222|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:34:22.1222|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:34:22.1222|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:34:22.1222|INFO|RightLinesWrapper.MyLogger|Set Tx 11
+2024-01-18 14:34:22.1222|INFO|RightLinesWrapper.MyLogger|Tx set :11
+2024-01-18 14:34:22.1222|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:34:22.1222|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:34:22.1992|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:34:22.2133|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:34:22.2471|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:34:22.2471|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:34:22.2471|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:34:22.2471|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:34:22.2471|INFO|RightLinesWrapper.MyLogger|Set Tx 12
+2024-01-18 14:34:22.2471|INFO|RightLinesWrapper.MyLogger|Tx set :12
+2024-01-18 14:34:22.2471|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:34:22.2471|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:34:22.3299|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:34:22.3465|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:34:22.3823|INFO|RightLinesWrapper.MyLogger|# Measurements complete.
+2024-01-18 14:34:22.3823|INFO|RightLinesWrapper.MyLogger|Test complete
+2024-01-18 14:34:22.3823|INFO|RightLinesWrapper.MyLogger|Set console: control: TEST state: OK
+2024-01-18 14:34:22.3823|INFO|RightLinesWrapper.MyLogger|Set console: control: SAVE state: RUN
+2024-01-18 14:34:22.4956|INFO|RightLinesWrapper.MyLogger|Set console: control: SAVE state: OK
+2024-01-18 14:34:22.4956|INFO|RightLinesWrapper.MyLogger|Saving data : True
+2024-01-18 14:34:22.4956|INFO|RightLinesWrapper.MyLogger|Saving settings
+2024-01-18 14:34:22.5437|INFO|RightLinesWrapper.MyLogger|Settings saved
+2024-01-18 14:34:22.5577|INFO|RightLinesWrapper.MyLogger|## Dispose RLC. Disposed? False
+2024-01-18 14:34:22.5577|INFO|RightLinesWrapper.MyLogger|Power..False
+2024-01-18 14:34:22.5577|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:34:22.5577|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:34:22.5577|INFO|RightLinesWrapper.MyLogger|Power changed: False
+2024-01-18 14:34:22.6071|INFO|RightLinesWrapper.MyLogger|## RLC Disposed
+2024-01-18 14:36:10.2650|INFO|RightLinesWrapper.MyLogger|----------------
+2024-01-18 14:36:10.2804|INFO|RightLinesWrapper.MyLogger|Initialised form
+2024-01-18 14:36:10.3135|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2024-01-18 14:36:10.4025|INFO|RightLinesWrapper.MyLogger|Using commandline settings
+2024-01-18 14:36:10.4025|INFO|RightLinesWrapper.MyLogger|{"Sampling":{"Sample_RateHz":500000,"Num_Samples":2048,"Start_Offset":0,"Num_Averages":1,"RepeatDelay_mS":0,"adc_Range_options":[2.5,5,10],"adc_Range_":1},"Impedence":{"StartFrequency":1000,"EndFrequency":100000,"IdleFrequency":1000,"num_points":30,"num_samples":1024},"Toneburst":{"Shape_options":["Square","Triang","Hanning","Gauss"],"Shape":4,"Frequency":50000,"num_cycles":6,"Phase_deg":0,"Tx_mute_samples":0,"Tx_Channel":1,"Attenuation_dB":0},"Instrument_attributes":{"number_of_transducers":12,"trans_row":[1,1,1,1,2,2,2,2,3,3,3,3],"trans_pos":[1,2,3,4,1,2,3,4,1,2,3,4],"trans_pos_orientation":[[0,0,1],[0,-1,0],[0,0,1],[0,1,0],[1,0,0],[0,-1,0],[-1,0,0],[0,1,0],[1,0,0],[0,0,-1],[-1,0,0],[0,0,-1]],"trans_row_pos":[0.012,0,-0.012]},"TIPI_LEGACY":{"No_of_instruments":4,"SNs":[33690,34373,33634,37075],"channels":[[13,14,0,0],[1,2,3,4],[5,6,7,8],[9,10,11,12]],"ActiveChannels":12,"delay_factor":0,"sens":0.2,"resolution":14,"afg_pts":32,"sig_amp":12,"meas_delay":0,"averages_no":16,"pretrig":0,"stretch_factor":1},"Model_data":{"fe_fnames":["//SAFE_solutions//AC-120_SOLVED_1.mat","//SAFE_solutions//AC-107_SOLVED_1.mat"],"trans_node_list":[[362,729,371,2],[362,729,371,2]],"real_length":[-3,3]},"filename":"rl_temp.dat","hash":"965 18-Jan-2024 14:36:09"}
+2024-01-18 14:36:10.5784|INFO|RightLinesWrapper.MyLogger|Commandline settings used.
+2024-01-18 14:36:10.5784|INFO|RightLinesWrapper.MyLogger|Set state: OPERATIONAL
+2024-01-18 14:36:10.8050|INFO|RightLinesWrapper.MyLogger|Set data ready callback..
+2024-01-18 14:36:10.8050|INFO|RightLinesWrapper.MyLogger|Data ready callback set
+2024-01-18 14:36:10.8050|INFO|RightLinesWrapper.MyLogger|Imepdance callback set.
+2024-01-18 14:36:10.8050|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:36:10.8050|INFO|RightLinesWrapper.MyLogger|# RLC Created. state: READY
+2024-01-18 14:36:11.5777|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:36:11.5777|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:36:12.5754|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:36:12.5754|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:36:12.7069|INFO|RightLinesWrapper.MyLogger|Set console: control: INIT state: FAIL
+2024-01-18 14:36:12.7411|INFO|RightLinesWrapper.MyLogger|Power..True
+2024-01-18 14:36:12.7421|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:36:12.7421|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:36:12.7421|INFO|RightLinesWrapper.MyLogger|Power changed: True
+2024-01-18 14:36:12.7421|INFO|RightLinesWrapper.MyLogger|Power..False
+2024-01-18 14:36:12.7421|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:36:12.7421|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:36:12.7421|INFO|RightLinesWrapper.MyLogger|Power changed: False
+2024-01-18 14:36:12.7421|INFO|RightLinesWrapper.MyLogger|Power..True
+2024-01-18 14:36:12.7421|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:36:12.7421|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:36:12.7421|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:36:12.7869|INFO|RightLinesWrapper.MyLogger|## Run controller. Single run: False
+2024-01-18 14:36:12.7869|INFO|RightLinesWrapper.MyLogger|Power..True
+2024-01-18 14:36:12.7869|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:36:12.7869|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:36:12.7869|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:36:12.7869|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:36:12.7915|INFO|RightLinesWrapper.MyLogger|Run controller
+2024-01-18 14:36:12.7915|INFO|RightLinesWrapper.MyLogger|Set console: control: INIT state: FAIL
+2024-01-18 14:36:12.8411|INFO|RightLinesWrapper.MyLogger|Start Inductance test Thread Id:1
+2024-01-18 14:36:12.8411|INFO|RightLinesWrapper.MyLogger|Set console: control: IMPEDANCE state: RUN
+2024-01-18 14:36:12.8411|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:36:12.8411|INFO|RightLinesWrapper.MyLogger|Starting impedance test..
+2024-01-18 14:36:15.1579|INFO|RightLinesWrapper.MyLogger|Impedance data ready. Success: True
+2024-01-18 14:36:15.1579|INFO|RightLinesWrapper.MyLogger|# Impedance Ready
+2024-01-18 14:36:15.1579|INFO|RightLinesWrapper.MyLogger|Impedance done..
+2024-01-18 14:36:15.1579|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:36:15.1579|INFO|RightLinesWrapper.MyLogger|Inductance test produced data? True
+2024-01-18 14:36:15.1579|INFO|RightLinesWrapper.MyLogger|Impedance data received
+2024-01-18 14:36:15.2072|INFO|RightLinesWrapper.MyLogger|Impedance data processed
+2024-01-18 14:36:15.2644|INFO|RightLinesWrapper.MyLogger|Impedance data complete. Valid: 6
+2024-01-18 14:36:15.2644|INFO|RightLinesWrapper.MyLogger|Set console: control: IMPEDANCE state: FAIL
+2024-01-18 14:36:15.2685|INFO|RightLinesWrapper.MyLogger|Set console: control: SETUP state: RUN
+2024-01-18 14:36:15.2685|INFO|RightLinesWrapper.MyLogger|Set tone burst request..
+2024-01-18 14:36:15.2685|INFO|RightLinesWrapper.MyLogger|Send toneburst..
+2024-01-18 14:36:15.2685|INFO|RightLinesWrapper.MyLogger|Gen tone burst...
+2024-01-18 14:36:15.3117|INFO|RightLinesWrapper.MyLogger|Tone burst generated.
+2024-01-18 14:36:15.3146|INFO|RightLinesWrapper.MyLogger|Set toneburst..
+2024-01-18 14:36:15.3146|INFO|RightLinesWrapper.MyLogger|Toneburst done..
+2024-01-18 14:36:15.3146|INFO|RightLinesWrapper.MyLogger|TB sent.
+2024-01-18 14:36:15.3146|INFO|RightLinesWrapper.MyLogger|Tone burst success? True
+2024-01-18 14:36:15.3146|INFO|RightLinesWrapper.MyLogger|Set Params..
+2024-01-18 14:36:15.4246|INFO|RightLinesWrapper.MyLogger|Params set..True
+2024-01-18 14:36:15.4246|INFO|RightLinesWrapper.MyLogger|Setup device with params: True
+2024-01-18 14:36:15.4246|INFO|RightLinesWrapper.MyLogger|Set console: control: SETUP state: OK
+2024-01-18 14:36:15.4246|INFO|RightLinesWrapper.MyLogger|Set console: control: TEST state: RUN
+2024-01-18 14:36:15.4246|INFO|RightLinesWrapper.MyLogger|# Start taking measurements...
+2024-01-18 14:36:15.4246|INFO|RightLinesWrapper.MyLogger|Channel test: from 1 to 12
+2024-01-18 14:36:15.4246|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:36:15.4246|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:36:15.4246|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:36:15.4246|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:36:15.4246|INFO|RightLinesWrapper.MyLogger|Set Tx 1
+2024-01-18 14:36:15.4246|INFO|RightLinesWrapper.MyLogger|Tx set :1
+2024-01-18 14:36:15.4404|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:36:15.4404|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:36:15.5353|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:36:15.5513|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:36:15.5784|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:36:15.5784|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:36:15.5784|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:36:15.5784|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:36:15.5784|INFO|RightLinesWrapper.MyLogger|Set Tx 2
+2024-01-18 14:36:15.5817|INFO|RightLinesWrapper.MyLogger|Tx set :2
+2024-01-18 14:36:15.5817|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:36:15.5817|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:36:15.6444|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:36:15.6611|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:36:15.6953|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:36:15.6953|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:36:15.6953|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:36:15.6953|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:36:15.6953|INFO|RightLinesWrapper.MyLogger|Set Tx 3
+2024-01-18 14:36:15.6953|INFO|RightLinesWrapper.MyLogger|Tx set :3
+2024-01-18 14:36:15.6953|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:36:15.6953|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:36:15.7715|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:36:15.7862|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:36:15.8079|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:36:15.8079|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:36:15.8079|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:36:15.8079|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:36:15.8079|INFO|RightLinesWrapper.MyLogger|Set Tx 4
+2024-01-18 14:36:15.8079|INFO|RightLinesWrapper.MyLogger|Tx set :4
+2024-01-18 14:36:15.8079|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:36:15.8079|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:36:15.8804|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:36:15.8971|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:36:15.9314|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:36:15.9314|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:36:15.9314|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:36:15.9314|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:36:15.9314|INFO|RightLinesWrapper.MyLogger|Set Tx 5
+2024-01-18 14:36:15.9314|INFO|RightLinesWrapper.MyLogger|Tx set :5
+2024-01-18 14:36:15.9314|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:36:15.9314|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:36:16.0062|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:36:16.0226|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:36:16.0575|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:36:16.0575|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:36:16.0575|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:36:16.0575|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:36:16.0575|INFO|RightLinesWrapper.MyLogger|Set Tx 6
+2024-01-18 14:36:16.0575|INFO|RightLinesWrapper.MyLogger|Tx set :6
+2024-01-18 14:36:16.0575|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:36:16.0575|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:36:16.1315|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:36:16.1476|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:36:16.1753|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:36:16.1753|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:36:16.1753|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:36:16.1788|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:36:16.1788|INFO|RightLinesWrapper.MyLogger|Set Tx 7
+2024-01-18 14:36:16.1788|INFO|RightLinesWrapper.MyLogger|Tx set :7
+2024-01-18 14:36:16.1788|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:36:16.1788|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:36:16.2432|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:36:16.2585|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:36:16.2938|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:36:16.2938|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:36:16.2938|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:36:16.2938|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:36:16.2938|INFO|RightLinesWrapper.MyLogger|Set Tx 8
+2024-01-18 14:36:16.2938|INFO|RightLinesWrapper.MyLogger|Tx set :8
+2024-01-18 14:36:16.2938|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:36:16.2938|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:36:16.3685|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:36:16.3834|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:36:16.4179|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:36:16.4179|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:36:16.4179|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:36:16.4179|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:36:16.4179|INFO|RightLinesWrapper.MyLogger|Set Tx 9
+2024-01-18 14:36:16.4179|INFO|RightLinesWrapper.MyLogger|Tx set :9
+2024-01-18 14:36:16.4179|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:36:16.4179|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:36:16.4943|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:36:16.5096|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:36:16.5443|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:36:16.5443|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:36:16.5443|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:36:16.5443|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:36:16.5443|INFO|RightLinesWrapper.MyLogger|Set Tx 10
+2024-01-18 14:36:16.5443|INFO|RightLinesWrapper.MyLogger|Tx set :10
+2024-01-18 14:36:16.5443|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:36:16.5443|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:36:16.6198|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:36:16.6344|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:36:16.6680|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:36:16.6680|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:36:16.6680|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:36:16.6680|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:36:16.6680|INFO|RightLinesWrapper.MyLogger|Set Tx 11
+2024-01-18 14:36:16.6680|INFO|RightLinesWrapper.MyLogger|Tx set :11
+2024-01-18 14:36:16.6680|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:36:16.6680|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:36:16.7453|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:36:16.7612|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:36:16.7952|INFO|RightLinesWrapper.MyLogger|$$ RLC state : RUNNING
+2024-01-18 14:36:16.7952|INFO|RightLinesWrapper.MyLogger|Starting measure.. Id:1
+2024-01-18 14:36:16.7952|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:36:16.7952|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:36:16.7952|INFO|RightLinesWrapper.MyLogger|Set Tx 12
+2024-01-18 14:36:16.7952|INFO|RightLinesWrapper.MyLogger|Tx set :12
+2024-01-18 14:36:16.7952|INFO|RightLinesWrapper.MyLogger|Taking measure..
+2024-01-18 14:36:16.7952|INFO|RightLinesWrapper.MyLogger|Measure done..
+2024-01-18 14:36:16.8714|INFO|RightLinesWrapper.MyLogger|$$ RLC state : READY
+2024-01-18 14:36:16.8861|INFO|RightLinesWrapper.MyLogger|Run data received Id:1
+2024-01-18 14:36:16.9209|INFO|RightLinesWrapper.MyLogger|# Measurements complete.
+2024-01-18 14:36:16.9209|INFO|RightLinesWrapper.MyLogger|Test complete
+2024-01-18 14:36:16.9209|INFO|RightLinesWrapper.MyLogger|Set console: control: TEST state: OK
+2024-01-18 14:36:16.9209|INFO|RightLinesWrapper.MyLogger|Set console: control: SAVE state: RUN
+2024-01-18 14:36:17.0334|INFO|RightLinesWrapper.MyLogger|Set console: control: SAVE state: OK
+2024-01-18 14:36:17.0334|INFO|RightLinesWrapper.MyLogger|Saving data : True
+2024-01-18 14:36:17.0334|INFO|RightLinesWrapper.MyLogger|Saving settings
+2024-01-18 14:36:17.0721|INFO|RightLinesWrapper.MyLogger|Settings saved
+2024-01-18 14:36:17.0833|INFO|RightLinesWrapper.MyLogger|## Dispose RLC. Disposed? False
+2024-01-18 14:36:17.0833|INFO|RightLinesWrapper.MyLogger|Power..False
+2024-01-18 14:36:17.0833|INFO|RightLinesWrapper.MyLogger|Request params
+2024-01-18 14:36:17.0833|INFO|RightLinesWrapper.MyLogger|params received: True
+2024-01-18 14:36:17.0833|INFO|RightLinesWrapper.MyLogger|Power changed: False
+2024-01-18 14:36:17.0944|INFO|RightLinesWrapper.MyLogger|## RLC Disposed

@@ -1,0 +1,1059 @@
+2025-05-09 16:09:56.3061|INFO|RightLinesWrapper.MyLogger|------------------------------------------
+2025-05-09 16:09:56.3330|INFO|RightLinesWrapper.MyLogger|Initialised form
+2025-05-09 16:09:56.3458|INFO|RightLinesWrapper.MyLogger|Using Saved settings
+2025-05-09 16:09:56.4357|INFO|RightLinesWrapper.MyLogger|Saved settings used.
+2025-05-09 16:09:56.4357|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:09:56.6193|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:01.4199|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:01.4639|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:01.4924|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:01.4924|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:02.5004|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:02.5302|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:02.5302|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:03.5242|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:03.5697|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:03.5697|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:04.5834|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:04.6299|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:04.6299|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:05.6359|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:05.6655|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:05.6655|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:06.6752|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:06.7213|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:06.7213|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:07.7261|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:07.7710|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:07.7710|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:08.7786|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:08.8090|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:08.8090|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:10.0568|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:10.0958|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:10.0958|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:11.0893|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:11.1288|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:11.1288|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:12.1179|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:12.1498|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:12.1498|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:13.1645|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:13.2093|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:13.2093|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:14.2237|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:14.2692|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:14.2692|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:15.2727|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:15.3179|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:15.3179|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:16.3252|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:16.3558|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:16.3558|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:17.3642|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:17.4077|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:17.4077|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:18.4124|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:18.4592|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:18.4592|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:19.4624|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:19.4928|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:19.4928|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:20.5036|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:20.5338|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:20.5338|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:21.5273|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:21.5699|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:21.5705|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:22.5830|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:22.6136|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:22.6136|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:23.6021|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:23.6472|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:23.6472|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:24.6504|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:24.6810|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:24.6810|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:25.6809|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:25.7169|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:25.7169|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:26.7157|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:26.7507|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:26.7507|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:27.7549|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:27.8007|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:27.8007|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:28.7948|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:28.8248|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:28.8248|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:29.8294|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:29.8605|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:29.8605|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:30.8655|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:30.9117|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:30.9117|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:31.9284|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:31.9724|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:31.9724|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:32.9620|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:32.9923|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:32.9923|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:33.9950|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:34.0257|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:34.0257|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:35.0333|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:35.0628|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:35.0628|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:36.0686|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:36.1145|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:36.1145|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:37.1026|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:37.1336|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:37.1336|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:38.1411|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:38.1858|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:38.1858|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:39.1934|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:39.2392|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:39.2392|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:40.2553|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:40.3008|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:40.3008|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:41.3017|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:41.3468|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:41.3468|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:42.3510|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:42.3967|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:42.3967|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:43.4028|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:43.4328|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:43.4328|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:44.4417|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:44.4858|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:44.4858|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:45.4773|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:45.5218|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:45.5224|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:46.5396|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:46.5852|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:46.5860|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:47.5926|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:47.6228|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:47.6228|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:48.6263|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:48.6572|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:48.6572|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:49.6540|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:49.6868|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:49.6868|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:50.6949|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:50.7403|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:50.7403|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:51.7474|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:51.7787|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:51.7787|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:52.7853|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:52.8308|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:52.8308|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:53.8207|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:53.8518|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:53.8518|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:54.8616|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:54.9074|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:54.9074|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:55.9124|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:55.9586|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:55.9586|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:56.9624|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:56.9921|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:56.9921|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:57.9993|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:58.0296|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:58.0296|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:10:59.0237|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:10:59.0665|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:10:59.0665|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:00.0559|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:00.0857|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:00.0857|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:01.0884|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:01.1238|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:01.1238|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:02.1234|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:02.1681|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:02.1681|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:03.1681|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:03.1989|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:03.1989|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:04.2084|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:04.2536|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:04.2536|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:05.2739|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:05.3170|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:05.3170|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:06.3238|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:06.3547|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:06.3547|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:07.3557|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:07.3910|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:07.3910|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:08.3963|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:08.4417|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:08.4417|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:09.4508|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:09.4800|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:09.4800|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:10.4900|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:10.5342|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:10.5342|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:11.5244|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:11.5555|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:11.5555|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:12.5621|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:12.5932|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:12.5932|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:13.5957|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:13.6393|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:13.6393|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:14.6421|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:14.6881|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:14.6881|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:15.6808|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:15.7110|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:15.7110|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:16.7203|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:16.7648|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:16.7648|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:17.7705|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:17.8172|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:17.8172|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:18.8224|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:18.8527|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:18.8527|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:19.8617|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:19.9081|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:19.9081|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:20.9004|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:20.9299|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:20.9299|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:21.9397|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:21.9694|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:21.9694|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:22.9688|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:22.9984|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:22.9984|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:23.9921|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:24.0227|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:24.0227|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:25.0249|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:25.0682|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:25.0682|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:26.0734|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:26.1031|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:26.1031|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:27.1010|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:27.1467|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:27.1473|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:28.1535|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:28.1824|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:28.1824|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:29.1802|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:29.2169|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:29.2169|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:30.2220|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:30.2685|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:30.2685|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:31.2744|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:31.3187|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:31.3193|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:32.3248|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:32.3552|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:32.3552|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:33.3569|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:33.3913|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:33.3913|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:34.3866|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:34.4168|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:34.4168|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:35.4187|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:35.4482|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:35.4482|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:36.4474|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:36.4794|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:36.4794|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:37.4828|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:37.5125|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:37.5125|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:38.5081|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:38.5453|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:38.5453|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:39.5411|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:39.5716|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:39.5716|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:40.5759|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:40.6091|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:40.6091|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:41.6032|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:41.6323|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:41.6323|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:42.6367|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:42.6669|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:42.6669|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:43.6771|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:43.7213|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:43.7213|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:44.7109|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:44.7411|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:44.7411|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:45.7503|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:45.7968|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:45.7968|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:46.8015|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:46.8478|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:46.8478|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:47.8600|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:47.9054|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:47.9054|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:48.9023|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:48.9319|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:48.9319|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:49.9414|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:49.9867|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:49.9867|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:50.9786|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:51.0087|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:51.0087|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:52.0169|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:52.0605|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:52.0605|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:53.0570|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:53.0876|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:53.0876|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:54.0938|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:54.1229|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:54.1229|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:55.1294|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:55.1740|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:55.1740|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:56.1662|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:56.1963|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:56.1963|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:57.2004|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:57.2312|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:57.2312|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:58.2374|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:11:58.2828|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:11:58.2828|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:11:58.5316|INFO|RightLinesWrapper.MyLogger|Set test state: CANCEL
+2025-05-09 16:11:58.5316|INFO|RightLinesWrapper.MyLogger|Saving settings
+2025-05-09 16:11:58.5464|INFO|RightLinesWrapper.MyLogger|Settings saved
+2025-05-09 16:12:01.9369|INFO|RightLinesWrapper.MyLogger|------------------------------------------
+2025-05-09 16:12:01.9634|INFO|RightLinesWrapper.MyLogger|Initialised form
+2025-05-09 16:12:01.9761|INFO|RightLinesWrapper.MyLogger|Using Saved settings
+2025-05-09 16:12:02.0283|INFO|RightLinesWrapper.MyLogger|Saved settings used.
+2025-05-09 16:12:02.0283|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:12:02.1931|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:04.1475|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:05.0971|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:05.1424|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:05.1424|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:06.1588|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:06.2038|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:06.2038|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:07.1942|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:07.2253|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:07.2253|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:08.2270|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:08.2558|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:08.2558|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:09.2590|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:09.2945|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:09.2945|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:10.2900|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:10.3211|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:10.3211|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:11.3192|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:11.3500|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:11.3500|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:12.3530|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:12.3828|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:12.3828|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:13.3818|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:13.4125|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:13.4125|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:14.4180|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:14.4478|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:14.4478|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:15.4463|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:15.4824|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:15.4824|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:16.4773|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:16.5088|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:16.5088|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:17.5125|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:17.5432|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:17.5432|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:18.5496|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:18.5949|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:18.5949|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:19.5890|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:19.6191|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:19.6191|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:20.6222|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:20.6532|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:20.6532|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:21.6575|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:21.7018|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:21.7018|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:22.7046|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:22.7494|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:22.7494|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:23.7520|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:23.7975|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:23.7975|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:24.7908|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:24.8209|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:24.8209|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:25.8240|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:25.8555|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:25.8555|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:26.8504|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:26.8929|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:26.8929|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:27.8860|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:27.9143|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:27.9143|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:28.9154|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:28.9460|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:28.9460|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:29.9498|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:29.9814|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:29.9814|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:30.9754|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:31.0180|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:31.0180|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:32.0339|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:32.0791|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:32.0791|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:33.0886|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:33.1184|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:33.1184|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:34.1195|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:34.1491|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:34.1491|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:35.1529|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:35.1852|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:35.1852|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:36.1786|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:36.2092|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:36.2092|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:37.2095|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:37.2504|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:37.2504|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:38.2443|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:38.2740|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:38.2740|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:39.2730|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:39.3100|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:39.3100|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:40.3055|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:40.3343|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:40.3343|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:41.3348|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:41.3734|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:41.3734|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:42.3793|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:42.4247|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:42.4247|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:43.4136|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:43.4432|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:43.4432|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:44.4532|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:44.4972|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:44.4972|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:45.4986|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:45.5449|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:45.5449|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:46.5485|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:46.5946|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:46.5946|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:47.5950|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:47.6269|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:47.6269|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:48.6154|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:48.6604|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:48.6610|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:49.6713|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:49.7021|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:49.7021|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:50.6963|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:50.7278|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:50.7278|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:51.7329|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:51.7786|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:51.7786|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:52.7844|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:52.8306|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:52.8306|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:53.8472|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:53.8928|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:53.8928|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:54.9100|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:54.9557|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:54.9557|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:55.9663|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:56.0128|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:56.0128|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:57.0166|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:57.0620|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:57.0620|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:58.0580|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:58.0870|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:58.0870|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:13:59.0928|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:13:59.1383|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:13:59.1511|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:00.1545|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:00.2004|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:00.2004|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:01.1946|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:01.2247|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:01.2247|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:02.2314|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:02.2600|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:02.2600|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:03.2586|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:03.2926|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:03.2926|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:04.2896|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:04.3188|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:04.3188|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:05.3256|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:05.3719|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:05.3719|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:06.3786|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:06.4236|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:06.4236|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:07.4356|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:07.4818|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:07.4818|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:08.4890|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:08.5338|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:08.5338|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:09.5418|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:09.5736|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:09.5736|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:10.5811|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:10.6263|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:10.6263|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:11.6153|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:11.6609|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:11.6609|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:12.6665|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:12.6968|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:12.6968|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:13.7027|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:13.7483|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:13.7483|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:14.7449|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:14.7736|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:14.7736|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:15.7838|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:15.8278|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:15.8278|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:16.8287|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:16.8741|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:16.8741|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:17.8654|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:17.9103|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:17.9103|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:18.9188|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:18.9474|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:18.9474|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:19.9427|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:19.9878|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:19.9884|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:20.9906|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:21.0213|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:21.0213|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:22.0331|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:22.0781|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:22.0781|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:23.0808|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:23.1278|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:23.1278|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:24.1316|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:24.1622|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:24.1622|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:25.1668|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:25.1985|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:25.1985|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:26.1936|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:26.2317|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:26.2317|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:27.2315|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:27.2763|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:27.2763|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:28.2812|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:28.3280|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:28.3280|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:29.3191|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:29.3607|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:29.3607|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:30.3688|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:30.3987|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:30.3987|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:31.4041|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:31.4500|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:31.4500|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:32.4532|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:32.4994|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:32.4994|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:33.4890|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:33.5332|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:33.5332|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:34.5453|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:34.5907|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:34.5907|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:35.5902|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:35.6196|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:35.6196|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:36.6152|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:36.6552|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:36.6552|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:37.6475|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:37.6784|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:37.6784|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:38.6796|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:38.7142|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:38.7142|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:39.7133|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:39.7437|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:39.7437|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:40.7425|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:40.7727|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:40.7727|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:41.7728|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2025-05-09 16:14:41.8025|INFO|RightLinesWrapper.MyLogger|Failed to create new controller|RightLinesWrapper.RightLinesDeviceException: Failed to create
+   at RightLinesWrapper.RightLinesController.CreateController(MyLogger log, String IPAddress) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\RightLinesController.cs:line 515
+   at RightLinesWrapper.Form1.CreateController(Boolean reset) in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 286
+2025-05-09 16:14:41.8025|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2025-05-09 16:14:42.5622|INFO|RightLinesWrapper.MyLogger|Set test state: CANCEL
+2025-05-09 16:14:42.5622|INFO|RightLinesWrapper.MyLogger|Saving settings
+2025-05-09 16:14:42.5765|INFO|RightLinesWrapper.MyLogger|Settings saved

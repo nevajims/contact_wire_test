@@ -1,0 +1,95 @@
+2024-07-16 10:50:12.6430|INFO|RightLinesWrapper.MyLogger|----------------
+2024-07-16 10:50:12.6885|INFO|RightLinesWrapper.MyLogger|Initialised form
+2024-07-16 10:50:12.7529|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2024-07-16 10:50:12.8992|INFO|RightLinesWrapper.MyLogger|Using commandline settings
+2024-07-16 10:50:12.8992|INFO|RightLinesWrapper.MyLogger|{"Sampling":{"Sample_RateHz":500000,"Num_Samples":2048,"Start_Offset":0,"Num_Averages":1,"RepeatDelay_mS":0,"adc_Range_options":[2.5,5,10],"adc_Range_":1},"Impedence":{"StartFrequency":1000,"EndFrequency":100000,"IdleFrequency":1000,"num_points":30,"num_samples":1024},"Toneburst":{"Shape_options":["Square","Triang","Hanning","Gauss"],"Shape":4,"Frequency":50000,"num_cycles":6,"Phase_deg":0,"Tx_mute_samples":0,"Tx_Channel":1,"Attenuation_dB":0},"Instrument_attributes":{"number_of_transducers":12,"trans_row":[1,1,1,1,2,2,2,2,3,3,3,3],"trans_pos":[1,2,3,4,1,2,3,4,1,2,3,4],"trans_pos_orientation":[[0,0,1],[0,-1,0],[0,0,1],[0,1,0],[1,0,0],[0,-1,0],[-1,0,0],[0,1,0],[1,0,0],[0,0,-1],[-1,0,0],[0,0,-1]],"trans_row_pos":[0.012,0,-0.012]},"TIPI_LEGACY":{"No_of_instruments":4,"SNs":[33690,34373,33634,37075],"channels":[[13,14,0,0],[1,2,3,4],[5,6,7,8],[9,10,11,12]],"ActiveChannels":12,"delay_factor":0,"sens":0.2,"resolution":14,"afg_pts":32,"sig_amp":12,"meas_delay":0,"averages_no":16,"pretrig":0,"stretch_factor":1},"Model_data":{"fe_fnames":["//SAFE_solutions//AC-120_SOLVED_1.mat","//SAFE_solutions//AC-107_SOLVED.mat","//SAFE_solutions//AC-107 - 1mm_rem_SOLVED.mat","//SAFE_solutions//AC-107 - 2mm_rem_SOLVED.mat","//SAFE_solutions//AC-107 - 3mm_rem_SOLVED.mat","//SAFE_solutions//AC-107 - 4mm_rem_SOLVED.mat","//SAFE_solutions//AC-120 - 1mm_rem_SOLVED.mat","//SAFE_solutions//AC-120 - 2mm_rem_SOLVED.mat","//SAFE_solutions//AC-120 - 3mm_rem_SOLVED.mat","//SAFE_solutions//AC-120 - 4mm_rem_SOLVED.mat"],"trans_node_list":0,"real_length":[-3,3]},"filename":"rl_temp.dat","hash":"633 16-Jul-2024 10:50:10"}
+2024-07-16 10:50:13.2504|INFO|RightLinesWrapper.MyLogger|Json exception: 158|Newtonsoft.Json.JsonSerializationException: Error converting value 0 to type 'System.Collections.Generic.List`1[System.Collections.Generic.List`1[System.Int32]]'. Path 'Model_data.trans_node_list', line 1, position 1528.
+ ---> System.ArgumentException: Could not cast or convert from System.Int64 to System.Collections.Generic.List`1[System.Collections.Generic.List`1[System.Int32]].
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType)
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at RightLinesWrapper.Form1.LoadSettings() in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 282
+2024-07-16 10:50:20.2521|INFO|RightLinesWrapper.MyLogger|Using Saved settings
+2024-07-16 10:50:20.2554|INFO|RightLinesWrapper.MyLogger|Saved settings used.
+2024-07-16 10:50:20.2554|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2024-07-16 10:50:21.2817|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2024-07-16 10:50:21.4049|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2024-07-16 10:50:22.3956|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2024-07-16 10:50:22.5203|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2024-07-16 10:50:23.5301|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2024-07-16 10:50:23.6395|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2024-07-16 10:50:24.6302|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2024-07-16 10:50:24.7553|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2024-07-16 10:50:25.7616|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2024-07-16 10:50:25.8874|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2024-07-16 10:50:26.8783|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2024-07-16 10:50:27.0023|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2024-07-16 10:50:28.0087|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2024-07-16 10:50:28.3099|INFO|RightLinesWrapper.MyLogger|Saving settings
+2024-07-16 10:50:28.4384|INFO|RightLinesWrapper.MyLogger|Settings saved
+2024-07-16 10:50:28.4511|INFO|RightLinesWrapper.MyLogger|## Dispose RLC. Disposed? False
+2024-07-16 10:50:28.4511|INFO|RightLinesWrapper.MyLogger|## RLC Disposed
+2024-07-16 11:02:15.5232|INFO|RightLinesWrapper.MyLogger|----------------
+2024-07-16 11:02:15.5379|INFO|RightLinesWrapper.MyLogger|Initialised form
+2024-07-16 11:02:15.5695|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2024-07-16 11:02:15.6488|INFO|RightLinesWrapper.MyLogger|Using commandline settings
+2024-07-16 11:02:15.6517|INFO|RightLinesWrapper.MyLogger|{"Sampling":{"Sample_RateHz":500000,"Num_Samples":2048,"Start_Offset":0,"Num_Averages":1,"RepeatDelay_mS":0,"adc_Range_options":[2.5,5,10],"adc_Range_":1},"Impedence":{"StartFrequency":1000,"EndFrequency":100000,"IdleFrequency":1000,"num_points":30,"num_samples":1024},"Toneburst":{"Shape_options":["Square","Triang","Hanning","Gauss"],"Shape":4,"Frequency":50000,"num_cycles":6,"Phase_deg":0,"Tx_mute_samples":0,"Tx_Channel":1,"Attenuation_dB":0},"Instrument_attributes":{"number_of_transducers":12,"trans_row":[1,1,1,1,2,2,2,2,3,3,3,3],"trans_pos":[1,2,3,4,1,2,3,4,1,2,3,4],"trans_pos_orientation":[[0,0,1],[0,-1,0],[0,0,1],[0,1,0],[1,0,0],[0,-1,0],[-1,0,0],[0,1,0],[1,0,0],[0,0,-1],[-1,0,0],[0,0,-1]],"trans_row_pos":[0.012,0,-0.012]},"TIPI_LEGACY":{"No_of_instruments":4,"SNs":[33690,34373,33634,37075],"channels":[[13,14,0,0],[1,2,3,4],[5,6,7,8],[9,10,11,12]],"ActiveChannels":12,"delay_factor":0,"sens":0.2,"resolution":14,"afg_pts":32,"sig_amp":12,"meas_delay":0,"averages_no":16,"pretrig":0,"stretch_factor":1},"Model_data":{"fe_fnames":["//SAFE_solutions//AC-120_SOLVED_1.mat","//SAFE_solutions//AC-107_SOLVED.mat","//SAFE_solutions//AC-107 - 1mm_rem_SOLVED.mat","//SAFE_solutions//AC-107 - 2mm_rem_SOLVED.mat","//SAFE_solutions//AC-107 - 3mm_rem_SOLVED.mat","//SAFE_solutions//AC-107 - 4mm_rem_SOLVED.mat","//SAFE_solutions//AC-120 - 1mm_rem_SOLVED.mat","//SAFE_solutions//AC-120 - 2mm_rem_SOLVED.mat","//SAFE_solutions//AC-120 - 3mm_rem_SOLVED.mat","//SAFE_solutions//AC-120 - 4mm_rem_SOLVED.mat"],"trans_node_list":0,"real_length":[-3,3]},"filename":"rl_temp.dat","hash":"98 16-Jul-2024 11:02:14"}
+2024-07-16 11:02:15.8330|INFO|RightLinesWrapper.MyLogger|Json exception: 158|Newtonsoft.Json.JsonSerializationException: Error converting value 0 to type 'System.Collections.Generic.List`1[System.Collections.Generic.List`1[System.Int32]]'. Path 'Model_data.trans_node_list', line 1, position 1528.
+ ---> System.ArgumentException: Could not cast or convert from System.Int64 to System.Collections.Generic.List`1[System.Collections.Generic.List`1[System.Int32]].
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType)
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at RightLinesWrapper.Form1.LoadSettings() in C:\Users\Dev\source\repos\RightLinesWrapper\RightLinesWrapper\Form1.cs:line 282
+2024-07-16 11:02:30.4599|INFO|RightLinesWrapper.MyLogger|Using Saved settings
+2024-07-16 11:02:30.5113|INFO|RightLinesWrapper.MyLogger|Saved settings used.
+2024-07-16 11:02:30.5113|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2024-07-16 11:02:31.5295|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2024-07-16 11:02:31.6569|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2024-07-16 11:02:32.6567|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2024-07-16 11:02:32.7778|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2024-07-16 11:02:33.7801|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2024-07-16 11:02:33.8990|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2024-07-16 11:02:34.9181|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2024-07-16 11:02:35.0379|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2024-07-16 11:02:36.0420|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2024-07-16 11:02:36.1624|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2024-07-16 11:02:37.1824|INFO|RightLinesWrapper.MyLogger|Creating RLC...
+2024-07-16 11:02:37.2930|INFO|RightLinesWrapper.MyLogger|Set state: INIT
+2024-07-16 11:02:38.0998|INFO|RightLinesWrapper.MyLogger|Saving settings
+2024-07-16 11:02:38.0998|INFO|RightLinesWrapper.MyLogger|Settings saved
+2024-07-16 11:02:38.1218|INFO|RightLinesWrapper.MyLogger|## Dispose RLC. Disposed? False
+2024-07-16 11:02:38.1218|INFO|RightLinesWrapper.MyLogger|## RLC Disposed

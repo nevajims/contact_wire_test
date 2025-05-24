@@ -1,16 +1,17 @@
-function show_mesh(rail_tester)
+function show_mesh(rail_tester,base_width,base_height,mag_fac)
 
 trans_node_list    = rail_tester.array.trans_node_list;
 mesh_              = rail_tester.mesh; 
 
-Pix_SS = get(0,'screensize');
-x_mult = Pix_SS(3)/1920;
-y_mult = Pix_SS(4)/1080;
+Pix_SS = get(0,'screensize')               ;
+x_mult = (Pix_SS(3)/base_width)   * mag_fac;
+y_mult = (Pix_SS(4)/base_height)  * mag_fac;
 
-fig = uifigure('Resize','off','Units','normalized','Position',[0.1,0.1,0.25,0.42],'Name', 'Mesh and Transducer Locations');
+fig = uifigure('Resize','off','Units','normalized','Position',[0.05,0.05,0.25* mag_fac,0.42* mag_fac],'Name', 'Mesh and Transducer Locations');
 fig.Icon = 'ICON2.png';
-px_LH = 10; py_LH = 0; px_SZ = 490; py_SZ = 480;
-ax_LH = 0; ay_LH = 0; ax_SZ = 450; ay_SZ = 450;
+px_LH = 10; py_LH = 0; px_SZ = 490; py_SZ = 480  ;
+ax_LH = 0; ay_LH = 0; ax_SZ = 450; ay_SZ = 450   ;
+
 p1 = uipanel(fig,'Position',[x_mult*px_LH y_mult*py_LH x_mult*px_SZ y_mult*py_SZ]);
 
 p1.BorderColor = [0.9400 0.9400 0.9400];

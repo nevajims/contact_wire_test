@@ -1,15 +1,18 @@
-function showdispersion(plot_options,rail_tester)
+function showdispersion(plot_options,rail_tester,base_width,base_height,mag_fac)
 
 if plot_options.showdispersion %plot dispersion curves for referencerail_tester.raw_data.tx = rail_tester.raw_data.tx(:); 
 
     rail_tester.raw_data.rx = rail_tester.raw_data.rx(:);
 
 %    figure; 
-Pix_SS = get(0,'screensize');
-x_mult = Pix_SS(3)/1920;
-y_mult = Pix_SS(4)/1080;
 
-fig = uifigure('Resize','off','Units','normalized','Position',[0.1,0.1,0.25,0.4],'Name', 'Dispersion Curves- 1st 4 modes');
+Pix_SS = get(0,'screensize')                ;
+x_mult = (Pix_SS(3)/base_width)   * mag_fac ;
+y_mult = (Pix_SS(4)/base_height)  * mag_fac ;
+
+
+
+fig = uifigure('Resize','off','Units','normalized','Position',[0.05,0.05,0.25*mag_fac,0.4*mag_fac],'Name', 'Dispersion Curves- 1st 4 modes');
 fig.Icon = 'ICON2.png';
 px_LH = 0; py_LH = 0; px_SZ = 490; py_SZ = 490;
 ax_LH = 10; ay_LH = 30; ax_SZ = 450; ay_SZ = 370;
