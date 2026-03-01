@@ -1,5 +1,11 @@
-function   results_struct = lookup_NS_details(x_mult ,y_mult,mag_fac)
-LU_Table              =     load([pwd,'\SETTINGS_FILES\NS_Details.mat'])   ;
+function   results_struct = lookup_NS_details(x_mult ,y_mult,mag_fac,advanced_settings)
+
+LU_Table_temp              =     load([pwd,'\SETTINGS_FILES\NS_Details2.mat'])   ;
+LU_Table.Locations_ = LU_Table_temp.Locations_arr{advanced_settings.choices.Region_index};
+LU_Table.Sublocations = LU_Table_temp.Sublocations_arr{advanced_settings.choices.Region_index};
+LU_Table.Values_ = LU_Table_temp.Values_arr{advanced_settings.choices.Region_index};
+
+
 fig = make_dialog_box(LU_Table,x_mult ,y_mult,mag_fac)                     ;
 results_struct = get_LU_indeces_and_labels(fig)                            ; 
 end    % function   NS_Indices = lookup_NS_details(x_mult ,y_mult,mag_fac)
@@ -32,7 +38,7 @@ function fig = make_dialog_box(LU_Table,x_mult ,y_mult,mag_fac)
 fig = uifigure('Resize','off','Units','normalized','Position', [0.225*mag_fac,0.11*mag_fac,0.16*mag_fac,0.16*mag_fac] ,'Name', 'Look up a specific location');
 fig.Icon = 'ICON2.png';
 
-default_Location_index = 12;
+default_Location_index = length(LU_Table.Locations_);
 default_sub_Location_index = 1;
 
 DD_1= uidropdown(fig,"Items",[LU_Table.Locations_],'Position', [x_mult*10, y_mult*95, x_mult*160, y_mult*28 ],'FontSize',y_mult*18,'Value',LU_Table.Locations_{default_Location_index},'ValueChangedFcn',@(src,event)DD_A(fig,LU_Table)    );

@@ -22,7 +22,7 @@ else
 cd (num2str(month_))
 end %if ~exist(num2str(year_))
 
-if ~exist(num2str(day_))
+if ~exist([pwd,'\',num2str(day_)])
 mkdir(num2str(day_))
 cd (num2str(day_))
 else

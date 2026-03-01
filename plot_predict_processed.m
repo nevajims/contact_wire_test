@@ -99,7 +99,6 @@ y_mult = (Pix_SS(4)/base_height)  * mag_fac ;
 
 
     case(7)
-
 % prediction_ = plot_predict_processed(proc_file, settings_ ,do_plots, settings_.Data_path_options{settings_.Data_path_choice})        
 proc_file            =  varargin{1}                                 ;   
 settings_            =  varargin{2}                                 ;
@@ -115,29 +114,23 @@ Pix_SS = get(0,'screensize')                ;
 x_mult = (Pix_SS(3)/base_width)   * mag_fac ;
 y_mult = (Pix_SS(4)/base_height)  * mag_fac ;
 
-
-
-
 settings_.DATA_PATH  =  DP                                          ;
 % settings_.DATA_PATH  = settings_.Data_path_options{settings_.Data_path_choice};
+
 rail_tester   =  proc_file.rail_tester                       ;
 grid_data     = fn_get_grid_data(rail_tester , settings_) ;
 FILE_TO_PREDICT = proc_file.test_data.file_with_path(max(find(proc_file.test_data.file_with_path =='\'))+1:end);
+
 end  % switch(nargin)        
 
 PFH = [];
-
-
-
-
-
 %---------------------------------------------------------
 %---------------------------------------------------------
 % ----------------------------------------------------
-%other internal stuff
-
+% other internal stuff
 labels = {'1-1','1-2','1-3','1-4','2-1','2-2','2-3','2-4','3-1','3-2','3-3','3-4','4-1','4-2','4-3','4-4'};
 mod_vals_inds = [1,1;1,2;1,3;1,4;2,1;2,2;2,3;2,4;3,1;3,2;3,3;3,4;4,1;4,2;4,3;4,4];
+
 % ----------------------------------------------------
 dummy = load(settings_.DATA_PATH) ;
 Block_DATA = dummy.Block_DATA   ;
@@ -157,9 +150,14 @@ settings_.predition_colours      =    [1,1,2,3,3] ;  % 1 = green // 2 = yellow  
 settings_.predition_colours      =    [1,1,2,3,3,3] ;  % 1 = green // 2 = yellow  // 3 = red         
 end %switch(length(Block_DATA.Labels_))
 
+
+
 [slice_options,slice_indices] = get_slice_options(Block_DATA.max_number_of_slices) ;
 
+
 [Slice_index,Thresh_index]  = get_index_value (settings_,Block_DATA,slice_options) ;  %  extract from the learning file
+
+
 
 [mod_val,lower_val,upper_val,~]  =  get_peak_vals_and_plot(grid_data,settings_ ,do_plots(1),x_mult,y_mult,mag_fac );
 
@@ -1109,14 +1107,16 @@ function  [mod_val,lower_val,upper_val,actual_peak_val]  =  get_peak_vals_and_pl
 %--------------------------------------------------------------------------------------------
 % function [mod_val  , lower_val  ,  upper_val  ,  actual_peak_val]  =  get_peak_values( )
 %--------------------------------------------------------------------------------------------
-initial_thresh = settings_.initial_thresh                 ;
-thresh_val     = settings_.thresh_val                     ;
-num_slices     = settings_.num_slices                     ;
-window_start   = settings_.window_start                   ;    
-mode_map             = grid_data.data_stack               ;
-mm33                 = squeeze(mode_map(3,3,:))           ;
-dv                   = grid_data.distance_vector          ;  
-start_val       =   min(find(dv>window_start)) + min(find(mm33(find(dv>window_start))  >   max(mm33(find(dv>window_start)))*initial_thresh))-1;
+
+
+initial_thresh       =   settings_.initial_thresh           ;
+thresh_val           =   settings_.thresh_val               ;
+num_slices           =   settings_.num_slices               ;
+window_start         =   settings_.window_start             ;    
+mode_map             =   grid_data.data_stack               ;
+mm33                 =   squeeze(mode_map(3,3,:))           ;
+dv                   =   grid_data.distance_vector          ;  
+start_val            =   min(find(dv>window_start)) + min(find(mm33(find(dv>window_start))  >   max(mm33(find(dv>window_start)))*initial_thresh))-1;
 
 mm33_s = mm33(start_val:start_val+200);
 mm33_s_diff = diff(mm33_s);

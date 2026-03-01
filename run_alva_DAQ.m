@@ -37,9 +37,6 @@ function [raw_data,err] =  run_alva_DAQ(Test_Settings)
 
 [testdata, err] = GetDataFromDevice(Test_Settings); % real
 
-
-
-
 if err ==0
 raw_data.time = (1/Test_Settings.Sampling.Sample_RateHz)*[0:Test_Settings.Sampling.Num_Samples-1]' ;
 

@@ -151,9 +151,7 @@ end %if nargin ==2 || nargin ==3
 %------------------------------------------------
 % Calculate matrix properties
 %-----------------------------------------------
-
 [samp_freq,freq_axis_KHz,fft_d_temp,fft_n_temp ,RMS_mat,SNR_mat_DB,LFN_mat_DB,HFN_mat_DB]  =  calculate_mat_properties(time_,ALL_time_d,time_d,exitation_freq_kHz,SNR_bandwidth_kHz,All_noise_d,noise_d);
-
 %------------------------------------------------
 % PLOT COLORMAPS
 %-----------------------------------------------
@@ -262,13 +260,9 @@ plot_data_structure.fft_d_temp                     = fft_d_temp         ;
 plot_data_structure.ALL_time_d                     = ALL_time_d         ;
 end
 
-
 plot_data_structure.exitation_freq_kHz             = exitation_freq_kHz ; 
 plot_data_structure.SNR_bandwidth_kHz              = SNR_bandwidth_kHz  ; 
 plot_data_structure.file_name                      = file_name          ; 
-
-
-
 
 
 fig.UserData                                       = plot_data_structure;
@@ -310,8 +304,8 @@ time_gate2          = plot_data_structure.time_gate2        ;
 time_gate3          = plot_data_structure.time_gate3        ;
 
 sbH1               = plot_data_structure.sbH1               ;
-sbH2               =  plot_data_structure.sbH2              ;
-fig                =  plot_data_structure.fig               ;
+sbH2               = plot_data_structure.sbH2              ;
+fig                = plot_data_structure.fig               ;
 freq_axis_KHz      = plot_data_structure.freq_axis_KHz      ; 
 fft_d_temp         = plot_data_structure.fft_d_temp         ;   
 exitation_freq_kHz = plot_data_structure.exitation_freq_kHz ; 
@@ -740,10 +734,7 @@ function [samp_freq,freq_axis_KHz,fft_d_temp,fft_n_temp,RMS_mat,SNR_mat_DB,LFN_m
 
 samp_freq  = 1/(time_(2)- time_(1));
 temp_f = [1:length(time_)]/length(time_)*samp_freq/1000 ;
-
-
 freq_axis_KHz = temp_f(1:floor(length(temp_f)/2));
-
 tem_f_d = abs(fft(time_d));
 fft_d_temp = tem_f_d(1: floor(length(tem_f_d)/2),:,:);
 

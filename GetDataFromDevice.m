@@ -37,6 +37,7 @@ cd('daq');
 
 cmdline = strcat("RightLinesWrapper.exe", " ", json);
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % Jim I've edited the next section for the new DAQ (on desktop)
@@ -45,7 +46,7 @@ cmdline = strcat("RightLinesWrapper.exe", " ", json);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Open the app modally. Code pauses here until it closes
 
-try
+try   
 [status,text] = system(cmdline);
 catch error_
 
@@ -72,6 +73,7 @@ if ~isempty(text)
         try   
         testdata = jsondecode(text);
         catch error_
+        
         msgbox(['(3) error running testdata = jsondecode(text)  ',error_.message])   
         if length(text)                      <= 200 
         msgbox(['json text:',text(1:end)])
@@ -110,6 +112,7 @@ else
 time_data = [];
 err = 1 ; 
 end %if ~isempty(text)
+
 cd(p_w_d)
 %End func
 end %function [time_data, err] = GetDataFromDevice(Test_Settings)

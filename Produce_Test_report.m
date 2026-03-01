@@ -1,6 +1,5 @@
 function Produce_Test_report( proc_file  ,  PL_inf , T_num, Prediction_,default_options,slab_root,P_Opts,Prog_STATE )
 
-
 capacitance_thresholds  = [P_Opts.cap_thresh_lower,  P_Opts.cap_thresh_options(P_Opts.cap_thresh_index)]  ;   % one  value    min  threshold
 dist_pass_val           = [P_Opts.dist_pass_options(P_Opts.dist_pass_index),P_Opts.dist_pass_val_upper]   ;   % one  minimum  dist 
 %  These need to go in the settings 
@@ -27,7 +26,7 @@ con_Wires = {'120','107'};
 Report_info.date_time         = proc_file.test_data.date_time                              ;
 Report_info.Tester_name       = proc_file.test_data.fixed_Operator_Settings.Name           ;
 Report_info.Sentinal_no       = proc_file.test_data.fixed_Operator_Settings.Sentinel_No    ; 
-Report_info.SW_version        = SW_version                                                 ;
+Report_info.SW_version        = [SW_version, get_compilation_date()];                                                ;
 Report_info.ELR               = num2str(proc_file.test_data.fixed_Operator_Settings.ELR)   ;
 %Report_info.milage           = num2str(proc_file.test_data.fixed_Operator_Settings.Milage);  
 Report_info.Notes             = proc_file.test_data.fixed_Operator_Settings.Notes          ;
@@ -46,7 +45,7 @@ else
 Report_info.date_time         = proc_file.test_data.date_time                              ;
 Report_info.Tester_name       = proc_file.test_data.tester_details.Name                    ;
 Report_info.Sentinal_no       = proc_file.test_data.tester_details.Sentinal_no             ;
-Report_info.SW_version        = SW_version                                                 ;
+Report_info.SW_version        = [SW_version, get_compilation_date()]                                                 ;
 
 if isempty(proc_file.test_data.test_parameters.ELR)
 Report_info.ELR = 'Unspec';
@@ -184,7 +183,7 @@ else
         
     label_Instr_serial        =  uilabel(p3,'Text',['Instrument Serial No: ',Report_info.SN_],'Position',[x_mult*10 y_mult*150 x_mult*550 y_mult*40],'FontSize',y_mult*14);
         
-    label_soft_version         =  uilabel(p3,'Text',['Software version #: ',Report_info.SW_version],'Position',[x_mult*300 y_mult*150 x_mult*550 y_mult*40],'FontSize',y_mult*14);
+    label_soft_version         =  uilabel(p3,'Text',['Software version #: ',Report_info.SW_version],'Position',[x_mult*250 y_mult*150 x_mult*550 y_mult*40],'FontSize',y_mult*14);
     
     label_In_Thresh       =  uilabel(p3,'Text',['Inital Thresh: ',num2str(Report_info.INI_val),'.'],'Position',[x_mult*10 y_mult*130 x_mult*550 y_mult*40],'FontSize',y_mult*14);
 
@@ -281,15 +280,11 @@ else
 
     label_Pred_1    = uilabel(p4,'Text',['Prediction: ',pred_txt],'Position',[x_mult*10 y_mult*100 x_mult*500 y_mult*100],'FontSize',y_mult*25,'Interpreter','Latex');
 
-
-
-
-
 % create this at the file open - put it in the defaults options
-answer_ = questdlg('Save the report?','Report',	'Yes','No','Yes');
-
-if strcmp(answer_,'Yes')
+% answer_ = questdlg('Save the report?','Report',	'Yes','No','Yes');
+%if strcmp(answer_,'Yes')
 % now create the file name and file structure and save there
+
 p_w_d =  pwd;
 cd([slab_root,default_options.report_data_file_path]) % create this at the file open 
 
@@ -311,12 +306,14 @@ else
 cd (num2str(month_))
 end %if ~exist(num2str(year_))
 
-if ~exist(num2str(day_))
+if ~exist([pwd,'\',num2str(day_)])
 mkdir(num2str(day_))
 cd (num2str(day_))
 else
 cd (num2str(day_))
 end %if ~exist(num2str(year_))
+
+
 target_fn = [Report_info.file_with_path(max(find(Report_info.file_with_path=='\'))+1:end-4),'.pdf'];
 
 if exist(target_fn) == 0
@@ -328,8 +325,15 @@ num_insrt = num2str(length(files_));
 new_target_fn = [target_fn(1:end-4),'_',num_insrt,'.pdf'];       
 end %if exist(target_fn) == 0
 exportapp(fig,new_target_fn)
+m_temp = msgbox({'Report Saved:';[pwd,'\',new_target_fn]});
+
+pause(2)
+if ishandle(m_temp)
+close(m_temp)
+end %if ishandle(m_temp)
 cd(p_w_d) 
-end %ifstrcmp(answer_,'Yes')
+%end %ifstrcmp(answer_,'Yes')
+
 end %if  strcmp (FN__(1:5),'CALIB') ==1 &&  Prog_STATE~=3
 
 end %function Produce_Test_report(TPs,RI,PL_inf,T_num)

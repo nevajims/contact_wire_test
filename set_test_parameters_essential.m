@@ -1,9 +1,7 @@
 function test_parameters_ = set_test_parameters_essential(varargin)
-
 % Remove
 
 switch(nargin)
-    
     case(0)    
 FD_settings_path =                [pwd,'\SETTINGS_FILES\test_parameters2.mat']                   ; 
 %Settings_path    =                [getenv('APPDATA'),'\SETTINGS_FILES\test_parameters2.mat']     ;
@@ -15,21 +13,28 @@ base_width                = 1920                  ;
 base_height               = 1080                  ; 
 mag_fac                     =  1.82               ;
 
-    case(5)
+login_path_2 =  [pwd,'\SETTINGS_FILES\advanced_settings.mat']; 
+fields_2 =      {'options.mag_labels' ; 'options.mag_values' ; 'options.Region_options' ; 'choices.mag' ; 'choices.Region_index'};
+[advanced_settings  , ~] =  load_mat_structure_from_file(login_path_2,fields_2);
+
+    case(6)
 % FD_settings_path       =       varargin{2}  ; 
+
 Settings_path          =       varargin{2}  ;
 test_paramters_options =       varargin{1};
 
 %[test_paramters_last , ~] =  load_mat_structure_from_file(Settings_path);
 
+base_width        = varargin{3}  ;
+base_height       = varargin{4}  ;  
+mag_fac           = varargin{5}  ; 
+advanced_settings = varargin{6}  ; 
 
-base_width     = varargin{3}  ;
-base_height    = varargin{4}  ;  
-mag_fac        = varargin{5}  ; 
 end %switch(nargin)
 
 
-if exist([pwd,'\SETTINGS_FILES\NS_Details.mat']) == 2
+
+if exist([pwd,'\SETTINGS_FILES\NS_Details2.mat']) == 2
 do_LU = 1;    
 else
 do_LU = 0;    
@@ -42,14 +47,16 @@ y_mult = (Pix_SS(4)/base_height)  * mag_fac;
 
 
 %keyboard
-
 %test_parameters_essential = set_test_parameters_essential()
 
-data_         =  test_paramters_options.data_       ;
-defaults_     =  test_paramters_options.defaults_   ;
+data_      = test_paramters_options.data_arr{advanced_settings.choices.Region_index  };
+defaults_  =  test_paramters_options.defaults_arr{advanced_settings.choices.Region_index  };
+
+%data_         =  test_paramters_options.data_       ;
+%defaults_     =  test_paramters_options.defaults_   ;
 %defaults_last =  test_paramters_last.defaults_      ;
 
-[fig] = bespoke_dialog_box2(do_LU, data_,defaults_,x_mult ,y_mult,mag_fac );
+[fig] = bespoke_dialog_box2(do_LU, data_,defaults_,x_mult ,y_mult,mag_fac,advanced_settings );
 
 fig.Icon = 'ICON2.png';
 [test_parameters_] = get_test_parameters_essential(fig);
@@ -91,7 +98,7 @@ if isvalid(fig)
 
 if length(fig.UserData.Warning_message) == 0
 no_warnings = 1;
-
+%msgbox('no warnings')
 else
 wmsg_ = fig.UserData.Warning_message                       ; 
 wmsg_{length(wmsg_)+1} = ''                                ;
@@ -124,7 +131,7 @@ end %function test_parameters_essential = get_test_parameters_essential(fig)
 
 
 
-function fig =  bespoke_dialog_box2(do_LU,data_,defaults_,x_mult ,y_mult,mag_fac)
+function fig =  bespoke_dialog_box2(do_LU,data_,defaults_,x_mult ,y_mult,mag_fac,advanced_settings)
 
 
 fig = uifigure('Resize','off','Units','normalized','Position',[0.05,0.05,0.2*mag_fac,0.3*mag_fac],'Name', 'Input Test Parameters');
@@ -231,7 +238,8 @@ but = uibutton(fig,"push" ,"Text","Submit",'Position',[x_mult*270, y_mult*30, x_
 %but2 =  uibutton(fig,"push" ,"Text","Last",'Position',[x_mult*270,y_mult*80,x_mult*100,y_mult*35],'FontSize',y_mult*18,"ButtonPushedFcn", @(src,event)ButtonPushed_special(fig,data_,defaults_,defaults_last));
 %fig.UserData.inps.ren_but = but2;
 
-but3 =  uibutton(fig,"push" ,"Text","Lookup",'Position',[x_mult*270,y_mult*90,x_mult*100,y_mult*35],'FontSize',y_mult*18,"ButtonPushedFcn", @(src,event)ButtonPushed_Lookup(fig,data_,defaults_,x_mult ,y_mult,mag_fac));
+but3 =  uibutton(fig,"push" ,"Text","Lookup",'Position',[x_mult*270,y_mult*90,x_mult*100,y_mult*35],'FontSize',y_mult*18,"ButtonPushedFcn", @(src,event)ButtonPushed_Lookup(fig,data_,defaults_,x_mult ,y_mult,mag_fac,advanced_settings));
+
 fig.UserData.inps.LU_but = but3;
 
 
@@ -359,7 +367,7 @@ end %function ButtonPushed2(fig,data_)
 %}
 
 
-function ButtonPushed_Lookup(fig,data_,defaults_,x_mult , y_mult,mag_fac)
+function ButtonPushed_Lookup(fig,data_,defaults_,x_mult , y_mult,mag_fac,advanced_settings)
 
 fig.UserData.Track_id_DD.Visible = 'off';
 fig.UserData.Asset_no_DD.Visible = 'off';
@@ -374,7 +382,7 @@ fig.UserData.inps.ELR_but.BackgroundColor = [0.9600,0.9600,0.9600];
 fig.UserData.inps.SID_but.BackgroundColor = [0.9600,0.9600,0.9600];
 
 fig.UserData.inps.LU_but.BackgroundColor = [0.9600,0.6600,0.6600];
-NS_struct = lookup_NS_details(x_mult ,y_mult,mag_fac);
+NS_struct = lookup_NS_details(x_mult ,y_mult,mag_fac,advanced_settings);
 fig.UserData.inps.LU_but.BackgroundColor = [0.9600,0.9600,0.9600];
 
 
