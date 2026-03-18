@@ -1,9 +1,9 @@
 function raw_data = fn_coupling_comp(raw_data, array, options);
 tic;
 
-if options.show_coupling_graph
-    fn_show_coupling_graph(raw_data, array, options);
-end
+% if options.show_coupling_graph
+%     fn_show_coupling_graph(raw_data, array, options);
+% end
 
 % max_row = max([raw_data.tx_row; raw_data.rx_row]);
 % max_pos = max([raw_data.tx_pos; raw_data.rx_pos]);

@@ -1,0 +1,9 @@
+LIBRARY fn_process_rail_data_DLL.mexw64
+EXPORTS
+mexFunction
+mexfilerequiredapiversion
+emlrtMexFcnProperties
+fn_process_rail_data_DLL
+fn_process_rail_data_DLL_initialize
+fn_process_rail_data_DLL_terminate
+fn_process_rail_data_DLL_atexit

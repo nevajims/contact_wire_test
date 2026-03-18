@@ -1,4 +1,4 @@
-function new_struct = set_default_fields(old_struct, default_struct);
+function new_struct = fn_set_default_fields(new_struct, default_struct);
 %USAGE
 %	new_struct = set_default_fields(old_struct, default_struct);
 %SUMMARY
@@ -15,7 +15,7 @@ function new_struct = set_default_fields(old_struct, default_struct);
 %	in old_struct will be preserved, but any fields found in default_struct
 %	and their values will be added
 
-new_struct = old_struct;
+% new_struct = old_struct;
 default_fieldnames = fieldnames(default_struct);
 for ii=1:length(default_fieldnames)
 	if ~isfield(new_struct, default_fieldnames{ii})

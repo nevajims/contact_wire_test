@@ -1,6 +1,5 @@
-function raw_data = fn_convert_to_freq_domain(raw_data_in, suppress_display)
+function raw_data = fn_convert_to_freq_domain(raw_data, suppress_display)
 tic;
-raw_data = raw_data_in;
 time_pts = size(raw_data.time_data, 1);
 raw_data.fft_pts = 2 ^ nextpow2(time_pts);
 raw_data.freq_data = fft(raw_data.time_data, raw_data.fft_pts);

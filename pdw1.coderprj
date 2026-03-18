@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<coderProject client="MatlabCoder" containerVersion="1" createdBy="R2025a" modifiedBy="R2025a">
+  <layers>
+    <layer id="core" version="R2025a">
+      <parts>
+        <part role="testRepository">
+          <MF0 packageUris="http://schema.mathworks.com/mf0/coderapp_config_datamodel/R2021a.001 http://schema.mathworks.com/mf0/coderapp_core_proj_dm/R2025a http://schema.mathworks.com/mf0/coderapp_core_rt_dm/R2022b http://schema.mathworks.com/mf0/coderapp_form_datamodel/R2020a http://schema.mathworks.com/mf0/coderapp_gpucoder_proj_dm/R2025a http://schema.mathworks.com/mf0/coderapp_gpucoder_rt_dm/R2022b http://schema.mathworks.com/mf0/coderapp_matlabcoder_proj_dm/R2025a http://schema.mathworks.com/mf0/coderapp_matlabcoder_rt_dm/R2022b http://schema.mathworks.com/mf0/coderapp_types_project_datamodel/R2025a http://schema.mathworks.com/mf0/coderapp_types_runtime_datamodel/R2022b http://schema.mathworks.com/mf0/coderapp_utils_datamodel/R2020a" version="1.1">
+            <coderapp.internal.core.mfz.TestRepositoryState id="1" type="coderapp.internal.core.mfz.TestRepositoryState">
+              <Tests type="coderapp.internal.core.mfz.TestSpec">
+                <Type>FILE</Type>
+                <Value>C:\Users\mepdw\Git\contact_wire_test\PDW.m</Value>
+              </Tests>
+            </coderapp.internal.core.mfz.TestRepositoryState>
+          </MF0>
+        </part>
+      </parts>
+    </layer>
+    <layer id="interface" version="R2025a">
+      <parts>
+        <part role="mainInterface">
+          <MF0 packageUris="http://schema.mathworks.com/mf0/coderapp_config_datamodel/R2021a.001 http://schema.mathworks.com/mf0/coderapp_core_proj_dm/R2025a http://schema.mathworks.com/mf0/coderapp_core_rt_dm/R2022b http://schema.mathworks.com/mf0/coderapp_form_datamodel/R2020a http://schema.mathworks.com/mf0/coderapp_gpucoder_proj_dm/R2025a http://schema.mathworks.com/mf0/coderapp_gpucoder_rt_dm/R2022b http://schema.mathworks.com/mf0/coderapp_matlabcoder_proj_dm/R2025a http://schema.mathworks.com/mf0/coderapp_matlabcoder_rt_dm/R2022b http://schema.mathworks.com/mf0/coderapp_types_project_datamodel/R2025a http://schema.mathworks.com/mf0/coderapp_types_runtime_datamodel/R2022b http://schema.mathworks.com/mf0/coderapp_utils_datamodel/R2020a" version="1.1">
+            <coderapp.internal.interface.project.Interface id="1" type="coderapp.internal.interface.project.Interface">
+              <EntryPoints id="2" type="coderapp.internal.interface.project.EntryPointFunction">
+                <Signatures id="3" type="coderapp.internal.interface.project.FunctionSignature">
+                  <Inputs id="4" type="coderapp.internal.interface.project.Input">
+                    <Name>time</Name>
+                    <Type id="5" type="coderapp.internal.codertype.PrimitiveType"/>
+                  </Inputs>
+                  <Inputs id="6" type="coderapp.internal.interface.project.Input">
+                    <Name>time_data</Name>
+                    <Type id="7" type="coderapp.internal.codertype.PrimitiveType"/>
+                  </Inputs>
+                  <Inputs id="8" type="coderapp.internal.interface.project.Input">
+                    <Name>tx</Name>
+                    <Type id="9" type="coderapp.internal.codertype.PrimitiveType"/>
+                  </Inputs>
+                  <Inputs id="10" type="coderapp.internal.interface.project.Input">
+                    <Name>rx</Name>
+                    <Type id="9" type="coderapp.internal.codertype.PrimitiveType"/>
+                  </Inputs>
+                  <Inputs id="11" type="coderapp.internal.interface.project.Input">
+                    <Name>row_pos</Name>
+                    <Type id="12" type="coderapp.internal.codertype.PrimitiveType"/>
+                  </Inputs>
+                  <Inputs id="13" type="coderapp.internal.interface.project.Input">
+                    <Name>trans_pos</Name>
+                    <Type id="14" type="coderapp.internal.codertype.PrimitiveType"/>
+                  </Inputs>
+                  <Inputs id="15" type="coderapp.internal.interface.project.Input">
+                    <Name>trans_row</Name>
+                    <Type id="14" type="coderapp.internal.codertype.PrimitiveType"/>
+                  </Inputs>
+                  <Inputs id="16" type="coderapp.internal.interface.project.Input">
+                    <Name>trans_pos_orientations</Name>
+                    <Type id="17" type="coderapp.internal.codertype.PrimitiveType"/>
+                  </Inputs>
+                  <Inputs id="18" type="coderapp.internal.interface.project.Input">
+                    <Name>delay</Name>
+                    <Type id="19" type="coderapp.internal.codertype.PrimitiveType"/>
+                  </Inputs>
+                  <Inputs id="20" type="coderapp.internal.interface.project.Input">
+                    <Name>trans_node_list</Name>
+                    <Type id="21" type="coderapp.internal.codertype.PrimitiveType"/>
+                  </Inputs>
+                  <NumOutputs>6</NumOutputs>
+                </Signatures>
+                <File type="coderapp.internal.util.mfz.FileSpec">
+                  <Path>fn_process_rail_data_DLL.m</Path>
+                </File>
+                <Name>fn_process_rail_data_DLL</Name>
+              </EntryPoints>
+              <SizeConstraints id="22" type="coderapp.internal.interface.project.SizeConstraints">
+                <Value type="coderapp.internal.interface.project.SizeConstraintsValue"/>
+              </SizeConstraints>
+              <Types id="23" type="coderapp.internal.codertype.TypeStore">
+                <Types id="12" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>3</Length>
+                  </Size>
+                </Types>
+                <Types id="21" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>int64</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>4</Length>
+                  </Size>
+                </Types>
+                <Types id="9" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>int64</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>144</Length>
+                  </Size>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="7" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2048</Length>
+                  </Size>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>144</Length>
+                  </Size>
+                </Types>
+                <Types id="5" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>2048</Length>
+                  </Size>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="19" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                </Types>
+                <Types id="14" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>int64</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension"/>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>12</Length>
+                  </Size>
+                </Types>
+                <Types id="17" type="coderapp.internal.codertype.PrimitiveType">
+                  <ClassName>double</ClassName>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>12</Length>
+                  </Size>
+                  <Size type="coderapp.internal.codertype.Dimension">
+                    <Length>3</Length>
+                  </Size>
+                </Types>
+              </Types>
+            </coderapp.internal.interface.project.Interface>
+          </MF0>
+        </part>
+      </parts>
+    </layer>
+    <layer id="matlabCoder" version="R2025a">
+      <parts>
+        <part role="matlabCoder">
+          <MF0 packageUris="http://schema.mathworks.com/mf0/coderapp_config_datamodel/R2021a.001 http://schema.mathworks.com/mf0/coderapp_core_proj_dm/R2025a http://schema.mathworks.com/mf0/coderapp_core_rt_dm/R2022b http://schema.mathworks.com/mf0/coderapp_form_datamodel/R2020a http://schema.mathworks.com/mf0/coderapp_gpucoder_proj_dm/R2025a http://schema.mathworks.com/mf0/coderapp_gpucoder_rt_dm/R2022b http://schema.mathworks.com/mf0/coderapp_matlabcoder_proj_dm/R2025a http://schema.mathworks.com/mf0/coderapp_matlabcoder_rt_dm/R2022b http://schema.mathworks.com/mf0/coderapp_types_project_datamodel/R2025a http://schema.mathworks.com/mf0/coderapp_types_runtime_datamodel/R2022b http://schema.mathworks.com/mf0/coderapp_utils_datamodel/R2020a" version="1.1">
+            <coderapp.internal.mlc.mfz.MatlabCoderProjectState id="1" type="coderapp.internal.mlc.mfz.MatlabCoderProjectState">
+              <WorkflowTarget>DLL</WorkflowTarget>
+              <Activity id="2" type="coderapp.internal.mlc.mfz.MainBuildActivity">
+                <Compile>FAIL</Compile>
+                <Generate>SUCCESS</Generate>
+                <TargetHardware>MATLAB Host Computer</TargetHardware>
+                <TargetLanguage>C</TargetLanguage>
+                <WorkflowTarget>DLL</WorkflowTarget>
+                <Result id="3" type="coderapp.internal.mlc.mfz.MatlabCoderCodegenResult"/>
+              </Activity>
+              <MainBuildResult id="3" type="coderapp.internal.mlc.mfz.MatlabCoderCodegenResult">
+                <WorkflowTarget>DLL</WorkflowTarget>
+                <LogDirectory>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL</LogDirectory>
+                <MainReport id="4" type="coderapp.internal.build.mfz.CodegenArtifact"/>
+                <Artifacts id="4" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <SubType>CODEGEN_REPORT</SubType>
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\html\report.mldatx</Path>
+                  </File>
+                  <Type>CODEGEN_REPORT</Type>
+                </Artifacts>
+                <Artifacts id="5" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Program Files\MATLAB\R2025a\extern\include\tmwtypes.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="6" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\eml_rand.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="7" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\eml_rand.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="8" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\eml_rand_mcg16807_stateful.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="9" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\eml_rand_mcg16807_stateful.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="10" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\eml_rand_mt19937ar.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="11" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\eml_rand_mt19937ar.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="12" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\eml_rand_mt19937ar_stateful.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="13" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\eml_rand_mt19937ar_stateful.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="14" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\eml_rand_shr3cong.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="15" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\eml_rand_shr3cong.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="16" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\eml_rand_shr3cong_stateful.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="17" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\eml_rand_shr3cong_stateful.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="18" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\eml_randn.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="19" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\eml_randn.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="20" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\fn_process_rail_data_DLL.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="21" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\fn_process_rail_data_DLL.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="22" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\fn_process_rail_data_DLL_data.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="23" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\fn_process_rail_data_DLL_data.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="24" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\fn_process_rail_data_DLL_initialize.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="25" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\fn_process_rail_data_DLL_initialize.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="26" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\fn_process_rail_data_DLL_terminate.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="27" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\fn_process_rail_data_DLL_terminate.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="28" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\fn_process_rail_data_DLL_types.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="29" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\linspace.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="30" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\linspace.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="31" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\randn.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="32" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\randn.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="33" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\rtwtypes.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="34" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\examples\main.c</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <Artifacts id="35" type="coderapp.internal.build.mfz.CodegenArtifact">
+                  <File type="coderapp.internal.util.mfz.FileSpec">
+                    <Path>C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\examples\main.h</Path>
+                  </File>
+                  <Type>GENERATED_SOURCE</Type>
+                </Artifacts>
+                <BuildFolder type="coderapp.internal.util.mfz.FileSpec"/>
+                <Messages type="coderapp.internal.util.mfz.Message">
+                  <FileRange type="coderapp.internal.util.mfz.FileRange">
+                    <File type="coderapp.internal.util.mfz.FileSpec">
+                      <Path>C:\Users\mepdw\Git\contact_wire_test\fn_process_rail_data_DLL.m</Path>
+                    </File>
+                    <Range type="coderapp.internal.util.mfz.Range"/>
+                  </FileRange>
+                  <Identifier>Coder:FE:ExampleMainModified</Identifier>
+                  <Text>MATLAB Coder cannot generate the example main file 'C:\Users\mepdw\Git\contact_wire_test\codegen\dll\fn_process_rail_data_DLL\examples\main.c' because it detected changes to the previously generated file. If you want to preserve the changes, move the file to a folder outside of the build folder. If you want MATLAB Coder to regenerate the example main file, move or delete the file.</Text>
+                  <Type>WARNING</Type>
+                </Messages>
+                <Messages type="coderapp.internal.util.mfz.Message">
+                  <FileRange type="coderapp.internal.util.mfz.FileRange">
+                    <File type="coderapp.internal.util.mfz.FileSpec">
+                      <Path>C:\Users\mepdw\Git\contact_wire_test\fn_process_rail_data_DLL.m</Path>
+                    </File>
+                    <Range type="coderapp.internal.util.mfz.Range"/>
+                  </FileRange>
+                  <Identifier>Coder:FE:TargetBuildError</Identifier>
+                  <Text>Build error: C compiler produced errors. See the Build Log for further details.</Text>
+                  <Type>ERROR</Type>
+                </Messages>
+                <Timestamp>2026-03-12T17:25:31</Timestamp>
+              </MainBuildResult>
+            </coderapp.internal.mlc.mfz.MatlabCoderProjectState>
+          </MF0>
+        </part>
+        <part role="standaloneConfig">
+          <MF0 packageUris="http://schema.mathworks.com/mf0/coderapp_config_datamodel/R2021a.001 http://schema.mathworks.com/mf0/coderapp_core_proj_dm/R2025a http://schema.mathworks.com/mf0/coderapp_core_rt_dm/R2022b http://schema.mathworks.com/mf0/coderapp_form_datamodel/R2020a http://schema.mathworks.com/mf0/coderapp_gpucoder_proj_dm/R2025a http://schema.mathworks.com/mf0/coderapp_gpucoder_rt_dm/R2022b http://schema.mathworks.com/mf0/coderapp_matlabcoder_proj_dm/R2025a http://schema.mathworks.com/mf0/coderapp_matlabcoder_rt_dm/R2022b http://schema.mathworks.com/mf0/coderapp_types_project_datamodel/R2025a http://schema.mathworks.com/mf0/coderapp_types_runtime_datamodel/R2022b http://schema.mathworks.com/mf0/coderapp_utils_datamodel/R2020a" version="1.1">
+            <coderapp.internal.ext.ConfigStore id="1" type="coderapp.internal.ext.ConfigStore"/>
+          </MF0>
+        </part>
+        <part role="mexConfig">
+          <MF0 packageUris="http://schema.mathworks.com/mf0/coderapp_config_datamodel/R2021a.001 http://schema.mathworks.com/mf0/coderapp_core_proj_dm/R2025a http://schema.mathworks.com/mf0/coderapp_core_rt_dm/R2022b http://schema.mathworks.com/mf0/coderapp_form_datamodel/R2020a http://schema.mathworks.com/mf0/coderapp_gpucoder_proj_dm/R2025a http://schema.mathworks.com/mf0/coderapp_gpucoder_rt_dm/R2022b http://schema.mathworks.com/mf0/coderapp_matlabcoder_proj_dm/R2025a http://schema.mathworks.com/mf0/coderapp_matlabcoder_rt_dm/R2022b http://schema.mathworks.com/mf0/coderapp_types_project_datamodel/R2025a http://schema.mathworks.com/mf0/coderapp_types_runtime_datamodel/R2022b http://schema.mathworks.com/mf0/coderapp_utils_datamodel/R2020a" version="1.1">
+            <coderapp.internal.ext.ConfigStore id="1" type="coderapp.internal.ext.ConfigStore"/>
+          </MF0>
+        </part>
+      </parts>
+    </layer>
+    <layer id="gpuCoder" version="R2025a">
+      <parts/>
+    </layer>
+  </layers>
+</coderProject>
