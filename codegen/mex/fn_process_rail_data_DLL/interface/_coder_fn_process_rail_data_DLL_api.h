@@ -21,7 +21,7 @@
 #include <string.h>
 
 /* Function Declarations */
-void fn_process_rail_data_DLL_api(const mxArray *const prhs[10], int32_T nlhs,
+void fn_process_rail_data_DLL_api(const mxArray *const prhs[30], int32_T nlhs,
                                   const mxArray *plhs[6]);
 
 /* End of code generation (_coder_fn_process_rail_data_DLL_api.h) */

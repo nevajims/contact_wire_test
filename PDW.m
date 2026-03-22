@@ -1,5 +1,5 @@
 clear all
-close all
+% close all
 addpath(genpath('.'));
 
 
@@ -12,18 +12,25 @@ clear('input', 'output');
 
 %Local processing of benchmark input data to check same as GUI processing
 output_rail_tester{2} = fn_process_rail_data(benchmark.input.rail_tester, benchmark.input.proc_options);
+
+benchmark.input.proc_options.raw_data_zero_dead_time = 0;%this now works ... but has to be off to match
+benchmark.input.proc_options.ms_matrix_calc_freqs = [];%new way fo forcing single freq calc
+% benchmark.input.proc_options.ms_matrix_apply_as_time_shift = 1;%works but doesn't make much odds
+% benchmark.input.proc_options.ms_matrix_allow_neg_amps = 1;%works but doesn't make much odds
 output_rail_tester{3} = fn_process_rail_data_DLL_wrapper(benchmark.input.rail_tester, benchmark.input.proc_options);
 
-return
 figure;
-norm_val = max(abs(output_rail_tester{1}.proc_data.dist_data), [], 'all');
 dmax = max(output_rail_tester{1}.proc_data.dist);
 
-col = {'r', 'k:', 'g--'};
+col = {'r', 'k.', 'g--'};
 for b = 1:numel(output_rail_tester)
-    tmp = 20 * log10(output_rail_tester{b}.proc_data.dist_data / norm_val);
+    norm_val = max(abs(output_rail_tester{b}.proc_data.dist_data), [], 'all');
+    tmp = 20 * log10(abs(output_rail_tester{b}.proc_data.dist_data) / norm_val);
     for direction = [-1:1]
         k = find((output_rail_tester{b}.proc_data.tx_dir == direction) & (output_rail_tester{b}.proc_data.rx_dir == direction));
+        if numel(k)>3
+            k = k(1:3);
+        end
         for i = 1:numel(k)
             subplot(numel(k), 2, i * 2 + (direction + 1) / 2 - 1);
             plot(output_rail_tester{b}.proc_data.dist * direction, tmp(:, k(i)), col{b});

@@ -1,5 +1,5 @@
 # CompilerName=mingw64
-# Mode=optim
+# Mode=debug
 ninja_required_version = 1.3
 
 # Basic folders
@@ -14,13 +14,13 @@ cxx = C:\ProgramData\MATLAB\SupportPackages\R2025a\3P.instrset\mingw_w64.instrse
 linker = C:\ProgramData\MATLAB\SupportPackages\R2025a\3P.instrset\mingw_w64.instrset\bin\gcc
 linkerxx = C:\ProgramData\MATLAB\SupportPackages\R2025a\3P.instrset\mingw_w64.instrset\bin\g++
 
-cflags =  -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I "C:\Users\mepdw\Git\contact_wire_test\codegen\mex\fn_process_rail_data_DLL" -I "C:\Users\mepdw\Git\contact_wire_test" -I "C:\Users\mepdw\Git\contact_wire_test\codegen\mex\fn_process_rail_data_DLL\interface" -I "C:\Program Files\MATLAB\R2025a\extern\include" -I "." -DMODEL=fn_process_rail_data_DLL_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized 
+cflags =  -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -g -std=c99 -I "C:\Users\mepdw\Git\contact_wire_test\codegen\mex\fn_process_rail_data_DLL" -I "C:\Users\mepdw\Git\contact_wire_test" -I "C:\Users\mepdw\Git\contact_wire_test\codegen\mex\fn_process_rail_data_DLL\interface" -I "C:\Program Files\MATLAB\R2025a\extern\include" -I "." -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=fn_process_rail_data_DLL_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp 
 
-cxxflags =  -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I "C:\Users\mepdw\Git\contact_wire_test\codegen\mex\fn_process_rail_data_DLL" -I "C:\Users\mepdw\Git\contact_wire_test" -I "C:\Users\mepdw\Git\contact_wire_test\codegen\mex\fn_process_rail_data_DLL\interface" -I "C:\Program Files\MATLAB\R2025a\extern\include" -I "." -DMODEL=fn_process_rail_data_DLL_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized 
+cxxflags =  -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -g -std=c++11 -I "C:\Users\mepdw\Git\contact_wire_test\codegen\mex\fn_process_rail_data_DLL" -I "C:\Users\mepdw\Git\contact_wire_test" -I "C:\Users\mepdw\Git\contact_wire_test\codegen\mex\fn_process_rail_data_DLL\interface" -I "C:\Program Files\MATLAB\R2025a\extern\include" -I "." -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=fn_process_rail_data_DLL_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp 
 
-ldflags = fn_process_rail_data_DLL.def  -m64 -Wl,--no-undefined -shared -static -L"C:\Program Files\MATLAB\R2025a\extern\lib\win64\mingw64" -llibmx -llibmex -llibmat -lm -llibmwlapack -llibmwblas -o "fn_process_rail_data_DLL_mex.mexw64" -llibemlrt -llibcovrt -llibut -llibmwmathutil 
+ldflags = fn_process_rail_data_DLL.def  -m64 -Wl,--no-undefined -shared -static -L"C:\Program Files\MATLAB\R2025a\extern\lib\win64\mingw64" -llibmx -llibmex -llibmat -lm -llibmwlapack -llibmwblas -o "fn_process_rail_data_DLL_mex.mexw64" -g -L"$matlabdir\extern\lib\win64\mingw64" -llibmwblas -llibmwlapack -llibemlrt -llibcovrt -llibut -llibmwmathutil -fopenmp
 
-ldxxflags = fn_process_rail_data_DLL.def  -m64 -Wl,--no-undefined -shared -static -L"C:\Program Files\MATLAB\R2025a\extern\lib\win64\mingw64" -llibmx -llibmex -llibmat -lm -llibmwlapack -llibmwblas -llibMatlabDataArray -llibMatlabEngine  -o "fn_process_rail_data_DLL_mex.mexw64" -llibemlrt -llibcovrt -llibut -llibmwmathutil 
+ldxxflags = fn_process_rail_data_DLL.def  -m64 -Wl,--no-undefined -shared -static -L"C:\Program Files\MATLAB\R2025a\extern\lib\win64\mingw64" -llibmx -llibmex -llibmat -lm -llibmwlapack -llibmwblas -llibMatlabDataArray -llibMatlabEngine  -o "fn_process_rail_data_DLL_mex.mexw64" -g -L"$matlabdir\extern\lib\win64\mingw64" -llibmwblas -llibmwlapack -llibemlrt -llibcovrt -llibut -llibmwmathutil -fopenmp
 
 linkobjs = 
 
@@ -45,11 +45,32 @@ build $builddir/rt_nonfinite.o : cc $root/rt_nonfinite.c
 build $builddir/fn_process_rail_data_DLL_initialize.o : cc $root/fn_process_rail_data_DLL_initialize.c
 build $builddir/fn_process_rail_data_DLL_terminate.o : cc $root/fn_process_rail_data_DLL_terminate.c
 build $builddir/fn_process_rail_data_DLL.o : cc $root/fn_process_rail_data_DLL.c
-build $builddir/randn.o : cc $root/randn.c
+build $builddir/mtimes.o : cc $root/mtimes.c
+build $builddir/find.o : cc $root/find.c
+build $builddir/indexShapeCheck.o : cc $root/indexShapeCheck.c
+build $builddir/fft.o : cc $root/fft.c
+build $builddir/linspace.o : cc $root/linspace.c
+build $builddir/abs.o : cc $root/abs.c
+build $builddir/sum.o : cc $root/sum.c
+build $builddir/sumMatrixIncludeNaN.o : cc $root/sumMatrixIncludeNaN.c
+build $builddir/interp1.o : cc $root/interp1.c
+build $builddir/anynan.o : cc $root/anynan.c
+build $builddir/pchip.o : cc $root/pchip.c
+build $builddir/chckxy.o : cc $root/chckxy.c
+build $builddir/bsearch.o : cc $root/bsearch.c
+build $builddir/squeeze.o : cc $root/squeeze.c
+build $builddir/dot.o : cc $root/dot.c
+build $builddir/pinv.o : cc $root/pinv.c
+build $builddir/ifft.o : cc $root/ifft.c
 build $builddir/_coder_fn_process_rail_data_DLL_api.o : cc $root/interface/_coder_fn_process_rail_data_DLL_api.c
 build $builddir/_coder_fn_process_rail_data_DLL_mex.o : cc $root/interface/_coder_fn_process_rail_data_DLL_mex.c
+build $builddir/eml_int_forloop_overflow_check.o : cc $root/eml_int_forloop_overflow_check.c
+build $builddir/exp.o : cc $root/exp.c
+build $builddir/flip.o : cc $root/flip.c
+build $builddir/div.o : cc $root/div.c
+build $builddir/fn_process_rail_data_DLL_emxutil.o : cc $root/fn_process_rail_data_DLL_emxutil.c
 build $builddir/_coder_fn_process_rail_data_DLL_info.o : cc $root/interface/_coder_fn_process_rail_data_DLL_info.c
 build $builddir/c_mexapi_version.o : cc $matlabdir/extern/version/c_mexapi_version.c
 
 # Link
-build $root\fn_process_rail_data_DLL_mex.mexw64 : link $builddir/fn_process_rail_data_DLL_data.o $builddir/rt_nonfinite.o $builddir/fn_process_rail_data_DLL_initialize.o $builddir/fn_process_rail_data_DLL_terminate.o $builddir/fn_process_rail_data_DLL.o $builddir/randn.o $builddir/_coder_fn_process_rail_data_DLL_api.o $builddir/_coder_fn_process_rail_data_DLL_mex.o $builddir/_coder_fn_process_rail_data_DLL_info.o $builddir/c_mexapi_version.o 
+build $root\fn_process_rail_data_DLL_mex.mexw64 : link $builddir/fn_process_rail_data_DLL_data.o $builddir/rt_nonfinite.o $builddir/fn_process_rail_data_DLL_initialize.o $builddir/fn_process_rail_data_DLL_terminate.o $builddir/fn_process_rail_data_DLL.o $builddir/mtimes.o $builddir/find.o $builddir/indexShapeCheck.o $builddir/fft.o $builddir/linspace.o $builddir/abs.o $builddir/sum.o $builddir/sumMatrixIncludeNaN.o $builddir/interp1.o $builddir/anynan.o $builddir/pchip.o $builddir/chckxy.o $builddir/bsearch.o $builddir/squeeze.o $builddir/dot.o $builddir/pinv.o $builddir/ifft.o $builddir/_coder_fn_process_rail_data_DLL_api.o $builddir/_coder_fn_process_rail_data_DLL_mex.o $builddir/eml_int_forloop_overflow_check.o $builddir/exp.o $builddir/flip.o $builddir/div.o $builddir/fn_process_rail_data_DLL_emxutil.o $builddir/_coder_fn_process_rail_data_DLL_info.o $builddir/c_mexapi_version.o 

@@ -3,15 +3,16 @@
  * course requirements at degree granting institutions only.  Not for
  * government, commercial, or other organizational use.
  *
- * randn.h
+ * anynan.h
  *
- * Code generation for function 'randn'
+ * Code generation for function 'anynan'
  *
  */
 
 #pragma once
 
 /* Include files */
+#include "fn_process_rail_data_DLL_types.h"
 #include "rtwtypes.h"
 #include "emlrt.h"
 #include "mex.h"
@@ -21,6 +22,8 @@
 #include <string.h>
 
 /* Function Declarations */
-void randn(real_T r[101056]);
+boolean_T anynan(const emlrtStack *sp, const emxArray_real_T *x);
 
-/* End of code generation (randn.h) */
+boolean_T b_anynan(const emlrtStack *sp, const emxArray_real_T *x);
+
+/* End of code generation (anynan.h) */

@@ -23,7 +23,7 @@
 /* Function Declarations */
 void fn_process_rail_data_DLL_mexFunction(int32_T nlhs, mxArray *plhs[6],
                                           int32_T nrhs,
-                                          const mxArray *prhs[10]);
+                                          const mxArray *prhs[30]);
 
 MEXFUNCTION_LINKAGE void mexFunction(int32_T nlhs, mxArray *plhs[],
                                      int32_T nrhs, const mxArray *prhs[]);

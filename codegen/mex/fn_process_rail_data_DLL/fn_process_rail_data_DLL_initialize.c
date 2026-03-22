@@ -26,7 +26,6 @@ static void fn_process_rail_data_DLL_once(void)
 
 void fn_process_rail_data_DLL_initialize(void)
 {
-  static const volatile char_T *emlrtBreakCheckR2012bFlagVar = NULL;
   emlrtStack st = {
       NULL, /* site */
       NULL, /* tls */
