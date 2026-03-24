@@ -21,7 +21,7 @@
 #include <emmintrin.h>
 
 /* Variable Definitions */
-static emlrtRSInfo le_emlrtRSI = {
+static emlrtRSInfo fe_emlrtRSI = {
     51,      /* lineNo */
     "pchip", /* fcnName */
     "C:\\Program "
@@ -29,7 +29,7 @@ static emlrtRSInfo le_emlrtRSI = {
                                                                           */
 };
 
-static emlrtRSInfo ne_emlrtRSI = {
+static emlrtRSInfo he_emlrtRSI = {
     62,      /* lineNo */
     "pchip", /* fcnName */
     "C:\\Program "
@@ -37,7 +37,7 @@ static emlrtRSInfo ne_emlrtRSI = {
                                                                           */
 };
 
-static emlrtRSInfo pe_emlrtRSI = {
+static emlrtRSInfo je_emlrtRSI = {
     75,      /* lineNo */
     "pchip", /* fcnName */
     "C:\\Program "
@@ -45,7 +45,7 @@ static emlrtRSInfo pe_emlrtRSI = {
                                                                           */
 };
 
-static emlrtRSInfo qe_emlrtRSI = {
+static emlrtRSInfo ke_emlrtRSI = {
     84,      /* lineNo */
     "pchip", /* fcnName */
     "C:\\Program "
@@ -53,7 +53,7 @@ static emlrtRSInfo qe_emlrtRSI = {
                                                                           */
 };
 
-static emlrtRSInfo te_emlrtRSI = {
+static emlrtRSInfo ne_emlrtRSI = {
     44,         /* lineNo */
     "pwchcore", /* fcnName */
     "C:\\Program "
@@ -61,7 +61,7 @@ static emlrtRSInfo te_emlrtRSI = {
     "re.m" /* pathName */
 };
 
-static emlrtRSInfo ue_emlrtRSI = {
+static emlrtRSInfo oe_emlrtRSI = {
     51,         /* lineNo */
     "pwchcore", /* fcnName */
     "C:\\Program "
@@ -69,7 +69,7 @@ static emlrtRSInfo ue_emlrtRSI = {
     "re.m" /* pathName */
 };
 
-static emlrtRTEInfo df_emlrtRTEI = {
+static emlrtRTEInfo pf_emlrtRTEI = {
     42,         /* lineNo */
     31,         /* colNo */
     "pwchcore", /* fName */
@@ -162,15 +162,15 @@ void pchip(const emlrtStack *sp, const emxArray_real_T *x,
   y_data = y->data;
   x_data = x->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
-  st.site = &ie_emlrtRSI;
+  st.site = &ce_emlrtRSI;
   if (x->size[0] < 2) {
-    emlrtErrorWithMessageIdR2018a(&st, &w_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &v_emlrtRTEI,
                                   "MATLAB:chckxy:NotEnoughPts",
                                   "MATLAB:chckxy:NotEnoughPts", 0);
   }
   if (!isFiniteAndStrictlyIncreasing(x)) {
     emlrtErrorWithMessageIdR2018a(
-        &st, &x_emlrtRTEI, "Coder:toolbox:MustBeFiniteAndStrictlyIncreasing",
+        &st, &w_emlrtRTEI, "Coder:toolbox:MustBeFiniteAndStrictlyIncreasing",
         "Coder:toolbox:MustBeFiniteAndStrictlyIncreasing", 0);
   }
   overflow = false;
@@ -187,30 +187,30 @@ void pchip(const emlrtStack *sp, const emxArray_real_T *x,
     }
   }
   if (overflow) {
-    emlrtErrorWithMessageIdR2018a(&st, &y_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &x_emlrtRTEI,
                                   "Coder:toolbox:UnsupportedNaN",
                                   "Coder:toolbox:UnsupportedNaN", 0);
   }
   if ((x->size[0] != y->size[1]) && (y->size[1] != x->size[0] + 2)) {
-    emlrtErrorWithMessageIdR2018a(&st, &ab_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &y_emlrtRTEI,
                                   "MATLAB:chckxy:NumSitesMismatchValues",
                                   "MATLAB:chckxy:NumSitesMismatchValues", 4, 12,
                                   x->size[0], 12, y->size[1]);
   }
   nx = x->size[0] - 2;
   if (x->size[0] != y->size[1]) {
-    emlrtErrorWithMessageIdR2018a(sp, &v_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(sp, &u_emlrtRTEI,
                                   "MATLAB:chckxy:NumSitesMismatchValues",
                                   "MATLAB:chckxy:NumSitesMismatchValues", 4, 12,
                                   x->size[0], 12, y->size[1]);
   }
-  emxInit_real_T(sp, &h, 2, &ef_emlrtRTEI);
+  emxInit_real_T(sp, &h, 2, &qf_emlrtRTEI);
   scalarLB = h->size[0] * h->size[1];
   h->size[0] = 1;
   h->size[1] = x->size[0] - 1;
-  emxEnsureCapacity_real_T(sp, h, scalarLB, &ye_emlrtRTEI);
+  emxEnsureCapacity_real_T(sp, h, scalarLB, &lf_emlrtRTEI);
   h_data = h->data;
-  st.site = &je_emlrtRSI;
+  st.site = &de_emlrtRSI;
   scalarLB = ((x->size[0] - 1) / 2) << 1;
   joffset = scalarLB - 2;
   for (k = 0; k <= joffset; k += 2) {
@@ -221,18 +221,18 @@ void pchip(const emlrtStack *sp, const emxArray_real_T *x,
     h_data[k] = x_data[k + 1] - x_data[k];
   }
   m = y->size[0];
-  emxInit_creal_T(sp, &del, 2, &ff_emlrtRTEI);
+  emxInit_creal_T(sp, &del, 2, &rf_emlrtRTEI);
   scalarLB = del->size[0] * del->size[1];
   del->size[0] = y->size[0];
   del->size[1] = y->size[1] - 1;
-  emxEnsureCapacity_creal_T(sp, del, scalarLB, &af_emlrtRTEI);
+  emxEnsureCapacity_creal_T(sp, del, scalarLB, &mf_emlrtRTEI);
   del_data = del->data;
-  st.site = &ke_emlrtRSI;
+  st.site = &ee_emlrtRSI;
   overflow = (y->size[0] > 2147483646);
   for (k = 0; k <= nx; k++) {
     c1 = k * m - 1;
     c2 = (k + 1) * m;
-    st.site = &le_emlrtRSI;
+    st.site = &fe_emlrtRSI;
     if (overflow) {
       b_st.site = &o_emlrtRSI;
       check_forloop_overflow_error(&b_st);
@@ -255,18 +255,18 @@ void pchip(const emlrtStack *sp, const emxArray_real_T *x,
       }
     }
   }
-  emxInit_creal_T(sp, &slopes, 2, &gf_emlrtRTEI);
+  emxInit_creal_T(sp, &slopes, 2, &sf_emlrtRTEI);
   scalarLB = slopes->size[0] * slopes->size[1];
   slopes->size[0] = y->size[0];
   slopes->size[1] = y->size[1];
-  emxEnsureCapacity_creal_T(sp, slopes, scalarLB, &bf_emlrtRTEI);
+  emxEnsureCapacity_creal_T(sp, slopes, scalarLB, &nf_emlrtRTEI);
   slopes_data = slopes->data;
   if (x->size[0] == 2) {
-    st.site = &me_emlrtRSI;
+    st.site = &ge_emlrtRSI;
     overflow = (y->size[0] > 2147483646);
     for (k = 0; k < 2; k++) {
       c1 = k * m;
-      st.site = &ne_emlrtRSI;
+      st.site = &he_emlrtRSI;
       if (overflow) {
         b_st.site = &o_emlrtRSI;
         check_forloop_overflow_error(&b_st);
@@ -277,7 +277,7 @@ void pchip(const emlrtStack *sp, const emxArray_real_T *x,
     }
   } else {
     joffset = x->size[0];
-    st.site = &oe_emlrtRSI;
+    st.site = &ie_emlrtRSI;
     overflow = (y->size[0] > 2147483646);
     for (k = 0; k <= joffset - 3; k++) {
       ar = h_data[k + 1];
@@ -286,7 +286,7 @@ void pchip(const emlrtStack *sp, const emxArray_real_T *x,
       w2 = ar + 2.0 * w2;
       c1 = k * m;
       c2 = (k + 1) * m - 1;
-      st.site = &pe_emlrtRSI;
+      st.site = &je_emlrtRSI;
       if (overflow) {
         b_st.site = &o_emlrtRSI;
         check_forloop_overflow_error(&b_st);
@@ -314,7 +314,7 @@ void pchip(const emlrtStack *sp, const emxArray_real_T *x,
     joffset = (x->size[0] - 1) * y->size[0];
     c1 = (x->size[0] - 2) * y->size[0];
     c2 = (x->size[0] - 3) * y->size[0];
-    st.site = &qe_emlrtRSI;
+    st.site = &ke_emlrtRSI;
     if (y->size[0] > 2147483646) {
       b_st.site = &o_emlrtRSI;
       check_forloop_overflow_error(&b_st);
@@ -326,18 +326,18 @@ void pchip(const emlrtStack *sp, const emxArray_real_T *x,
           del_data[k + c1], del_data[k + c2], h_data[nx], h_data[nx - 1]);
     }
   }
-  st.site = &re_emlrtRSI;
+  st.site = &le_emlrtRSI;
   nx = x->size[0];
-  b_st.site = &se_emlrtRSI;
+  b_st.site = &me_emlrtRSI;
   if (x->size[0] > muIntScalarMax_sint32(nx, nx)) {
-    emlrtErrorWithMessageIdR2018a(&b_st, &c_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&b_st, &m_emlrtRTEI,
                                   "Coder:toolbox:reshape_emptyReshapeLimit",
                                   "Coder:toolbox:reshape_emptyReshapeLimit", 0);
   }
   scalarLB = v_breaks->size[0] * v_breaks->size[1];
   v_breaks->size[0] = 1;
   v_breaks->size[1] = x->size[0];
-  emxEnsureCapacity_real_T(&st, v_breaks, scalarLB, &cf_emlrtRTEI);
+  emxEnsureCapacity_real_T(&st, v_breaks, scalarLB, &of_emlrtRTEI);
   v_breaks_data = v_breaks->data;
   for (k = 0; k < nx; k++) {
     v_breaks_data[k] = x_data[k];
@@ -348,15 +348,15 @@ void pchip(const emlrtStack *sp, const emxArray_real_T *x,
   v_coefs->size[0] = slopes->size[0];
   v_coefs->size[1] = x->size[0] - 1;
   v_coefs->size[2] = 4;
-  emxEnsureCapacity_creal_T(&st, v_coefs, joffset, &df_emlrtRTEI);
+  emxEnsureCapacity_creal_T(&st, v_coefs, joffset, &pf_emlrtRTEI);
   v_coefs_data = v_coefs->data;
-  b_st.site = &te_emlrtRSI;
+  b_st.site = &ne_emlrtRSI;
   overflow = (slopes->size[0] > 2147483646);
   for (k = 0; k <= nx - 2; k++) {
     real_T dxj;
     dxj = h_data[k];
     joffset = k * c1 - 1;
-    b_st.site = &ue_emlrtRSI;
+    b_st.site = &oe_emlrtRSI;
     if (overflow) {
       c_st.site = &o_emlrtRSI;
       check_forloop_overflow_error(&c_st);

@@ -26,7 +26,7 @@
 #include <emmintrin.h>
 
 /* Variable Definitions */
-static emlrtRSInfo ud_emlrtRSI = {
+static emlrtRSInfo od_emlrtRSI = {
     49,        /* lineNo */
     "interp1", /* fcnName */
     "C:\\Program "
@@ -34,7 +34,7 @@ static emlrtRSInfo ud_emlrtRSI = {
                                                                             */
 };
 
-static emlrtRSInfo vd_emlrtRSI = {
+static emlrtRSInfo pd_emlrtRSI = {
     165,            /* lineNo */
     "interp1_work", /* fcnName */
     "C:\\Program "
@@ -42,7 +42,7 @@ static emlrtRSInfo vd_emlrtRSI = {
                                                                             */
 };
 
-static emlrtRSInfo wd_emlrtRSI = {
+static emlrtRSInfo qd_emlrtRSI = {
     190,            /* lineNo */
     "interp1_work", /* fcnName */
     "C:\\Program "
@@ -50,7 +50,7 @@ static emlrtRSInfo wd_emlrtRSI = {
                                                                             */
 };
 
-static emlrtRSInfo xd_emlrtRSI = {
+static emlrtRSInfo rd_emlrtRSI = {
     198,            /* lineNo */
     "interp1_work", /* fcnName */
     "C:\\Program "
@@ -58,7 +58,7 @@ static emlrtRSInfo xd_emlrtRSI = {
                                                                             */
 };
 
-static emlrtRSInfo yd_emlrtRSI = {
+static emlrtRSInfo sd_emlrtRSI = {
     202,            /* lineNo */
     "interp1_work", /* fcnName */
     "C:\\Program "
@@ -66,7 +66,7 @@ static emlrtRSInfo yd_emlrtRSI = {
                                                                             */
 };
 
-static emlrtRSInfo ae_emlrtRSI = {
+static emlrtRSInfo td_emlrtRSI = {
     265,            /* lineNo */
     "interp1_work", /* fcnName */
     "C:\\Program "
@@ -74,7 +74,7 @@ static emlrtRSInfo ae_emlrtRSI = {
                                                                             */
 };
 
-static emlrtRSInfo ee_emlrtRSI = {
+static emlrtRSInfo xd_emlrtRSI = {
     37,     /* lineNo */
     "flip", /* fcnName */
     "C:\\Program "
@@ -82,7 +82,7 @@ static emlrtRSInfo ee_emlrtRSI = {
                                                                        */
 };
 
-static emlrtRSInfo fe_emlrtRSI = {
+static emlrtRSInfo yd_emlrtRSI = {
     453,                          /* lineNo */
     "interp1SplineMakimaOrPCHIP", /* fcnName */
     "C:\\Program "
@@ -90,7 +90,7 @@ static emlrtRSInfo fe_emlrtRSI = {
                                                                             */
 };
 
-static emlrtRSInfo ge_emlrtRSI = {
+static emlrtRSInfo ae_emlrtRSI = {
     460,                          /* lineNo */
     "interp1SplineMakimaOrPCHIP", /* fcnName */
     "C:\\Program "
@@ -98,7 +98,7 @@ static emlrtRSInfo ge_emlrtRSI = {
                                                                             */
 };
 
-static emlrtRSInfo he_emlrtRSI = {
+static emlrtRSInfo be_emlrtRSI = {
     25,                                /* lineNo */
     "interp1SplineMakimaOrPCHIPcoefs", /* fcnName */
     "C:\\Program "
@@ -107,7 +107,7 @@ static emlrtRSInfo he_emlrtRSI = {
     "fs.m" /* pathName */
 };
 
-static emlrtRSInfo xe_emlrtRSI = {
+static emlrtRSInfo re_emlrtRSI = {
     100,     /* lineNo */
     "ppval", /* fcnName */
     "C:\\Program "
@@ -115,7 +115,7 @@ static emlrtRSInfo xe_emlrtRSI = {
                                                                           */
 };
 
-static emlrtRSInfo ye_emlrtRSI = {
+static emlrtRSInfo se_emlrtRSI = {
     107,     /* lineNo */
     "ppval", /* fcnName */
     "C:\\Program "
@@ -123,7 +123,7 @@ static emlrtRSInfo ye_emlrtRSI = {
                                                                           */
 };
 
-static emlrtRSInfo af_emlrtRSI = {
+static emlrtRSInfo te_emlrtRSI = {
     112,     /* lineNo */
     "ppval", /* fcnName */
     "C:\\Program "
@@ -131,7 +131,7 @@ static emlrtRSInfo af_emlrtRSI = {
                                                                           */
 };
 
-static emlrtRSInfo bf_emlrtRSI = {
+static emlrtRSInfo ue_emlrtRSI = {
     14,                                /* lineNo */
     "interp1SplineMakimaOrPCHIPcoefs", /* fcnName */
     "C:\\Program "
@@ -140,7 +140,7 @@ static emlrtRSInfo bf_emlrtRSI = {
     "fs.m" /* pathName */
 };
 
-static emlrtRSInfo ug_emlrtRSI = {
+static emlrtRSInfo ii_emlrtRSI = {
     54,        /* lineNo */
     "interp1", /* fcnName */
     "C:\\Program "
@@ -148,7 +148,7 @@ static emlrtRSInfo ug_emlrtRSI = {
                                                                             */
 };
 
-static emlrtRSInfo vg_emlrtRSI = {
+static emlrtRSInfo ji_emlrtRSI = {
     305,            /* lineNo */
     "interp1_work", /* fcnName */
     "C:\\Program "
@@ -156,7 +156,7 @@ static emlrtRSInfo vg_emlrtRSI = {
                                                                             */
 };
 
-static emlrtRSInfo wg_emlrtRSI = {
+static emlrtRSInfo ki_emlrtRSI = {
     339,             /* lineNo */
     "interp1Linear", /* fcnName */
     "C:\\Program "
@@ -164,7 +164,7 @@ static emlrtRSInfo wg_emlrtRSI = {
                                                                             */
 };
 
-static emlrtRTEInfo q_emlrtRTEI = {
+static emlrtRTEInfo p_emlrtRTEI = {
     204,            /* lineNo */
     13,             /* colNo */
     "interp1_work", /* fName */
@@ -173,7 +173,7 @@ static emlrtRTEInfo q_emlrtRTEI = {
                                                                             */
 };
 
-static emlrtRTEInfo r_emlrtRTEI = {
+static emlrtRTEInfo q_emlrtRTEI = {
     165,            /* lineNo */
     5,              /* colNo */
     "interp1_work", /* fName */
@@ -182,7 +182,7 @@ static emlrtRTEInfo r_emlrtRTEI = {
                                                                             */
 };
 
-static emlrtRTEInfo s_emlrtRTEI = {
+static emlrtRTEInfo r_emlrtRTEI = {
     155,            /* lineNo */
     15,             /* colNo */
     "interp1_work", /* fName */
@@ -191,7 +191,7 @@ static emlrtRTEInfo s_emlrtRTEI = {
                                                                             */
 };
 
-static emlrtRTEInfo t_emlrtRTEI = {
+static emlrtRTEInfo s_emlrtRTEI = {
     139,            /* lineNo */
     23,             /* colNo */
     "interp1_work", /* fName */
@@ -200,7 +200,7 @@ static emlrtRTEInfo t_emlrtRTEI = {
                                                                             */
 };
 
-static emlrtRTEInfo u_emlrtRTEI = {
+static emlrtRTEInfo t_emlrtRTEI = {
     130,            /* lineNo */
     19,             /* colNo */
     "interp1_work", /* fName */
@@ -209,7 +209,7 @@ static emlrtRTEInfo u_emlrtRTEI = {
                                                                             */
 };
 
-static emlrtRTEInfo re_emlrtRTEI = {
+static emlrtRTEInfo ef_emlrtRTEI = {
     49,        /* lineNo */
     49,        /* colNo */
     "interp1", /* fName */
@@ -218,7 +218,7 @@ static emlrtRTEInfo re_emlrtRTEI = {
                                                                             */
 };
 
-static emlrtRTEInfo se_emlrtRTEI = {
+static emlrtRTEInfo ff_emlrtRTEI = {
     50,        /* lineNo */
     25,        /* colNo */
     "interp1", /* fName */
@@ -227,7 +227,7 @@ static emlrtRTEInfo se_emlrtRTEI = {
                                                                             */
 };
 
-static emlrtRTEInfo te_emlrtRTEI = {
+static emlrtRTEInfo gf_emlrtRTEI = {
     26,        /* lineNo */
     9,         /* colNo */
     "permute", /* fName */
@@ -236,7 +236,7 @@ static emlrtRTEInfo te_emlrtRTEI = {
                                                                           */
 };
 
-static emlrtRTEInfo ue_emlrtRTEI = {
+static emlrtRTEInfo hf_emlrtRTEI = {
     77,      /* lineNo */
     24,      /* colNo */
     "ppval", /* fName */
@@ -245,7 +245,7 @@ static emlrtRTEInfo ue_emlrtRTEI = {
                                                                           */
 };
 
-static emlrtRTEInfo ve_emlrtRTEI = {
+static emlrtRTEInfo if_emlrtRTEI = {
     49,        /* lineNo */
     9,         /* colNo */
     "interp1", /* fName */
@@ -254,7 +254,7 @@ static emlrtRTEInfo ve_emlrtRTEI = {
                                                                             */
 };
 
-static emlrtRTEInfo we_emlrtRTEI = {
+static emlrtRTEInfo jf_emlrtRTEI = {
     453,       /* lineNo */
     1,         /* colNo */
     "interp1", /* fName */
@@ -263,7 +263,7 @@ static emlrtRTEInfo we_emlrtRTEI = {
                                                                             */
 };
 
-static emlrtRTEInfo xe_emlrtRTEI = {
+static emlrtRTEInfo kf_emlrtRTEI = {
     460,       /* lineNo */
     5,         /* colNo */
     "interp1", /* fName */
@@ -272,7 +272,7 @@ static emlrtRTEInfo xe_emlrtRTEI = {
                                                                             */
 };
 
-static emlrtRTEInfo hf_emlrtRTEI = {
+static emlrtRTEInfo tf_emlrtRTEI = {
     32,         /* lineNo */
     31,         /* colNo */
     "pwchcore", /* fName */
@@ -281,7 +281,7 @@ static emlrtRTEInfo hf_emlrtRTEI = {
     "re.m" /* pName */
 };
 
-static emlrtRTEInfo sg_emlrtRTEI = {
+static emlrtRTEInfo nh_emlrtRTEI = {
     55,        /* lineNo */
     9,         /* colNo */
     "interp1", /* fName */
@@ -290,7 +290,7 @@ static emlrtRTEInfo sg_emlrtRTEI = {
                                                                             */
 };
 
-static emlrtRTEInfo tg_emlrtRTEI = {
+static emlrtRTEInfo oh_emlrtRTEI = {
     55,        /* lineNo */
     33,        /* colNo */
     "interp1", /* fName */
@@ -299,7 +299,7 @@ static emlrtRTEInfo tg_emlrtRTEI = {
                                                                             */
 };
 
-static emlrtRTEInfo ug_emlrtRTEI = {
+static emlrtRTEInfo ph_emlrtRTEI = {
     54,        /* lineNo */
     5,         /* colNo */
     "interp1", /* fName */
@@ -353,7 +353,7 @@ static void b_interp1Linear(const emlrtStack *sp, const emxArray_creal_T *y,
   y_data = y->data;
   minx = varargin_1_data[0];
   maxx = varargin_1_data[varargin_1->size[0] - 1];
-  st.site = &wg_emlrtRSI;
+  st.site = &ki_emlrtRSI;
   if (xi->size[0] > 2147483646) {
     b_st.site = &o_emlrtRSI;
     check_forloop_overflow_error(&b_st);
@@ -443,7 +443,7 @@ static void interp1Linear(const emlrtStack *sp, const emxArray_real_T *y,
   y_data = y->data;
   minx = varargin_1_data[0];
   maxx = varargin_1_data[varargin_1->size[1] - 1];
-  st.site = &wg_emlrtRSI;
+  st.site = &ki_emlrtRSI;
   if (xi->size[0] > 2147483646) {
     b_st.site = &o_emlrtRSI;
     check_forloop_overflow_error(&b_st);
@@ -542,55 +542,55 @@ real_T b_interp1(const emlrtStack *sp, const emxArray_real_T *varargin_1,
   varargin_2_data = varargin_2->data;
   varargin_1_data = varargin_1->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
-  st.site = &ud_emlrtRSI;
-  emxInit_real_T(&st, &y, 1, &re_emlrtRTEI);
+  st.site = &od_emlrtRSI;
+  emxInit_real_T(&st, &y, 1, &ef_emlrtRTEI);
   nd2 = varargin_2->size[0];
   n = y->size[0];
   y->size[0] = varargin_2->size[0];
-  emxEnsureCapacity_real_T(&st, y, n, &re_emlrtRTEI);
+  emxEnsureCapacity_real_T(&st, y, n, &ef_emlrtRTEI);
   y_data = y->data;
   for (b_j1 = 0; b_j1 < nd2; b_j1++) {
     y_data[b_j1] = varargin_2_data[b_j1];
   }
-  emxInit_real_T(&st, &x, 1, &se_emlrtRTEI);
+  emxInit_real_T(&st, &x, 1, &ff_emlrtRTEI);
   loop_ub = varargin_1->size[0];
   n = x->size[0];
   x->size[0] = varargin_1->size[0];
-  emxEnsureCapacity_real_T(&st, x, n, &se_emlrtRTEI);
+  emxEnsureCapacity_real_T(&st, x, n, &ff_emlrtRTEI);
   x_data = x->data;
   for (b_j1 = 0; b_j1 < loop_ub; b_j1++) {
     x_data[b_j1] = varargin_1_data[b_j1];
   }
   nx = varargin_1->size[0] - 1;
   if (varargin_1->size[0] != varargin_2->size[0]) {
-    emlrtErrorWithMessageIdR2018a(&st, &t_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &s_emlrtRTEI,
                                   "Coder:MATLAB:interp1_YInvalidNumRows",
                                   "Coder:MATLAB:interp1_YInvalidNumRows", 0);
   }
   if (varargin_1->size[0] <= 1) {
-    emlrtErrorWithMessageIdR2018a(&st, &s_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &r_emlrtRTEI,
                                   "MATLAB:interp1:NotEnoughPts",
                                   "MATLAB:interp1:NotEnoughPts", 0);
   }
-  b_st.site = &vd_emlrtRSI;
+  b_st.site = &pd_emlrtRSI;
   if (anynan(&b_st, varargin_1)) {
-    emlrtErrorWithMessageIdR2018a(&st, &r_emlrtRTEI, "MATLAB:interp1:NaNinX",
+    emlrtErrorWithMessageIdR2018a(&st, &q_emlrtRTEI, "MATLAB:interp1:NaNinX",
                                   "MATLAB:interp1:NaNinX", 0);
   }
   if (varargin_1_data[1] < varargin_1_data[0]) {
     n = varargin_1->size[0] >> 1;
-    b_st.site = &wd_emlrtRSI;
+    b_st.site = &qd_emlrtRSI;
     for (b_j1 = 0; b_j1 < n; b_j1++) {
       Vq = x_data[b_j1];
       nd2 = nx - b_j1;
       x_data[b_j1] = x_data[nd2];
       x_data[nd2] = Vq;
     }
-    b_st.site = &xd_emlrtRSI;
+    b_st.site = &rd_emlrtRSI;
     if (varargin_2->size[0] > 1) {
       n = varargin_2->size[0] - 1;
       nd2 = varargin_2->size[0] >> 1;
-      c_st.site = &ee_emlrtRSI;
+      c_st.site = &xd_emlrtRSI;
       for (b_j1 = 0; b_j1 < nd2; b_j1++) {
         Vq = y_data[b_j1];
         y_tmp = n - b_j1;
@@ -599,30 +599,30 @@ real_T b_interp1(const emlrtStack *sp, const emxArray_real_T *varargin_1,
       }
     }
   }
-  b_st.site = &yd_emlrtRSI;
+  b_st.site = &sd_emlrtRSI;
   if (varargin_1->size[0] > 2147483646) {
     c_st.site = &o_emlrtRSI;
     check_forloop_overflow_error(&c_st);
   }
   for (b_j1 = 2; b_j1 <= nx + 1; b_j1++) {
     if (x_data[b_j1 - 1] <= x_data[b_j1 - 2]) {
-      emlrtErrorWithMessageIdR2018a(&st, &q_emlrtRTEI,
+      emlrtErrorWithMessageIdR2018a(&st, &p_emlrtRTEI,
                                     "Coder:toolbox:interp1_nonMonotonicX",
                                     "Coder:toolbox:interp1_nonMonotonicX", 0);
     }
   }
-  b_st.site = &ae_emlrtRSI;
-  c_st.site = &fe_emlrtRSI;
-  d_st.site = &bf_emlrtRSI;
-  e_st.site = &ie_emlrtRSI;
+  b_st.site = &td_emlrtRSI;
+  c_st.site = &yd_emlrtRSI;
+  d_st.site = &ue_emlrtRSI;
+  e_st.site = &ce_emlrtRSI;
   if (x->size[0] < 2) {
-    emlrtErrorWithMessageIdR2018a(&e_st, &w_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&e_st, &v_emlrtRTEI,
                                   "MATLAB:chckxy:NotEnoughPts",
                                   "MATLAB:chckxy:NotEnoughPts", 0);
   }
   if (!isFiniteAndStrictlyIncreasing(x)) {
     emlrtErrorWithMessageIdR2018a(
-        &e_st, &x_emlrtRTEI, "Coder:toolbox:MustBeFiniteAndStrictlyIncreasing",
+        &e_st, &w_emlrtRTEI, "Coder:toolbox:MustBeFiniteAndStrictlyIncreasing",
         "Coder:toolbox:MustBeFiniteAndStrictlyIncreasing", 0);
   }
   p = false;
@@ -637,30 +637,30 @@ real_T b_interp1(const emlrtStack *sp, const emxArray_real_T *varargin_1,
     }
   }
   if (p) {
-    emlrtErrorWithMessageIdR2018a(&e_st, &y_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&e_st, &x_emlrtRTEI,
                                   "Coder:toolbox:UnsupportedNaN",
                                   "Coder:toolbox:UnsupportedNaN", 0);
   }
   if ((y->size[0] != x->size[0]) && (y->size[0] != x->size[0] + 2)) {
-    emlrtErrorWithMessageIdR2018a(&e_st, &ab_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&e_st, &y_emlrtRTEI,
                                   "MATLAB:chckxy:NumSitesMismatchValues",
                                   "MATLAB:chckxy:NumSitesMismatchValues", 4, 12,
                                   x->size[0], 12, y->size[0]);
   }
   if (x->size[0] != y->size[0]) {
-    emlrtErrorWithMessageIdR2018a(&d_st, &v_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&d_st, &u_emlrtRTEI,
                                   "MATLAB:chckxy:NumSitesMismatchValues",
                                   "MATLAB:chckxy:NumSitesMismatchValues", 4, 12,
                                   x->size[0], 12, y->size[0]);
   }
   nxm1 = x->size[0] - 2;
-  emxInit_real_T(&d_st, &h, 2, &ef_emlrtRTEI);
+  emxInit_real_T(&d_st, &h, 2, &qf_emlrtRTEI);
   n = h->size[0] * h->size[1];
   h->size[0] = 1;
   h->size[1] = varargin_1->size[0] - 1;
-  emxEnsureCapacity_real_T(&d_st, h, n, &ye_emlrtRTEI);
+  emxEnsureCapacity_real_T(&d_st, h, n, &lf_emlrtRTEI);
   h_data = h->data;
-  e_st.site = &je_emlrtRSI;
+  e_st.site = &de_emlrtRSI;
   nd2 = ((x->size[0] - 1) / 2) << 1;
   n = nd2 - 2;
   for (b_j1 = 0; b_j1 <= n; b_j1 += 2) {
@@ -671,14 +671,14 @@ real_T b_interp1(const emlrtStack *sp, const emxArray_real_T *varargin_1,
   for (b_j1 = nd2; b_j1 <= nxm1; b_j1++) {
     h_data[b_j1] = x_data[b_j1 + 1] - x_data[b_j1];
   }
-  emxInit_real_T(&d_st, &del, 2, &ff_emlrtRTEI);
+  emxInit_real_T(&d_st, &del, 2, &rf_emlrtRTEI);
   n = del->size[0] * del->size[1];
   del->size[0] = 1;
   y_tmp = y->size[0] - 1;
   del->size[1] = y->size[0] - 1;
-  emxEnsureCapacity_real_T(&d_st, del, n, &af_emlrtRTEI);
+  emxEnsureCapacity_real_T(&d_st, del, n, &mf_emlrtRTEI);
   del_data = del->data;
-  e_st.site = &ke_emlrtRSI;
+  e_st.site = &ee_emlrtRSI;
   n = nd2 - 2;
   for (b_j1 = 0; b_j1 <= n; b_j1 += 2) {
     __m128d r2;
@@ -690,19 +690,19 @@ real_T b_interp1(const emlrtStack *sp, const emxArray_real_T *varargin_1,
   for (b_j1 = nd2; b_j1 <= nxm1; b_j1++) {
     del_data[b_j1] = (y_data[b_j1 + 1] - y_data[b_j1]) / h_data[b_j1];
   }
-  emxInit_real_T(&d_st, &slopes, 2, &gf_emlrtRTEI);
+  emxInit_real_T(&d_st, &slopes, 2, &sf_emlrtRTEI);
   n = slopes->size[0] * slopes->size[1];
   slopes->size[0] = 1;
   slopes->size[1] = varargin_2->size[0];
-  emxEnsureCapacity_real_T(&d_st, slopes, n, &bf_emlrtRTEI);
+  emxEnsureCapacity_real_T(&d_st, slopes, n, &nf_emlrtRTEI);
   slopes_data = slopes->data;
   if (x->size[0] == 2) {
-    e_st.site = &me_emlrtRSI;
+    e_st.site = &ge_emlrtRSI;
     slopes_data[0] = del_data[0];
     slopes_data[1] = del_data[0];
   } else {
     n = varargin_1->size[0];
-    e_st.site = &oe_emlrtRSI;
+    e_st.site = &ie_emlrtRSI;
     if (x->size[0] - 2 < 2000) {
       for (k = 0; k <= loop_ub - 3; k++) {
         w2 = h_data[k + 1];
@@ -769,18 +769,18 @@ real_T b_interp1(const emlrtStack *sp, const emxArray_real_T *varargin_1,
     }
     slopes_data[nx] = s;
   }
-  e_st.site = &re_emlrtRSI;
-  f_st.site = &se_emlrtRSI;
+  e_st.site = &le_emlrtRSI;
+  f_st.site = &me_emlrtRSI;
   if (x->size[0] > muIntScalarMax_sint32(loop_ub, loop_ub)) {
-    emlrtErrorWithMessageIdR2018a(&f_st, &c_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&f_st, &m_emlrtRTEI,
                                   "Coder:toolbox:reshape_emptyReshapeLimit",
                                   "Coder:toolbox:reshape_emptyReshapeLimit", 0);
   }
-  emxInit_real_T(&e_st, &pp_coefs, 2, &cf_emlrtRTEI);
+  emxInit_real_T(&e_st, &pp_coefs, 2, &of_emlrtRTEI);
   n = pp_coefs->size[0] * pp_coefs->size[1];
   pp_coefs->size[0] = y_tmp;
   pp_coefs->size[1] = 4;
-  emxEnsureCapacity_real_T(&e_st, pp_coefs, n, &hf_emlrtRTEI);
+  emxEnsureCapacity_real_T(&e_st, pp_coefs, n, &tf_emlrtRTEI);
   pp_coefs_data = pp_coefs->data;
   for (b_j1 = 0; b_j1 <= loop_ub - 2; b_j1++) {
     Vq = del_data[b_j1];
@@ -855,25 +855,25 @@ void c_interp1(const emlrtStack *sp, const emxArray_real_T *varargin_1,
   varargin_2_data = varargin_2->data;
   varargin_1_data = varargin_1->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
-  st.site = &ud_emlrtRSI;
-  emxInit_creal_T(&st, &y, 2, &re_emlrtRTEI);
+  st.site = &od_emlrtRSI;
+  emxInit_creal_T(&st, &y, 2, &ef_emlrtRTEI);
   i = varargin_2->size[0];
   loop_ub = y->size[0] * y->size[1];
   y->size[0] = varargin_2->size[0];
   b_loop_ub = varargin_2->size[1];
   y->size[1] = varargin_2->size[1];
-  emxEnsureCapacity_creal_T(&st, y, loop_ub, &re_emlrtRTEI);
+  emxEnsureCapacity_creal_T(&st, y, loop_ub, &ef_emlrtRTEI);
   y_data = y->data;
   loop_ub = varargin_2->size[0] * varargin_2->size[1];
   for (b_j1 = 0; b_j1 < loop_ub; b_j1++) {
     y_data[b_j1] = varargin_2_data[b_j1];
   }
-  emxInit_real_T(&st, &x, 2, &se_emlrtRTEI);
+  emxInit_real_T(&st, &x, 2, &ff_emlrtRTEI);
   loop_ub = x->size[0] * x->size[1];
   x->size[0] = 1;
   n = varargin_1->size[1];
   x->size[1] = varargin_1->size[1];
-  emxEnsureCapacity_real_T(&st, x, loop_ub, &se_emlrtRTEI);
+  emxEnsureCapacity_real_T(&st, x, loop_ub, &ff_emlrtRTEI);
   x_data = x->data;
   for (b_j1 = 0; b_j1 < n; b_j1++) {
     x_data[b_j1] = varargin_1_data[b_j1];
@@ -882,56 +882,56 @@ void c_interp1(const emlrtStack *sp, const emxArray_real_T *varargin_1,
       ((varargin_2->size[0] == 1) || (varargin_2->size[1] == 1)) &&
       (varargin_2->size[0] == 1)) {
     emlrtErrorWithMessageIdR2018a(
-        &st, &u_emlrtRTEI, "Coder:toolbox:interp1_vsizeMatrixBecameRowVec",
+        &st, &t_emlrtRTEI, "Coder:toolbox:interp1_vsizeMatrixBecameRowVec",
         "Coder:toolbox:interp1_vsizeMatrixBecameRowVec", 0);
   }
   nyrows = varargin_2->size[0];
   nx = varargin_1->size[1] - 1;
   if (varargin_2->size[0] != varargin_1->size[1]) {
-    emlrtErrorWithMessageIdR2018a(&st, &t_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &s_emlrtRTEI,
                                   "Coder:MATLAB:interp1_YInvalidNumRows",
                                   "Coder:MATLAB:interp1_YInvalidNumRows", 0);
   }
   if (varargin_1->size[1] <= 1) {
-    emlrtErrorWithMessageIdR2018a(&st, &s_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &r_emlrtRTEI,
                                   "MATLAB:interp1:NotEnoughPts",
                                   "MATLAB:interp1:NotEnoughPts", 0);
   }
   loop_ub = Vq->size[0] * Vq->size[1];
   Vq->size[0] = 1;
   Vq->size[1] = varargin_2->size[1];
-  emxEnsureCapacity_creal_T(&st, Vq, loop_ub, &ve_emlrtRTEI);
+  emxEnsureCapacity_creal_T(&st, Vq, loop_ub, &if_emlrtRTEI);
   Vq_data = Vq->data;
   for (b_j1 = 0; b_j1 < b_loop_ub; b_j1++) {
     Vq_data[b_j1].re = rtNaN;
     Vq_data[b_j1].im = rtNaN;
   }
-  b_st.site = &vd_emlrtRSI;
+  b_st.site = &pd_emlrtRSI;
   if (b_anynan(&b_st, varargin_1)) {
-    emlrtErrorWithMessageIdR2018a(&st, &r_emlrtRTEI, "MATLAB:interp1:NaNinX",
+    emlrtErrorWithMessageIdR2018a(&st, &q_emlrtRTEI, "MATLAB:interp1:NaNinX",
                                   "MATLAB:interp1:NaNinX", 0);
   }
   if (varargin_1_data[1] < varargin_1_data[0]) {
     loop_ub = varargin_1->size[1] >> 1;
-    b_st.site = &wd_emlrtRSI;
+    b_st.site = &qd_emlrtRSI;
     for (b_j1 = 0; b_j1 < loop_ub; b_j1++) {
       xtmp = x_data[b_j1];
       n = nx - b_j1;
       x_data[b_j1] = x_data[n];
       x_data[n] = xtmp;
     }
-    b_st.site = &xd_emlrtRSI;
+    b_st.site = &rd_emlrtRSI;
     flip(y);
     y_data = y->data;
   }
-  b_st.site = &yd_emlrtRSI;
+  b_st.site = &sd_emlrtRSI;
   if (varargin_1->size[1] > 2147483646) {
     c_st.site = &o_emlrtRSI;
     check_forloop_overflow_error(&c_st);
   }
   for (b_j1 = 2; b_j1 <= nx + 1; b_j1++) {
     if (x_data[b_j1 - 1] <= x_data[b_j1 - 2]) {
-      emlrtErrorWithMessageIdR2018a(&st, &q_emlrtRTEI,
+      emlrtErrorWithMessageIdR2018a(&st, &p_emlrtRTEI,
                                     "Coder:toolbox:interp1_nonMonotonicX",
                                     "Coder:toolbox:interp1_nonMonotonicX", 0);
     }
@@ -1025,62 +1025,62 @@ void d_interp1(const emlrtStack *sp, const emxArray_real_T *varargin_1,
   varargin_2_data = varargin_2->data;
   varargin_1_data = varargin_1->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
-  st.site = &ug_emlrtRSI;
-  emxInit_real_T(&st, &y, 1, &sg_emlrtRTEI);
+  st.site = &ii_emlrtRSI;
+  emxInit_real_T(&st, &y, 1, &nh_emlrtRTEI);
   nd2 = varargin_2->size[0];
   n = y->size[0];
   y->size[0] = varargin_2->size[0];
-  emxEnsureCapacity_real_T(&st, y, n, &sg_emlrtRTEI);
+  emxEnsureCapacity_real_T(&st, y, n, &nh_emlrtRTEI);
   y_data = y->data;
   for (b_j1 = 0; b_j1 < nd2; b_j1++) {
     y_data[b_j1] = varargin_2_data[b_j1];
   }
-  emxInit_real_T(&st, &x, 2, &tg_emlrtRTEI);
+  emxInit_real_T(&st, &x, 2, &oh_emlrtRTEI);
   n = x->size[0] * x->size[1];
   x->size[0] = 1;
   nd2 = varargin_1->size[1];
   x->size[1] = varargin_1->size[1];
-  emxEnsureCapacity_real_T(&st, x, n, &tg_emlrtRTEI);
+  emxEnsureCapacity_real_T(&st, x, n, &oh_emlrtRTEI);
   x_data = x->data;
   for (b_j1 = 0; b_j1 < nd2; b_j1++) {
     x_data[b_j1] = varargin_1_data[b_j1];
   }
   nx = varargin_1->size[1] - 1;
   if (varargin_2->size[0] != varargin_1->size[1]) {
-    emlrtErrorWithMessageIdR2018a(&st, &t_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &s_emlrtRTEI,
                                   "Coder:MATLAB:interp1_YInvalidNumRows",
                                   "Coder:MATLAB:interp1_YInvalidNumRows", 0);
   }
   if (varargin_1->size[1] <= 1) {
-    emlrtErrorWithMessageIdR2018a(&st, &s_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &r_emlrtRTEI,
                                   "MATLAB:interp1:NotEnoughPts",
                                   "MATLAB:interp1:NotEnoughPts", 0);
   }
   nd2 = varargin_3->size[0];
   n = Vq->size[0];
   Vq->size[0] = varargin_3->size[0];
-  emxEnsureCapacity_real_T(&st, Vq, n, &ug_emlrtRTEI);
+  emxEnsureCapacity_real_T(&st, Vq, n, &ph_emlrtRTEI);
   Vq_data = Vq->data;
   for (b_j1 = 0; b_j1 < nd2; b_j1++) {
     Vq_data[b_j1] = 0.0;
   }
   if (varargin_3->size[0] != 0) {
-    b_st.site = &vd_emlrtRSI;
+    b_st.site = &pd_emlrtRSI;
     if (b_anynan(&b_st, varargin_1)) {
-      emlrtErrorWithMessageIdR2018a(&st, &r_emlrtRTEI, "MATLAB:interp1:NaNinX",
+      emlrtErrorWithMessageIdR2018a(&st, &q_emlrtRTEI, "MATLAB:interp1:NaNinX",
                                     "MATLAB:interp1:NaNinX", 0);
     }
     if (varargin_1_data[1] < varargin_1_data[0]) {
       real_T xtmp;
       n = varargin_1->size[1] >> 1;
-      b_st.site = &wd_emlrtRSI;
+      b_st.site = &qd_emlrtRSI;
       for (b_j1 = 0; b_j1 < n; b_j1++) {
         xtmp = x_data[b_j1];
         nd2 = nx - b_j1;
         x_data[b_j1] = x_data[nd2];
         x_data[nd2] = xtmp;
       }
-      b_st.site = &xd_emlrtRSI;
+      b_st.site = &rd_emlrtRSI;
       if (varargin_2->size[0] > 1) {
         n = varargin_2->size[0] - 1;
         nd2 = varargin_2->size[0] >> 1;
@@ -1093,19 +1093,19 @@ void d_interp1(const emlrtStack *sp, const emxArray_real_T *varargin_1,
         }
       }
     }
-    b_st.site = &yd_emlrtRSI;
+    b_st.site = &sd_emlrtRSI;
     if (varargin_1->size[1] > 2147483646) {
       c_st.site = &o_emlrtRSI;
       check_forloop_overflow_error(&c_st);
     }
     for (b_j1 = 2; b_j1 <= nx + 1; b_j1++) {
       if (x_data[b_j1 - 1] <= x_data[b_j1 - 2]) {
-        emlrtErrorWithMessageIdR2018a(&st, &q_emlrtRTEI,
+        emlrtErrorWithMessageIdR2018a(&st, &p_emlrtRTEI,
                                       "Coder:toolbox:interp1_nonMonotonicX",
                                       "Coder:toolbox:interp1_nonMonotonicX", 0);
       }
     }
-    b_st.site = &vg_emlrtRSI;
+    b_st.site = &ji_emlrtRSI;
     interp1Linear(&b_st, y, varargin_3, Vq, x);
   }
   emxFree_real_T(&st, &x);
@@ -1140,62 +1140,62 @@ void e_interp1(const emlrtStack *sp, const emxArray_real_T *varargin_1,
   varargin_2_data = varargin_2->data;
   varargin_1_data = varargin_1->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
-  st.site = &ug_emlrtRSI;
-  emxInit_creal_T(&st, &y, 1, &sg_emlrtRTEI);
+  st.site = &ii_emlrtRSI;
+  emxInit_creal_T(&st, &y, 1, &nh_emlrtRTEI);
   nd2 = varargin_2->size[0];
   n = y->size[0];
   y->size[0] = varargin_2->size[0];
-  emxEnsureCapacity_creal_T(&st, y, n, &sg_emlrtRTEI);
+  emxEnsureCapacity_creal_T(&st, y, n, &nh_emlrtRTEI);
   y_data = y->data;
   for (b_j1 = 0; b_j1 < nd2; b_j1++) {
     y_data[b_j1] = varargin_2_data[b_j1];
   }
-  emxInit_real_T(&st, &x, 1, &tg_emlrtRTEI);
+  emxInit_real_T(&st, &x, 1, &oh_emlrtRTEI);
   nd2 = varargin_1->size[0];
   n = x->size[0];
   x->size[0] = varargin_1->size[0];
-  emxEnsureCapacity_real_T(&st, x, n, &tg_emlrtRTEI);
+  emxEnsureCapacity_real_T(&st, x, n, &oh_emlrtRTEI);
   x_data = x->data;
   for (b_j1 = 0; b_j1 < nd2; b_j1++) {
     x_data[b_j1] = varargin_1_data[b_j1];
   }
   nx = varargin_1->size[0] - 1;
   if (varargin_1->size[0] != varargin_2->size[0]) {
-    emlrtErrorWithMessageIdR2018a(&st, &t_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &s_emlrtRTEI,
                                   "Coder:MATLAB:interp1_YInvalidNumRows",
                                   "Coder:MATLAB:interp1_YInvalidNumRows", 0);
   }
   if (varargin_1->size[0] <= 1) {
-    emlrtErrorWithMessageIdR2018a(&st, &s_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &r_emlrtRTEI,
                                   "MATLAB:interp1:NotEnoughPts",
                                   "MATLAB:interp1:NotEnoughPts", 0);
   }
   nd2 = varargin_3->size[0];
   n = Vq->size[0];
   Vq->size[0] = varargin_3->size[0];
-  emxEnsureCapacity_creal_T(&st, Vq, n, &ug_emlrtRTEI);
+  emxEnsureCapacity_creal_T(&st, Vq, n, &ph_emlrtRTEI);
   Vq_data = Vq->data;
   for (b_j1 = 0; b_j1 < nd2; b_j1++) {
     Vq_data[b_j1].re = 0.0;
     Vq_data[b_j1].im = 0.0;
   }
   if (varargin_3->size[0] != 0) {
-    b_st.site = &vd_emlrtRSI;
+    b_st.site = &pd_emlrtRSI;
     if (anynan(&b_st, varargin_1)) {
-      emlrtErrorWithMessageIdR2018a(&st, &r_emlrtRTEI, "MATLAB:interp1:NaNinX",
+      emlrtErrorWithMessageIdR2018a(&st, &q_emlrtRTEI, "MATLAB:interp1:NaNinX",
                                     "MATLAB:interp1:NaNinX", 0);
     }
     if (varargin_1_data[1] < varargin_1_data[0]) {
       real_T xtmp;
       n = varargin_1->size[0] >> 1;
-      b_st.site = &wd_emlrtRSI;
+      b_st.site = &qd_emlrtRSI;
       for (b_j1 = 0; b_j1 < n; b_j1++) {
         xtmp = x_data[b_j1];
         nd2 = nx - b_j1;
         x_data[b_j1] = x_data[nd2];
         x_data[nd2] = xtmp;
       }
-      b_st.site = &xd_emlrtRSI;
+      b_st.site = &rd_emlrtRSI;
       if (varargin_2->size[0] > 1) {
         n = varargin_2->size[0] - 1;
         nd2 = varargin_2->size[0] >> 1;
@@ -1211,19 +1211,19 @@ void e_interp1(const emlrtStack *sp, const emxArray_real_T *varargin_1,
         }
       }
     }
-    b_st.site = &yd_emlrtRSI;
+    b_st.site = &sd_emlrtRSI;
     if (varargin_1->size[0] > 2147483646) {
       c_st.site = &o_emlrtRSI;
       check_forloop_overflow_error(&c_st);
     }
     for (b_j1 = 2; b_j1 <= nx + 1; b_j1++) {
       if (x_data[b_j1 - 1] <= x_data[b_j1 - 2]) {
-        emlrtErrorWithMessageIdR2018a(&st, &q_emlrtRTEI,
+        emlrtErrorWithMessageIdR2018a(&st, &p_emlrtRTEI,
                                       "Coder:toolbox:interp1_nonMonotonicX",
                                       "Coder:toolbox:interp1_nonMonotonicX", 0);
       }
     }
-    b_st.site = &vg_emlrtRSI;
+    b_st.site = &ji_emlrtRSI;
     b_interp1Linear(&b_st, y, varargin_3, Vq, x);
   }
   emxFree_real_T(&st, &x);
@@ -1273,23 +1273,23 @@ void interp1(const emlrtStack *sp, const emxArray_real_T *varargin_1,
   varargin_2_data = varargin_2->data;
   varargin_1_data = varargin_1->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
-  st.site = &ud_emlrtRSI;
-  emxInit_creal_T(&st, &y, 2, &re_emlrtRTEI);
+  st.site = &od_emlrtRSI;
+  emxInit_creal_T(&st, &y, 2, &ef_emlrtRTEI);
   ip = y->size[0] * y->size[1];
   y->size[0] = varargin_2->size[0];
   loop_ub = varargin_2->size[1];
   y->size[1] = varargin_2->size[1];
-  emxEnsureCapacity_creal_T(&st, y, ip, &re_emlrtRTEI);
+  emxEnsureCapacity_creal_T(&st, y, ip, &ef_emlrtRTEI);
   Vq_data = y->data;
   ip = varargin_2->size[0] * varargin_2->size[1];
   for (b_j1 = 0; b_j1 < ip; b_j1++) {
     Vq_data[b_j1] = varargin_2_data[b_j1];
   }
-  emxInit_real_T(&st, &x, 1, &se_emlrtRTEI);
+  emxInit_real_T(&st, &x, 1, &ff_emlrtRTEI);
   b_ip = varargin_1->size[0];
   ip = x->size[0];
   x->size[0] = varargin_1->size[0];
-  emxEnsureCapacity_real_T(&st, x, ip, &se_emlrtRTEI);
+  emxEnsureCapacity_real_T(&st, x, ip, &ff_emlrtRTEI);
   x_data = x->data;
   for (b_j1 = 0; b_j1 < b_ip; b_j1++) {
     x_data[b_j1] = varargin_1_data[b_j1];
@@ -1298,59 +1298,59 @@ void interp1(const emlrtStack *sp, const emxArray_real_T *varargin_1,
       ((varargin_2->size[0] == 1) || (varargin_2->size[1] == 1)) &&
       (varargin_2->size[0] == 1)) {
     emlrtErrorWithMessageIdR2018a(
-        &st, &u_emlrtRTEI, "Coder:toolbox:interp1_vsizeMatrixBecameRowVec",
+        &st, &t_emlrtRTEI, "Coder:toolbox:interp1_vsizeMatrixBecameRowVec",
         "Coder:toolbox:interp1_vsizeMatrixBecameRowVec", 0);
   }
   nx = varargin_1->size[0] - 1;
   if (varargin_1->size[0] != varargin_2->size[0]) {
-    emlrtErrorWithMessageIdR2018a(&st, &t_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &s_emlrtRTEI,
                                   "Coder:MATLAB:interp1_YInvalidNumRows",
                                   "Coder:MATLAB:interp1_YInvalidNumRows", 0);
   }
   if (varargin_1->size[0] <= 1) {
-    emlrtErrorWithMessageIdR2018a(&st, &s_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &r_emlrtRTEI,
                                   "MATLAB:interp1:NotEnoughPts",
                                   "MATLAB:interp1:NotEnoughPts", 0);
   }
-  b_st.site = &vd_emlrtRSI;
+  b_st.site = &pd_emlrtRSI;
   if (anynan(&b_st, varargin_1)) {
-    emlrtErrorWithMessageIdR2018a(&st, &r_emlrtRTEI, "MATLAB:interp1:NaNinX",
+    emlrtErrorWithMessageIdR2018a(&st, &q_emlrtRTEI, "MATLAB:interp1:NaNinX",
                                   "MATLAB:interp1:NaNinX", 0);
   }
   if (varargin_1_data[1] < varargin_1_data[0]) {
     ip = varargin_1->size[0] >> 1;
-    b_st.site = &wd_emlrtRSI;
+    b_st.site = &qd_emlrtRSI;
     for (b_j1 = 0; b_j1 < ip; b_j1++) {
       xtmp = x_data[b_j1];
       b_ip = nx - b_j1;
       x_data[b_j1] = x_data[b_ip];
       x_data[b_ip] = xtmp;
     }
-    b_st.site = &xd_emlrtRSI;
+    b_st.site = &rd_emlrtRSI;
     flip(y);
     Vq_data = y->data;
   }
-  b_st.site = &yd_emlrtRSI;
+  b_st.site = &sd_emlrtRSI;
   if (varargin_1->size[0] > 2147483646) {
     c_st.site = &o_emlrtRSI;
     check_forloop_overflow_error(&c_st);
   }
   for (b_j1 = 2; b_j1 <= nx + 1; b_j1++) {
     if (x_data[b_j1 - 1] <= x_data[b_j1 - 2]) {
-      emlrtErrorWithMessageIdR2018a(&st, &q_emlrtRTEI,
+      emlrtErrorWithMessageIdR2018a(&st, &p_emlrtRTEI,
                                     "Coder:toolbox:interp1_nonMonotonicX",
                                     "Coder:toolbox:interp1_nonMonotonicX", 0);
     }
   }
-  b_st.site = &ae_emlrtRSI;
-  c_st.site = &fe_emlrtRSI;
-  emxInit_creal_T(&c_st, &b_y, 2, &te_emlrtRTEI);
+  b_st.site = &td_emlrtRSI;
+  c_st.site = &yd_emlrtRSI;
+  emxInit_creal_T(&c_st, &b_y, 2, &gf_emlrtRTEI);
   b_ip = y->size[1];
   ip = b_y->size[0] * b_y->size[1];
   b_y->size[0] = y->size[1];
   nx = y->size[0];
   b_y->size[1] = y->size[0];
-  emxEnsureCapacity_creal_T(&c_st, b_y, ip, &te_emlrtRTEI);
+  emxEnsureCapacity_creal_T(&c_st, b_y, ip, &gf_emlrtRTEI);
   y_data = b_y->data;
   for (b_j1 = 0; b_j1 < nx; b_j1++) {
     for (j = 0; j < b_ip; j++) {
@@ -1358,21 +1358,21 @@ void interp1(const emlrtStack *sp, const emxArray_real_T *varargin_1,
     }
   }
   emxFree_creal_T(&c_st, &y);
-  emxInit_real_T(&c_st, &pp_breaks, 2, &we_emlrtRTEI);
-  emxInit_creal_T(&c_st, &pp_coefs, 3, &we_emlrtRTEI);
-  d_st.site = &he_emlrtRSI;
+  emxInit_real_T(&c_st, &pp_breaks, 2, &jf_emlrtRTEI);
+  emxInit_creal_T(&c_st, &pp_coefs, 3, &jf_emlrtRTEI);
+  d_st.site = &be_emlrtRSI;
   pchip(&d_st, x, b_y, pp_breaks, pp_coefs);
   Vq_data = pp_coefs->data;
   x_data = pp_breaks->data;
   emxFree_creal_T(&c_st, &b_y);
   emxFree_real_T(&c_st, &x);
-  c_st.site = &ge_emlrtRSI;
+  c_st.site = &ae_emlrtRSI;
   elementsPerPage = pp_coefs->size[0];
   coefStride = pp_coefs->size[0] * (pp_breaks->size[1] - 1);
-  emxInit_creal_T(&c_st, &yi, 1, &xe_emlrtRTEI);
+  emxInit_creal_T(&c_st, &yi, 1, &kf_emlrtRTEI);
   ip = yi->size[0];
   yi->size[0] = pp_coefs->size[0];
-  emxEnsureCapacity_creal_T(&c_st, yi, ip, &ue_emlrtRTEI);
+  emxEnsureCapacity_creal_T(&c_st, yi, ip, &hf_emlrtRTEI);
   y_data = yi->data;
   if (pp_coefs->size[0] == 1) {
     real_T v_re;
@@ -1395,7 +1395,7 @@ void interp1(const emlrtStack *sp, const emxArray_real_T *varargin_1,
     y_data[0].re = v_re;
     y_data[0].im = xtmp;
   } else if (muDoubleScalarIsNaN(varargin_3)) {
-    d_st.site = &xe_emlrtRSI;
+    d_st.site = &re_emlrtRSI;
     if (pp_coefs->size[0] > 2147483646) {
       e_st.site = &o_emlrtRSI;
       check_forloop_overflow_error(&e_st);
@@ -1408,7 +1408,7 @@ void interp1(const emlrtStack *sp, const emxArray_real_T *varargin_1,
     ip = b_bsearch(pp_breaks, varargin_3) - 1;
     b_ip = ip * pp_coefs->size[0];
     xtmp = varargin_3 - x_data[ip];
-    d_st.site = &ye_emlrtRSI;
+    d_st.site = &se_emlrtRSI;
     if (pp_coefs->size[0] > 2147483646) {
       e_st.site = &o_emlrtRSI;
       check_forloop_overflow_error(&e_st);
@@ -1418,7 +1418,7 @@ void interp1(const emlrtStack *sp, const emxArray_real_T *varargin_1,
     }
     for (b_j1 = 0; b_j1 < 3; b_j1++) {
       ip = b_ip + (b_j1 + 1) * coefStride;
-      d_st.site = &af_emlrtRSI;
+      d_st.site = &te_emlrtRSI;
       for (j = 0; j < elementsPerPage; j++) {
         nx = ip + j;
         y_data[j].re = xtmp * y_data[j].re + Vq_data[nx].re;
@@ -1431,7 +1431,7 @@ void interp1(const emlrtStack *sp, const emxArray_real_T *varargin_1,
   ip = Vq->size[0] * Vq->size[1];
   Vq->size[0] = 1;
   Vq->size[1] = varargin_2->size[1];
-  emxEnsureCapacity_creal_T(&b_st, Vq, ip, &ve_emlrtRTEI);
+  emxEnsureCapacity_creal_T(&b_st, Vq, ip, &if_emlrtRTEI);
   Vq_data = Vq->data;
   for (b_j1 = 0; b_j1 < loop_ub; b_j1++) {
     Vq_data[b_j1] = y_data[b_j1];

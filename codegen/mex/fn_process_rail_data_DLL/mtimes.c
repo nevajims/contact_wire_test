@@ -19,7 +19,23 @@
 #include <stddef.h>
 
 /* Variable Definitions */
-static emlrtRTEInfo id_emlrtRTEI = {
+static emlrtRSInfo n_emlrtRSI = {
+    142,      /* lineNo */
+    "mtimes", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025a\\toolbox\\eml\\eml\\+coder\\+internal\\+"
+    "blas\\mtimes.m" /* pathName */
+};
+
+static emlrtRSInfo p_emlrtRSI = {
+    177,           /* lineNo */
+    "mtimes_blas", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025a\\toolbox\\eml\\eml\\+coder\\+internal\\+"
+    "blas\\mtimes.m" /* pathName */
+};
+
+static emlrtRTEInfo ae_emlrtRTEI = {
     140,      /* lineNo */
     5,        /* colNo */
     "mtimes", /* fName */
@@ -28,8 +44,75 @@ static emlrtRTEInfo id_emlrtRTEI = {
     "blas\\mtimes.m" /* pName */
 };
 
+static emlrtRTEInfo be_emlrtRTEI = {
+    218,      /* lineNo */
+    20,       /* colNo */
+    "mtimes", /* fName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025a\\toolbox\\eml\\eml\\+coder\\+internal\\+"
+    "blas\\mtimes.m" /* pName */
+};
+
 /* Function Definitions */
 void b_mtimes(const emlrtStack *sp, const emxArray_creal_T *A,
+              const emxArray_creal_T *B, emxArray_creal_T *C)
+{
+  ptrdiff_t k_t;
+  ptrdiff_t lda_t;
+  ptrdiff_t ldb_t;
+  ptrdiff_t ldc_t;
+  ptrdiff_t m_t;
+  ptrdiff_t n_t;
+  emlrtStack b_st;
+  emlrtStack st;
+  const creal_T *A_data;
+  const creal_T *B_data;
+  creal_T *C_data;
+  int32_T i;
+  char_T TRANSA1;
+  char_T TRANSB1;
+  st.prev = sp;
+  st.tls = sp->tls;
+  b_st.prev = &st;
+  b_st.tls = st.tls;
+  B_data = B->data;
+  A_data = A->data;
+  if ((A->size[0] == 0) || (A->size[1] == 0) || (B->size[0] == 0) ||
+      (B->size[1] == 0)) {
+    int32_T loop_ub;
+    loop_ub = C->size[0] * C->size[1];
+    C->size[0] = A->size[0];
+    C->size[1] = B->size[0];
+    emxEnsureCapacity_creal_T(sp, C, loop_ub, &ae_emlrtRTEI);
+    C_data = C->data;
+    loop_ub = A->size[0] * B->size[0];
+    for (i = 0; i < loop_ub; i++) {
+      C_data[i] = dc;
+    }
+  } else {
+    int32_T loop_ub;
+    st.site = &n_emlrtRSI;
+    b_st.site = &p_emlrtRSI;
+    TRANSB1 = 'T';
+    TRANSA1 = 'N';
+    m_t = (ptrdiff_t)A->size[0];
+    n_t = (ptrdiff_t)B->size[0];
+    k_t = (ptrdiff_t)A->size[1];
+    lda_t = (ptrdiff_t)A->size[0];
+    ldb_t = (ptrdiff_t)B->size[0];
+    ldc_t = (ptrdiff_t)A->size[0];
+    loop_ub = C->size[0] * C->size[1];
+    C->size[0] = A->size[0];
+    C->size[1] = B->size[0];
+    emxEnsureCapacity_creal_T(&b_st, C, loop_ub, &be_emlrtRTEI);
+    C_data = C->data;
+    zgemm(&TRANSA1, &TRANSB1, &m_t, &n_t, &k_t, (real_T *)&dc1,
+          (real_T *)&A_data[0], &lda_t, (real_T *)&B_data[0], &ldb_t,
+          (real_T *)&dc, (real_T *)&C_data[0], &ldc_t);
+  }
+}
+
+void c_mtimes(const emlrtStack *sp, const emxArray_creal_T *A,
               const emxArray_creal_T *B, emxArray_creal_T *C)
 {
   ptrdiff_t k_t;
@@ -52,14 +135,14 @@ void b_mtimes(const emlrtStack *sp, const emxArray_creal_T *A,
   b_st.tls = st.tls;
   B_data = B->data;
   A_data = A->data;
-  if ((A->size[0] == 0) || (B->size[0] == 0)) {
+  if ((A->size[1] == 0) || (B->size[0] == 0) || (B->size[1] == 0)) {
     int32_T i;
     int32_T loop_ub;
-    loop_ub = A->size[0];
     i = C->size[0] * C->size[1];
-    C->size[0] = A->size[0];
-    C->size[1] = 1;
-    emxEnsureCapacity_creal_T(sp, C, i, &id_emlrtRTEI);
+    C->size[0] = 1;
+    loop_ub = B->size[0];
+    C->size[1] = B->size[0];
+    emxEnsureCapacity_creal_T(sp, C, i, &ae_emlrtRTEI);
     C_data = C->data;
     for (i1 = 0; i1 < loop_ub; i1++) {
       C_data[i1] = dc;
@@ -68,18 +151,18 @@ void b_mtimes(const emlrtStack *sp, const emxArray_creal_T *A,
     int32_T i;
     st.site = &n_emlrtRSI;
     b_st.site = &p_emlrtRSI;
-    TRANSB1 = 'N';
+    TRANSB1 = 'T';
     TRANSA1 = 'N';
-    m_t = (ptrdiff_t)A->size[0];
-    n_t = (ptrdiff_t)1;
-    k_t = (ptrdiff_t)1;
-    lda_t = (ptrdiff_t)A->size[0];
+    m_t = (ptrdiff_t)1;
+    n_t = (ptrdiff_t)B->size[0];
+    k_t = (ptrdiff_t)A->size[1];
+    lda_t = (ptrdiff_t)1;
     ldb_t = (ptrdiff_t)B->size[0];
-    ldc_t = (ptrdiff_t)A->size[0];
+    ldc_t = (ptrdiff_t)1;
     i = C->size[0] * C->size[1];
-    C->size[0] = A->size[0];
-    C->size[1] = 1;
-    emxEnsureCapacity_creal_T(&b_st, C, i, &pc_emlrtRTEI);
+    C->size[0] = 1;
+    C->size[1] = B->size[0];
+    emxEnsureCapacity_creal_T(&b_st, C, i, &be_emlrtRTEI);
     C_data = C->data;
     zgemm(&TRANSA1, &TRANSB1, &m_t, &n_t, &k_t, (real_T *)&dc1,
           (real_T *)&A_data[0], &lda_t, (real_T *)&B_data[0], &ldb_t,
@@ -117,7 +200,7 @@ void mtimes(const emlrtStack *sp, const emxArray_real_T *A,
     loop_ub = C->size[0] * C->size[1];
     C->size[0] = A->size[0];
     C->size[1] = B->size[1];
-    emxEnsureCapacity_real_T(sp, C, loop_ub, &id_emlrtRTEI);
+    emxEnsureCapacity_real_T(sp, C, loop_ub, &ae_emlrtRTEI);
     C_data = C->data;
     loop_ub = A->size[0] * B->size[1];
     for (i = 0; i < loop_ub; i++) {
@@ -140,7 +223,7 @@ void mtimes(const emlrtStack *sp, const emxArray_real_T *A,
     loop_ub = C->size[0] * C->size[1];
     C->size[0] = A->size[0];
     C->size[1] = B->size[1];
-    emxEnsureCapacity_real_T(&b_st, C, loop_ub, &pc_emlrtRTEI);
+    emxEnsureCapacity_real_T(&b_st, C, loop_ub, &be_emlrtRTEI);
     C_data = C->data;
     dgemm(&TRANSA1, &TRANSB1, &m_t, &n_t, &k_t, &alpha1, (real_T *)&A_data[0],
           &lda_t, (real_T *)&B_data[0], &ldb_t, &beta1, &C_data[0], &ldc_t);

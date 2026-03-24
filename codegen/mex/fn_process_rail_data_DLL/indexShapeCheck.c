@@ -22,7 +22,15 @@ static emlrtRSInfo w_emlrtRSI = {
     "internal\\indexShapeCheck.m" /* pathName */
 };
 
-static emlrtRTEInfo h_emlrtRTEI = {
+static emlrtRSInfo xg_emlrtRSI = {
+    33,                /* lineNo */
+    "indexShapeCheck", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025a\\toolbox\\eml\\eml\\+coder\\+"
+    "internal\\indexShapeCheck.m" /* pathName */
+};
+
+static emlrtRTEInfo f_emlrtRTEI = {
     122,           /* lineNo */
     5,             /* colNo */
     "errOrWarnIf", /* fName */
@@ -36,6 +44,35 @@ void b_indexShapeCheck(const emlrtStack *sp, const int32_T matrixSize[2],
                        int32_T indexSize)
 {
   emlrtStack st;
+  boolean_T nonSingletonDimFound;
+  st.prev = sp;
+  st.tls = sp->tls;
+  nonSingletonDimFound = (matrixSize[0] != 1);
+  if (matrixSize[1] != 1) {
+    if (nonSingletonDimFound) {
+      nonSingletonDimFound = false;
+    } else {
+      nonSingletonDimFound = true;
+    }
+  }
+  if (nonSingletonDimFound && (indexSize != 1) &&
+      (((matrixSize[0] == 1) != (indexSize == 1)) || (matrixSize[1] != 1))) {
+    nonSingletonDimFound = true;
+  } else {
+    nonSingletonDimFound = false;
+  }
+  st.site = &xg_emlrtRSI;
+  if (nonSingletonDimFound) {
+    emlrtErrorWithMessageIdR2018a(&st, &f_emlrtRTEI,
+                                  "Coder:FE:PotentialMatrixMatrix_MV",
+                                  "Coder:FE:PotentialMatrixMatrix_MV", 0);
+  }
+}
+
+void c_indexShapeCheck(const emlrtStack *sp, const int32_T matrixSize[2],
+                       int32_T indexSize)
+{
+  emlrtStack st;
   boolean_T c;
   st.prev = sp;
   st.tls = sp->tls;
@@ -46,7 +83,7 @@ void b_indexShapeCheck(const emlrtStack *sp, const int32_T matrixSize[2],
   }
   st.site = &w_emlrtRSI;
   if (c) {
-    emlrtErrorWithMessageIdR2018a(&st, &h_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &f_emlrtRTEI,
                                   "Coder:FE:PotentialVectorVector",
                                   "Coder:FE:PotentialVectorVector", 0);
   }
@@ -66,7 +103,7 @@ void indexShapeCheck(const emlrtStack *sp, int32_T matrixSize,
   }
   st.site = &w_emlrtRSI;
   if (c) {
-    emlrtErrorWithMessageIdR2018a(&st, &h_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &f_emlrtRTEI,
                                   "Coder:FE:PotentialVectorVector",
                                   "Coder:FE:PotentialVectorVector", 0);
   }

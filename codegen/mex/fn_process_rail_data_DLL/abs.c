@@ -29,23 +29,6 @@ static emlrtRSInfo kc_emlrtRSI =
                                                                           */
 };
 
-static emlrtRSInfo lc_emlrtRSI = {
-    82,                    /* lineNo */
-    "applyScalarFunction", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025a\\toolbox\\eml\\eml\\+coder\\+"
-    "internal\\applyScalarFunction.m" /* pathName */
-};
-
-static emlrtRTEInfo od_emlrtRTEI = {
-    30,                    /* lineNo */
-    21,                    /* colNo */
-    "applyScalarFunction", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025a\\toolbox\\eml\\eml\\+coder\\+"
-    "internal\\applyScalarFunction.m" /* pName */
-};
-
 /* Function Definitions */
 void b_abs(const emlrtStack *sp, const emxArray_real_T *x, emxArray_real_T *y)
 {
@@ -70,7 +53,7 @@ void b_abs(const emlrtStack *sp, const emxArray_real_T *x, emxArray_real_T *y)
   nx = x->size[0];
   i = y->size[0];
   y->size[0] = x->size[0];
-  emxEnsureCapacity_real_T(&st, y, i, &od_emlrtRTEI);
+  emxEnsureCapacity_real_T(&st, y, i, &he_emlrtRTEI);
   y_data = y->data;
   b_st.site = &lc_emlrtRSI;
   if (x->size[0] > 2147483646) {
@@ -120,7 +103,7 @@ void c_abs(const emlrtStack *sp, const emxArray_creal_T *x, emxArray_real_T *y)
   i = y->size[0] * y->size[1];
   y->size[0] = x->size[0];
   y->size[1] = x->size[1];
-  emxEnsureCapacity_real_T(&st, y, i, &od_emlrtRTEI);
+  emxEnsureCapacity_real_T(&st, y, i, &he_emlrtRTEI);
   y_data = y->data;
   b_st.site = &lc_emlrtRSI;
   if (nx > 2147483646) {
@@ -170,7 +153,7 @@ void d_abs(const emlrtStack *sp, const emxArray_real_T *x, emxArray_real_T *y)
   i = y->size[0] * y->size[1];
   y->size[0] = 1;
   y->size[1] = x->size[1];
-  emxEnsureCapacity_real_T(&st, y, i, &od_emlrtRTEI);
+  emxEnsureCapacity_real_T(&st, y, i, &he_emlrtRTEI);
   y_data = y->data;
   b_st.site = &lc_emlrtRSI;
   if (x->size[1] > 2147483646) {
@@ -219,7 +202,7 @@ void e_abs(const emlrtStack *sp, const emxArray_creal_T *x, emxArray_real_T *y)
   nx = x->size[0];
   i = y->size[0];
   y->size[0] = x->size[0];
-  emxEnsureCapacity_real_T(&st, y, i, &od_emlrtRTEI);
+  emxEnsureCapacity_real_T(&st, y, i, &he_emlrtRTEI);
   y_data = y->data;
   b_st.site = &lc_emlrtRSI;
   if (x->size[0] > 2147483646) {

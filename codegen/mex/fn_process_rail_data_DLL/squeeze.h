@@ -22,7 +22,7 @@
 #include <string.h>
 
 /* Function Declarations */
-void b_squeeze(const emlrtStack *sp, const emxArray_real_T *a);
+void b_squeeze(const emlrtStack *sp, const emxArray_creal_T *a);
 
 void squeeze(const emlrtStack *sp, const emxArray_creal_T *a,
              emxArray_creal_T *b);

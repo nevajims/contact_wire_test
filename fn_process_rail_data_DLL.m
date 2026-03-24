@@ -205,7 +205,7 @@ inv_mode_shapes = complex(zeros(no_mode_combinations_proc, no_time_traces, lengt
 mode_shapes = complex(zeros(no_time_traces, no_mode_combinations_proc));
 for ii=1:length(ms_matrix_calc_freqs)
 	%interpolate to get mode shapes and wavenumbers of all the modes at the current frequency
-	temp_mode_shape = complex(zeros(max_mode_index, node_pts, max(max(array_trans_pos_orientations))));
+	temp_mode_shape = complex(zeros(max_mode_index, node_pts, 3));
     
 	temp_waveno = zeros(max_mode_index, 1);
     %Need to make this x, y and z (and perhaps normal and tangential also?)
@@ -254,7 +254,8 @@ function proc_freq_data = fn_mode_extract_freq_dom(...
 %actually do the multiplication to convert the raw freq domain data
 %to mode extracted freq domain data by one of two methods (single frequency mode shapes or interpolated frequency)
 proc_freq_data = complex(zeros(size(raw_freq_data, 1), size(inv_mode_shapes, 1)));
-if length(size(inv_mode_shapes)) < 3
+% if length(size(inv_mode_shapes)) < 3
+if numel(ms_matrix_calc_freqs) == 1
 	inv_full_mode_shapes = squeeze(inv_mode_shapes(:, :, 1));
 	if ~ms_matrix_apply_as_time_shift
 		%normal frequency domain processing

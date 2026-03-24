@@ -25,6 +25,9 @@
 void b_mtimes(const emlrtStack *sp, const emxArray_creal_T *A,
               const emxArray_creal_T *B, emxArray_creal_T *C);
 
+void c_mtimes(const emlrtStack *sp, const emxArray_creal_T *A,
+              const emxArray_creal_T *B, emxArray_creal_T *C);
+
 void mtimes(const emlrtStack *sp, const emxArray_real_T *A,
             const emxArray_real_T *B, emxArray_real_T *C);
 

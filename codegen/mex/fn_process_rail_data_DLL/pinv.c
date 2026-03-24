@@ -23,7 +23,7 @@
 #include <stddef.h>
 
 /* Variable Definitions */
-static emlrtRSInfo mf_emlrtRSI = {
+static emlrtRSInfo ff_emlrtRSI = {
     42,         /* lineNo */
     "eml_pinv", /* fcnName */
     "C:\\Program "
@@ -31,7 +31,7 @@ static emlrtRSInfo mf_emlrtRSI = {
                                                                         */
 };
 
-static emlrtRSInfo nf_emlrtRSI = {
+static emlrtRSInfo gf_emlrtRSI = {
     46,         /* lineNo */
     "eml_pinv", /* fcnName */
     "C:\\Program "
@@ -39,7 +39,7 @@ static emlrtRSInfo nf_emlrtRSI = {
                                                                         */
 };
 
-static emlrtRSInfo of_emlrtRSI = {
+static emlrtRSInfo hf_emlrtRSI = {
     58,         /* lineNo */
     "eml_pinv", /* fcnName */
     "C:\\Program "
@@ -47,7 +47,7 @@ static emlrtRSInfo of_emlrtRSI = {
                                                                         */
 };
 
-static emlrtRSInfo pf_emlrtRSI = {
+static emlrtRSInfo if_emlrtRSI = {
     69,         /* lineNo */
     "eml_pinv", /* fcnName */
     "C:\\Program "
@@ -55,7 +55,7 @@ static emlrtRSInfo pf_emlrtRSI = {
                                                                         */
 };
 
-static emlrtRSInfo qf_emlrtRSI = {
+static emlrtRSInfo jf_emlrtRSI = {
     70,         /* lineNo */
     "eml_pinv", /* fcnName */
     "C:\\Program "
@@ -63,7 +63,7 @@ static emlrtRSInfo qf_emlrtRSI = {
                                                                         */
 };
 
-static emlrtRSInfo rf_emlrtRSI = {
+static emlrtRSInfo kf_emlrtRSI = {
     73,         /* lineNo */
     "eml_pinv", /* fcnName */
     "C:\\Program "
@@ -71,7 +71,7 @@ static emlrtRSInfo rf_emlrtRSI = {
                                                                         */
 };
 
-static emlrtRSInfo sf_emlrtRSI = {
+static emlrtRSInfo lf_emlrtRSI = {
     29,             /* lineNo */
     "anyNonFinite", /* fcnName */
     "C:\\Program "
@@ -79,7 +79,7 @@ static emlrtRSInfo sf_emlrtRSI = {
     "m" /* pathName */
 };
 
-static emlrtRSInfo tf_emlrtRSI = {
+static emlrtRSInfo mf_emlrtRSI = {
     52,    /* lineNo */
     "svd", /* fcnName */
     "C:\\Program "
@@ -87,7 +87,7 @@ static emlrtRSInfo tf_emlrtRSI = {
                                                                           */
 };
 
-static emlrtRSInfo uf_emlrtRSI = {
+static emlrtRSInfo nf_emlrtRSI = {
     93,           /* lineNo */
     "callLAPACK", /* fcnName */
     "C:\\Program "
@@ -95,7 +95,7 @@ static emlrtRSInfo uf_emlrtRSI = {
                                                                           */
 };
 
-static emlrtRSInfo vf_emlrtRSI = {
+static emlrtRSInfo of_emlrtRSI = {
     89,           /* lineNo */
     "callLAPACK", /* fcnName */
     "C:\\Program "
@@ -103,7 +103,7 @@ static emlrtRSInfo vf_emlrtRSI = {
                                                                           */
 };
 
-static emlrtRSInfo wf_emlrtRSI = {
+static emlrtRSInfo pf_emlrtRSI = {
     81,           /* lineNo */
     "callLAPACK", /* fcnName */
     "C:\\Program "
@@ -111,7 +111,7 @@ static emlrtRSInfo wf_emlrtRSI = {
                                                                           */
 };
 
-static emlrtRSInfo xf_emlrtRSI = {
+static emlrtRSInfo qf_emlrtRSI = {
     209,      /* lineNo */
     "xgesdd", /* fcnName */
     "C:\\Program "
@@ -119,7 +119,7 @@ static emlrtRSInfo xf_emlrtRSI = {
     "lapack\\xgesdd.m" /* pathName */
 };
 
-static emlrtRSInfo yf_emlrtRSI = {
+static emlrtRSInfo rf_emlrtRSI = {
     31,       /* lineNo */
     "xgesvd", /* fcnName */
     "C:\\Program "
@@ -127,7 +127,7 @@ static emlrtRSInfo yf_emlrtRSI = {
     "lapack\\xgesvd.m" /* pathName */
 };
 
-static emlrtRSInfo ag_emlrtRSI = {
+static emlrtRSInfo sf_emlrtRSI = {
     205,            /* lineNo */
     "ceval_xgesvd", /* fcnName */
     "C:\\Program "
@@ -135,7 +135,7 @@ static emlrtRSInfo ag_emlrtRSI = {
     "lapack\\xgesvd.m" /* pathName */
 };
 
-static emlrtRSInfo bg_emlrtRSI = {
+static emlrtRSInfo tf_emlrtRSI = {
     203,            /* lineNo */
     "ceval_xgesvd", /* fcnName */
     "C:\\Program "
@@ -143,7 +143,7 @@ static emlrtRSInfo bg_emlrtRSI = {
     "lapack\\xgesvd.m" /* pathName */
 };
 
-static emlrtRSInfo cg_emlrtRSI = {
+static emlrtRSInfo uf_emlrtRSI = {
     220,    /* lineNo */
     "getv", /* fcnName */
     "C:\\Program "
@@ -151,7 +151,7 @@ static emlrtRSInfo cg_emlrtRSI = {
     "lapack\\xgesvd.m" /* pathName */
 };
 
-static emlrtRSInfo dg_emlrtRSI = {
+static emlrtRSInfo vf_emlrtRSI = {
     221,    /* lineNo */
     "getv", /* fcnName */
     "C:\\Program "
@@ -159,7 +159,7 @@ static emlrtRSInfo dg_emlrtRSI = {
     "lapack\\xgesvd.m" /* pathName */
 };
 
-static emlrtRSInfo eg_emlrtRSI = {
+static emlrtRSInfo wf_emlrtRSI = {
     37,      /* lineNo */
     "xscal", /* fcnName */
     "C:\\Program "
@@ -167,7 +167,7 @@ static emlrtRSInfo eg_emlrtRSI = {
     "m" /* pathName */
 };
 
-static emlrtRSInfo fg_emlrtRSI = {
+static emlrtRSInfo xf_emlrtRSI = {
     49,           /* lineNo */
     "xscal_blas", /* fcnName */
     "C:\\Program "
@@ -175,7 +175,7 @@ static emlrtRSInfo fg_emlrtRSI = {
     "m" /* pathName */
 };
 
-static emlrtRSInfo gg_emlrtRSI = {
+static emlrtRSInfo yf_emlrtRSI = {
     77,      /* lineNo */
     "xgemm", /* fcnName */
     "C:\\Program "
@@ -183,7 +183,7 @@ static emlrtRSInfo gg_emlrtRSI = {
     "m" /* pathName */
 };
 
-static emlrtRSInfo hg_emlrtRSI = {
+static emlrtRSInfo ag_emlrtRSI = {
     94,           /* lineNo */
     "xgemm_blas", /* fcnName */
     "C:\\Program "
@@ -191,7 +191,7 @@ static emlrtRSInfo hg_emlrtRSI = {
     "m" /* pathName */
 };
 
-static emlrtRTEInfo cb_emlrtRTEI = {
+static emlrtRTEInfo bb_emlrtRTEI = {
     111,          /* lineNo */
     5,            /* colNo */
     "callLAPACK", /* fName */
@@ -200,25 +200,7 @@ static emlrtRTEInfo cb_emlrtRTEI = {
                                                                           */
 };
 
-static emlrtRTEInfo db_emlrtRTEI = {
-    45,          /* lineNo */
-    13,          /* colNo */
-    "infocheck", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025a\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\infocheck.m" /* pName */
-};
-
-static emlrtRTEInfo eb_emlrtRTEI = {
-    48,          /* lineNo */
-    13,          /* colNo */
-    "infocheck", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025a\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\infocheck.m" /* pName */
-};
-
-static emlrtRTEInfo kf_emlrtRTEI = {
+static emlrtRTEInfo uf_emlrtRTEI = {
     39,     /* lineNo */
     1,      /* colNo */
     "pinv", /* fName */
@@ -227,7 +209,7 @@ static emlrtRTEInfo kf_emlrtRTEI = {
                                                                         */
 };
 
-static emlrtRTEInfo lf_emlrtRTEI = {
+static emlrtRTEInfo vf_emlrtRTEI = {
     43,     /* lineNo */
     5,      /* colNo */
     "pinv", /* fName */
@@ -236,7 +218,7 @@ static emlrtRTEInfo lf_emlrtRTEI = {
                                                                         */
 };
 
-static emlrtRTEInfo mf_emlrtRTEI = {
+static emlrtRTEInfo wf_emlrtRTEI = {
     57,    /* lineNo */
     33,    /* colNo */
     "svd", /* fName */
@@ -245,7 +227,7 @@ static emlrtRTEInfo mf_emlrtRTEI = {
                                                                           */
 };
 
-static emlrtRTEInfo nf_emlrtRTEI = {
+static emlrtRTEInfo xf_emlrtRTEI = {
     81,    /* lineNo */
     63,    /* colNo */
     "svd", /* fName */
@@ -254,7 +236,7 @@ static emlrtRTEInfo nf_emlrtRTEI = {
                                                                           */
 };
 
-static emlrtRTEInfo of_emlrtRTEI = {
+static emlrtRTEInfo yf_emlrtRTEI = {
     45,       /* lineNo */
     24,       /* colNo */
     "xgesdd", /* fName */
@@ -263,7 +245,7 @@ static emlrtRTEInfo of_emlrtRTEI = {
     "lapack\\xgesdd.m" /* pName */
 };
 
-static emlrtRTEInfo pf_emlrtRTEI = {
+static emlrtRTEInfo ag_emlrtRTEI = {
     47,       /* lineNo */
     25,       /* colNo */
     "xgesdd", /* fName */
@@ -272,7 +254,7 @@ static emlrtRTEInfo pf_emlrtRTEI = {
     "lapack\\xgesdd.m" /* pName */
 };
 
-static emlrtRTEInfo qf_emlrtRTEI = {
+static emlrtRTEInfo bg_emlrtRTEI = {
     57,       /* lineNo */
     20,       /* colNo */
     "xgesdd", /* fName */
@@ -281,7 +263,7 @@ static emlrtRTEInfo qf_emlrtRTEI = {
     "lapack\\xgesdd.m" /* pName */
 };
 
-static emlrtRTEInfo rf_emlrtRTEI = {
+static emlrtRTEInfo cg_emlrtRTEI = {
     219,      /* lineNo */
     24,       /* colNo */
     "xgesvd", /* fName */
@@ -290,7 +272,7 @@ static emlrtRTEInfo rf_emlrtRTEI = {
     "lapack\\xgesvd.m" /* pName */
 };
 
-static emlrtRTEInfo sf_emlrtRTEI = {
+static emlrtRTEInfo dg_emlrtRTEI = {
     83,       /* lineNo */
     24,       /* colNo */
     "xgesvd", /* fName */
@@ -299,7 +281,7 @@ static emlrtRTEInfo sf_emlrtRTEI = {
     "lapack\\xgesvd.m" /* pName */
 };
 
-static emlrtRTEInfo tf_emlrtRTEI = {
+static emlrtRTEInfo eg_emlrtRTEI = {
     90,       /* lineNo */
     25,       /* colNo */
     "xgesvd", /* fName */
@@ -308,7 +290,7 @@ static emlrtRTEInfo tf_emlrtRTEI = {
     "lapack\\xgesvd.m" /* pName */
 };
 
-static emlrtRTEInfo uf_emlrtRTEI = {
+static emlrtRTEInfo fg_emlrtRTEI = {
     98,       /* lineNo */
     20,       /* colNo */
     "xgesvd", /* fName */
@@ -317,7 +299,7 @@ static emlrtRTEInfo uf_emlrtRTEI = {
     "lapack\\xgesvd.m" /* pName */
 };
 
-static emlrtRTEInfo vf_emlrtRTEI = {
+static emlrtRTEInfo gg_emlrtRTEI = {
     131,      /* lineNo */
     9,        /* colNo */
     "xgesvd", /* fName */
@@ -326,7 +308,7 @@ static emlrtRTEInfo vf_emlrtRTEI = {
     "lapack\\xgesvd.m" /* pName */
 };
 
-static emlrtRTEInfo wf_emlrtRTEI = {
+static emlrtRTEInfo hg_emlrtRTEI = {
     129,      /* lineNo */
     33,       /* colNo */
     "xgesvd", /* fName */
@@ -335,7 +317,7 @@ static emlrtRTEInfo wf_emlrtRTEI = {
     "lapack\\xgesvd.m" /* pName */
 };
 
-static emlrtRTEInfo xf_emlrtRTEI = {
+static emlrtRTEInfo ig_emlrtRTEI = {
     46,     /* lineNo */
     6,      /* colNo */
     "pinv", /* fName */
@@ -344,7 +326,7 @@ static emlrtRTEInfo xf_emlrtRTEI = {
                                                                         */
 };
 
-static emlrtRTEInfo yf_emlrtRTEI = {
+static emlrtRTEInfo jg_emlrtRTEI = {
     33,     /* lineNo */
     14,     /* colNo */
     "pinv", /* fName */
@@ -353,7 +335,7 @@ static emlrtRTEInfo yf_emlrtRTEI = {
                                                                         */
 };
 
-static emlrtRTEInfo ag_emlrtRTEI = {
+static emlrtRTEInfo kg_emlrtRTEI = {
     90,       /* lineNo */
     5,        /* colNo */
     "xgesvd", /* fName */
@@ -362,7 +344,7 @@ static emlrtRTEInfo ag_emlrtRTEI = {
     "lapack\\xgesvd.m" /* pName */
 };
 
-static emlrtRTEInfo bg_emlrtRTEI = {
+static emlrtRTEInfo lg_emlrtRTEI = {
     129,      /* lineNo */
     9,        /* colNo */
     "xgesvd", /* fName */
@@ -436,25 +418,25 @@ void eml_pinv(const emlrtStack *sp, const emxArray_creal_T *A,
   X->size[0] = A->size[1];
   b_i = A->size[0];
   X->size[1] = A->size[0];
-  emxEnsureCapacity_creal_T(sp, X, i, &kf_emlrtRTEI);
+  emxEnsureCapacity_creal_T(sp, X, i, &uf_emlrtRTEI);
   X_data = X->data;
   minnm = A->size[0] * A->size[1];
   for (k = 0; k < minnm; k++) {
     X_data[k] = dc;
   }
-  emxInit_creal_T(sp, &V, 2, &xf_emlrtRTEI);
-  emxInit_creal_T(sp, &U, 2, &yf_emlrtRTEI);
-  emxInit_creal_T(sp, &Vt, 2, &ag_emlrtRTEI);
-  emxInit_creal_T(sp, &b_A, 2, &nf_emlrtRTEI);
-  emxInit_real_T(sp, &S, 1, &yf_emlrtRTEI);
-  emxInit_real_T(sp, &superb, 1, &bg_emlrtRTEI);
+  emxInit_creal_T(sp, &V, 2, &ig_emlrtRTEI);
+  emxInit_creal_T(sp, &U, 2, &jg_emlrtRTEI);
+  emxInit_creal_T(sp, &Vt, 2, &kg_emlrtRTEI);
+  emxInit_creal_T(sp, &b_A, 2, &xf_emlrtRTEI);
+  emxInit_real_T(sp, &S, 1, &jg_emlrtRTEI);
+  emxInit_real_T(sp, &superb, 1, &lg_emlrtRTEI);
   if ((A->size[0] != 0) && (A->size[1] != 0)) {
     boolean_T overflow;
-    st.site = &mf_emlrtRSI;
-    b_st.site = &sf_emlrtRSI;
-    c_st.site = &ce_emlrtRSI;
+    st.site = &ff_emlrtRSI;
+    b_st.site = &lf_emlrtRSI;
+    c_st.site = &vd_emlrtRSI;
     overflow = true;
-    d_st.site = &de_emlrtRSI;
+    d_st.site = &wd_emlrtRSI;
     if (minnm > 2147483646) {
       e_st.site = &o_emlrtRSI;
       check_forloop_overflow_error(&e_st);
@@ -471,7 +453,7 @@ void eml_pinv(const emlrtStack *sp, const emxArray_creal_T *A,
       i = X->size[0] * X->size[1];
       X->size[0] = A->size[1];
       X->size[1] = A->size[0];
-      emxEnsureCapacity_creal_T(sp, X, i, &lf_emlrtRTEI);
+      emxEnsureCapacity_creal_T(sp, X, i, &vf_emlrtRTEI);
       X_data = X->data;
       for (k = 0; k < minnm; k++) {
         X_data[k].re = rtNaN;
@@ -481,21 +463,21 @@ void eml_pinv(const emlrtStack *sp, const emxArray_creal_T *A,
       real_T absx;
       int32_T info;
       boolean_T exitg1;
-      st.site = &nf_emlrtRSI;
-      b_st.site = &tf_emlrtRSI;
+      st.site = &gf_emlrtRSI;
+      b_st.site = &mf_emlrtRSI;
       i = V->size[0] * V->size[1];
       V->size[0] = A->size[0];
       V->size[1] = A->size[1];
-      emxEnsureCapacity_creal_T(&b_st, V, i, &mf_emlrtRTEI);
+      emxEnsureCapacity_creal_T(&b_st, V, i, &wf_emlrtRTEI);
       V_data = V->data;
       for (k = 0; k < minnm; k++) {
         V_data[k] = A_data[k];
       }
-      c_st.site = &wf_emlrtRSI;
+      c_st.site = &pf_emlrtRSI;
       i = b_A->size[0] * b_A->size[1];
       b_A->size[0] = A->size[0];
       b_A->size[1] = A->size[1];
-      emxEnsureCapacity_creal_T(&c_st, b_A, i, &nf_emlrtRTEI);
+      emxEnsureCapacity_creal_T(&c_st, b_A, i, &xf_emlrtRTEI);
       b_A_data = b_A->data;
       for (k = 0; k < minnm; k++) {
         b_A_data[k] = A_data[k];
@@ -504,16 +486,16 @@ void eml_pinv(const emlrtStack *sp, const emxArray_creal_T *A,
       i = U->size[0] * U->size[1];
       U->size[0] = A->size[0];
       U->size[1] = minnm;
-      emxEnsureCapacity_creal_T(&c_st, U, i, &of_emlrtRTEI);
+      emxEnsureCapacity_creal_T(&c_st, U, i, &yf_emlrtRTEI);
       U_data = U->data;
       i = Vt->size[0] * Vt->size[1];
       Vt->size[0] = minnm;
       Vt->size[1] = A->size[1];
-      emxEnsureCapacity_creal_T(&c_st, Vt, i, &pf_emlrtRTEI);
+      emxEnsureCapacity_creal_T(&c_st, Vt, i, &ag_emlrtRTEI);
       Vt_data = Vt->data;
       i = S->size[0];
       S->size[0] = minnm;
-      emxEnsureCapacity_real_T(&c_st, S, i, &qf_emlrtRTEI);
+      emxEnsureCapacity_real_T(&c_st, S, i, &bg_emlrtRTEI);
       S_data = S->data;
       info_t = LAPACKE_zgesdd(
           102, 'S', (ptrdiff_t)A->size[0], (ptrdiff_t)A->size[1],
@@ -521,13 +503,13 @@ void eml_pinv(const emlrtStack *sp, const emxArray_creal_T *A,
           &S_data[0], (lapack_complex_double *)&U_data[0],
           (ptrdiff_t)A->size[0], (lapack_complex_double *)&Vt_data[0],
           (ptrdiff_t)minnm);
-      d_st.site = &xf_emlrtRSI;
+      d_st.site = &qf_emlrtRSI;
       if ((int32_T)info_t < 0) {
         if ((int32_T)info_t == -1010) {
-          emlrtErrorWithMessageIdR2018a(&d_st, &db_emlrtRTEI, "MATLAB:nomem",
+          emlrtErrorWithMessageIdR2018a(&d_st, &cb_emlrtRTEI, "MATLAB:nomem",
                                         "MATLAB:nomem", 0);
         } else {
-          emlrtErrorWithMessageIdR2018a(&d_st, &eb_emlrtRTEI,
+          emlrtErrorWithMessageIdR2018a(&d_st, &db_emlrtRTEI,
                                         "Coder:toolbox:LAPACKCallErrorInfo",
                                         "Coder:toolbox:LAPACKCallErrorInfo", 5,
                                         4, 14, &fname[0], 12, (int32_T)info_t);
@@ -535,31 +517,31 @@ void eml_pinv(const emlrtStack *sp, const emxArray_creal_T *A,
       }
       info = (int32_T)info_t;
       if ((int32_T)info_t > 0) {
-        c_st.site = &vf_emlrtRSI;
-        d_st.site = &yf_emlrtRSI;
+        c_st.site = &of_emlrtRSI;
+        d_st.site = &rf_emlrtRSI;
         i = U->size[0] * U->size[1];
         U->size[0] = A->size[0];
         U->size[1] = minnm;
-        emxEnsureCapacity_creal_T(&d_st, U, i, &sf_emlrtRTEI);
+        emxEnsureCapacity_creal_T(&d_st, U, i, &dg_emlrtRTEI);
         U_data = U->data;
         i = Vt->size[0] * Vt->size[1];
         Vt->size[0] = minnm;
         Vt->size[1] = A->size[1];
-        emxEnsureCapacity_creal_T(&d_st, Vt, i, &tf_emlrtRTEI);
+        emxEnsureCapacity_creal_T(&d_st, Vt, i, &eg_emlrtRTEI);
         Vt_data = Vt->data;
         i = S->size[0];
         S->size[0] = minnm;
-        emxEnsureCapacity_real_T(&d_st, S, i, &uf_emlrtRTEI);
+        emxEnsureCapacity_real_T(&d_st, S, i, &fg_emlrtRTEI);
         S_data = S->data;
         if (minnm > 1) {
           i = superb->size[0];
           superb->size[0] = minnm - 1;
-          emxEnsureCapacity_real_T(&d_st, superb, i, &wf_emlrtRTEI);
+          emxEnsureCapacity_real_T(&d_st, superb, i, &hg_emlrtRTEI);
           superb_data = superb->data;
         } else {
           i = superb->size[0];
           superb->size[0] = 1;
-          emxEnsureCapacity_real_T(&d_st, superb, i, &vf_emlrtRTEI);
+          emxEnsureCapacity_real_T(&d_st, superb, i, &gg_emlrtRTEI);
           superb_data = superb->data;
         }
         info_t = LAPACKE_zgesvd(
@@ -568,21 +550,21 @@ void eml_pinv(const emlrtStack *sp, const emxArray_creal_T *A,
             &S_data[0], (lapack_complex_double *)&U_data[0],
             (ptrdiff_t)A->size[0], (lapack_complex_double *)&Vt_data[0],
             (ptrdiff_t)minnm, &superb_data[0]);
-        e_st.site = &bg_emlrtRSI;
+        e_st.site = &tf_emlrtRSI;
         minnm = muIntScalarMin_sint32(b_i, n);
         i = V->size[0] * V->size[1];
         V->size[0] = A->size[1];
         V->size[1] = minnm;
-        emxEnsureCapacity_creal_T(&e_st, V, i, &rf_emlrtRTEI);
+        emxEnsureCapacity_creal_T(&e_st, V, i, &cg_emlrtRTEI);
         V_data = V->data;
-        f_st.site = &cg_emlrtRSI;
+        f_st.site = &uf_emlrtRSI;
         if (minnm > 2147483646) {
           g_st.site = &o_emlrtRSI;
           check_forloop_overflow_error(&g_st);
         }
         overflow = (A->size[1] > 2147483646);
         for (k = 0; k < minnm; k++) {
-          f_st.site = &dg_emlrtRSI;
+          f_st.site = &vf_emlrtRSI;
           if (overflow) {
             g_st.site = &o_emlrtRSI;
             check_forloop_overflow_error(&g_st);
@@ -593,35 +575,35 @@ void eml_pinv(const emlrtStack *sp, const emxArray_creal_T *A,
                 -Vt_data[k + Vt->size[0] * c_i].im;
           }
         }
-        e_st.site = &ag_emlrtRSI;
+        e_st.site = &sf_emlrtRSI;
         if ((int32_T)info_t < 0) {
           if ((int32_T)info_t == -1010) {
-            emlrtErrorWithMessageIdR2018a(&e_st, &db_emlrtRTEI, "MATLAB:nomem",
+            emlrtErrorWithMessageIdR2018a(&e_st, &cb_emlrtRTEI, "MATLAB:nomem",
                                           "MATLAB:nomem", 0);
           } else {
             emlrtErrorWithMessageIdR2018a(
-                &e_st, &eb_emlrtRTEI, "Coder:toolbox:LAPACKCallErrorInfo",
+                &e_st, &db_emlrtRTEI, "Coder:toolbox:LAPACKCallErrorInfo",
                 "Coder:toolbox:LAPACKCallErrorInfo", 5, 4, 14, &b_fname[0], 12,
                 (int32_T)info_t);
           }
         }
         info = (int32_T)info_t;
       } else {
-        c_st.site = &uf_emlrtRSI;
+        c_st.site = &nf_emlrtRSI;
         minnm = muIntScalarMin_sint32(b_i, n);
         i = V->size[0] * V->size[1];
         V->size[0] = A->size[1];
         V->size[1] = minnm;
-        emxEnsureCapacity_creal_T(&c_st, V, i, &rf_emlrtRTEI);
+        emxEnsureCapacity_creal_T(&c_st, V, i, &cg_emlrtRTEI);
         V_data = V->data;
-        d_st.site = &cg_emlrtRSI;
+        d_st.site = &uf_emlrtRSI;
         if (minnm > 2147483646) {
           e_st.site = &o_emlrtRSI;
           check_forloop_overflow_error(&e_st);
         }
         overflow = (A->size[1] > 2147483646);
         for (k = 0; k < minnm; k++) {
-          d_st.site = &dg_emlrtRSI;
+          d_st.site = &vf_emlrtRSI;
           if (overflow) {
             e_st.site = &o_emlrtRSI;
             check_forloop_overflow_error(&e_st);
@@ -634,7 +616,7 @@ void eml_pinv(const emlrtStack *sp, const emxArray_creal_T *A,
         }
       }
       if (info > 0) {
-        emlrtErrorWithMessageIdR2018a(&b_st, &cb_emlrtRTEI,
+        emlrtErrorWithMessageIdR2018a(&b_st, &bb_emlrtRTEI,
                                       "Coder:MATLAB:svd_NoConvergence",
                                       "Coder:MATLAB:svd_NoConvergence", 0);
       }
@@ -659,7 +641,7 @@ void eml_pinv(const emlrtStack *sp, const emxArray_creal_T *A,
         }
       }
       minnm = 0;
-      st.site = &of_emlrtRSI;
+      st.site = &hf_emlrtRSI;
       if (A->size[1] > 2147483646) {
         b_st.site = &o_emlrtRSI;
         check_forloop_overflow_error(&b_st);
@@ -670,17 +652,17 @@ void eml_pinv(const emlrtStack *sp, const emxArray_creal_T *A,
         i++;
       }
       if (minnm > 0) {
-        st.site = &pf_emlrtRSI;
+        st.site = &if_emlrtRSI;
         if (minnm > 2147483646) {
           b_st.site = &o_emlrtRSI;
           check_forloop_overflow_error(&b_st);
         }
         for (k = 0; k < minnm; k++) {
-          st.site = &qf_emlrtRSI;
+          st.site = &jf_emlrtRSI;
           if (n >= 1) {
             creal_T a;
-            b_st.site = &eg_emlrtRSI;
-            c_st.site = &fg_emlrtRSI;
+            b_st.site = &wf_emlrtRSI;
+            c_st.site = &xf_emlrtRSI;
             a.re = 1.0 / S_data[k];
             a.im = 0.0;
             info_t = (ptrdiff_t)n;
@@ -688,9 +670,9 @@ void eml_pinv(const emlrtStack *sp, const emxArray_creal_T *A,
             zscal(&info_t, (real_T *)&a, (real_T *)&V_data[k * n], &incx_t);
           }
         }
-        st.site = &rf_emlrtRSI;
-        b_st.site = &gg_emlrtRSI;
-        c_st.site = &hg_emlrtRSI;
+        st.site = &kf_emlrtRSI;
+        b_st.site = &yf_emlrtRSI;
+        c_st.site = &ag_emlrtRSI;
         TRANSB1 = 'C';
         TRANSA1 = 'N';
         info_t = (ptrdiff_t)A->size[1];

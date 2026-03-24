@@ -22,7 +22,6 @@
 #include <string.h>
 
 /* Function Declarations */
-void dot(const emlrtStack *sp, const emxArray_creal_T *a,
-         const emxArray_real_T *b, emxArray_creal_T *c);
+creal_T dot(const emlrtStack *sp, const creal_T a[3], const emxArray_real_T *b);
 
 /* End of code generation (dot.h) */

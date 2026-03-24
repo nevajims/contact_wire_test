@@ -18,7 +18,7 @@
 #include "mwmathutil.h"
 
 /* Variable Definitions */
-static emlrtRSInfo mg_emlrtRSI = {
+static emlrtRSInfo ai_emlrtRSI = {
     83,     /* lineNo */
     "ifft", /* fcnName */
     "C:\\Program "
@@ -53,7 +53,7 @@ static emlrtRTEInfo hb_emlrtRTEI = {
                                                                          */
 };
 
-static emlrtRTEInfo cg_emlrtRTEI = {
+static emlrtRTEInfo wg_emlrtRTEI = {
     83,     /* lineNo */
     1,      /* colNo */
     "ifft", /* fName */
@@ -62,7 +62,7 @@ static emlrtRTEInfo cg_emlrtRTEI = {
                                                                          */
 };
 
-static emlrtRTEInfo dg_emlrtRTEI = {
+static emlrtRTEInfo xg_emlrtRTEI = {
     32,                   /* lineNo */
     44,                   /* colNo */
     "MATLABFFTWCallback", /* fName */
@@ -108,13 +108,13 @@ void ifft(const emlrtStack *sp, const emxArray_creal_T *x, real_T varargin_1,
     emlrtErrorWithMessageIdR2018a(sp, &fb_emlrtRTEI, "MATLAB:pmaxsize",
                                   "MATLAB:pmaxsize", 0);
   }
-  st.site = &mg_emlrtRSI;
+  st.site = &ai_emlrtRSI;
   if ((x->size[0] == 0) || (x->size[1] == 0) || ((int32_T)varargin_1 == 0)) {
     int32_T loop_ub;
     loop_ub = y->size[0] * y->size[1];
     y->size[0] = (int32_T)varargin_1;
     y->size[1] = x->size[1];
-    emxEnsureCapacity_creal_T(&st, y, loop_ub, &cg_emlrtRTEI);
+    emxEnsureCapacity_creal_T(&st, y, loop_ub, &wg_emlrtRTEI);
     y_data = y->data;
     loop_ub = (int32_T)varargin_1 * x->size[1];
     for (i = 0; i < loop_ub; i++) {
@@ -131,7 +131,7 @@ void ifft(const emlrtStack *sp, const emxArray_creal_T *x, real_T varargin_1,
     loop_ub = y->size[0] * y->size[1];
     y->size[0] = (int32_T)varargin_1;
     y->size[1] = x->size[1];
-    emxEnsureCapacity_creal_T(&e_st, y, loop_ub, &dg_emlrtRTEI);
+    emxEnsureCapacity_creal_T(&e_st, y, loop_ub, &xg_emlrtRTEI);
     y_data = y->data;
     emlrtFFTW_1D_C2C((real_T *)&x_data[0], (real_T *)&y_data[0], 1,
                      (int32_T)varargin_1, x->size[0], x->size[1], 1);

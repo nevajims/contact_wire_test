@@ -109,12 +109,6 @@
   },
   {
     "directory": "C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2025a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -g -std=c99 -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL\" -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\" -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL\\interface\" -I \"C:\\Program Files\\MATLAB\\R2025a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=fn_process_rail_data_DLL_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  squeeze.c -o build/win64/squeeze.o",
-    "file": "squeeze.c",
-    "output": "build/win64/squeeze.o"
-  },
-  {
-    "directory": "C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL",
     "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2025a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -g -std=c99 -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL\" -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\" -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL\\interface\" -I \"C:\\Program Files\\MATLAB\\R2025a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=fn_process_rail_data_DLL_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  dot.c -o build/win64/dot.o",
     "file": "dot.c",
     "output": "build/win64/dot.o"
@@ -127,9 +121,39 @@
   },
   {
     "directory": "C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2025a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -g -std=c99 -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL\" -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\" -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL\\interface\" -I \"C:\\Program Files\\MATLAB\\R2025a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=fn_process_rail_data_DLL_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  angle.c -o build/win64/angle.o",
+    "file": "angle.c",
+    "output": "build/win64/angle.o"
+  },
+  {
+    "directory": "C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2025a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -g -std=c99 -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL\" -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\" -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL\\interface\" -I \"C:\\Program Files\\MATLAB\\R2025a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=fn_process_rail_data_DLL_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  warning.c -o build/win64/warning.o",
+    "file": "warning.c",
+    "output": "build/win64/warning.o"
+  },
+  {
+    "directory": "C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2025a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -g -std=c99 -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL\" -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\" -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL\\interface\" -I \"C:\\Program Files\\MATLAB\\R2025a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=fn_process_rail_data_DLL_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  mrdivide_helper.c -o build/win64/mrdivide_helper.o",
+    "file": "mrdivide_helper.c",
+    "output": "build/win64/mrdivide_helper.o"
+  },
+  {
+    "directory": "C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2025a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -g -std=c99 -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL\" -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\" -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL\\interface\" -I \"C:\\Program Files\\MATLAB\\R2025a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=fn_process_rail_data_DLL_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  squeeze.c -o build/win64/squeeze.o",
+    "file": "squeeze.c",
+    "output": "build/win64/squeeze.o"
+  },
+  {
+    "directory": "C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL",
     "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2025a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -g -std=c99 -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL\" -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\" -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL\\interface\" -I \"C:\\Program Files\\MATLAB\\R2025a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=fn_process_rail_data_DLL_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  ifft.c -o build/win64/ifft.o",
     "file": "ifft.c",
     "output": "build/win64/ifft.o"
+  },
+  {
+    "directory": "C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2025a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -g -std=c99 -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL\" -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\" -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL\\interface\" -I \"C:\\Program Files\\MATLAB\\R2025a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=fn_process_rail_data_DLL_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  assertCompatibleDims.c -o build/win64/assertCompatibleDims.o",
+    "file": "assertCompatibleDims.c",
+    "output": "build/win64/assertCompatibleDims.o"
   },
   {
     "directory": "C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL",
@@ -151,6 +175,12 @@
   },
   {
     "directory": "C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2025a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -g -std=c99 -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL\" -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\" -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL\\interface\" -I \"C:\\Program Files\\MATLAB\\R2025a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=fn_process_rail_data_DLL_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  flipud.c -o build/win64/flipud.o",
+    "file": "flipud.c",
+    "output": "build/win64/flipud.o"
+  },
+  {
+    "directory": "C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL",
     "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2025a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -g -std=c99 -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL\" -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\" -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL\\interface\" -I \"C:\\Program Files\\MATLAB\\R2025a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=fn_process_rail_data_DLL_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  exp.c -o build/win64/exp.o",
     "file": "exp.c",
     "output": "build/win64/exp.o"
@@ -160,6 +190,12 @@
     "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2025a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -g -std=c99 -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL\" -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\" -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL\\interface\" -I \"C:\\Program Files\\MATLAB\\R2025a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=fn_process_rail_data_DLL_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  flip.c -o build/win64/flip.o",
     "file": "flip.c",
     "output": "build/win64/flip.o"
+  },
+  {
+    "directory": "C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2025a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -g -std=c99 -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL\" -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\" -I \"C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL\\interface\" -I \"C:\\Program Files\\MATLAB\\R2025a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=fn_process_rail_data_DLL_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  round.c -o build/win64/round.o",
+    "file": "round.c",
+    "output": "build/win64/round.o"
   },
   {
     "directory": "C:\\Users\\mepdw\\Git\\contact_wire_test\\codegen\\mex\\fn_process_rail_data_DLL",

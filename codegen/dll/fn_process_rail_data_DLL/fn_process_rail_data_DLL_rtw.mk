@@ -2,7 +2,7 @@
 ## Makefile generated for component 'fn_process_rail_data_DLL'. 
 ## 
 ## Makefile     : fn_process_rail_data_DLL_rtw.mk
-## Generated on : Thu Mar 12 17:25:27 2026
+## Generated on : Tue Mar 24 22:30:58 2026
 ## Final product: ./fn_process_rail_data_DLL.dll
 ## Product type : dynamic-library
 ## 
@@ -25,7 +25,7 @@ MATLAB_ROOT               = C:/PROGRA~1/MATLAB/R2025a
 MATLAB_BIN                = C:/PROGRA~1/MATLAB/R2025a/bin
 MATLAB_ARCH_BIN           = $(MATLAB_BIN)/win64
 START_DIR                 = C:/Users/mepdw/Git/contact_wire_test
-TGT_FCN_LIB               = ISO_C
+TGT_FCN_LIB               = ISO_C++11
 SOLVER_OBJ                = 
 CLASSIC_INTERFACE         = 0
 MODEL_HAS_DYNAMICALLY_LOADED_SFCNS = 
@@ -173,7 +173,7 @@ INCLUDES = $(INCLUDES_BUILDINFO)
 ## DEFINES
 ###########################################################################
 
-DEFINES_ = -D__USE_MINGW_ANSI_STDIO=1
+DEFINES_ = -D__USE_MINGW_ANSI_STDIO=1 -DBUILDING_FN_PROCESS_RAIL_DATA_DLL
 DEFINES_CUSTOM = 
 DEFINES_STANDARD = -DMODEL=fn_process_rail_data_DLL
 
@@ -183,7 +183,7 @@ DEFINES = $(DEFINES_) $(DEFINES_CUSTOM) $(DEFINES_STANDARD)
 ## SOURCE FILES
 ###########################################################################
 
-SRCS = $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/fn_process_rail_data_DLL_data.c $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/fn_process_rail_data_DLL_initialize.c $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/fn_process_rail_data_DLL_terminate.c $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/fn_process_rail_data_DLL.c $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/randn.c $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/eml_rand_mt19937ar.c $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/eml_randn.c $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/eml_rand.c $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/eml_rand_mcg16807_stateful.c $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/eml_rand_shr3cong_stateful.c $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/eml_rand_mt19937ar_stateful.c $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/linspace.c $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/eml_rand_shr3cong.c
+SRCS = $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/fn_process_rail_data_DLL_data.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/rt_nonfinite.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/rtGetNaN.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/rtGetInf.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/fn_process_rail_data_DLL_initialize.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/fn_process_rail_data_DLL_terminate.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/fn_process_rail_data_DLL.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/find.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/nextpow2.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/fft.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/minOrMax.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/linspace.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/abs.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/sum.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/interp1.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/pchip.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/bsearch.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/dot.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/pinv.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/xzsvdc.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/xzlangeM.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/xnrm2.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/xdotc.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/angle.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/mrdivide_helper.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/squeeze.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/ifft.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/mpower.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/flipud.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/exp.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/xaxpy.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/xrotg.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/xrot.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/xswap.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/round.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/xzlascl.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/div.cpp $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/FFTImplementationCallback.cpp
 
 ALL_SRCS = $(SRCS)
 
@@ -191,7 +191,7 @@ ALL_SRCS = $(SRCS)
 ## OBJECTS
 ###########################################################################
 
-OBJS = fn_process_rail_data_DLL_data.obj fn_process_rail_data_DLL_initialize.obj fn_process_rail_data_DLL_terminate.obj fn_process_rail_data_DLL.obj randn.obj eml_rand_mt19937ar.obj eml_randn.obj eml_rand.obj eml_rand_mcg16807_stateful.obj eml_rand_shr3cong_stateful.obj eml_rand_mt19937ar_stateful.obj linspace.obj eml_rand_shr3cong.obj
+OBJS = fn_process_rail_data_DLL_data.obj rt_nonfinite.obj rtGetNaN.obj rtGetInf.obj fn_process_rail_data_DLL_initialize.obj fn_process_rail_data_DLL_terminate.obj fn_process_rail_data_DLL.obj find.obj nextpow2.obj fft.obj minOrMax.obj linspace.obj abs.obj sum.obj interp1.obj pchip.obj bsearch.obj dot.obj pinv.obj xzsvdc.obj xzlangeM.obj xnrm2.obj xdotc.obj angle.obj mrdivide_helper.obj squeeze.obj ifft.obj mpower.obj flipud.obj exp.obj xaxpy.obj xrotg.obj xrot.obj xswap.obj round.obj xzlascl.obj div.obj FFTImplementationCallback.obj
 
 ALL_OBJS = $(OBJS)
 
@@ -221,25 +221,29 @@ SYSTEM_LIBS =
 # C Compiler
 #---------------
 
+CFLAGS_ = -fvisibility=hidden
+CFLAGS_OPTS = -fopenmp
 CFLAGS_TFL = -msse2 -fno-predictive-commoning
 CFLAGS_BASIC = $(DEFINES) $(INCLUDES) @$(COMPILER_COMMAND_FILE)
 
-CFLAGS += $(CFLAGS_TFL) $(CFLAGS_BASIC)
+CFLAGS += $(CFLAGS_) $(CFLAGS_OPTS) $(CFLAGS_TFL) $(CFLAGS_BASIC)
 
 #-----------------
 # C++ Compiler
 #-----------------
 
+CPPFLAGS_ = -fvisibility=hidden
+CPPFLAGS_OPTS = -fopenmp
 CPPFLAGS_TFL = -msse2 -fno-predictive-commoning
 CPPFLAGS_BASIC = $(DEFINES) $(INCLUDES) @$(COMPILER_COMMAND_FILE)
 
-CPPFLAGS += $(CPPFLAGS_TFL) $(CPPFLAGS_BASIC)
+CPPFLAGS += $(CPPFLAGS_) $(CPPFLAGS_OPTS) $(CPPFLAGS_TFL) $(CPPFLAGS_BASIC)
 
 #---------------
 # C++ Linker
 #---------------
 
-CPP_LDFLAGS_ = $(DEF_FILE)
+CPP_LDFLAGS_ = -fopenmp
 
 CPP_LDFLAGS += $(CPP_LDFLAGS_)
 
@@ -247,7 +251,7 @@ CPP_LDFLAGS += $(CPP_LDFLAGS_)
 # C++ Shared Library Linker
 #------------------------------
 
-CPP_SHAREDLIB_LDFLAGS_ = $(DEF_FILE)
+CPP_SHAREDLIB_LDFLAGS_ = -fopenmp
 
 CPP_SHAREDLIB_LDFLAGS += $(CPP_SHAREDLIB_LDFLAGS_)
 
@@ -255,7 +259,7 @@ CPP_SHAREDLIB_LDFLAGS += $(CPP_SHAREDLIB_LDFLAGS_)
 # Linker
 #-----------
 
-LDFLAGS_ = $(DEF_FILE)
+LDFLAGS_ = -fopenmp
 
 LDFLAGS += $(LDFLAGS_)
 
@@ -279,7 +283,7 @@ MEX_CFLAGS += $(MEX_Compiler_BASIC)
 # Shared Library Linker
 #--------------------------
 
-SHAREDLIB_LDFLAGS_ = $(DEF_FILE)
+SHAREDLIB_LDFLAGS_ = -fopenmp
 
 SHAREDLIB_LDFLAGS += $(SHAREDLIB_LDFLAGS_)
 
@@ -324,7 +328,7 @@ execute : download
 
 $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS)
 	@echo "### Creating dynamic library "$(PRODUCT)" ..."
-	$(LD) $(SHAREDLIB_LDFLAGS) -o $(PRODUCT) @$(CMD_FILE) $(SYSTEM_LIBS) $(TOOLCHAIN_LIBS)
+	$(CPP_LD) $(CPP_SHAREDLIB_LDFLAGS) -o $(PRODUCT) @$(CMD_FILE) $(SYSTEM_LIBS) $(TOOLCHAIN_LIBS)
 	@echo "### Created: $(PRODUCT)"
 
 
@@ -464,56 +468,156 @@ $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS)
 	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-fn_process_rail_data_DLL_data.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/fn_process_rail_data_DLL_data.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
+fn_process_rail_data_DLL_data.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/fn_process_rail_data_DLL_data.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-fn_process_rail_data_DLL_initialize.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/fn_process_rail_data_DLL_initialize.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
+rt_nonfinite.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/rt_nonfinite.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-fn_process_rail_data_DLL_terminate.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/fn_process_rail_data_DLL_terminate.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
+rtGetNaN.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/rtGetNaN.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-fn_process_rail_data_DLL.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/fn_process_rail_data_DLL.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
+rtGetInf.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/rtGetInf.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-randn.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/randn.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
+fn_process_rail_data_DLL_initialize.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/fn_process_rail_data_DLL_initialize.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-eml_rand_mt19937ar.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/eml_rand_mt19937ar.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
+fn_process_rail_data_DLL_terminate.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/fn_process_rail_data_DLL_terminate.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-eml_randn.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/eml_randn.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
+fn_process_rail_data_DLL.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/fn_process_rail_data_DLL.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-eml_rand.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/eml_rand.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
+find.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/find.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-eml_rand_mcg16807_stateful.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/eml_rand_mcg16807_stateful.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
+nextpow2.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/nextpow2.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-eml_rand_shr3cong_stateful.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/eml_rand_shr3cong_stateful.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
+fft.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/fft.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-eml_rand_mt19937ar_stateful.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/eml_rand_mt19937ar_stateful.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
+minOrMax.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/minOrMax.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-linspace.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/linspace.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
+linspace.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/linspace.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-eml_rand_shr3cong.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/eml_rand_shr3cong.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
+abs.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/abs.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+sum.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/sum.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+interp1.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/interp1.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+pchip.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/pchip.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+bsearch.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/bsearch.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+dot.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/dot.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+pinv.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/pinv.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+xzsvdc.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/xzsvdc.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+xzlangeM.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/xzlangeM.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+xnrm2.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/xnrm2.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+xdotc.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/xdotc.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+angle.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/angle.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+mrdivide_helper.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/mrdivide_helper.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+squeeze.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/squeeze.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+ifft.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/ifft.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+mpower.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/mpower.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+flipud.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/flipud.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+exp.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/exp.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+xaxpy.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/xaxpy.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+xrotg.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/xrotg.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+xrot.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/xrot.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+xswap.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/xswap.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+round.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/round.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+xzlascl.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/xzlascl.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+div.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/div.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+FFTImplementationCallback.obj : $(START_DIR)/codegen/dll/fn_process_rail_data_DLL/FFTImplementationCallback.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
 ###########################################################################

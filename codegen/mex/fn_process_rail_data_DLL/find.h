@@ -25,9 +25,12 @@
 void b_eml_find(const emlrtStack *sp, const emxArray_boolean_T *x,
                 emxArray_int32_T *i);
 
-void binary_expand_op_1(const emlrtStack *sp, emxArray_int32_T *in1,
+void binary_expand_op_2(const emlrtStack *sp, emxArray_int32_T *in1,
                         const emlrtRSInfo in2, const emxArray_int64_T *in3,
                         const emxArray_int64_T *in4);
+
+void c_eml_find(const emlrtStack *sp, const emxArray_boolean_T *x,
+                emxArray_int32_T *i);
 
 void eml_find(const emlrtStack *sp, const emxArray_boolean_T *x,
               emxArray_int32_T *i);

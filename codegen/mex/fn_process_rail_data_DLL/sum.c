@@ -73,7 +73,7 @@ static emlrtRSInfo bd_emlrtRSI = {
     "rixIncludeNaN.m" /* pathName */
 };
 
-static emlrtRTEInfo m_emlrtRTEI = {
+static emlrtRTEInfo k_emlrtRTEI = {
     46,        /* lineNo */
     23,        /* colNo */
     "sumprod", /* fName */
@@ -82,7 +82,7 @@ static emlrtRTEInfo m_emlrtRTEI = {
     "d.m" /* pName */
 };
 
-static emlrtRTEInfo n_emlrtRTEI = {
+static emlrtRTEInfo l_emlrtRTEI = {
     76,        /* lineNo */
     9,         /* colNo */
     "sumprod", /* fName */
@@ -91,7 +91,7 @@ static emlrtRTEInfo n_emlrtRTEI = {
     "d.m" /* pName */
 };
 
-static emlrtRTEInfo pd_emlrtRTEI = {
+static emlrtRTEInfo ie_emlrtRTEI = {
     20,    /* lineNo */
     1,     /* colNo */
     "sum", /* fName */
@@ -100,7 +100,7 @@ static emlrtRTEInfo pd_emlrtRTEI = {
                                                                         */
 };
 
-static emlrtRTEInfo qd_emlrtRTEI = {
+static emlrtRTEInfo je_emlrtRTEI = {
     35,                    /* lineNo */
     20,                    /* colNo */
     "sumMatrixIncludeNaN", /* fName */
@@ -135,12 +135,12 @@ void sum(const emlrtStack *sp, const emxArray_real_T *x, emxArray_real_T *y)
   f_st.tls = e_st.tls;
   st.site = &rc_emlrtRSI;
   if (((x->size[0] != 1) || (x->size[1] != 1)) && (x->size[0] == 1)) {
-    emlrtErrorWithMessageIdR2018a(&st, &m_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &k_emlrtRTEI,
                                   "Coder:toolbox:autoDimIncompatibility",
                                   "Coder:toolbox:autoDimIncompatibility", 0);
   }
   if ((x->size[0] == 0) && (x->size[1] == 0)) {
-    emlrtErrorWithMessageIdR2018a(&st, &n_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &l_emlrtRTEI,
                                   "Coder:toolbox:UnsupportedSpecialEmpty",
                                   "Coder:toolbox:UnsupportedSpecialEmpty", 0);
   }
@@ -151,7 +151,7 @@ void sum(const emlrtStack *sp, const emxArray_real_T *x, emxArray_real_T *y)
     nfb = y->size[0] * y->size[1];
     y->size[0] = 1;
     y->size[1] = x->size[1];
-    emxEnsureCapacity_real_T(&c_st, y, nfb, &pd_emlrtRTEI);
+    emxEnsureCapacity_real_T(&c_st, y, nfb, &ie_emlrtRTEI);
     y_data = y->data;
     nfb = x->size[1];
     for (col = 0; col < nfb; col++) {
@@ -166,7 +166,7 @@ void sum(const emlrtStack *sp, const emxArray_real_T *x, emxArray_real_T *y)
     y->size[0] = 1;
     i = x->size[1];
     y->size[1] = x->size[1];
-    emxEnsureCapacity_real_T(&e_st, y, nfb, &qd_emlrtRTEI);
+    emxEnsureCapacity_real_T(&e_st, y, nfb, &je_emlrtRTEI);
     y_data = y->data;
     if (x->size[0] < 4096) {
       for (col = 0; col < i; col++) {

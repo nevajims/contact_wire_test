@@ -58,19 +58,25 @@ build $builddir/anynan.o : cc $root/anynan.c
 build $builddir/pchip.o : cc $root/pchip.c
 build $builddir/chckxy.o : cc $root/chckxy.c
 build $builddir/bsearch.o : cc $root/bsearch.c
-build $builddir/squeeze.o : cc $root/squeeze.c
 build $builddir/dot.o : cc $root/dot.c
 build $builddir/pinv.o : cc $root/pinv.c
+build $builddir/angle.o : cc $root/angle.c
+build $builddir/warning.o : cc $root/warning.c
+build $builddir/mrdivide_helper.o : cc $root/mrdivide_helper.c
+build $builddir/squeeze.o : cc $root/squeeze.c
 build $builddir/ifft.o : cc $root/ifft.c
+build $builddir/assertCompatibleDims.o : cc $root/assertCompatibleDims.c
 build $builddir/_coder_fn_process_rail_data_DLL_api.o : cc $root/interface/_coder_fn_process_rail_data_DLL_api.c
 build $builddir/_coder_fn_process_rail_data_DLL_mex.o : cc $root/interface/_coder_fn_process_rail_data_DLL_mex.c
 build $builddir/eml_int_forloop_overflow_check.o : cc $root/eml_int_forloop_overflow_check.c
+build $builddir/flipud.o : cc $root/flipud.c
 build $builddir/exp.o : cc $root/exp.c
 build $builddir/flip.o : cc $root/flip.c
+build $builddir/round.o : cc $root/round.c
 build $builddir/div.o : cc $root/div.c
 build $builddir/fn_process_rail_data_DLL_emxutil.o : cc $root/fn_process_rail_data_DLL_emxutil.c
 build $builddir/_coder_fn_process_rail_data_DLL_info.o : cc $root/interface/_coder_fn_process_rail_data_DLL_info.c
 build $builddir/c_mexapi_version.o : cc $matlabdir/extern/version/c_mexapi_version.c
 
 # Link
-build $root\fn_process_rail_data_DLL_mex.mexw64 : link $builddir/fn_process_rail_data_DLL_data.o $builddir/rt_nonfinite.o $builddir/fn_process_rail_data_DLL_initialize.o $builddir/fn_process_rail_data_DLL_terminate.o $builddir/fn_process_rail_data_DLL.o $builddir/mtimes.o $builddir/find.o $builddir/indexShapeCheck.o $builddir/fft.o $builddir/linspace.o $builddir/abs.o $builddir/sum.o $builddir/sumMatrixIncludeNaN.o $builddir/interp1.o $builddir/anynan.o $builddir/pchip.o $builddir/chckxy.o $builddir/bsearch.o $builddir/squeeze.o $builddir/dot.o $builddir/pinv.o $builddir/ifft.o $builddir/_coder_fn_process_rail_data_DLL_api.o $builddir/_coder_fn_process_rail_data_DLL_mex.o $builddir/eml_int_forloop_overflow_check.o $builddir/exp.o $builddir/flip.o $builddir/div.o $builddir/fn_process_rail_data_DLL_emxutil.o $builddir/_coder_fn_process_rail_data_DLL_info.o $builddir/c_mexapi_version.o 
+build $root\fn_process_rail_data_DLL_mex.mexw64 : link $builddir/fn_process_rail_data_DLL_data.o $builddir/rt_nonfinite.o $builddir/fn_process_rail_data_DLL_initialize.o $builddir/fn_process_rail_data_DLL_terminate.o $builddir/fn_process_rail_data_DLL.o $builddir/mtimes.o $builddir/find.o $builddir/indexShapeCheck.o $builddir/fft.o $builddir/linspace.o $builddir/abs.o $builddir/sum.o $builddir/sumMatrixIncludeNaN.o $builddir/interp1.o $builddir/anynan.o $builddir/pchip.o $builddir/chckxy.o $builddir/bsearch.o $builddir/dot.o $builddir/pinv.o $builddir/angle.o $builddir/warning.o $builddir/mrdivide_helper.o $builddir/squeeze.o $builddir/ifft.o $builddir/assertCompatibleDims.o $builddir/_coder_fn_process_rail_data_DLL_api.o $builddir/_coder_fn_process_rail_data_DLL_mex.o $builddir/eml_int_forloop_overflow_check.o $builddir/flipud.o $builddir/exp.o $builddir/flip.o $builddir/round.o $builddir/div.o $builddir/fn_process_rail_data_DLL_emxutil.o $builddir/_coder_fn_process_rail_data_DLL_info.o $builddir/c_mexapi_version.o 

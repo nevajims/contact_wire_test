@@ -22,7 +22,7 @@
 #include <string.h>
 
 /* Function Declarations */
-void binary_expand_op_2(const emlrtStack *sp, emxArray_real_T *in1,
+void binary_expand_op_3(const emlrtStack *sp, emxArray_real_T *in1,
                         const emxArray_real_T *in2, const emxArray_real_T *in3);
 
 void rdivide(const emlrtStack *sp, emxArray_real_T *in1,

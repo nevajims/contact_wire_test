@@ -1,33 +1,30 @@
-/*
- * Academic License - for use in teaching, academic research, and meeting
- * course requirements at degree granting institutions only.  Not for
- * government, commercial, or other organizational use.
- * File: fn_process_rail_data_DLL_data.h
- *
- * MATLAB Coder version            : 25.1
- * C/C++ source code generated on  : 12-Mar-2026 17:25:15
- */
+//
+// Academic License - for use in teaching, academic research, and meeting
+// course requirements at degree granting institutions only.  Not for
+// government, commercial, or other organizational use.
+// File: fn_process_rail_data_DLL_data.h
+//
+// MATLAB Coder version            : 25.1
+// C/C++ source code generated on  : 24-Mar-2026 22:30:21
+//
 
 #ifndef FN_PROCESS_RAIL_DATA_DLL_DATA_H
 #define FN_PROCESS_RAIL_DATA_DLL_DATA_H
 
-/* Include Files */
+// Include Files
+#include "fn_process_rail_data_DLL_spec.h"
 #include "rtwtypes.h"
-#include <stddef.h>
-#include <stdlib.h>
+#include "omp.h"
+#include <cstddef>
+#include <cstdlib>
 
-/* Variable Declarations */
-extern unsigned int method;
-extern unsigned int state[2];
-extern unsigned int b_method;
-extern unsigned int b_state;
-extern unsigned int c_state[2];
-extern unsigned int d_state[625];
+// Variable Declarations
+extern omp_nest_lock_t fn_process_rail_data_DLL_nestLockGlobal;
 extern boolean_T isInitialized_fn_process_rail_data_DLL;
 
 #endif
-/*
- * File trailer for fn_process_rail_data_DLL_data.h
- *
- * [EOF]
- */
+//
+// File trailer for fn_process_rail_data_DLL_data.h
+//
+// [EOF]
+//

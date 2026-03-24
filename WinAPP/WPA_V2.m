@@ -1334,7 +1334,7 @@ end
         % Button pushed function: ProcessDataButton
         function ProcessDataButtonPushed(app, event)
           
-          try  
+          % try  
           if isstruct(app.test_data)           
           [app.rail_tester,loaded_fe_file_ok ] =  create_rail_tester_structure(app.default_options,app.test_data,app.proc_options);
           
@@ -1342,7 +1342,10 @@ end
           if loaded_fe_file_ok~= 1
           msgbox('warning issue with fe file loading- cant process')
           else
-          app.rail_tester                                =  fn_process_rail_data(app.rail_tester, app.proc_options);
+          % app.rail_tester                                =  fn_process_rail_data(app.rail_tester, app.proc_options);
+          % app.rail_tester                                =  fn_process_rail_data_fn_wrapper(app.rail_tester, app.proc_options);
+          % app.rail_tester                                =  fn_process_rail_data_fn_wrapper(app.rail_tester, app.proc_options, 'new matlab');
+          app.rail_tester                                =  fn_process_rail_data_fn_wrapper(app.rail_tester, app.proc_options, 'new mex');
           
           if isstruct(app.rail_tester)
           app.have_processed_data = 1;
@@ -1357,9 +1360,9 @@ end
 
           end %if isstruct(app.test_data)
 
-          catch ER
-          write_error2file(app,ER)    
-          end %try
+          % catch ER
+          % write_error2file(app,ER)    
+          % end %try
 
           % fit thisinto the next window 
           % txt_ = app.plot_options2.Data_path_options{app.plot_options2.Data_path_choice};    

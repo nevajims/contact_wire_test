@@ -24,6 +24,9 @@
 void b_indexShapeCheck(const emlrtStack *sp, const int32_T matrixSize[2],
                        int32_T indexSize);
 
+void c_indexShapeCheck(const emlrtStack *sp, const int32_T matrixSize[2],
+                       int32_T indexSize);
+
 void indexShapeCheck(const emlrtStack *sp, int32_T matrixSize,
                      const int32_T indexSize[2]);
 

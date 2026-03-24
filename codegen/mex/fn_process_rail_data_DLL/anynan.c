@@ -18,7 +18,7 @@
 #include "mwmathutil.h"
 
 /* Variable Definitions */
-static emlrtRSInfo be_emlrtRSI = {
+static emlrtRSInfo ud_emlrtRSI = {
     16,       /* lineNo */
     "anynan", /* fcnName */
     "C:\\Program "
@@ -46,11 +46,11 @@ boolean_T anynan(const emlrtStack *sp, const emxArray_real_T *x)
   d_st.prev = &c_st;
   d_st.tls = c_st.tls;
   x_data = x->data;
-  st.site = &be_emlrtRSI;
-  b_st.site = &ce_emlrtRSI;
+  st.site = &ud_emlrtRSI;
+  b_st.site = &vd_emlrtRSI;
   nx = x->size[0];
   tf = false;
-  c_st.site = &de_emlrtRSI;
+  c_st.site = &wd_emlrtRSI;
   if (x->size[0] > 2147483646) {
     d_st.site = &o_emlrtRSI;
     check_forloop_overflow_error(&d_st);
@@ -82,11 +82,11 @@ boolean_T b_anynan(const emlrtStack *sp, const emxArray_real_T *x)
   d_st.prev = &c_st;
   d_st.tls = c_st.tls;
   x_data = x->data;
-  st.site = &be_emlrtRSI;
-  b_st.site = &ce_emlrtRSI;
+  st.site = &ud_emlrtRSI;
+  b_st.site = &vd_emlrtRSI;
   nx = x->size[1];
   tf = false;
-  c_st.site = &de_emlrtRSI;
+  c_st.site = &wd_emlrtRSI;
   if (x->size[1] > 2147483646) {
     d_st.site = &o_emlrtRSI;
     check_forloop_overflow_error(&d_st);

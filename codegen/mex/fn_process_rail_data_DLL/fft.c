@@ -26,7 +26,7 @@ static emlrtRSInfo db_emlrtRSI = {
                                                                         */
 };
 
-static emlrtRTEInfo i_emlrtRTEI = {
+static emlrtRTEInfo g_emlrtRTEI = {
     52,    /* lineNo */
     35,    /* colNo */
     "fft", /* fName */
@@ -35,7 +35,7 @@ static emlrtRTEInfo i_emlrtRTEI = {
                                                                         */
 };
 
-static emlrtRTEInfo j_emlrtRTEI = {
+static emlrtRTEInfo h_emlrtRTEI = {
     48,    /* lineNo */
     35,    /* colNo */
     "fft", /* fName */
@@ -44,7 +44,7 @@ static emlrtRTEInfo j_emlrtRTEI = {
                                                                         */
 };
 
-static emlrtRTEInfo k_emlrtRTEI = {
+static emlrtRTEInfo i_emlrtRTEI = {
     37,    /* lineNo */
     31,    /* colNo */
     "fft", /* fName */
@@ -53,7 +53,7 @@ static emlrtRTEInfo k_emlrtRTEI = {
                                                                         */
 };
 
-static emlrtRTEInfo ld_emlrtRTEI = {
+static emlrtRTEInfo ee_emlrtRTEI = {
     63,    /* lineNo */
     5,     /* colNo */
     "fft", /* fName */
@@ -62,7 +62,7 @@ static emlrtRTEInfo ld_emlrtRTEI = {
                                                                         */
 };
 
-static emlrtRTEInfo md_emlrtRTEI = {
+static emlrtRTEInfo fe_emlrtRTEI = {
     32,                   /* lineNo */
     36,                   /* colNo */
     "MATLABFFTWCallback", /* fName */
@@ -95,17 +95,17 @@ void fft(const emlrtStack *sp, const emxArray_real_T *x, real_T varargin_1,
   e_st.tls = d_st.tls;
   x_data = x->data;
   if (x->size[0] == 1) {
-    emlrtErrorWithMessageIdR2018a(sp, &k_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(sp, &i_emlrtRTEI,
                                   "Coder:toolbox:autoDimIncompatibility",
                                   "Coder:toolbox:autoDimIncompatibility", 0);
   }
   if (!(varargin_1 == muDoubleScalarFloor(varargin_1))) {
-    emlrtErrorWithMessageIdR2018a(sp, &j_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(sp, &h_emlrtRTEI,
                                   "MATLAB:fftfcn:lengthNotNonNegInt",
                                   "MATLAB:fftfcn:lengthNotNonNegInt", 0);
   }
   if (!(varargin_1 <= 2.147483647E+9)) {
-    emlrtErrorWithMessageIdR2018a(sp, &i_emlrtRTEI, "MATLAB:pmaxsize",
+    emlrtErrorWithMessageIdR2018a(sp, &g_emlrtRTEI, "MATLAB:pmaxsize",
                                   "MATLAB:pmaxsize", 0);
   }
   st.site = &db_emlrtRSI;
@@ -114,7 +114,7 @@ void fft(const emlrtStack *sp, const emxArray_real_T *x, real_T varargin_1,
     loop_ub = y->size[0] * y->size[1];
     y->size[0] = (int32_T)varargin_1;
     y->size[1] = x->size[1];
-    emxEnsureCapacity_creal_T(&st, y, loop_ub, &ld_emlrtRTEI);
+    emxEnsureCapacity_creal_T(&st, y, loop_ub, &ee_emlrtRTEI);
     y_data = y->data;
     loop_ub = (int32_T)varargin_1 * x->size[1];
     for (i = 0; i < loop_ub; i++) {
@@ -131,7 +131,7 @@ void fft(const emlrtStack *sp, const emxArray_real_T *x, real_T varargin_1,
     loop_ub = y->size[0] * y->size[1];
     y->size[0] = (int32_T)varargin_1;
     y->size[1] = x->size[1];
-    emxEnsureCapacity_creal_T(&e_st, y, loop_ub, &md_emlrtRTEI);
+    emxEnsureCapacity_creal_T(&e_st, y, loop_ub, &fe_emlrtRTEI);
     y_data = y->data;
     emlrtFFTW_1D_R2C((real_T *)&x_data[0], (real_T *)&y_data[0], 1,
                      (int32_T)varargin_1, x->size[0], x->size[1], -1);

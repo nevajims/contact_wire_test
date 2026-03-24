@@ -22,7 +22,7 @@
 #include <string.h>
 
 /* Function Declarations */
-void b_exp(creal_T *x);
+void b_exp(const emlrtStack *sp, emxArray_creal_T *x);
 
 void c_exp(const emlrtStack *sp, emxArray_real_T *x);
 

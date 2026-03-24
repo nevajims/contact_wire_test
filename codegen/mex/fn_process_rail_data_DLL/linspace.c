@@ -18,7 +18,7 @@
 #include <emmintrin.h>
 
 /* Variable Definitions */
-static emlrtRTEInfo l_emlrtRTEI = {
+static emlrtRTEInfo j_emlrtRTEI = {
     31,         /* lineNo */
     33,         /* colNo */
     "linspace", /* fName */
@@ -27,7 +27,7 @@ static emlrtRTEInfo l_emlrtRTEI = {
                                                                            */
 };
 
-static emlrtRTEInfo nd_emlrtRTEI = {
+static emlrtRTEInfo ge_emlrtRTEI = {
     45,         /* lineNo */
     20,         /* colNo */
     "linspace", /* fName */
@@ -45,7 +45,7 @@ void linspace(const emlrtStack *sp, real_T N, emxArray_real_T *y)
   int32_T k;
   int32_T scalarLB;
   if (muDoubleScalarIsNaN(N)) {
-    emlrtErrorWithMessageIdR2018a(sp, &l_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(sp, &j_emlrtRTEI,
                                   "Coder:toolbox:MustNotBeNaN",
                                   "Coder:toolbox:MustNotBeNaN", 3, 4, 1, "N");
   }
@@ -53,7 +53,7 @@ void linspace(const emlrtStack *sp, real_T N, emxArray_real_T *y)
   y->size[0] = 1;
   i = (int32_T)muDoubleScalarFloor(N);
   y->size[1] = i;
-  emxEnsureCapacity_real_T(sp, y, scalarLB, &nd_emlrtRTEI);
+  emxEnsureCapacity_real_T(sp, y, scalarLB, &ge_emlrtRTEI);
   y_data = y->data;
   y_data[i - 1] = 1.0;
   if (y->size[1] >= 2) {
