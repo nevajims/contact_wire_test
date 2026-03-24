@@ -71,7 +71,8 @@ classdef WPA_V2 < matlab.apps.AppBase
         PREDICTIONButton               matlab.ui.control.Button
         ModePairViewerFDButton         matlab.ui.control.Button
         SetPredictionOptionsButton     matlab.ui.control.Button
-                 
+        SYMMETRYButton                 matlab.ui.control.Button  
+
     end
 
     
@@ -303,6 +304,7 @@ default_option_fields       =  {'raw_data_file_options';...
             app.SetPredictionOptionsButton.Enable ='on'; 
             app.ProduceareportButton.Enable     ='off'; 
             app.ClearPredictionsButton.Enable   ='off'; 
+            app.SYMMETRYButton.Enable           ='off';     
 
                 case(1)
             app.PREDICTIONButton.Enable         ='on';
@@ -321,6 +323,7 @@ default_option_fields       =  {'raw_data_file_options';...
             app.SetPredictionOptionsButton.Enable  ='on';
             app.ProduceareportButton.Enable     ='on'; 
             app.ClearPredictionsButton.Enable   ='on'; 
+            app.SYMMETRYButton.Enable           ='on'; 
 
                 case(2)
             app.PREDICTIONButton.Enable         ='off';
@@ -339,6 +342,7 @@ default_option_fields       =  {'raw_data_file_options';...
             app.SetPredictionOptionsButton.Enable ='on';
             app.ProduceareportButton.Enable     ='on'; 
             app.ClearPredictionsButton.Enable   ='on'; 
+            app.SYMMETRYButton.Enable          ='off'; 
            end   
 
            if app.Prog_STATE ==  3  % i.e. calibrate state
@@ -359,6 +363,7 @@ default_option_fields       =  {'raw_data_file_options';...
                    app.MeanSTDmodesButton.Visible       ='on';   
                    app.InteractiveMMViewerButton.Visible='on'; 
                    app.MPRCvsTagButton.Visible          ='on';
+                   app.SYMMETRYButton.Visible            ='on';
                    
                otherwise
 
@@ -374,6 +379,7 @@ default_option_fields       =  {'raw_data_file_options';...
                    app.ShowMeshButton.Visible           ='off';
                    app.MeanSTDmodesButton.Visible       ='off';   
                    app.InteractiveMMViewerButton.Visible='off'; 
+                   app.SYMMETRYButton.Visible           ='off';
                    
           end      % switch(app.login_level) 
 
@@ -773,10 +779,19 @@ Pix_SS = get(0,'screensize')              ;
             app.LogLikelyhoodTableButton.Position = [x_mult*567 y_mult*188 x_mult*166 y_mult*30];
             app.DistanceMeanTableButton.FontSize = y_mult*14;
             app.DistanceMeanTableButton.Position = [x_mult*564 y_mult*223 x_mult*171 y_mult*30];
-            app.ShowMeshButton.FontSize = y_mult*14;
-            app.ShowMeshButton.Position = [x_mult*564 y_mult*5 x_mult*171 y_mult*30];
+            
+
             app.ShowDispersionButton.FontSize = y_mult*14;
             app.ShowDispersionButton.Position = [x_mult*569 y_mult*39 x_mult*166 y_mult*30];
+
+            app.ShowMeshButton.FontSize = y_mult*14;
+            app.ShowMeshButton.Position = [x_mult*564 y_mult*5 x_mult*171 y_mult*30];
+            
+            app.SYMMETRYButton.FontSize = y_mult*14;
+            app.ShowMeshButton.Position = [x_mult*564 y_mult*5 x_mult*171 y_mult*30]; 
+
+
+            
             app.PLampLabel.Position = [x_mult*382 y_mult*164 x_mult*25 y_mult*22];
             app.PLampLabel.FontSize = 12 * x_mult;
             app.PLamp.Position = [x_mult*422 y_mult*164 x_mult*20 y_mult*20];
@@ -1406,7 +1421,7 @@ end %try
             proc_file.test_data    =  app.test_data  ;
             settings_               = plot_options_O; 
 
-            do_plots = [0 1 0 0 0 0 0 0 0 0 0 0];
+            do_plots = [0 1 0 0 0 0 0 0 0 0 0 0 0];
             LF = [pwd,settings_.Data_path_options{settings_.Data_path_choice}];
             try
             [~] = plot_predict_processed(proc_file, settings_ ,do_plots, LF,app.base_width,app.base_height,app.mag_fac);        
@@ -1441,7 +1456,7 @@ end %try
              write_error2file(app,ER)    
              end %try
 
-             do_plots   = [0 0 0 0 0 0 0 0 0 0 0 0];  
+             do_plots   = [0 0 0 0 0 0 0 0 0 0 0 0 0];  
              LF = [pwd,settings_.Data_path_options{settings_.Data_path_choice}];
              
              try
@@ -1514,7 +1529,7 @@ end %try
              
              if do_the_prediction == 1  
              
-             do_plots   = [0 0 0 0 0 0 0 0 0 1 0 0];  
+             do_plots   = [0 0 0 0 0 0 0 0 0 1 0 0 0];  
              LF = [pwd,settings_.Data_path_options{settings_.Data_path_choice}];
              
              % [~,PL_inf,~] = plot_predict_processed    (proc_file, settings_ ,do_plots, LF,app.base_width,app.base_height,app.
@@ -1635,7 +1650,7 @@ end %try
             settings_               = plot_options_O; 
 
            %do_plots = [0 0 1 0 0 0 0 0 0 0];
-            do_plots = [0 0 1 0 0 0 0 0 0 0 0 0];
+            do_plots = [0 0 1 0 0 0 0 0 0 0 0 0 0];
             
             LF = [pwd,settings_.Data_path_options{settings_.Data_path_choice}];
             
@@ -1659,7 +1674,7 @@ end %try
             settings_               = plot_options_O; 
 
             
-            do_plots = [0 0 0 1 0 0 0 0 0 0 0 0];
+            do_plots = [0 0 0 1 0 0 0 0 0 0 0 0 0];
             
             LF = [pwd,settings_.Data_path_options{settings_.Data_path_choice}];
             
@@ -1683,7 +1698,7 @@ end %try
             settings_               = plot_options_O; 
 
             
-            do_plots = [0 0 0 0 0 0 1 0 0 0 0 0];
+            do_plots = [0 0 0 0 0 0 1 0 0 0 0 0 0];
             
             LF = [pwd,settings_.Data_path_options{settings_.Data_path_choice}];
             
@@ -1706,7 +1721,7 @@ end %try
             settings_               = plot_options_O; 
             
             %do_plots = [1 0 0 0 0 0 0 0 0 0];
-            do_plots =  [1 0 0 0 0 0 0 0 0 0 0 0];  
+            do_plots =  [1 0 0 0 0 0 0 0 0 0 0 0 0];  
             
             LF = [pwd,settings_.Data_path_options{settings_.Data_path_choice}];
             
@@ -1729,7 +1744,7 @@ end %try
             settings_               = plot_options_O; 
 
             %do_plots = [0 0 0 0 0 0 0 1 0 0];
-            do_plots =  [0 0 0 0 0 0 0 1 0 0 0 0];  
+            do_plots =  [0 0 0 0 0 0 0 1 0 0 0 0 0];  
             LF = [pwd,settings_.Data_path_options{settings_.Data_path_choice}];
             
             try
@@ -1751,7 +1766,7 @@ end %try
             settings_               = plot_options_O; 
 
             %do_plots = [0 0 0 0 0 0 0 0 1 0];
-            do_plots =  [0 0 0 0 0 0 0 0 1 0 0 0];  
+            do_plots =  [0 0 0 0 0 0 0 0 1 0 0 0 0];  
             LF = [pwd,settings_.Data_path_options{settings_.Data_path_choice}];
             
             try
@@ -1773,7 +1788,7 @@ end %try
             settings_               = plot_options_O; 
 
             %do_plots = [0 0 0 0 1 0 0 0 0 0];
-            do_plots =  [0 0 0 0 1 0 0 0 0 0 0 0];  
+            do_plots =  [0 0 0 0 1 0 0 0 0 0 0 0 0];  
             
             LF = [pwd,settings_.Data_path_options{settings_.Data_path_choice}];
             
@@ -1810,6 +1825,27 @@ end %try
             end%if isstruct(app.rail_tester)            
         end
 
+        function ShowShowSymmetryPushedPushed(app, event) 
+            if isstruct(app.rail_tester)
+            plot_options_O  = convert_plot_options2_old_strct(app.plot_options);
+
+            proc_file.rail_tester  =  app.rail_tester;
+            proc_file.test_data    =  app.test_data  ;
+            settings_               = plot_options_O; 
+
+            do_plots =  [0 0 0 0 0 0 0 0 0 0 0 0 1];  
+            LF = [pwd,settings_.Data_path_options{settings_.Data_path_choice}];
+            
+            try
+            [~] = plot_predict_processed(proc_file, settings_ ,do_plots, LF,app.base_width,app.base_height,app.mag_fac);        
+            catch ER
+            write_error2file(app,ER)    
+            end %try
+            
+            end %if isstruct(app.rail_tester)
+        end %function ShowSymmetryPushed(app, event) 
+
+
         % Button pushed function: ModeMapTagsButton
         function ModeMapTagsButtonPushed(app, event)
             if isstruct(app.rail_tester)   
@@ -1819,7 +1855,7 @@ end %try
             proc_file.test_data    =  app.test_data  ;
             settings_               = plot_options_O; 
 
-            do_plots =  [0 0 0 0 0 1 0 0 0 0 0 0];  
+            do_plots =  [0 0 0 0 0 1 0 0 0 0 0 0 0];  
             LF = [pwd,settings_.Data_path_options{settings_.Data_path_choice}];
             
             try
@@ -1833,8 +1869,7 @@ end %try
 
         % Button pushed function: ClearPredictionsButton
         function ClearPredictionsButtonPushed(app, event)
-            
-            
+                       
 
             if ishandle(app.prediction_figure_handle)
                 close(app.prediction_figure_handle)
@@ -1885,7 +1920,7 @@ end %try
             proc_file.test_data    =  app.test_data  ;
             settings_               = plot_options_O; 
 
-            do_plots =  [0 0 0 0 0 0 0 0 0 0 0 1];  
+            do_plots =  [0 0 0 0 0 0 0 0 0 0 0 1 0];  
             LF = [pwd,settings_.Data_path_options{settings_.Data_path_choice}];
            
             try
@@ -1940,7 +1975,7 @@ end %try
              write_error2file(app,ER)    
              end %try
 
-             do_plots   = [0 0 0 0 0 0 0 0 0 0 0 0];  
+             do_plots   = [0 0 0 0 0 0 0 0 0 0 0 0 0];  
              LF = [pwd,settings_.Data_path_options{settings_.Data_path_choice}];
              [PREDICTION_,PL_inf,~] = plot_predict_processed(proc_file, settings_ ,do_plots, LF,app.base_width,app.base_height,app.mag_fac);  
              
@@ -2236,78 +2271,88 @@ end %try
             app.ViewModeMapButton = uibutton(app.PredictionTab, 'push');
             app.ViewModeMapButton.ButtonPushedFcn = createCallbackFcn(app, @ViewModeMapButtonPushed, true);
             app.ViewModeMapButton.FontSize = y_mult*14;
-            app.ViewModeMapButton.Position = [x_mult*562 y_mult*353 x_mult*171 y_mult*30];
+            app.ViewModeMapButton.Position = [x_mult*562 y_mult*363 x_mult*171 y_mult*30];
             app.ViewModeMapButton.Text = 'View Mode Map';
 
             % Create ShowPeakFindButton
             app.ShowPeakFindButton = uibutton(app.PredictionTab, 'push');
             app.ShowPeakFindButton.ButtonPushedFcn = createCallbackFcn(app, @ShowPeakFindButtonPushed, true);
             app.ShowPeakFindButton.FontSize = y_mult*14;
-            app.ShowPeakFindButton.Position = [x_mult*562 y_mult*320 x_mult*171 y_mult*30];
+            app.ShowPeakFindButton.Position = [x_mult*562 y_mult*330 x_mult*171 y_mult*30];
             app.ShowPeakFindButton.Text = 'Show Peak Find';
 
             % Create ModeMapTagsButton
             app.ModeMapTagsButton = uibutton(app.PredictionTab, 'push');
             app.ModeMapTagsButton.ButtonPushedFcn = createCallbackFcn(app, @ModeMapTagsButtonPushed, true);
             app.ModeMapTagsButton.FontSize = y_mult*14;
-            app.ModeMapTagsButton.Position = [x_mult*562 y_mult*287 x_mult*171 y_mult*30];
+            app.ModeMapTagsButton.Position = [x_mult*562 y_mult*297 x_mult*171 y_mult*30];
             app.ModeMapTagsButton.Text = 'Mode Map Tags';
  
             % Create MPRCvsTagButton
             app.MPRCvsTagButton = uibutton(app.PredictionTab, 'push');
             app.MPRCvsTagButton.ButtonPushedFcn = createCallbackFcn(app, @MPRCvsTagButtonPushed, true);
             app.MPRCvsTagButton.FontSize = y_mult*14;
-            app.MPRCvsTagButton.Position = [x_mult*562 y_mult*254 x_mult*171 y_mult*30];
+            app.MPRCvsTagButton.Position = [x_mult*562 y_mult*264 x_mult*171 y_mult*30];
             app.MPRCvsTagButton.Text = 'MP RC vs Tag';  
 
             % Create DistanceMeanTableButton
             app.DistanceMeanTableButton = uibutton(app.PredictionTab, 'push');
             app.DistanceMeanTableButton.ButtonPushedFcn = createCallbackFcn(app, @DistanceMeanTableButtonPushed, true);
             app.DistanceMeanTableButton.FontSize = y_mult*14;
-            app.DistanceMeanTableButton.Position = [x_mult*562 y_mult*221 x_mult*171 y_mult*30];
+            app.DistanceMeanTableButton.Position = [x_mult*562 y_mult*231 x_mult*171 y_mult*30];
             app.DistanceMeanTableButton.Text = 'Distance/Mean Table';
 
             % Create LogLikelyhoodTableButton
             app.LogLikelyhoodTableButton = uibutton(app.PredictionTab, 'push');
             app.LogLikelyhoodTableButton.ButtonPushedFcn = createCallbackFcn(app, @LogLikelyhoodTableButtonPushed, true);
             app.LogLikelyhoodTableButton.FontSize = y_mult*14;
-            app.LogLikelyhoodTableButton.Position = [x_mult*562 y_mult*188 x_mult*171 y_mult*30];
+            app.LogLikelyhoodTableButton.Position = [x_mult*562 y_mult*198 x_mult*171 y_mult*30];
             app.LogLikelyhoodTableButton.Text = 'Log Likelyhood Table';
 
             % Create InteractiveMMViewerButton
             app.InteractiveMMViewerButton = uibutton(app.PredictionTab, 'push');
             app.InteractiveMMViewerButton.ButtonPushedFcn = createCallbackFcn(app, @InteractiveMMViewerButtonPushed, true);
             app.InteractiveMMViewerButton.FontSize = y_mult*14;
-            app.InteractiveMMViewerButton.Position = [x_mult*562 y_mult*155 x_mult*171 y_mult*30];
+            app.InteractiveMMViewerButton.Position = [x_mult*562 y_mult*165 x_mult*171 y_mult*30];
             app.InteractiveMMViewerButton.Text = 'Interactive MM Viewer';
 
             % Create PredsButton
             app.PredsButton = uibutton(app.PredictionTab, 'push');
             app.PredsButton.ButtonPushedFcn = createCallbackFcn(app, @PredsButtonPushed, true);
             app.PredsButton.FontSize = y_mult*14;
-            app.PredsButton.Position = [x_mult*562 y_mult*122 x_mult*171 y_mult*30];
+            app.PredsButton.Position = [x_mult*562 y_mult*132 x_mult*171 y_mult*30];
             app.PredsButton.Text = '3 Preds';
 
              % Create MeanSTDmodesButton
             app.MeanSTDmodesButton = uibutton(app.PredictionTab, 'push');
             app.MeanSTDmodesButton.ButtonPushedFcn = createCallbackFcn(app, @MeanSTDmodesButtonPushed, true);
             app.MeanSTDmodesButton.FontSize = y_mult*14;
-            app.MeanSTDmodesButton.Position =[x_mult*562 y_mult*89 x_mult*171 y_mult*30];
+            app.MeanSTDmodesButton.Position =[x_mult*562 y_mult*99 x_mult*171 y_mult*30];
             app.MeanSTDmodesButton.Text = 'Mean/STD modes';
 
             % Create ShowDispersionButton
             app.ShowDispersionButton = uibutton(app.PredictionTab, 'push');
             app.ShowDispersionButton.ButtonPushedFcn = createCallbackFcn(app, @ShowDispersionButtonPushed, true);
             app.ShowDispersionButton.FontSize = y_mult*14;
-            app.ShowDispersionButton.Position = [x_mult*562 y_mult*56 x_mult*171 y_mult*30];
+            app.ShowDispersionButton.Position = [x_mult*562 y_mult*66 x_mult*171 y_mult*30];
             app.ShowDispersionButton.Text = 'Show Dispersion';
 
             % Create ShowMeshButton
             app.ShowMeshButton = uibutton(app.PredictionTab, 'push');
             app.ShowMeshButton.ButtonPushedFcn = createCallbackFcn(app, @ShowMeshButtonPushed, true);
             app.ShowMeshButton.FontSize = y_mult*14;
-            app.ShowMeshButton.Position = [x_mult*562 y_mult*23 x_mult*171 y_mult*30];
+            app.ShowMeshButton.Position = [x_mult*562 y_mult*33 x_mult*171 y_mult*30];
             app.ShowMeshButton.Text = 'Show Mesh';
+
+            % Create SYMMETRYButton
+
+            app.SYMMETRYButton = uibutton(app.PredictionTab, 'push');
+            app.SYMMETRYButton.ButtonPushedFcn = createCallbackFcn(app, @ShowSymmetryPushed, true);
+            app.SYMMETRYButton.FontSize = y_mult*14;
+            app.SYMMETRYButton.Position = [x_mult*562 y_mult*0  x_mult*171 y_mult*30]; 
+            app.SYMMETRYButton.Text = 'Show Mode Symmetry';
+
+
 
 %----------------------------------------------------------------------------------------------
 %----------------------------------------------------------------------------------------------

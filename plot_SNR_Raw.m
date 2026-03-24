@@ -152,10 +152,15 @@ end %if nargin ==2 || nargin ==3
 % Calculate matrix properties
 %-----------------------------------------------
 [samp_freq,freq_axis_KHz,fft_d_temp,fft_n_temp ,RMS_mat,SNR_mat_DB,LFN_mat_DB,HFN_mat_DB]  =  calculate_mat_properties(time_,ALL_time_d,time_d,exitation_freq_kHz,SNR_bandwidth_kHz,All_noise_d,noise_d);
+
+
+
+
+
+
 %------------------------------------------------
 % PLOT COLORMAPS
 %-----------------------------------------------
-
 if do_plots(1) ==1
 plot_colourmaps(RMS_mat,SNR_mat_DB,LFN_mat_DB,HFN_mat_DB,file_name,x_mult,y_mult,mag_fac)
 end %if do_plots(1) ==1
@@ -176,6 +181,11 @@ end %if do_plots(2) ==1
 % Calcutate REJECTION INDICATORS 
 % ----------------------------------------------------------
 rejection_indicators = Calcutate_REJECTION_INDICATORS(ALL_bars,RMS_boundaries,SNR_boundaries,LFN_boundaries,HFN_boundaries); 
+
+
+
+
+
 % ----------------------------------------------------------
 % Plot REJECTION INDICATORS 
 % ----------------------------------------------------------
@@ -194,6 +204,9 @@ col_ind = 2;   % start val
 plot_time_and_frequencies(ALL_time_d,ALL_time,All_noise_d,freq_axis_KHz,fft_d_temp,fft_n_temp,exitation_freq_kHz,SNR_bandwidth_kHz,time_gate,time_gate2,time_gate3,file_name,row_ind,col_ind,x_mult,y_mult,mag_fac)
 
 end %if do_plots(4) == 1
+
+
+
 
 end %function   plot_SNR_Raw(raw_data)
 

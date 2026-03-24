@@ -1,5 +1,6 @@
 %---------------------------------
 %---------------------------------
+
 % compare data path predictions
 % (1) process the data
 % (2) do the data checks (SNR/CAP/dist of peak)
@@ -15,6 +16,7 @@
 % proc_file.rail_tester  =  app.rail_tester;
 % proc_file.test_data    =  app.test_data  ;
 %  [~,PL_inf,~] = plot_predict_processed(proc_file, settings_ ,do_plots, LF,app.base_width,app.base_height,app.mag_fac);
+
 %---------------------------------
 %---------------------------------
 
@@ -42,7 +44,7 @@ plot_options    = load([settings_dir2,'\',plot_options_fn]);
 plot_options_O  = convert_plot_options2_old_strct(plot_options);
 settings_              = plot_options_O;
 snr_settings_O  = convert_to_snr_struct(snr_settings);
-do_plots   = [0 0 0 0 0 0 0 0 0 0 0 0];
+do_plots   = [0 0 0 0 0 0 0 0 0 0 0 0 0];
 
 dum = dir(LS_dir); all_names = {dum.name}; isdirect = [dum.isdir];
 all_LS = {all_names{find(isdirect == 0)}};
@@ -68,8 +70,6 @@ end  %switch(choice)
 % Table_data
 % RESULTS_STRUCTURE = []; 
 % Structure of the results ?
-
-
 % predict all the learning sets
 
 % ----------
@@ -103,13 +103,31 @@ end  %switch(choice)
 % Rejection criteria::
 % ----------
 % Capacitance -- Pass/Fail(Result) / SNR -- Pass/Fail(Result) / Distance of peak -- Pass/Fail(Result)
-
 % Result::
 % ----------
 % For each data set
 % LS_1, LS_2    etc ...
 % AI / DFM / LL  --  Text for each
 % ----------
+
+
+%  Need the SNR threshold to cause failure at the top (Need he actual SNR vals)
+SNR_Boundaries =   snr_settings.SNR_boundaries_options(snr_settings.SNR_boundaries) ;  % which on is the key boudary? 1,2 or 3? 
+
+%  Need the Cap threshold to cause failure at the top --  which one ofthese
+%  two::
+cap_thresh_chosen =  plot_options.cap_thresh_options(plot_options.cap_thresh_index);
+cap_min  = plot_options.cap_thresh_options(plot_options.cap_thresh_index);
+cap_thresh_lower  = plot_options.cap_thresh_lower;
+
+
+%  Need the dist threshold to cause failure at the top 
+
+dist_past_m = plot_options.dist_pass_options(plot_options.dist_pass_index);
+%  Need the assymetry threhold + mean value to cause failure  (e.g. < 0.3(ratio) && >  1 (mean))  
+%----------------------------------------------------------------------------------------------------------------------------------------------------
+%------------------------------
+
 
 
 for index = 1:length(chosen_tests)
@@ -123,7 +141,7 @@ Track_id       =   test_data.test_parameters.Track_id             ;
 Test_DT        =   datetime(test_data.date_time)                  ;
 Tester         =   test_data.tester_details.Name                  ; 
 inds = find(current_test == '$')                                  ;
-test_num    =     current_test(inds(1)+1:inds(2)-1)                  ;
+test_num       =     current_test(inds(1)+1:inds(2)-1)                ;
 
 % now process the data
 [rail_tester , ~ ]     =   create_rail_tester_structure(default_options, test_data, proc_options)           ;
@@ -148,10 +166,20 @@ proc_file.test_data      = test_data         ;
 %----------------------------------------------------
 % Cap_res
 
+
 cap_result= test_data.raw_data.cap_test_result.z;
 b_temp = log10((cap_result(1:12,1)./cap_result(1:12,end)))';
-cap_min  = plot_options.cap_thresh_options(plot_options.cap_thresh_index);
 cap_fail_chns = find(b_temp<cap_min );
+
+
+%  need plot_SNR_Raw t output a structure with rejection indicators AND all
+%  bars to extract the  exact SNR
+% ALL_bars(2,:)
+
+%----------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+
+keyboard
 
 if isempty(cap_fail_chns)
 Cap_res = 'PASS';
@@ -173,20 +201,28 @@ SNR_THRESH = num2str(snr_settings.SNR_boundaries_options(snr_settings.SNR_bounda
 %----------------------------------------------------
 %----------------------------------------------------
 
-
-
 % now get everything except the prediction and peak find value 
 
 for index2 = 1:length(chosen_LS) % go through the learning sets   
 current_LS = ['P:\GITHUBS\contact_wire_test\Learning_blocks\',chosen_LS{index2}];
-keyboard
+
+%LS_Label_temp
+
+
+
+%------------------------
+%------------------------
 
 [pred_,PL_inf,PFH] = plot_predict_processed(proc_file, settings_ ,do_plots, current_LS ,base_width,base_height,mag_fac);  
 
-end %for index2 = 1:length(chosen_LS)    
+% pred_.Mode_SYM
+% Mode_SYM.val
+% Mode_SYM.mean_val
+
+end % for index2 = 1:length(chosen_LS)    
 
 
-for index = 1:length(chosen_tests)
+end % for index = 1:length(chosen_tests)
 % Now create the table....
 
 % Create the tables with results
