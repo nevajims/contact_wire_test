@@ -2,8 +2,8 @@ function plot_Options_updated = set_plot_options(varargin)
 
 switch(nargin)
     case(0)
-FD_settings_path       =  [pwd,'\SETTINGS_FILES\plot_options3.mat']; 
-Settings_path          =  [getenv('APPDATA'),'\SETTINGS_FILES\plot_options3.mat'];
+FD_settings_path       =  [pwd,'\SETTINGS_FILES\plot_options2.mat']; 
+Settings_path          =  [getenv('APPDATA'),'\SETTINGS_FILES\plot_options2.mat'];
 [plot_options , ~ ]    = load_mat_structure_from_file(Settings_path); 
 
     case(3)
@@ -26,6 +26,8 @@ y_mult = (Pix_SS(4)/base_height)  * mag_fac ;
 
 end % switch(nargin)
 
+
+
 if nargin == 0 || nargin == 3 
 mag_fac                   =  1.9531;
 base_width                = 1920                  ; 
@@ -35,6 +37,9 @@ Pix_SS = get(0,'screensize')                ;
 x_mult = (Pix_SS(3)/base_width)   * mag_fac ;
 y_mult = (Pix_SS(4)/base_height)  * mag_fac ;
 end %if nargin == 0 || nargin == 3 
+
+
+
 
 [Options_,Defaults] = get_options_Defaults(plot_options);
 
@@ -95,8 +100,6 @@ new_vals_.dist_pass_index = find(ismember(fig.UserData.inps.DD_12.Items,  fig.Us
 new_vals_.MPair_ind_C     = find(ismember(fig.UserData.inps.DD_13.Items,  fig.UserData.inps.DD_13.Value));
 new_vals_.DPath_ind_C     = find(ismember(fig.UserData.inps.DD_14.Items,  fig.UserData.inps.DD_14.Value));
 new_vals_.IniStart_ind_C  = find(ismember(fig.UserData.inps.DD_15.Items,  fig.UserData.inps.DD_15.Value));
-new_vals_.symmetry_choice = find(ismember(fig.UserData.inps.DD_16.Items,  fig.UserData.inps.DD_16.Value));
-new_vals_.MP_mean_symmetry_choice   = find(ismember(fig.UserData.inps.DD_17.Items,  fig.UserData.inps.DD_17.Value));
 
 
 %Defaults.cap_thresh_index      = dum.cap_thresh_index     ;   
@@ -116,13 +119,14 @@ plot_options.dist_pass_index        = new_vals_.dist_pass_index     ;
 plot_options.mode_pairs_to_Use_C    = new_vals_.MPair_ind_C         ;
 plot_options.Data_path_choice_C     = new_vals_.DPath_ind_C         ;
 plot_options.initial_thresh_index_C = new_vals_.IniStart_ind_C      ;
-plot_options.symmetry_choice        = new_vals_.symmetry_choice     ;
-plot_options.MP_mean_symmetry_choice = new_vals_.MP_mean_symmetry_choice ;
 end %function plot_options_updated = update_plot_options(new_vals,plot_options )
 
 
+
 function [Options_,Defaults] = get_options_Defaults(dum)
+
 %Options_.sample_rate_ = cellfun(@num2str, num2cell(dum.Sample_Rate_options) , 'UniformOutput', false)' ;
+
 Options_.DPath                 = dum.Data_path_options;
 Options_.MPair                 = dum.mode_pairs_to_Use_options;
 %Options_.MPair = cellfun(@num2str, num2cell(dum.mode_pairs_to_Use_options) , 'UniformOutput', false)' ;
@@ -138,10 +142,9 @@ Options_.ThreshV = cellfun(@num2str, num2cell(dum.thresh_val_options) , 'Uniform
 Options_.IniStart = cellfun(@num2str, num2cell(dum.initial_thresh_options) , 'UniformOutput', false)' ;
 
 Options_.cap_thresh_options = cellfun(@num2str, num2cell(dum.cap_thresh_options) , 'UniformOutput', false)' ;
+
 Options_.dist_pass_options  = cellfun(@num2str, num2cell(dum.dist_pass_options) , 'UniformOutput', false)' ;
 
-Options_.symmetry_options   = cellfun(@num2str, num2cell(dum.symmetry_options) , 'UniformOutput', false)' ;
-Options_.MP_mean_symmetry_options   = cellfun(@num2str, num2cell(dum.MP_mean_symmetry_options) , 'UniformOutput', false)' ;
 
 %----------------------------------------------------------------------------
 Options_.AI_pred = dum.AI_pred_options;
@@ -170,16 +173,17 @@ Defaults.MPair_ind             = dum.mode_pairs_to_Use    ;
 Defaults.DPath_ind             = dum.Data_path_choice     ;
 Defaults.IniStart_ind          = dum.initial_thresh_index ;
 
-Defaults.MPair_ind_C             = dum.mode_pairs_to_Use_C       ;
-Defaults.DPath_ind_C             = dum.Data_path_choice_C        ;
-Defaults.IniStart_ind_C          = dum.initial_thresh_index_C    ;
-
-Defaults.symmetry_choice          = dum.symmetry_choice          ;
-Defaults.MP_mean_symmetry_choice  = dum.MP_mean_symmetry_choice  ;
+Defaults.MPair_ind_C             = dum.mode_pairs_to_Use_C    ;
+Defaults.DPath_ind_C             = dum.Data_path_choice_C     ;
+Defaults.IniStart_ind_C          = dum.initial_thresh_index_C ;
 
 % Defaults.Pred2use_ind          = dum.predictions2use      ;
 
 end % function [Options_,Defaults] = get_options_Defaults(snr_settings)
+
+
+
+
 
 
 function [fig] = bespoke_dialog_box2(Options_,Defaults,FD_settings_path,Settings_path,x_mult,y_mult,mag_fac)
@@ -192,80 +196,78 @@ fig.UserData.S_button_pressed = 0;
 %----------------------------------------------------------------------------------
 %ROW 1
 %----------------------------------------------------------------------------------
-fig.UserData.inps.DD_5 = uidropdown(fig,"Items",[Options_.ThreshV ],'Position',[x_mult*15, y_mult*277, x_mult*100, y_mult*24] ,'FontSize',y_mult*14,'Value',Options_.ThreshV{Defaults.ThreshV_ind})   ;
-lbl5 = uilabel(fig,'Position',[x_mult*15, y_mult*300, x_mult*150, y_mult*28],'Text', 'Thresh Val','FontSize',y_mult*14)                        ;
-                         
-fig.UserData.inps.DD_4 = uidropdown(fig,"Items",[Options_.NSlice ],'Position', [x_mult*145,y_mult*277,x_mult*110,y_mult*24],'FontSize',y_mult*14,'Value',Options_.NSlice{Defaults.NSlice_ind})   ;
-lbl4 = uilabel(fig,'Position',[x_mult*145, y_mult*300, x_mult*150, y_mult*28],'Text', 'No Slices','FontSize',y_mult*14)                        ;
 
-fig.UserData.inps.DD_3 = uidropdown(fig,"Items",[Options_.NNeib],'Position', [x_mult*275,y_mult*277,x_mult*100,y_mult*24],'FontSize',y_mult*14,'Value',Options_.NNeib{Defaults.NNeib_ind});
-lbl3 = uilabel(fig,'Position',[x_mult*275, y_mult*300, x_mult*150, y_mult*28],'Text', 'N. Neighbs','FontSize',y_mult*14)                         ;  
+fig.UserData.inps.DD_5 = uidropdown(fig,"Items",[Options_.ThreshV ],'Position',[x_mult*15, y_mult*275, x_mult*100, y_mult*28] ,'FontSize',y_mult*18,'Value',Options_.ThreshV{Defaults.ThreshV_ind})   ;
+lbl5 = uilabel(fig,'Position',[x_mult*15, y_mult*300, x_mult*150, y_mult*28],'Text', 'Thresh Val','FontSize',y_mult*18)                        ;
+                         
+fig.UserData.inps.DD_4 = uidropdown(fig,"Items",[Options_.NSlice ],'Position', [x_mult*145,y_mult*275,x_mult*110,y_mult*28],'FontSize',y_mult*18,'Value',Options_.NSlice{Defaults.NSlice_ind})   ;
+lbl4 = uilabel(fig,'Position',[x_mult*145, y_mult*300, x_mult*150, y_mult*28],'Text', 'No Slices','FontSize',y_mult*18)                        ;
+
+fig.UserData.inps.DD_3 = uidropdown(fig,"Items",[Options_.NNeib],'Position', [x_mult*275,y_mult*275,x_mult*100,y_mult*28],'FontSize',y_mult*18,'Value',Options_.NNeib{Defaults.NNeib_ind});
+lbl3 = uilabel(fig,'Position',[x_mult*275, y_mult*300, x_mult*150, y_mult*28],'Text', 'N. Neighbs','FontSize',y_mult*18)                         ;  
 
 %----------------------------------------------------------------------------------
 %ROW 2
 %----------------------------------------------------------------------------------
-fig.UserData.inps.DD_2 =  uidropdown(fig,"Items",[Options_.MPair],'Position',[x_mult*15,y_mult*231,x_mult*100,y_mult*24],'FontSize',y_mult*14,'Value',Options_.MPair{Defaults.MPair_ind})   ;
-lbl2 = uilabel(fig,'Position',[x_mult*15, y_mult*253, x_mult*150, y_mult*28],'Text', 'Mode Pairs','FontSize',y_mult*14)                          ;
 
-fig.UserData.inps.DD_1 = uidropdown(fig,"Items",[Options_.DPath],'Position',[x_mult*145,y_mult*231,x_mult*110,y_mult*24] ,'FontSize',y_mult*14,'Value',Options_.DPath{Defaults.DPath_ind});
-lbl = uilabel(fig,'Position',[x_mult*145, y_mult*253, x_mult*150, y_mult*28],'Text', 'Learning Set','FontSize',y_mult*14) ;    
+fig.UserData.inps.DD_2 =  uidropdown(fig,"Items",[Options_.MPair],'Position',[x_mult*15,y_mult*225,x_mult*100,y_mult*28],'FontSize',y_mult*18,'Value',Options_.MPair{Defaults.MPair_ind})   ;
+lbl2 = uilabel(fig,'Position',[x_mult*15, y_mult*250, x_mult*150, y_mult*28],'Text', 'Mode Pairs','FontSize',y_mult*18)                          ;
 
-fig.UserData.inps.DD_6 = uidropdown(fig,"Items",[Options_.IniStart ],'Position', [x_mult*275,y_mult*231,x_mult*100,y_mult*24],'FontSize',y_mult*14,'Value',Options_.IniStart{Defaults.IniStart_ind})   ;
-lbl6 = uilabel(fig,'Position',[x_mult*275, y_mult*253, x_mult*150, y_mult*28],'Text', 'Initial thresh','FontSize',y_mult*14)                        ;
+fig.UserData.inps.DD_1 = uidropdown(fig,"Items",[Options_.DPath],'Position',[x_mult*145,y_mult*225,x_mult*110,y_mult*28] ,'FontSize',y_mult*18,'Value',Options_.DPath{Defaults.DPath_ind});
+lbl = uilabel(fig,'Position',[x_mult*145, y_mult*250, x_mult*150, y_mult*28],'Text', 'Learning Set','FontSize',y_mult*18) ;    
+
+fig.UserData.inps.DD_6 = uidropdown(fig,"Items",[Options_.IniStart ],'Position', [x_mult*275,y_mult*225,x_mult*100,y_mult*28],'FontSize',y_mult*18,'Value',Options_.IniStart{Defaults.IniStart_ind})   ;
+lbl6 = uilabel(fig,'Position',[x_mult*275, y_mult*250, x_mult*150, y_mult*28],'Text', 'Initial thresh','FontSize',y_mult*18)                        ;
 
 %----------------------------------------------------------------------------------
 %ROW 3
 %----------------------------------------------------------------------------------
-fig.UserData.inps.DD_13 =  uidropdown(fig,"Items",[Options_.MPair],'Position',[x_mult*15,y_mult*180,x_mult*100,y_mult*24],'FontSize',y_mult*14,'Value',Options_.MPair{Defaults.MPair_ind_C});
-lbl13 = uilabel(fig,'Position',[x_mult*15, y_mult*202, x_mult*150, y_mult*28],'Text', 'MP_cal','FontSize',y_mult*14);
 
-fig.UserData.inps.DD_14 = uidropdown(fig,"Items",[Options_.DPath],'Position',[x_mult*145,y_mult*180,x_mult*110,y_mult*24] ,'FontSize',y_mult*14,'Value',Options_.DPath{Defaults.DPath_ind_C});
-lbl14 = uilabel(fig,'Position',[x_mult*145, y_mult*202, x_mult*150, y_mult*28],'Text', 'LS_cal','FontSize',y_mult*14);    
+fig.UserData.inps.DD_13 =  uidropdown(fig,"Items",[Options_.MPair],'Position',[x_mult*15,y_mult*175,x_mult*100,y_mult*28],'FontSize',y_mult*14,'Value',Options_.MPair{Defaults.MPair_ind_C});
+lbl13 = uilabel(fig,'Position',[x_mult*15, y_mult*200, x_mult*150, y_mult*28],'Text', 'MP_cal','FontSize',y_mult*14);
 
-fig.UserData.inps.DD_15 = uidropdown(fig,"Items",[Options_.IniStart ],'Position', [x_mult*275,y_mult*180,x_mult*100,y_mult*24],'FontSize',y_mult*14,'Value',Options_.IniStart{Defaults.IniStart_ind_C});
-lbl15 = uilabel(fig,'Position',[x_mult*275, y_mult*202, x_mult*150, y_mult*28],'Text', 'IT_cal','FontSize',y_mult*14);
+fig.UserData.inps.DD_14 = uidropdown(fig,"Items",[Options_.DPath],'Position',[x_mult*145,y_mult*175,x_mult*110,y_mult*28] ,'FontSize',y_mult*14,'Value',Options_.DPath{Defaults.DPath_ind_C});
+lbl14 = uilabel(fig,'Position',[x_mult*145, y_mult*200, x_mult*150, y_mult*28],'Text', 'LS_cal','FontSize',y_mult*14);    
+
+fig.UserData.inps.DD_15 = uidropdown(fig,"Items",[Options_.IniStart ],'Position', [x_mult*275,y_mult*175,x_mult*100,y_mult*28],'FontSize',y_mult*14,'Value',Options_.IniStart{Defaults.IniStart_ind_C});
+lbl15 = uilabel(fig,'Position',[x_mult*275, y_mult*200, x_mult*150, y_mult*28],'Text', 'IT_cal','FontSize',y_mult*14);
 
 %----------------------------------------------------------------------------------
 %ROW 4
 %----------------------------------------------------------------------------------
-fig.UserData.inps.DD_7 = uidropdown(fig,"Items",[Options_.AI_pred ],'Position', [x_mult*15, y_mult*133, x_mult*100, y_mult*24],'FontSize',y_mult*14,'Value',Options_.AI_pred{Defaults.AI_pred_ind})   ;
-lbl7 = uilabel(fig,'Position',[x_mult*15, y_mult*152, x_mult*100, y_mult*28],'Text', 'Use AI?','FontSize',y_mult*14);  
 
-fig.UserData.inps.DD_8 = uidropdown(fig,"Items",[Options_.DM_pred ],'Position', [x_mult*145, y_mult*133, x_mult*110, y_mult*24],'FontSize',y_mult*14,'Value',Options_.DM_pred{Defaults.DM_pred_ind})   ;
-lbl8 = uilabel(fig,'Position',[x_mult*145, y_mult*152, x_mult*120, y_mult*28],'Text', 'Use D Mean?','FontSize',y_mult*14);  
+fig.UserData.inps.DD_7 = uidropdown(fig,"Items",[Options_.AI_pred ],'Position', [x_mult*15, y_mult*125, x_mult*100, y_mult*28],'FontSize',y_mult*18,'Value',Options_.AI_pred{Defaults.AI_pred_ind})   ;
+lbl7 = uilabel(fig,'Position',[x_mult*15, y_mult*150, x_mult*100, y_mult*28],'Text', 'Use AI?','FontSize',y_mult*18);  
 
-fig.UserData.inps.DD_9 = uidropdown(fig,"Items",[Options_.LL_pred ],'Position', [x_mult*275, y_mult*133, x_mult*100, y_mult*24],'FontSize',y_mult*14,'Value',Options_.LL_pred{Defaults.LL_pred_ind})   ;
-lbl9 = uilabel(fig,'Position',[x_mult*275, y_mult*152, x_mult*100, y_mult*28],'Text', 'Use L Like?','FontSize',y_mult*14);  
+fig.UserData.inps.DD_8 = uidropdown(fig,"Items",[Options_.DM_pred ],'Position', [x_mult*145, y_mult*125, x_mult*110, y_mult*28],'FontSize',y_mult*18,'Value',Options_.DM_pred{Defaults.DM_pred_ind})   ;
+lbl8 = uilabel(fig,'Position',[x_mult*145, y_mult*150, x_mult*120, y_mult*28],'Text', 'Use D Mean?','FontSize',y_mult*18);  
+
+fig.UserData.inps.DD_9 = uidropdown(fig,"Items",[Options_.LL_pred ],'Position', [x_mult*275, y_mult*125, x_mult*100, y_mult*28],'FontSize',y_mult*18,'Value',Options_.LL_pred{Defaults.LL_pred_ind})   ;
+lbl9 = uilabel(fig,'Position',[x_mult*275, y_mult*150, x_mult*100, y_mult*28],'Text', 'Use L Like?','FontSize',y_mult*18);  
 
 %----------------------------------------------------------------------------------
 %ROW 5
 %----------------------------------------------------------------------------------
-fig.UserData.inps.DD_10 = uidropdown(fig,"Items",[Options_.WinStart ],'Position', [x_mult*145, y_mult*89, x_mult*100, y_mult*24],'FontSize',y_mult*14,'Value',Options_.WinStart{Defaults.WinStart_ind});
-lbl10 = uilabel(fig,'Position',[x_mult*145, y_mult*107, x_mult*100, y_mult*28],'Text', 'Win Start','FontSize',y_mult*14);  
 
-fig.UserData.inps.DD_11 = uidropdown(fig,"Items",[Options_.cap_thresh_options],'Position', [x_mult*15, y_mult*89, x_mult*100, y_mult*24],'FontSize',y_mult*14,'Value',Options_.cap_thresh_options{Defaults.cap_thresh_index});
-lbl11 = uilabel(fig,'Position',[x_mult*15, y_mult*107, x_mult*100, y_mult*28],'Text', 'Cap Thresh','FontSize',y_mult*14);  
+fig.UserData.inps.DD_10 = uidropdown(fig,"Items",[Options_.WinStart ],'Position', [x_mult*145, y_mult*70, x_mult*100, y_mult*28],'FontSize',y_mult*18,'Value',Options_.WinStart{Defaults.WinStart_ind});
+lbl10 = uilabel(fig,'Position',[x_mult*145, y_mult*95, x_mult*100, y_mult*28],'Text', 'Win Start','FontSize',y_mult*18);  
 
-fig.UserData.inps.DD_12 = uidropdown(fig,"Items",[Options_.dist_pass_options],'Position', [x_mult*275, y_mult*89, x_mult*100, y_mult*24],'FontSize',y_mult*14,'Value',Options_.dist_pass_options{Defaults.dist_pass_index});
-lbl12 = uilabel(fig,'Position',[x_mult*275, y_mult*107, x_mult*100, y_mult*28],'Text', 'Dist Pass','FontSize',y_mult*14);  
+fig.UserData.inps.DD_11 = uidropdown(fig,"Items",[Options_.cap_thresh_options],'Position', [x_mult*15, y_mult*70, x_mult*100, y_mult*28],'FontSize',y_mult*18,'Value',Options_.cap_thresh_options{Defaults.cap_thresh_index});
+lbl11 = uilabel(fig,'Position',[x_mult*15, y_mult*95, x_mult*100, y_mult*28],'Text', 'Cap Thresh','FontSize',y_mult*18);  
 
-%----------------------------------------------------------------------------------
-%ROW 6  -  New symmetry buttons
-%----------------------------------------------------------------------------------
-fig.UserData.inps.DD_16 = uidropdown(fig,"Items",[Options_.symmetry_options ],'Position', [x_mult*15, y_mult*46, x_mult*100, y_mult*24],'FontSize',y_mult*14,'Value',Options_.symmetry_options{Defaults.symmetry_choice});
-lbl16 = uilabel(fig,'Position',[x_mult*15, y_mult*65, x_mult*100, y_mult*28],'Text', 'Symmetry','FontSize',y_mult*14);  
-
-fig.UserData.inps.DD_17 = uidropdown(fig,"Items",[Options_.MP_mean_symmetry_options  ],'Position', [x_mult*145, y_mult*46, x_mult*100, y_mult*24],'FontSize',y_mult*14,'Value',Options_.MP_mean_symmetry_options {Defaults.MP_mean_symmetry_choice});
-lbl17 = uilabel(fig,'Position',[x_mult*145, y_mult*65, x_mult*100, y_mult*28],'Text', 'Sym Mean','FontSize',y_mult*14);  
-
+fig.UserData.inps.DD_12 = uidropdown(fig,"Items",[Options_.dist_pass_options],'Position', [x_mult*275, y_mult*70, x_mult*100, y_mult*28],'FontSize',y_mult*18,'Value',Options_.dist_pass_options{Defaults.dist_pass_index});
+lbl12 = uilabel(fig,'Position',[x_mult*275, y_mult*95, x_mult*100, y_mult*28],'Text', 'Dist Pass','FontSize',y_mult*18);  
 
 %----------------------------------------------------------------------------------
-%ROW 7 --  Buttons
+%ROW 5 --  Buttons
 %----------------------------------------------------------------------------------
-but1 = uibutton(fig,"push" ,"Text","Reload FDs",'Position',[x_mult*5,y_mult*3,x_mult*120,y_mult*37],'FontSize',y_mult*18,"ButtonPushedFcn", @(src,event)FD_ButtonPushed(fig,FD_settings_path))   ;
-but2 = uibutton(fig,"push" ,"Text","Reload Defs",'Position',[x_mult*132,y_mult*3,x_mult*120,y_mult*37],'FontSize',y_mult*18,"ButtonPushedFcn", @(src,event)RD_ButtonPushed(fig,Settings_path))   ;
-but3 = uibutton(fig,"push" ,"Text","Save/Exit",'Position',[x_mult*260,y_mult*3,x_mult*120,y_mult*37],'FontSize',y_mult*18,"ButtonPushedFcn", @(src,event)S_ButtonPushed(fig))   ;
+
+but1 = uibutton(fig,"push" ,"Text","Reload FDs",'Position',[x_mult*5,y_mult*10,x_mult*120,y_mult*55],'FontSize',y_mult*18,"ButtonPushedFcn", @(src,event)FD_ButtonPushed(fig,FD_settings_path))   ;
+but2 = uibutton(fig,"push" ,"Text","Reload Defs",'Position',[x_mult*132,y_mult*10,x_mult*120,y_mult*55],'FontSize',y_mult*18,"ButtonPushedFcn", @(src,event)RD_ButtonPushed(fig,Settings_path))   ;
+but3 = uibutton(fig,"push" ,"Text","Save/Exit",'Position',[x_mult*260,y_mult*10,x_mult*120,y_mult*55],'FontSize',y_mult*18,"ButtonPushedFcn", @(src,event)S_ButtonPushed(fig))   ;
 end %function [fig] = bespoke_dialog_box2(Options_,Defaults,FD_settings_path,Settings_path);
+
+
 
 
 function FD_ButtonPushed(fig,FD_settings_path)
@@ -317,8 +319,7 @@ fig.UserData.inps.DD_13.Value = Options_.MPair{Defaults.MPair_ind_C}            
 fig.UserData.inps.DD_14.Value = Options_.DPath{Defaults.DPath_ind_C}                    ;
 fig.UserData.inps.DD_15.Value = Options_.IniStart{Defaults.IniStart_ind_C}              ;
 
-fig.UserData.inps.DD_16.Value = Options_.symmetry_options{Defaults.symmetry_choice}     ;
-fig.UserData.inps.DD_17.Value = Options_.MP_mean_symmetry_options{Defaults.MP_mean_symmetry_choice};
+
 
 end %function reset_the_dropdowns(fig , Options_ , Defaults)
 

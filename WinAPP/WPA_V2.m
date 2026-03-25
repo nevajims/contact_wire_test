@@ -80,7 +80,7 @@ classdef WPA_V2 < matlab.apps.AppBase
     Property % Description
     
     
-    location_of_default_options =  '\SETTINGS_FILES\default_options3.mat';
+    location_of_default_options =  '\SETTINGS_FILES\default_options4.mat';
     current_test_folder         =  '';
 
     slab_root     = [getenv('systemDrive'),getenv('homePath')];
@@ -1396,10 +1396,14 @@ try
             switch (app.login_level)
 
                  case{0,1}    
-              dummy_ =  set_plot_options_BASICU(app.plot_options,FDSF_temp,SF_temp,app.base_width,app.base_height,app.mag_fac); 
+              dummy_  =   set_plot_options_BASICU(app.plot_options,FDSF_temp,SF_temp,app.base_width,app.base_height,app.mag_fac); 
+
                  case(2)
-              dummy_  =  set_plot_options(app.plot_options,FDSF_temp,SF_temp,app.base_width,app.base_height,app.mag_fac); 
+
+              dummy_  =   set_plot_options(app.plot_options,FDSF_temp,SF_temp,app.base_width,app.base_height,app.mag_fac); 
              
+
+
             end %switch (app.login_level)
 catch ER
 write_error2file(app,ER)    
@@ -1465,9 +1469,16 @@ end %try
              write_error2file(app,ER)    
              end %try
 
-             [T_num]= find(rejection_indicators(2,:)==1);
-             
 
+             %  put all the error checking in a single function so it can be
+             %  ------------------------------------------------------------------
+
+
+             %  ------------------------------------------------------------------
+             %  reused for  the report  
+
+
+             [T_num]= find(rejection_indicators(2,:)==1);
              cap_result= app.test_data.raw_data.cap_test_result.z;
              b_temp = log10((cap_result(1:12,1)./cap_result(1:12,end)))' ;
              cap_fail_chns = find(b_temp<cap_min );  
@@ -1514,6 +1525,8 @@ end %try
              end %if PL_inf.DV(PL_inf.mod_val) < dist_min
 
 
+
+             
              if do_the_prediction == 0
              if app.login_level ~= 2
              msgbox({'Cannot predict because data has the following issues:'  ,cap_text,sn_text,dist_text,'if you want a report anyway press Force Report'})               

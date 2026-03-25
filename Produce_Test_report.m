@@ -128,7 +128,6 @@ else
     label_tester_ST           = uilabel(p2,'Text', '\underline{Operator}','Position',[x_mult*10 y_mult*140 x_mult*300 y_mult*40],'FontSize',y_mult*16,'Interpreter','Latex');
     
     
-    
     label_Operator            = uilabel(p2,'Text',[Report_info.Tester_name,', (Sentinal# ',num2str(Report_info.Sentinal_no),').'],'Position',[x_mult*10 y_mult*120 x_mult*300 y_mult*40],'FontSize',y_mult*14,'Interpreter','Latex');
     label_DateTime            = uilabel(p2,'Text',['Test Date: ',date_str,' (',time_str,').'],'Position',[x_mult*10 y_mult*100 x_mult*300 y_mult*40],'FontSize',y_mult*14,'Interpreter','Latex');
     label_Notes               = uilabel(p2,'Text','\underline{Notes}','Position',[x_mult*10 y_mult*60 x_mult*300 y_mult*40],'FontSize',y_mult*14,'Interpreter','Latex');
@@ -164,15 +163,8 @@ else
 
 
     
-
-
-
-    
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     
-
-
-
     % Data Checks
     px3_LH = 20; py3_LH = 335; px3_SZ = 630; py3_SZ = 240;
     p3                        = uipanel(fig,'Position',[x_mult*px3_LH y_mult*py3_LH x_mult*px3_SZ y_mult*py3_SZ],'AutoResizeChildren','off');
@@ -233,6 +225,10 @@ else
     end %if ~isempty (cap_fail_chns)  
 
     CC_insert1 = cap_text;
+
+
+
+
 
     if isempty(find(b_temp < capacitance_thresholds(2) ))
     CC_insert2 = 'OK'; 
