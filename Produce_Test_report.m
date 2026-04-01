@@ -226,10 +226,6 @@ else
 
     CC_insert1 = cap_text;
 
-
-
-
-
     if isempty(find(b_temp < capacitance_thresholds(2) ))
     CC_insert2 = 'OK'; 
     CC_accpt = 1 ;
@@ -252,6 +248,11 @@ else
     CC_accpt = 0 ;
     end
 
+    %-------------------------------------------------
+    %  need the additional check in here for mode symmetry -  with text if
+    %  it fails
+    %-------------------------------------------------
+
     label_Peak_1  = uilabel(p3,'Text','Peak (3-3) location:','Position',[x_mult*10 y_mult*100 x_mult*200 y_mult*40],'FontSize',y_mult*14,'Interpreter','Latex');
     label_Peak_2  = uilabel(p3,'Text',[num2str(pass_val_),' mm.   '],'Position',[x_mult*10 y_mult*80 x_mult*200 y_mult*40],'FontSize',y_mult*14,'Interpreter','Latex');
     label_Peak_3  = uilabel(p3,'Text',peak_test_insert,'Position',[x_mult*390 y_mult*100 x_mult*300 y_mult*40],'FontSize',y_mult*14,'Interpreter','Latex');
@@ -263,6 +264,11 @@ else
     label_CC_1    = uilabel(p3,'Text','Capacitance check:','Position',[x_mult*10 y_mult*20 x_mult*200 y_mult*40],'FontSize',y_mult*14,'Interpreter','Latex');
     label_CC_2    = uilabel(p3,'Text',CC_insert1,'Position',[x_mult*10 y_mult*0 x_mult*400 y_mult*40],'FontSize',y_mult*14,'Interpreter','Latex');
     label_CC_3    = uilabel(p3,'Text',CC_insert2,'Position',[x_mult*390 y_mult*20 x_mult*250 y_mult*40],'FontSize',y_mult*14,'Interpreter','Latex');
+    
+    %-------------------------------------------------
+    %  need the insertion of the mode symmetry check in here
+    %  it fails
+    %-------------------------------------------------   
     
     px4_LH = 20; py4_LH = 50; px4_SZ = 630; py4_SZ = 260;
     p4 = uipanel(fig,'Position',[x_mult*px4_LH y_mult*py4_LH x_mult*px4_SZ y_mult*py4_SZ],'AutoResizeChildren','off');

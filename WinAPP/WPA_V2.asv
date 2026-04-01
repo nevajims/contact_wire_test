@@ -1462,67 +1462,19 @@ end %try
 
              do_plots   = [0 0 0 0 0 0 0 0 0 0 0 0 0];  
              LF = [pwd,settings_.Data_path_options{settings_.Data_path_choice}];
-             
              try
              [~,PL_inf,~] = plot_predict_processed(proc_file, settings_ ,do_plots, LF,app.base_width,app.base_height,app.mag_fac);  
              catch ER
              write_error2file(app,ER)    
              end %try
 
-             %  put all the error checking in a single function so it can be
+             cap_result= app.test_data.raw_data.cap_test_result.z ;  
+             
              %  ------------------------------------------------------------------
-             
-             %  reused for  the report  
-
-
-
-             [T_num]= find(rejection_indicators(2,:)==1);
-             cap_result= app.test_data.raw_data.cap_test_result.z;
-             b_temp = log10((cap_result(1:12,1)./cap_result(1:12,end)))' ;
-             cap_fail_chns = find(b_temp<cap_min );  
-
-             do_the_prediction = 1 ;
-             cap_text  = 'Cap OK';
-             sn_text   = 'S/N OK'; 
-             dist_text = 'Dist OK';
-
-             if ~isempty (cap_fail_chns)  
-             cap_text = 'Low Cap: ';
-             do_the_prediction = 0; 
-             for index = 1:length(cap_fail_chns)
-             if index == length(cap_fail_chns)
-             insert_ = '.';
-             else
-             insert_ = ',';    
-             end
-             cap_text = [cap_text , num2str(cap_fail_chns(index)),'(',num2str(round(b_temp(cap_fail_chns(index))*10)/10),')',insert_] ; 
-             end %for index = 1:length(cap_fail_chns)
-             end %if ~isempty (cap_fail_chns)  
-             
-             if ~isempty(T_num)
-             do_the_prediction = 0; 
-             sn_text = 'Low S/N: ';    
-             for index = 1:length(T_num)
-             if index == length(T_num)
-             insert_ = '.';
-             else
-             insert_ = ',';    
-             end
-             sn_text = [sn_text , num2str(T_num(index)),insert_] ; 
-             end %for index = 1:length(T_num)
-             end %if ~isempty(T_num)
-             
-             if PL_inf.DV(PL_inf.mod_val) < dist_min
-             do_the_prediction = 0;
-             dist_text = ['Peak to close (',num2str(round(1000*PL_inf.DV(PL_inf.mod_val))),' mm).'];
-             end %if PL_inf.DV(PL_inf.mod_val) < dist_min
-             
-             if PL_inf.DV(PL_inf.mod_val) > dist_max
-             do_the_prediction = 0;
-             dist_text = ['Peak to far away (',num2str(round(1000*PL_inf.DV(PL_inf.mod_val))),' mm).'];
-             end %if PL_inf.DV(PL_inf.mod_val) < dist_min
-
-
+             [ do_the_prediction , cap_text , sn_text , dist_text,T_num ]      =  check_quality_indicators(PL_inf,rejection_indicators,cap_result,cap_min,dist_min,dist_max );
+             %  ------------------------------------------------------------------
+             %  reused for  the report if possible 
+                       
              if do_the_prediction == 0
              if app.login_level ~= 2
              msgbox({'Cannot predict because data has the following issues:'  ,cap_text,sn_text,dist_text,'if you want a report anyway press Force Report'})               
@@ -1536,6 +1488,7 @@ end %try
                              
              end %if do_the_prediction ==0                 
              
+
              if do_the_prediction == 1  
              
              do_plots   = [0 0 0 0 0 0 0 0 0 1 0 0 0];  
@@ -1567,17 +1520,17 @@ end %try
              app.prediction_done  = 1 ;
              app.get_status
              app.set_status
-                        
              
             Produce_Test_report( proc_file, PL_inf, T_num, pred_,app.default_options,app.slab_root,app.plot_options,app.Prog_STATE)
             end %if do_the_prediction == 1;  
                        
             end %if isstruct(app.rail_tester)   
              
-        end
+        end  %function PREDICTIONButtonPushed(app, event)
+
 
         % Button pushed function: SNRSettingsButton
-        function SNRSettingsButtonPushed(app, event)
+    function SNRSettingsButtonPushed(app, event)
             %  also  only Visible for level 2
             
             switch (app.login_level)

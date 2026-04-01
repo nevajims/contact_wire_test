@@ -267,8 +267,8 @@ end %if do_plots(12) ==1
 
 if do_plots(13) ==1
 Mode_SYM =   get_mode_symmetry_vals(MP_mean,x_mult,y_mult,mag_fac);    
+prediction_.Mode_SYM = Mode_SYM;
 end %if do_plots(13) ==1
-
 
 %---------------------------------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------------------------------
@@ -291,18 +291,18 @@ if val>1
 val = 1/val;
 end
 
-
-
 symmetry_text   =    ['Symmetry = ', num2str(round(val*10)/10 ),'.']; 
 mean_val        =    (slice_data(4,2) + slice_data(2,4))/2; 
-mean_txt        =    ['(Mean val = ', num2str(round(mean_val*10)/10),')'] ;  
 
 Mode_SYM.val        = val       ;
 Mode_SYM.mean_val   = mean_val  ;
 
+
+
+mean_txt        =    ['(Mean val = ', num2str(round(mean_val*10)/10),')'] ;  
 tx1 = uitextarea(fig,'Position',[x_mult*60 y_mult*160 x_mult*240 y_mult*40], 'Value',symmetry_text,'FontSize',y_mult*20,'HorizontalAlignment','center');
 tx2 = uitextarea(fig,'Position',[x_mult*60 y_mult*100 x_mult*240 y_mult*25], 'Value',mean_txt,'FontSize',y_mult*15,'HorizontalAlignment','center');
-end %function get_mode_symmetry_vals(slice_data)
+end % Mode_SYM = function get_mode_symmetry_vals(slice_data)
 
 
 

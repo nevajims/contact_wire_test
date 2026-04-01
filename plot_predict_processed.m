@@ -265,11 +265,9 @@ if do_plots(12) ==1
 do_mean_vs_group(Block_DATA,MP_mean,MP_std,settings_,FILE_TO_PREDICT,labels,mod_vals_inds,x_mult,y_mult,mag_fac);    
 end %if do_plots(12) ==1
 
-if do_plots(13) ==1
-Mode_SYM =   get_mode_symmetry_vals(MP_mean,x_mult,y_mult,mag_fac);    
-end %if do_plots(13) ==1
+%do_plots(13) ::
 
-
+Mode_SYM =   get_mode_symmetry_vals(MP_mean,x_mult,y_mult,mag_fac,do_plots(13));    
 prediction_.Mode_SYM = Mode_SYM;
 
 
@@ -282,29 +280,30 @@ end %function predict_plot_processed()
 %---------------------------------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------------------------------
 
-function Mode_SYM = get_mode_symmetry_vals(slice_data,x_mult,y_mult,mag_fac)
+function Mode_SYM = get_mode_symmetry_vals(slice_data,x_mult,y_mult,mag_fac,do_plots_)
 
-fig = uifigure('Resize','off','Units','normalized','Position',[ 0.05,0.05,0.195*mag_fac,0.247*mag_fac],'Name', '4/2--2/4 Symmetry');
-fig.Icon = 'ICON2.png';
 %RGB_colours = [0,1,0; 1 0.5 0  ;1,0,0];
-
 val = 1/ (slice_data(4,2)/slice_data(2,4));
-
 if val>1
 val = 1/val;
 end
 
-
-
-symmetry_text   =    ['Symmetry = ', num2str(round(val*10)/10 ),'.']; 
 mean_val        =    (slice_data(4,2) + slice_data(2,4))/2; 
-mean_txt        =    ['(Mean val = ', num2str(round(mean_val*10)/10),')'] ;  
-
 Mode_SYM.val        = val       ;
 Mode_SYM.mean_val   = mean_val  ;
 
+if do_plots_ ==1
+
+fig = uifigure('Resize','off','Units','normalized','Position',[ 0.05,0.05,0.195*mag_fac,0.247*mag_fac],'Name', '4/2--2/4 Symmetry');
+fig.Icon = 'ICON2.png';
+symmetry_text   =    ['Symmetry = ', num2str(round(val*10)/10 ),'.']; 
+mean_txt        =    ['(Mean val = ', num2str(round(mean_val*10)/10),')'] ;  
 tx1 = uitextarea(fig,'Position',[x_mult*60 y_mult*160 x_mult*240 y_mult*40], 'Value',symmetry_text,'FontSize',y_mult*20,'HorizontalAlignment','center');
 tx2 = uitextarea(fig,'Position',[x_mult*60 y_mult*100 x_mult*240 y_mult*25], 'Value',mean_txt,'FontSize',y_mult*15,'HorizontalAlignment','center');
+
+end%  if do_plots_ ==1
+
+
 end % Mode_SYM = function get_mode_symmetry_vals(slice_data)
 
 
