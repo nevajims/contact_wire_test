@@ -1,5 +1,4 @@
 function  rejection_indicators   =  plot_SNR_Raw(varargin)
-
 % ---------------------------------------------------------------------- %
 % for use with single result of Raw data file 
 % Jim 11/7/2024
@@ -29,21 +28,13 @@ settings.time_gate           =  60                                              
 settings.time_gate2          =                                                  ;
 settings.time_gate3          =                                                  ;
 settings.diagonal_time_gate  =  200                                             ;
-
 %}
-
 %  TO DO
 %  First put in the vertical line for the third timegate
-
-
-
 % ------------------------------------------------------------------------------------------------------------------------------- %
 % ------------------------------------------------------------------------------------------------------------------------------- %
 % ------------------------------------------------------------------------------------------------------------------------------- %
 % ------------------------------------------------------------------------------------------------------------------------------- %
-
-
-
 switch(nargin)
     case(0)  %------------------------------------
 % FORMAT::   rejection_indicators   = plot_SNR_Raw()
@@ -123,8 +114,8 @@ mag_fac   = varargin{6};
 Pix_SS = get(0,'screensize')                ;
 x_mult = (Pix_SS(3)/base_width)   * mag_fac ;
 y_mult = (Pix_SS(4)/base_height)  * mag_fac ;
-
 end %switch(narargin)
+
 
 if nargin ==2 || nargin ==3 || nargin ==6
 RMS_boundaries     = snr_settings.RMS_boundaries     ;
@@ -139,24 +130,17 @@ time_gate3          = snr_settings.time_gate3          ;
 
 diagonal_time_gate = snr_settings.diagonal_time_gate ;
 
-
 [ALL_time_d,time_d,ALL_time,time_,All_noise_d,noise_d ] =  load_the_data_from_structure(test_data,time_gate,time_gate2);
-
-
 file_name = test_data.file_with_path(max(find(test_data.file_with_path=='\'))+1:end-4);
 
 end %if nargin ==2 || nargin ==3
+
 
 % give option to plot time/frequecy traces   -  for selected send and
 %------------------------------------------------
 % Calculate matrix properties
 %-----------------------------------------------
 [samp_freq,freq_axis_KHz,fft_d_temp,fft_n_temp ,RMS_mat,SNR_mat_DB,LFN_mat_DB,HFN_mat_DB]  =  calculate_mat_properties(time_,ALL_time_d,time_d,exitation_freq_kHz,SNR_bandwidth_kHz,All_noise_d,noise_d);
-
-
-
-
-
 
 %------------------------------------------------
 % PLOT COLORMAPS
@@ -169,10 +153,10 @@ end %if do_plots(1) ==1
 % CREATE THE DATA FOR THE BARCHART
 %-----------------------------------------------
 ALL_bars = create_ALL_Bars(ALL_time_d,RMS_mat,SNR_mat_DB,LFN_mat_DB,HFN_mat_DB);
+
 %------------------------------------------------
 % PLOT BARCHART
 %------------------------------------------------
-
 if do_plots(2) ==1
 plot_Barcarts(ALL_bars,RMS_boundaries,SNR_boundaries,LFN_boundaries,HFN_boundaries,file_name,x_mult,y_mult,mag_fac);
 end %if do_plots(2) ==1
@@ -181,17 +165,16 @@ end %if do_plots(2) ==1
 % Calcutate REJECTION INDICATORS 
 % ----------------------------------------------------------
 rejection_indicators = Calcutate_REJECTION_INDICATORS(ALL_bars,RMS_boundaries,SNR_boundaries,LFN_boundaries,HFN_boundaries); 
-
-
-
-
-
 % ----------------------------------------------------------
 % Plot REJECTION INDICATORS 
 % ----------------------------------------------------------
+
+
 if do_plots(3) == 1  
 Plot_REJECTION_INDICATORS (rejection_indicators,file_name,ALL_bars,x_mult,y_mult,mag_fac )
 end %if do_plots(3) == 1
+
+
 
 % ----------------------------------------------------------
 % Plot selected_time/freq_traces
@@ -357,6 +340,9 @@ p1.FontWeight = 'bold';
 
 end %function  update_time_plot(plot_data_structure)
 
+
+
+
 function  Plot_REJECTION_INDICATORS (rejection_indicators,file_name,ALL_bars,x_mult,y_mult,mag_fac)
 
 fig = uifigure('Resize','off','Units','normalized','Position',[0.05000 0.05000 0.2900*mag_fac 0.2450*mag_fac],'Name', 'Quality indicators' );
@@ -406,7 +392,6 @@ if indexb == length(xtt)
 plot(ax1,[xtt(indexb)+0.5,xtt(indexb)+0.5],[yLL(1),yLL(end)],'k')
 end %if indexa == length(ytt)
 end %for index = 1: length(ytt)
-
 
 for n=1:numel(ALL_bars)
     [x,y]=ind2sub(size(ALL_bars),n);

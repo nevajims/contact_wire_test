@@ -146,11 +146,8 @@ default_option_fields       =  {'raw_data_file_options';...
     
     
     methods (Access = private)
-        
-
-
-        function  get_status(app)
        
+         function  get_status(app)
          if app.have_test_data == 0 && app.have_processed_data == 0 && app.prediction_done ==0
          if app.login_level == 0
          app.status_ = 0 ;
@@ -170,12 +167,10 @@ default_option_fields       =  {'raw_data_file_options';...
 
         end %        function  get_status(app)
 
-
-
-
         function set_status(app)
             
         switch(app.status_)  
+
             case(0)
             set_Tab_2(app,0)
             set_Tab_3(app,0)
@@ -228,18 +223,21 @@ default_option_fields       =  {'raw_data_file_options';...
         function set_Tab_2(app,switch_val)
 
            switch(switch_val)
+
                case(1)
-               app.RunNewTestButton.Enable              ='on';  
-               app.LoadExistingDataButton.Enable        = 'on';     
-               app.TestSettingsButton.Enable            = 'on';
-               GetTransducerDetailsButtonPushed.Enable  = 'on';
+               app.RunNewTestButton.Enable              = 'on' ;  
+               app.LoadExistingDataButton.Enable        = 'on' ;     
+               app.TestSettingsButton.Enable            = 'on' ;
+               GetTransducerDetailsButton.Enable        = 'on' ;
+
                case(0)
-               app.RunNewTestButton.Enable            ='off';  
-               app.LoadExistingDataButton.Enable     = 'off';      
-               app.TestSettingsButton.Enable         = 'off';
-               GetTransducerDetailsButtonPushed.Enable  = 'off';
-           end %        function set_Tab_2(app,switch_val)
-        
+               app.RunNewTestButton.Enable            = 'off' ;  
+               app.LoadExistingDataButton.Enable      = 'off' ;      
+               app.TestSettingsButton.Enable          = 'off' ;
+               GetTransducerDetailsButton.Enable      = 'off' ;
+
+           end   % function set_Tab_2(app,switch_val)
+           
         if app.Prog_STATE ==  3  % i.e. calibrate state
            app.LoadExistingDataButton.Enable     = 'off';      
         end
@@ -843,8 +841,15 @@ end % function reset_window_sizes(app)
 
         % Button pushed function: LOGINButton
         function LOGINButtonPushed(app, event)
-         
+                
+            BackgroundColor_in_use = [0.9600,0.6600,0.6600];
+            BackgroundColor_normal = [0.9600,0.9600,0.9600];
             
+            app.LOGINButton.Enable = 0;
+            app.LOGINButton.BackgroundColor =BackgroundColor_in_use;
+            
+            
+
             switch(app.LOGINButton.Text)
 
                 case('LOGIN')   
@@ -903,7 +908,7 @@ end % function reset_window_sizes(app)
             else
 
             app.Prog_STATE            =  1;                 
-            msgbox('login unsuccesful')
+            % msgbox('login unsuccesful')
             % do nothing, possibly msgbox
             end %if app.login_details.values_set  == 1
 
@@ -955,11 +960,15 @@ end % function reset_window_sizes(app)
             
             end %switch(app.LOGINButton.Text)
 
-             
+            
+            app.LOGINButton.Enable = 1;
+            app.LOGINButton.BackgroundColor =BackgroundColor_normal;
+              
+
             app.get_status
             app.set_status
 
-        end
+        end  %function LOGINButtonPushed(app, event)
 
 
         % Button pushed function: TestSettingsButton
@@ -972,7 +981,7 @@ try
 switch(app.CALButton.Text)
 % app.RunNewTestButton.    
 
-    case('Go to CAL')
+    case('Go to Check')
 app.CALButton.Text = 'Go to TEST'    ;
 app.Prog_STATE            =  3       ;
 app.LOGINButton.Enable = 'off'       ;
@@ -982,14 +991,14 @@ app.plot_options.Data_path_choice     = app.plot_options.Data_path_choice_C     
 app.plot_options.mode_pairs_to_Use    = app.plot_options.mode_pairs_to_Use_C      ; 
 
 app.RunNewTestButton.Enable = 'on';
-app.RunNewTestButton.Text = 'Run Cal Test';
+app.RunNewTestButton.Text = 'Run Check';
 
 app.get_status
 app.set_status
 app.ProgMODELabel.Text = 'Mode: Cal';
 
     case('Go to TEST')
-app.CALButton.Text = 'Go to CAL';        
+app.CALButton.Text = 'Go to Check';        
 app.Prog_STATE            =  2;
 app.LOGINButton.Enable = 'on';
 
@@ -1018,7 +1027,13 @@ end %function CALButtonPushed(app, event)
 %------------------------------------------------------
 %------------------------------------------------------
         function TestSettingsButtonPushed(app, event)
+
+            BackgroundColor_in_use = [0.9600,0.6600,0.6600];
+            BackgroundColor_normal = [0.9600,0.9600,0.9600];
+            app.TestSettingsButton.Enable = 0;
+            app.TestSettingsButton.BackgroundColor =BackgroundColor_in_use;     
             
+        
      FDSF_temp   =   [pwd,app.default_options.Test_Settings_fname]                   ; 
      SF_temp     =   [app.settings_root,app.default_options.Test_Settings_fname]     ;
       try     
@@ -1044,6 +1059,11 @@ end %function CALButtonPushed(app, event)
        write_error2file(app,ER)    
        end %try
         
+           app.TestSettingsButton.Enable = 1;
+           app.TestSettingsButton.BackgroundColor =BackgroundColor_normal;     
+
+
+
 
         end %function TestSettingsButtonPushed(app, event)
 
@@ -1051,10 +1071,16 @@ end %function CALButtonPushed(app, event)
 
         function RunNewTestButtonPushed(app, event)
 
+            BackgroundColor_in_use = [0.9600,0.6600,0.6600];
+            BackgroundColor_normal = [0.9600,0.9600,0.9600];
+            app.RunNewTestButton.Enable = 0;
+            app.RunNewTestButton.BackgroundColor =BackgroundColor_in_use;
+                       
+            
             %FDSF_temp   =   [pwd,app.default_options.Ttest_parameters_fname]                     ; 
             SF_temp      =   [app.settings_root,app.default_options.test_parameters_fname]         ;              
             
-switch (app.login_level)
+            switch (app.login_level)
 
             case(0)
                 
@@ -1062,7 +1088,7 @@ switch (app.login_level)
 
             case{1,2}
             
-if app.have_test_data ==0
+            if app.have_test_data ==0
             %if app.have_test_data ==0    
              
             %msgbox('this is the level 1/2 option')
@@ -1070,22 +1096,17 @@ if app.have_test_data ==0
             if app.Prog_STATE ~= 3
             dummy__   = set_test_parameters_essential(app.test_parameters   ,  SF_temp  ,app.base_width,app.base_height,   app.mag_fac , app.advanced_settings);
    
-
-
             else
-dummy__.ELR            =  'N/A' ;
-dummy__.clamp_location =  'N/A' ;
-dummy__.contact_wire   =  'N/A' ;
-dummy__.arm_present    =  'N/A' ;
-dummy__.Track_id       =  'N/A' ;
-dummy__.Asset_No       =  'N/A' ;
-dummy__.WR             =  'N/A' ;
-dummy__.Structure_ID   =  'N/A' ;
-dummy__.LU_Label_text  =  'N/A' ;
-dummy__.Notes          =  'Calibration Test';
-          
-            
-            
+            dummy__.ELR            =  'N/A' ;
+            dummy__.clamp_location =  'N/A' ;
+            dummy__.contact_wire   =  'N/A' ;
+            dummy__.arm_present    =  'N/A' ;
+            dummy__.Track_id       =  'N/A' ;
+            dummy__.Asset_No       =  'N/A' ;
+            dummy__.WR             =  'N/A' ;
+            dummy__.Structure_ID   =  'N/A' ;
+            dummy__.LU_Label_text  =  'N/A' ;
+            dummy__.Notes          =  'Calibration Test';
             end %if app.Prog_STATE ~= 3
 
 
@@ -1117,12 +1138,16 @@ dummy__.Notes          =  'Calibration Test';
             fixed_Operator_Settings.Sentinel_No  = app.login_details.Sentinal_no   ;
             
             [Test_Settings_O] = convert_test_strct(app.Test_Settings ); 
-
+            p_w_d = pwd;
+            
             try
             [raw_data,err] =  run_alva_DAQ(Test_Settings_O) ;
             catch ER
+            cd(p_w_d)    
             msgbox('error running run_alva_DAQ')    
-            write_error2file(app,ER)                
+            write_error2file(app,ER)  
+            app.RunNewTestButton.Enable = 1;
+            app.RunNewTestButton.BackgroundColor =BackgroundColor_normal;
             end                
                        
             if isstruct(raw_data) ==1 && err == 0
@@ -1155,9 +1180,9 @@ dummy__.Notes          =  'Calibration Test';
             app.set_status
             app.TabGroup.SelectedTab = app.CheckProcessTab;
             else
-            msgbox('esc no test')
-
+            %msgbox('esc no test')
             end %if isstruct(dummy_)
+           
 end %if isstruct(dummy__)
 
 else
@@ -1166,12 +1191,19 @@ end % if app.have_test_data ==0
 
 end  % switch (app.login_level)
 
+app.RunNewTestButton.Enable = 1;
+app.RunNewTestButton.BackgroundColor =BackgroundColor_normal;
+      
         end  % FUNCTION
-
         % Button pushed function: LoadExistingDataButton
 
-
         function LoadExistingDataButtonPushed(app, event)
+            
+            BackgroundColor_in_use = [0.9600,0.6600,0.6600];
+            BackgroundColor_normal = [0.9600,0.9600,0.9600];
+            app.LoadExistingDataButton.Enable = 0;
+            app.LoadExistingDataButton.BackgroundColor =BackgroundColor_in_use;
+           
 
 %   all levels including (0)  should be able to load old data and analyse it     
 %   needs to differentiate between newand old data V1.0 and v2.0
@@ -1234,6 +1266,9 @@ end  % if ok_ ==1
 else
 msgbox('Clear current data first' )
 end
+
+app.LoadExistingDataButton.Enable = 1;
+app.LoadExistingDataButton.BackgroundColor =BackgroundColor_normal;
 
         
 % modified fromold code in WireProApp (1.0) ::
@@ -1348,7 +1383,13 @@ end
 
         % Button pushed function: ProcessDataButton
         function ProcessDataButtonPushed(app, event)
-          
+           
+            %HEREHERE
+            BackgroundColor_in_use = [0.9600,0.6600,0.6600];
+            BackgroundColor_normal = [0.9600,0.9600,0.9600];
+            app.ProcessDataButton.Enable = 0;
+            app.ProcessDataButton.BackgroundColor =BackgroundColor_in_use;  
+
           try  
           if isstruct(app.test_data)           
           [app.rail_tester,loaded_fe_file_ok ] =  create_rail_tester_structure(app.default_options,app.test_data,app.proc_options);
@@ -1365,10 +1406,17 @@ end
 
 
           end %if loaded_fe_file_ok~= 1
-                    
+          
+           pause(2)
+           app.ProcessDataButton.Enable = 1;
+           app.ProcessDataButton.BackgroundColor =BackgroundColor_normal;  
+
+
             app.get_status
             app.set_status
-          app.TabGroup.SelectedTab = app.PredictionTab ;
+            app.TabGroup.SelectedTab = app.PredictionTab ;
+
+
 
           end %if isstruct(app.test_data)
 
@@ -1382,15 +1430,25 @@ end
           % app.Set_Status();
 %}
 
+          
+
         end
 
         % Button pushed function: SetPredictionOptionsButton
         
         function SetPredictionOptionsButtonPushed(app, event)
             
+
              FDSF_temp             =   [pwd,app.default_options.plot_options_fname]                    ; 
              SF_temp               =   [app.settings_root,app.default_options.plot_options_fname]      ;
- 
+           
+            BackgroundColor_in_use = [0.9600,0.6600,0.6600];
+            BackgroundColor_normal = [0.9600,0.9600,0.9600];
+            app.SetPredictionOptionsButton.Enable = 0;
+            app.SetPredictionOptionsButton.BackgroundColor =BackgroundColor_in_use;
+            
+            
+
 try
 
             switch (app.login_level)
@@ -1402,22 +1460,32 @@ try
 
               dummy_  =   set_plot_options(app.plot_options,FDSF_temp,SF_temp,app.base_width,app.base_height,app.mag_fac); 
              
-
-
             end %switch (app.login_level)
-catch ER
-write_error2file(app,ER)    
-end %try
+            catch ER
+            write_error2file(app,ER)    
+            end %try
 
               
-              if isstruct(dummy_)
-              app.plot_options = dummy_;
-              end
+            if isstruct(dummy_)
+            app.plot_options = dummy_;
+            end
             
-        end
+            app.SetPredictionOptionsButton.Enable = 1;
+            app.SetPredictionOptionsButton.BackgroundColor =BackgroundColor_normal;
+
+
+
+        end %function SetPredictionOptionsButtonPushed(app, event)
 
         % Button pushed function: ModePairViewerFDButton
         function ModePairViewerFDButtonPushed(app, event)
+            
+             %HEREHERE
+            BackgroundColor_in_use = [0.9600,0.6600,0.6600];
+            BackgroundColor_normal = [0.9600,0.9600,0.9600];
+            app.ModePairViewerFDButton.Enable = 0;
+            app.ModePairViewerFDButton.BackgroundColor =BackgroundColor_in_use;  
+                        
             if isstruct(app.rail_tester)   
             plot_options_O  = convert_plot_options2_old_strct(app.plot_options);
 
@@ -1435,12 +1503,27 @@ end %try
 
             end %if isstruct(app.rail_tester)   
             
+            pause(2)
+            app.ModePairViewerFDButton.Enable = 1;
+            app.ModePairViewerFDButton.BackgroundColor =BackgroundColor_normal;  
+            
+
         end
 
         % Button pushed function: PREDICTIONButton
         function PREDICTIONButtonPushed(app, event)
         %----------------------------------------------
         %----------------------------------------------
+
+            app.ShowPeakFindButton.Enable = 1;
+            
+            
+             BackgroundColor_in_use = [0.9600,0.6600,0.6600];
+             BackgroundColor_normal = [0.9600,0.9600,0.9600];
+             app.PREDICTIONButton.Enable = 0;
+             app.PREDICTIONButton.BackgroundColor = BackgroundColor_in_use;
+             
+
 
              if isstruct(app.rail_tester)    
             
@@ -1526,6 +1609,10 @@ end %try
                        
             end %if isstruct(app.rail_tester)   
              
+             app.PREDICTIONButton.Enable = 1;
+             app.PREDICTIONButton.BackgroundColor = BackgroundColor_normal;
+ 
+
         end  %function PREDICTIONButtonPushed(app, event)
 
 
@@ -1576,6 +1663,7 @@ end %try
         function ChanTimeandFreqViewerButtonPushed(app, event)
             %plot_list =   {'Maps','Bar Charts','indicators','time_freq_traces' } 
             
+
             if isstruct(app.test_data)  
             snr_settings_O = convert_to_snr_struct(app.snr_settings);
             try 
@@ -1585,25 +1673,55 @@ end %try
             end %try
 
             end %if isstruct(app.test_data)  
+        
         end
 
         % Button pushed function: SignalQualityIndicatorsButton
         function SignalQualityIndicatorsButtonPushed(app, event)
             %plot_list =   {'Maps','Bar Charts','indicators','time_freq_traces' } 
             
+            
+            BackgroundColor_in_use = [0.9600,0.6600,0.6600];
+            BackgroundColor_normal = [0.9600,0.9600,0.9600];
+            app.SignalQualityIndicatorsButton.Enable = 0;
+            app.SignalQualityIndicatorsButton.BackgroundColor =BackgroundColor_in_use;  
+
+            
             if isstruct(app.test_data)  
             snr_settings_O = convert_to_snr_struct(app.snr_settings);
             try
-            [~]   = plot_SNR_Raw(app.test_data,[0,0,1,0],snr_settings_O,app.base_width,app.base_height,app.mag_fac); 
+            
+            switch (app.login_level)
+
+                case(2)                
+            [~]   =         plot_SNR_Raw(app.test_data,[0,0,1,0],snr_settings_O,app.base_width,app.base_height,app.mag_fac); 
+                case(1)  
+            [~]   =         plot_SNR_Raw_basicU(app.test_data,[0,0,1,0],snr_settings_O,app.base_width,app.base_height,app.mag_fac); 
+                otherwise 
+            % do nothing
+            end % switch (app.login_level)
+            
             catch ER
             write_error2file(app,ER)    
             end %try   
 
             end %if isstruct(app.test_data)  
+         
+        pause(2)   
+        app.SignalQualityIndicatorsButton.Enable = 1;
+        app.SignalQualityIndicatorsButton.BackgroundColor =BackgroundColor_normal;  
+   
         end
 
         % Button pushed function: ViewModeMapButton
         function ViewModeMapButtonPushed(app, event)
+
+            %HEREHERE
+            BackgroundColor_in_use = [0.9600,0.6600,0.6600];
+            BackgroundColor_normal = [0.9600,0.9600,0.9600];
+            app.ViewModeMapButton.Enable = 0;
+            app.ViewModeMapButton.BackgroundColor =BackgroundColor_in_use;  
+
             if isstruct(app.rail_tester)   
             plot_options_O  = convert_plot_options2_old_strct(app.plot_options);
 
@@ -1624,6 +1742,11 @@ end %try
             
             end %if isstruct(app.rail_tester)   
             
+            pause(2)
+
+            app.ViewModeMapButton.Enable = 1;
+            app.ViewModeMapButton.BackgroundColor =BackgroundColor_normal;  
+
         end
 
         % Button pushed function: MeanSTDmodesButton
@@ -1675,7 +1798,16 @@ end %try
 
         % Button pushed function: ShowPeakFindButton
         function ShowPeakFindButtonPushed(app, event)
-             if isstruct(app.rail_tester)   
+
+            %HEREHERE
+            BackgroundColor_in_use = [0.9600,0.6600,0.6600];
+            BackgroundColor_normal = [0.9600,0.9600,0.9600];
+            app.ShowPeakFindButton.Enable = 0;
+            app.ShowPeakFindButton.BackgroundColor =BackgroundColor_in_use;
+                       
+            
+
+            if isstruct(app.rail_tester)   
             plot_options_O  = convert_plot_options2_old_strct(app.plot_options);
 
             proc_file.rail_tester  =  app.rail_tester;
@@ -1694,6 +1826,10 @@ end %try
             end %try
 
             end %if isstruct(app.rail_tester)
+            pause(2)
+            app.ShowPeakFindButton.Enable = 1;
+            app.ShowPeakFindButton.BackgroundColor =BackgroundColor_normal;
+
         end
 
         % Button pushed function: DistanceMeanTableButton
@@ -1896,7 +2032,7 @@ end %try
 
         % Button pushed function: GetTransducerDetailsButton
         function GetTransducerDetailsButtonPushed(app, event)
-           
+                        
             try
             if app.have_test_data == 1
             display_trans_positions(app.test_data.fixed_Test_Settings,'from when the test was done',app.base_width,app.base_height,app.mag_fac)
@@ -1906,6 +2042,10 @@ end %try
             catch ER
             write_error2file(app,ER)    
             end %try
+
+
+            
+
             
         end %function GetTransducerDetailsButtonPushed(app, event)
 
@@ -1922,6 +2062,11 @@ end %try
             %  Produce_Test_report(       );            
             %  exportgraphics(f,'AnnotatedPlot.pdf')
             % ----------------------------------------------------------
+             BackgroundColor_in_use = [0.9600,0.6600,0.6600];
+             BackgroundColor_normal = [0.9600,0.9600,0.9600];
+             app.ProduceareportButton.Enable = 0;
+             app.ProduceareportButton.BackgroundColor = BackgroundColor_in_use;
+           
     if isstruct(app.rail_tester)    
              
              try
@@ -1952,6 +2097,11 @@ end %try
               
 
     end % if isstruct(app.rail_tester)    
+
+             pause(2)
+             app.ProduceareportButton.Enable = 1;
+             app.ProduceareportButton.BackgroundColor = BackgroundColor_normal;
+           
 
     end %function ProduceareportButtonPushed(app, event)
 
@@ -2016,13 +2166,6 @@ end %try
 
             
                        
-            % Create Caibrate Button
-            app.CALButton = uibutton(app.LoginTab, 'push');
-            app.CALButton.ButtonPushedFcn = createCallbackFcn(app, @CALButtonPushed, true);
-            app.CALButton.FontSize = y_mult*22;   
-            app.CALButton.Position = [x_mult*31 y_mult*50 x_mult*200 y_mult*67];
-            app.CALButton.Text = 'Go to CAL';
-            app.CALButton.Enable = 'off';
             
             % Create CurrentlyloggedinLabel
             app.CurrentlyloggedinLabel = uilabel(app.LoginTab);
@@ -2074,46 +2217,55 @@ end %try
             app.RunNewTestButton.Text = 'Run New Test';
             app.RunNewTestButton.Enable = 'off';
 
+            % Create Caibrate Button
+            app.CALButton = uibutton(app.TestSettingsTab, 'push');
+            app.CALButton.ButtonPushedFcn = createCallbackFcn(app, @CALButtonPushed, true);
+            app.CALButton.FontSize = y_mult*20;   
+            app.CALButton.Position = [x_mult*45 y_mult*245 x_mult*140 y_mult*39];
+            app.CALButton.Text = 'Go to Check';
+            app.CALButton.Enable = 'off';
+
             % Create LoadExistingDataButton
             app.LoadExistingDataButton = uibutton(app.TestSettingsTab, 'push');
             app.LoadExistingDataButton.ButtonPushedFcn = createCallbackFcn(app, @LoadExistingDataButtonPushed, true);
-            app.LoadExistingDataButton.FontSize = y_mult*24;
-            app.LoadExistingDataButton.Position = [x_mult*45 y_mult*253 x_mult*237 y_mult*39];
+            app.LoadExistingDataButton.FontSize = y_mult*20;
+            app.LoadExistingDataButton.Position = [x_mult*45 y_mult*197 x_mult*207 y_mult*39];
             app.LoadExistingDataButton.Text = 'Load Existing Data';
 
             % Create CurrentDataSetLabel
             app.CurrentDataSetLabel = uilabel(app.TestSettingsTab);
-            app.CurrentDataSetLabel.Position = [x_mult*45 y_mult*168 x_mult*120 y_mult*22];
+            app.CurrentDataSetLabel.Position = [x_mult*45 y_mult*158 x_mult*120 y_mult*22];
             app.CurrentDataSetLabel.Text = 'Current Data Set:';
             app.CurrentDataSetLabel.FontSize = x_mult*14;
    
+            % Create Cur_dat_set_val
+            app.Cur_dat_set_val = uilabel(app.TestSettingsTab);
+            app.Cur_dat_set_val.Position = [x_mult*179 y_mult*138 x_mult*480 y_mult*22];
+            app.Cur_dat_set_val.Text = 'NONE';
+            app.Cur_dat_set_val.FontSize = x_mult*14;
+            
             % Create TestDateandTimeLabel
             app.TestDateandTimeLabel = uilabel(app.TestSettingsTab);
-            app.TestDateandTimeLabel.Position = [x_mult*45 y_mult*135 x_mult*130 y_mult*22];
+            app.TestDateandTimeLabel.Position = [x_mult*45 y_mult*125 x_mult*130 y_mult*22];
             app.TestDateandTimeLabel.Text = 'Test Date and Time:';
             app.TestDateandTimeLabel.FontSize = x_mult*14;
-
+           
+            % Create Test_DandT_val
+            app.Test_DandT_val = uilabel(app.TestSettingsTab);
+            app.Test_DandT_val.Position = [x_mult*179 y_mult*105 x_mult*468 y_mult*22];
+            app.Test_DandT_val.Text = 'NONE';
+            app.Test_DandT_val.FontSize = x_mult*14;
+           
+           
             % Create NotesLabel
             app.NotesLabel = uilabel(app.TestSettingsTab);
-            app.NotesLabel.Position = [x_mult*45 y_mult*84 x_mult*60 y_mult*22];
+            app.NotesLabel.Position = [x_mult*45 y_mult*74 x_mult*60 y_mult*22];
             app.NotesLabel.Text = 'Notes:';
             app.NotesLabel.FontSize = x_mult*14;
 
-            % Create Cur_dat_set_val
-            app.Cur_dat_set_val = uilabel(app.TestSettingsTab);
-            app.Cur_dat_set_val.Position = [x_mult*179 y_mult*168 x_mult*480 y_mult*22];
-            app.Cur_dat_set_val.Text = 'NONE';
-            app.Cur_dat_set_val.FontSize = x_mult*14;
-
-            % Create Test_DandT_val
-            app.Test_DandT_val = uilabel(app.TestSettingsTab);
-            app.Test_DandT_val.Position = [x_mult*179 y_mult*135 x_mult*468 y_mult*22];
-            app.Test_DandT_val.Text = 'NONE';
-            app.Test_DandT_val.FontSize = x_mult*14;
-
             % Create Notes_val
             app.Notes_val = uilabel(app.TestSettingsTab);
-            app.Notes_val.Position = [x_mult*84 y_mult*12 x_mult*351 y_mult*94];
+            app.Notes_val.Position = [x_mult*84 y_mult*2 x_mult*351 y_mult*94];
             app.Notes_val.Text = 'NONE';
             app.Notes_val.FontSize = x_mult*14;
 

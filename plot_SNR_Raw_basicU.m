@@ -1,5 +1,4 @@
-function  rejection_indicators   =  plot_SNR_Raw(varargin)
-
+function  rejection_indicators   =  plot_SNR_Raw_basicU(varargin)
 % ---------------------------------------------------------------------- %
 % for use with single result of Raw data file 
 % Jim 11/7/2024
@@ -29,21 +28,13 @@ settings.time_gate           =  60                                              
 settings.time_gate2          =                                                  ;
 settings.time_gate3          =                                                  ;
 settings.diagonal_time_gate  =  200                                             ;
-
 %}
-
 %  TO DO
 %  First put in the vertical line for the third timegate
-
-
-
 % ------------------------------------------------------------------------------------------------------------------------------- %
 % ------------------------------------------------------------------------------------------------------------------------------- %
 % ------------------------------------------------------------------------------------------------------------------------------- %
 % ------------------------------------------------------------------------------------------------------------------------------- %
-
-
-
 switch(nargin)
     case(0)  %------------------------------------
 % FORMAT::   rejection_indicators   = plot_SNR_Raw()
@@ -123,8 +114,8 @@ mag_fac   = varargin{6};
 Pix_SS = get(0,'screensize')                ;
 x_mult = (Pix_SS(3)/base_width)   * mag_fac ;
 y_mult = (Pix_SS(4)/base_height)  * mag_fac ;
-
 end %switch(narargin)
+
 
 if nargin ==2 || nargin ==3 || nargin ==6
 RMS_boundaries     = snr_settings.RMS_boundaries     ;
@@ -139,25 +130,21 @@ time_gate3          = snr_settings.time_gate3          ;
 
 diagonal_time_gate = snr_settings.diagonal_time_gate ;
 
-
 [ALL_time_d,time_d,ALL_time,time_,All_noise_d,noise_d ] =  load_the_data_from_structure(test_data,time_gate,time_gate2);
-
-
 file_name = test_data.file_with_path(max(find(test_data.file_with_path=='\'))+1:end-4);
 
 end %if nargin ==2 || nargin ==3
+
 
 % give option to plot time/frequecy traces   -  for selected send and
 %------------------------------------------------
 % Calculate matrix properties
 %-----------------------------------------------
-
 [samp_freq,freq_axis_KHz,fft_d_temp,fft_n_temp ,RMS_mat,SNR_mat_DB,LFN_mat_DB,HFN_mat_DB]  =  calculate_mat_properties(time_,ALL_time_d,time_d,exitation_freq_kHz,SNR_bandwidth_kHz,All_noise_d,noise_d);
 
 %------------------------------------------------
 % PLOT COLORMAPS
 %-----------------------------------------------
-
 if do_plots(1) ==1
 plot_colourmaps(RMS_mat,SNR_mat_DB,LFN_mat_DB,HFN_mat_DB,file_name,x_mult,y_mult,mag_fac)
 end %if do_plots(1) ==1
@@ -166,10 +153,10 @@ end %if do_plots(1) ==1
 % CREATE THE DATA FOR THE BARCHART
 %-----------------------------------------------
 ALL_bars = create_ALL_Bars(ALL_time_d,RMS_mat,SNR_mat_DB,LFN_mat_DB,HFN_mat_DB);
+
 %------------------------------------------------
 % PLOT BARCHART
 %------------------------------------------------
-
 if do_plots(2) ==1
 plot_Barcarts(ALL_bars,RMS_boundaries,SNR_boundaries,LFN_boundaries,HFN_boundaries,file_name,x_mult,y_mult,mag_fac);
 end %if do_plots(2) ==1
@@ -181,9 +168,13 @@ rejection_indicators = Calcutate_REJECTION_INDICATORS(ALL_bars,RMS_boundaries,SN
 % ----------------------------------------------------------
 % Plot REJECTION INDICATORS 
 % ----------------------------------------------------------
+
+
 if do_plots(3) == 1  
 Plot_REJECTION_INDICATORS (rejection_indicators,file_name,ALL_bars,x_mult,y_mult,mag_fac )
 end %if do_plots(3) == 1
+
+
 
 % ----------------------------------------------------------
 % Plot selected_time/freq_traces
@@ -196,6 +187,9 @@ col_ind = 2;   % start val
 plot_time_and_frequencies(ALL_time_d,ALL_time,All_noise_d,freq_axis_KHz,fft_d_temp,fft_n_temp,exitation_freq_kHz,SNR_bandwidth_kHz,time_gate,time_gate2,time_gate3,file_name,row_ind,col_ind,x_mult,y_mult,mag_fac)
 
 end %if do_plots(4) == 1
+
+
+
 
 end %function   plot_SNR_Raw(raw_data)
 
@@ -262,13 +256,9 @@ plot_data_structure.fft_d_temp                     = fft_d_temp         ;
 plot_data_structure.ALL_time_d                     = ALL_time_d         ;
 end
 
-
 plot_data_structure.exitation_freq_kHz             = exitation_freq_kHz ; 
 plot_data_structure.SNR_bandwidth_kHz              = SNR_bandwidth_kHz  ; 
 plot_data_structure.file_name                      = file_name          ; 
-
-
-
 
 
 fig.UserData                                       = plot_data_structure;
@@ -310,8 +300,8 @@ time_gate2          = plot_data_structure.time_gate2        ;
 time_gate3          = plot_data_structure.time_gate3        ;
 
 sbH1               = plot_data_structure.sbH1               ;
-sbH2               =  plot_data_structure.sbH2              ;
-fig                =  plot_data_structure.fig               ;
+sbH2               = plot_data_structure.sbH2              ;
+fig                = plot_data_structure.fig               ;
 freq_axis_KHz      = plot_data_structure.freq_axis_KHz      ; 
 fft_d_temp         = plot_data_structure.fft_d_temp         ;   
 exitation_freq_kHz = plot_data_structure.exitation_freq_kHz ; 
@@ -342,7 +332,7 @@ legend(sbH2, {'Data','L band',' U band'})
 sbH2.XLabel.String = 'Freq (kHz)';
 sbH2.FontSize =9.5  *y_mult;
 
-p1.Title= (['Time/Freq,' R=' ,num2str(row_ind),', C=',num2str( col_ind),'    ::   ',remove_(file_name)]);
+p1.Title= (['Time/Freq, ',plot_data_structure.R_menu_string{row_ind},', ',plot_data_structure.C_menu_string{col_ind},'    ::   ',remove_(file_name)]);
 p1.BorderColor  = [0.9400 0.9400 0.9400];
 p1.TitlePosition ='centertop';
 p1.FontSize = 14*y_mult;
@@ -350,14 +340,22 @@ p1.FontWeight = 'bold';
 
 end %function  update_time_plot(plot_data_structure)
 
+
+
+
 function  Plot_REJECTION_INDICATORS (rejection_indicators,file_name,ALL_bars,x_mult,y_mult,mag_fac)
 
-fig = uifigure('Resize','off','Units','normalized','Position',[0.05000 0.05000 0.2900*mag_fac 0.2450*mag_fac],'Name', 'Quality indicators' );
+% Need some data to run this in keyboard mode
+
+fig = uifigure('Resize','off','Units','normalized','Position',[0.05000 0.05000 0.2900*mag_fac 0.1000*mag_fac],'Name', ['Quality indicators:: ' , remove_(remove_(file_name))   ,'.']);
 fig.Icon = 'ICON2.png';
 
-px_LH = 10; py_LH = 10; px_SZ = 540; py_SZ = 230;
+px_LH = 10; py_LH = 10; px_SZ = 540; py_SZ = 100;
+
 p1 = uipanel(fig,'Position',[x_mult*px_LH y_mult*py_LH x_mult*px_SZ y_mult*py_SZ],'AutoResizeChildren','off');
-mycolors                  =     [1, 0, 0 ;  1, 0.55, 0.01  ; 1, 1, 0.3 ;  0,1,0];
+
+mycolors    =     [1, 0, 0 ;  1, 0.55, 0.01  ; 1, 1, 0.3 ;  0,1,0] ;
+rejection_indicators = rejection_indicators(2,:);
 
 ax1 = subplot(1,1,1, 'Parent', p1);
 ax1.CLim =[1 4];
@@ -365,9 +363,14 @@ hold(ax1,'on')
 imagesc(ax1,rejection_indicators);
 ax1.Colormap = mycolors;
 ax1.XTick = 1:12;
-ax1.YTick = 1:4;
-ax1.YTickLabel = {'RMS','SNR','LFN','HFN'};
-ax1.YLim =[0.5 4.5];
+
+%ax1.YTick = 1:4;
+%ax1.YTickLabel = {'RMS','SNR','LFN','HFN'};
+ax1.YTick = 1:1;
+ax1.YTickLabel = {'SNR'};
+
+%ax1.YLim =[0.5 4.5];
+ax1.YLim =[0.5 1.5];
 ax1.XLim= [0.5 12.5];
 
 
@@ -400,6 +403,7 @@ plot(ax1,[xtt(indexb)+0.5,xtt(indexb)+0.5],[yLL(1),yLL(end)],'k')
 end %if indexa == length(ytt)
 end %for index = 1: length(ytt)
 
+ALL_bars = ALL_bars(2,:);
 
 for n=1:numel(ALL_bars)
     [x,y]=ind2sub(size(ALL_bars),n);
@@ -407,10 +411,10 @@ for n=1:numel(ALL_bars)
 end %for n=1:numel(ALL_bars)
 
 ax1.XLabel.String = 'Channel #';
-p1.Title = ['Quality indicators:: ' , remove_(remove_(file_name))   ,'.'];
+p1.Title = 'Signal/Noise Ratio.';
 p1.BorderColor  = [0.9400 0.9400 0.9400];
 p1.TitlePosition ='centertop';
-p1.FontSize = 14 * y_mult;
+p1.FontSize = 12 * y_mult;
 p1.FontWeight = 'bold';
 end %function  Plot_REJECTION_INDICATORS (rejection_indicators )
 
@@ -740,10 +744,7 @@ function [samp_freq,freq_axis_KHz,fft_d_temp,fft_n_temp,RMS_mat,SNR_mat_DB,LFN_m
 
 samp_freq  = 1/(time_(2)- time_(1));
 temp_f = [1:length(time_)]/length(time_)*samp_freq/1000 ;
-
-
 freq_axis_KHz = temp_f(1:floor(length(temp_f)/2));
-
 tem_f_d = abs(fft(time_d));
 fft_d_temp = tem_f_d(1: floor(length(tem_f_d)/2),:,:);
 

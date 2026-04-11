@@ -1,7 +1,6 @@
 function [prediction_,peak_loc,PFH]  = plot_predict_processed(varargin)
 %-------------------------------------
 %-------------------------------------
-%-------------------------------------
 % have it display aa montage of  mean/std of tags
 % 2 5 8 14
 % prediction = [];
@@ -456,15 +455,12 @@ RGB_colours = [0,1,0; 1 0.5 0  ;1,0,0];
 
 pred_value  = prediction_.pred_value;       
 txt_insrt   = prediction_.txt_insrt;
-pred_txt = [prediction_.Labels{pred_value},'(',txt_insrt,')'];
+%pred_txt = [prediction_.Labels{pred_value},'(',txt_insrt,')'];
+pred_txt = [prediction_.Labels{pred_value}];
 
 tx1 = uitextarea(fig,'Position',[x_mult*60 y_mult*100 x_mult*240 y_mult*40], 'Value',pred_txt,'FontSize',y_mult*25,'FontColor',RGB_colours(prediction_.colours(pred_value),:),'FontWeight','bold','HorizontalAlignment','center');
 tx2 = uitextarea(fig,'Position',[x_mult*60 y_mult*160 x_mult*240 y_mult*40], 'Value','PREDICTION','FontSize',y_mult*20,'FontWeight','bold','HorizontalAlignment','center');
 end %function do_overall_prediction(prediction_)
-
-
-
-
 
 
 function do_plots =  choose_plots_to_show(plot_list)

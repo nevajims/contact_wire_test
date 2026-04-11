@@ -238,10 +238,9 @@ but = uibutton(fig,"push" ,"Text","Submit",'Position',[x_mult*270, y_mult*30, x_
 %but2 =  uibutton(fig,"push" ,"Text","Last",'Position',[x_mult*270,y_mult*80,x_mult*100,y_mult*35],'FontSize',y_mult*18,"ButtonPushedFcn", @(src,event)ButtonPushed_special(fig,data_,defaults_,defaults_last));
 %fig.UserData.inps.ren_but = but2;
 
-but3 =  uibutton(fig,"push" ,"Text","Lookup",'Position',[x_mult*270,y_mult*90,x_mult*100,y_mult*35],'FontSize',y_mult*18,"ButtonPushedFcn", @(src,event)ButtonPushed_Lookup(fig,data_,defaults_,x_mult ,y_mult,mag_fac,advanced_settings));
+but3 =  uibutton(fig,"push" ,"Text","Lookup",'Position',[x_mult*270,y_mult*90,x_mult*100,y_mult*35],'FontSize',y_mult*18,"ButtonPushedFcn", @(src,event)ButtonPushed_Lookup(fig,data_,defaults_,x_mult ,y_mult,mag_fac,advanced_settings),'Enable',1);
 
 fig.UserData.inps.LU_but = but3;
-
 
 
 
@@ -382,9 +381,10 @@ fig.UserData.inps.ELR_but.BackgroundColor = [0.9600,0.9600,0.9600];
 fig.UserData.inps.SID_but.BackgroundColor = [0.9600,0.9600,0.9600];
 
 fig.UserData.inps.LU_but.BackgroundColor = [0.9600,0.6600,0.6600];
+fig.UserData.inps.LU_but.Enable = 0;
 NS_struct = lookup_NS_details(x_mult ,y_mult,mag_fac,advanced_settings);
+fig.UserData.inps.LU_but.Enable = 1;
 fig.UserData.inps.LU_but.BackgroundColor = [0.9600,0.9600,0.9600];
-
 
 if isstruct(NS_struct)
 fig.UserData.inps.Track_id.Value       =  fig.UserData.Track_id_DD.Items{NS_struct. prop_inds(1)}   ;
@@ -400,7 +400,6 @@ fig.UserData.Asset_no_DD.Value     = fig.UserData.Asset_no_DD.Items{ NS_struct. 
 fig.UserData.WR_DD.Value           = fig.UserData.WR_DD.Items{NS_struct. prop_inds(5)}             ; 
 fig.UserData.ELR_DD.Value          = fig.UserData.ELR_DD.Items{NS_struct. prop_inds(4)}            ;
 fig.UserData.Structure_ID_DD.Value = fig.UserData.Structure_ID_DD.Items {NS_struct. prop_inds(3)}  ;
-
 
 fig.UserData.inps.lookup_label.Visible = 'on'; 
 fig.UserData.inps.lookup_label.Text    = [NS_struct.Loc,' (',NS_struct.sub_Loc,').'];

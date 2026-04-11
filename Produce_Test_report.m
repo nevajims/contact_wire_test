@@ -275,7 +275,8 @@ else
     label_data_checks_ST      = uilabel(p4,'Text','\underline{Result}' ,'Position',[x_mult*10 y_mult*210 x_mult*300 y_mult*40],'FontSize',y_mult*16,'Interpreter','Latex');
 
     if PT_accpt==1 &&  SN_accpt==1 && CC_accpt==1 
-    pred_txt = [Prediction_.Labels{Prediction_.pred_value},' (',Prediction_.txt_insrt,')'];
+    %pred_txt = [Prediction_.Labels{Prediction_.pred_value},' (',Prediction_.txt_insrt,')'];
+    pred_txt = [Prediction_.Labels{Prediction_.pred_value}];
     else   
     pred_txt = 'Invalid test (see data checks)';
     end %if PT_accpt==1 &&  SN_accpt==1 && CC_accpt==1 
