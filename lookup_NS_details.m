@@ -41,7 +41,7 @@ fig.Icon = 'ICON2.png';
 default_Location_index = length(LU_Table.Locations_);
 default_sub_Location_index = 1;
 
-DD_1= uidropdown(fig,"Items",[LU_Table.Locations_],'Position', [x_mult*10, y_mult*95, x_mult*160, y_mult*28 ],'FontSize',y_mult*18,'Value',LU_Table.Locations_{default_Location_index},'ValueChangedFcn',@(src,event)DD_A(fig,LU_Table)    );
+DD_1= uidropdown(fig,"Items",[LU_Table.Locations_],'Position', [x_mult*10, y_mult*95, x_mult*260, y_mult*28 ],'FontSize',y_mult*18,'Value',LU_Table.Locations_{default_Location_index},'ValueChangedFcn',@(src,event)DD_A(fig,LU_Table)    );
 lbl1 = uilabel(fig,'Position',[x_mult*10, y_mult*125, x_mult*160, y_mult*28 ] ,'Text', 'Location:','FontSize',y_mult*18)  ;
 fig.UserData.DD_1 = DD_1 ;
 

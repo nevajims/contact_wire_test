@@ -146,11 +146,8 @@ default_option_fields       =  {'raw_data_file_options';...
     
     
     methods (Access = private)
-        
-
-
-        function  get_status(app)
        
+         function  get_status(app)
          if app.have_test_data == 0 && app.have_processed_data == 0 && app.prediction_done ==0
          if app.login_level == 0
          app.status_ = 0 ;
@@ -170,12 +167,10 @@ default_option_fields       =  {'raw_data_file_options';...
 
         end %        function  get_status(app)
 
-
-
-
         function set_status(app)
             
         switch(app.status_)  
+
             case(0)
             set_Tab_2(app,0)
             set_Tab_3(app,0)
@@ -228,7 +223,7 @@ default_option_fields       =  {'raw_data_file_options';...
         function set_Tab_2(app,switch_val)
 
            switch(switch_val)
-               
+
                case(1)
                app.RunNewTestButton.Enable              = 'on' ;  
                app.LoadExistingDataButton.Enable        = 'on' ;     
@@ -241,8 +236,8 @@ default_option_fields       =  {'raw_data_file_options';...
                app.TestSettingsButton.Enable          = 'off' ;
                GetTransducerDetailsButton.Enable      = 'off' ;
 
-           end %        function set_Tab_2(app,switch_val)
-        
+           end   % function set_Tab_2(app,switch_val)
+           
         if app.Prog_STATE ==  3  % i.e. calibrate state
            app.LoadExistingDataButton.Enable     = 'off';      
         end
@@ -823,7 +818,7 @@ Pix_SS = get(0,'screensize')              ;
             app.PredictionLampLabel.Position = [x_mult*582 y_mult*28 x_mult*74 y_mult*22];
             app.PredictionLampLabel.FontSize = y_mult*14; 
             app.PredictionLamp.Position = [x_mult*665 y_mult*28 x_mult*20 y_mult*20];
-            app.USERLabel_val2.Position = [x_mult*77 y_mult*40 x_mult*108 y_mult*22];
+            app.USERLabel_val2.Position = [x_mult*77 y_mult*40 x_mult*148 y_mult*22];
             app.USERLabel_val2.FontSize   =  14*y_mult ;
             app.Sentinal_LabelVAL2.Position = [x_mult*77 y_mult*15 x_mult*70 y_mult*22];
             app.Sentinal_LabelVAL2.FontSize   =  14*y_mult;
@@ -986,7 +981,7 @@ try
 switch(app.CALButton.Text)
 % app.RunNewTestButton.    
 
-    case('Go to Check')
+    case('Go to Functional Check')
 app.CALButton.Text = 'Go to TEST'    ;
 app.Prog_STATE            =  3       ;
 app.LOGINButton.Enable = 'off'       ;
@@ -996,14 +991,14 @@ app.plot_options.Data_path_choice     = app.plot_options.Data_path_choice_C     
 app.plot_options.mode_pairs_to_Use    = app.plot_options.mode_pairs_to_Use_C      ; 
 
 app.RunNewTestButton.Enable = 'on';
-app.RunNewTestButton.Text = 'Run Check';
+app.RunNewTestButton.Text = 'Run Functional Check';
 
 app.get_status
 app.set_status
 app.ProgMODELabel.Text = 'Mode: Cal';
 
     case('Go to TEST')
-app.CALButton.Text = 'Go to Check';        
+app.CALButton.Text = 'Go to Functional Check';        
 app.Prog_STATE            =  2;
 app.LOGINButton.Enable = 'on';
 
@@ -2218,7 +2213,7 @@ try
             app.RunNewTestButton = uibutton(app.TestSettingsTab, 'push');
             app.RunNewTestButton.ButtonPushedFcn = createCallbackFcn(app, @RunNewTestButtonPushed, true);
             app.RunNewTestButton.FontSize = y_mult*36;
-            app.RunNewTestButton.Position = [x_mult*45 y_mult*320 x_mult*273 y_mult*78];
+            app.RunNewTestButton.Position = [x_mult*45 y_mult*310 x_mult*360 y_mult*78];
             app.RunNewTestButton.Text = 'Run New Test';
             app.RunNewTestButton.Enable = 'off';
 
@@ -2226,8 +2221,8 @@ try
             app.CALButton = uibutton(app.TestSettingsTab, 'push');
             app.CALButton.ButtonPushedFcn = createCallbackFcn(app, @CALButtonPushed, true);
             app.CALButton.FontSize = y_mult*20;   
-            app.CALButton.Position = [x_mult*45 y_mult*245 x_mult*140 y_mult*39];
-            app.CALButton.Text = 'Go to Check';
+            app.CALButton.Position = [x_mult*45 y_mult*245 x_mult*230 y_mult*39];
+            app.CALButton.Text = 'Go to Functional Check';
             app.CALButton.Enable = 'off';
 
             % Create LoadExistingDataButton
@@ -2549,7 +2544,7 @@ try
             % Create UserLabel
             app.UserLabel = uilabel(app.UIFigure);
             app.UserLabel.FontAngle = 'italic';
-            app.UserLabel.Position = [x_mult*5 y_mult*39 x_mult*54 y_mult*22];
+            app.UserLabel.Position = [x_mult*5 y_mult*39 x_mult*74 y_mult*22];
             app.UserLabel.Text = 'User:';
             app.UserLabel.FontSize = y_mult*14;
             
@@ -2606,7 +2601,7 @@ try
             % Create USERLabel_val2
             app.USERLabel_val2 = uilabel(app.UIFigure);
             app.USERLabel_val2.FontAngle = 'italic';
-            app.USERLabel_val2.Position = [x_mult*77 y_mult*40 x_mult*108 y_mult*22];
+            app.USERLabel_val2.Position = [x_mult*77 y_mult*40 x_mult*148 y_mult*22];
             app.USERLabel_val2.Text = 'None';
             app.USERLabel_val2.FontSize   =  14*y_mult ;
 
