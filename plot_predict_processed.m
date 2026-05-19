@@ -1,4 +1,6 @@
-function [prediction_,peak_loc,PFH]  = plot_predict_processed(varargin)
+function [ prediction_ , peak_loc , PFH , Other_stuff]  = plot_predict_processed(varargin)
+
+%-------------------------------------
 %-------------------------------------
 %-------------------------------------
 % have it display aa montage of  mean/std of tags
@@ -27,6 +29,8 @@ function [prediction_,peak_loc,PFH]  = plot_predict_processed(varargin)
 %-------------------------------------
 %-------------------------------------
 %-------------------------------------
+
+Other_stuff = [];
 
 switch(nargin)
      case(0)    
@@ -123,6 +127,7 @@ settings_.DATA_PATH  =  DP                                          ;
 
 rail_tester   =  proc_file.rail_tester                       ;
 grid_data     = fn_get_grid_data(rail_tester , settings_) ;
+
 FILE_TO_PREDICT = proc_file.test_data.file_with_path(max(find(proc_file.test_data.file_with_path =='\'))+1:end);
 
 end  % switch(nargin)        
@@ -136,10 +141,12 @@ labels = {'1-1','1-2','1-3','1-4','2-1','2-2','2-3','2-4','3-1','3-2','3-3','3-4
 mod_vals_inds = [1,1;1,2;1,3;1,4;2,1;2,2;2,3;2,4;3,1;3,2;3,3;3,4;4,1;4,2;4,3;4,4];
 
 % ----------------------------------------------------
+
 dummy = load(settings_.DATA_PATH) ;
 Block_DATA = dummy.Block_DATA   ;
-%------------------------------------------------------------------------------
-%------------------------------------------------------------------------------
+
+%  ------------------------------------------------------------------------------
+%  ------------------------------------------------------------------------------
 
 switch(length(Block_DATA.Labels_))
     case(2)
@@ -157,12 +164,7 @@ end %switch(length(Block_DATA.Labels_))
 
 
 [slice_options,slice_indices] = get_slice_options(Block_DATA.max_number_of_slices) ;
-
-
 [Slice_index,Thresh_index]  = get_index_value (settings_,Block_DATA,slice_options) ;  %  extract from the learning file
-
-
-
 [mod_val,lower_val,upper_val,~]  =  get_peak_vals_and_plot(grid_data,settings_ ,do_plots(1),x_mult,y_mult,mag_fac );
 
 peak_loc.DV =  grid_data.distance_vector;
@@ -176,9 +178,20 @@ end  %if do_plots(2) ==1
 
 [ ~ , MP_mean,MP_std] =  get_normalised_stack_and_mean_P(lower_val,upper_val,grid_data.data_stack);
 
+
+
 if do_plots(3) ==1
-Plot_single_mode_map(MP_mean,settings_.MM_interp_res,settings_.db_range, FILE_TO_PREDICT(1:end-4),grid_data,x_mult,y_mult,mag_fac)
+Plot_single_mode_map(MP_mean,settings_.MM_interp_res,settings_.db_range, FILE_TO_PREDICT(1:end-4),grid_data,x_mult,y_mult,mag_fac);
 end %if do_plots(3) ==1
+
+%MP_mean
+%settings_.MM_interp_res
+%settings_.db_range
+%FILE_TO_PREDICT(1:end-4)
+%grid_data
+
+%SMM_inf = 
+
 
 if do_plots(4) ==1
 Plot_mean_and_std_of_MM (MP_mean,MP_std,settings_.mode_pairs_to_Use,FILE_TO_PREDICT,labels,x_mult,y_mult,mag_fac)
@@ -292,7 +305,6 @@ Mode_SYM.val        = val       ;
 Mode_SYM.mean_val   = mean_val  ;
 
 if do_plots_ ==1
-
 fig = uifigure('Resize','off','Units','normalized','Position',[ 0.05,0.05,0.195*mag_fac,0.247*mag_fac],'Name', '4/2--2/4 Symmetry');
 fig.Icon = 'ICON2.png';
 symmetry_text   =    ['Symmetry = ', num2str(round(val*10)/10 ),'.']; 
@@ -661,7 +673,6 @@ do_the_mode_map(Block_DATA.mean_tag_modes_{index},Block_DATA.Labels_{index},sett
 end
 end %for index = 1: LL_
 
-
 end %function   display_tag_mode_maps(Block_DATA)
 
 
@@ -960,13 +971,9 @@ end %function Plot_mean_and_std_of_MM (MP_mean,MP_std,settings_.mode_pairs_to_Us
 
 
 
-function Plot_single_mode_map(slice_data,grid_size_to_plot,db_range,filename_ , grid_data,x_mult,y_mult,mag_fac )
+function  Plot_single_mode_map(slice_data,grid_size_to_plot,db_range,filename_ , grid_data,x_mult,y_mult,mag_fac )
 %,mod_val,grid_data,lower_val,upper_val
-
 dv =grid_data.distance_vector;
-
-
-
 
 if grid_size_to_plot > 4
     x = linspace(1,size(slice_data,1),grid_size_to_plot);
@@ -978,13 +985,11 @@ if grid_size_to_plot > 4
     interp_data = interp2([1:size(slice_data,1)],[1:size(slice_data,2)],slice_data,xi,yi);
 else
     interp_data = slice_data;
-    
 end %if grid_size_to_plot > length(options.modes)
-
-
 
 fig = uifigure('Resize','off','Units','normalized','Position',[0.05,0.05,0.25*mag_fac,0.4*mag_fac],'Name', 'Mode Map');
 fig.Icon = 'ICON2.png';
+
 px_LH = 00; py_LH = 0; px_SZ = 470; py_SZ = 470;
 ax_LH = 0; ay_LH = 20; ax_SZ = 450; ay_SZ = 390;
 p1 = uipanel(fig,'Position',[x_mult*px_LH y_mult*py_LH x_mult*px_SZ y_mult*py_SZ]);
@@ -1023,16 +1028,9 @@ a.FontSize = 12*y_mult;
  cb = colorbar(ax);
  cb.Position= [0.86,0.11,0.04,0.7];
  cb.FontSize = 8*y_mult;
+ 
   %ax.XLabel.String = 'Mode #';
   %ax.YLabel.String = 'Mode #';
-
-%keyboard
-%val = 1/slice_data(4,2)/slice_data(2,4);
-%if val>1
-%val = 1/val;
-%end
-
-
 
 end %function Plot_single_mode_map(MP_mean)
 

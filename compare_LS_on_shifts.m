@@ -1,58 +1,503 @@
-%---------------------------------
-%---------------------------------
+function compare_LS_on_shifts(choice)
 
-% compare data path predictions
-% (1) process the data
-% (2) do the data checks (SNR/CAP/dist of peak)
-% (3) run the prediction  
-% 3 (a) build the data structure
+%  Allow plotting of any of the graphs (e.g. mode maps)
+%  ***DONE   plot the SNR values as well as
+%  Make the functions usable for both the windows and the analysis programs
+%- With an extra oputput   [   ,other_stuff]  =  etcetc  
+%- With an extra oputput   [   , ~ ]  =  etcetc as used in windows program   
+%  (1) ***DONE plot_SNR_Raw  
+%  Save ouput into a txt file as a structure to reload
+% Compare_LS_on_shifts(2)
+% Choice = 1 (all) choice = 2 (select)  choice = 3 (load old data)
+do_single_mode_plot = 0 ;
+screen_parameters = get_screen_parameters();
+[proc_options,plot_options,snr_settings,plot_options_O,snr_settings_O,LS_dir,test_dir,default_options]    =    get_all_settings();
+[chosen_LS,chosen_tests]    =   get_the_tests_and_learning_sets(LS_dir,test_dir,choice)                        ;
+do_plots   = [0 0 0 0 0 0 0 0 0 0 0 0 0]                                                                       ;
 
-% (4) produce a table with each file and the prediction from each DB + the
-% data check info -  do prediction whether passedor not
-% line 1449  of the main program :::
-% rejection_indicators   =  plot_SNR_Raw(app.test_data,[0,0,0,0],snr_settings_O,app.base_width,app.base_height,app.mag_fac);
+% [SNR_THRESH , SNR_Boundaries, cap_min,dist_pass_val,dist_pass_val_upper]   =    get_pass_fail_boundaries(plot_options,snr_settings) ;
+[SNR__,cap_min,DIST__,SYM__]                                                 =    get_pass_fail_boundaries(plot_options,snr_settings) ;
 
-% LF = [pwd,settings_.Data_path_options{settings_.Data_path_choice}];
-% proc_file.rail_tester  =  app.rail_tester;
-% proc_file.test_data    =  app.test_data  ;
-%  [~,PL_inf,~] = plot_predict_processed(proc_file, settings_ ,do_plots, LF,app.base_width,app.base_height,app.mag_fac);
+%  Need the assymetry threhold + mean value to cause failure  (e.g. < 0.3(ratio) && >  1 (mean))  
+group_conditions = define_the_prediction_conditions(SNR__ , cap_min , DIST__ , SYM__  ,chosen_LS , chosen_tests,test_dir) ;
 
-%---------------------------------
-%---------------------------------
 
-function compare_LS_on_shifts(choice )
-% choice = 1 (all) choice = 2 (select)
-% do_plots -  add options for plotting after
+for index = 1:length(chosen_tests)
+[test_conditions{index} , current_test,test_data  ]  =  get_Individual_test_data_and_conditions(index,chosen_tests,test_dir);
+disp(current_test)
 
-LS_dir     =  'P:\GITHUBS\contact_wire_test\Learning_blocks'       ;
-test_dir   =  'C:\Users\Dev\REPORT_data\SHIFT REPORTS\slab_data'   ; 
-settings_dir  =   'P:\GITHUBS\contact_wire_test\SETTINGS_FILES'    ;
-settings_dir2 =    'C:\Users\Dev\AppData\Roaming\SETTINGS_FILES'   ; 
+[proc_file,rejection_indicators,all_bars] = process_data_and_get_rejection_indicators(snr_settings_O,test_data,proc_options,default_options,screen_parameters);
 
-default_options_fn =   'default_options3.mat'                     ;
-proc_options_fn    =   'proc_options2.mat'                        ; 
-snr_settings_fn    =   'snr_settings2.mat'                        ;
-plot_options_fn    =   'plot_options2.mat'                        ; 
 
+temp_LS = [LS_dir,'\',chosen_LS{1}];
+
+if do_single_mode_plot ==1
+% get the values
+% MP_mean,settings_.MM_interp_res , settings_.db_range , FILE_TO_PREDICT(1:end-4) , grid_data , x_mult , y_mult , mag_fac ;
+% slice_data , grid_size_to_plot , db_range , filename_ , grid_data , x_mult , y_mult , mag_fac 
+
+
+grid_data          =  fn_get_grid_data(proc_file.rail_tester , plot_options_O);
+[~,lower_val,upper_val,~]  =  get_peak_vals_and_plot(grid_data , plot_options_O ,0,1,1,1 );
+[ ~ , MP_mean,~] =  get_normalised_stack_and_mean_P(lower_val,upper_val,grid_data.data_stack);
+
+SMM_vals{index}.slice_data         =  MP_mean ; 
+SMM_vals{index}.grid_size_to_plot  =  plot_options_O.MM_interp_res   ;
+SMM_vals{index}.db_range           =  plot_options_O.db_range        ;
+SMM_vals{index}.filename_          =  current_test                   ;
+SMM_vals{index}.grid_data          =  grid_data;                       
+SMM_vals{index}.x_mult             =  1; 
+SMM_vals{index}.y_mult             =  1;
+SMM_vals{index}.mag_fac            =  1;
+end %if do_mode_plot ==1
+
+
+[pred_temp,PL_inf,~,~] = plot_predict_processed(proc_file, plot_options_O ,do_plots, temp_LS, screen_parameters.base_width,screen_parameters.base_height,screen_parameters.mag_fac);  
+
+cap_result= test_data.raw_data.cap_test_result.z;
+
+indicator_results{index} = get_indicators(index,cap_result,rejection_indicators,PL_inf ,SNR__ , cap_min , DIST__ , SYM__ ,pred_temp,all_bars);
+
+pred_results = [];
+
+for index2 = 1:length(chosen_LS) % go through the learning sets   
+current_LS = [LS_dir,'\',chosen_LS{index2}];
+
+[prediction_temp,~,~,~] = plot_predict_processed( proc_file , plot_options_O , do_plots , current_LS , screen_parameters.base_width , screen_parameters.base_height , screen_parameters.mag_fac )  ;  
+
+pred_results{index2} = prediction_temp;
+end % for index2 = 1:length(chosen_LS)    
+all_predictions{index} = pred_results;
+end % for index = 1:length(chosen_tests)
+
+plot_SNR_indicators(indicator_results)
+
+if do_single_mode_plot
+plot_SMM(SMM_vals)
+end
+
+Results_struct.group_conditions    = group_conditions  ; 
+Results_struct.test_conditions     = test_conditions   ;
+Results_struct.indicator_results   = indicator_results ;
+Results_struct.all_predictions     = all_predictions   ; 
+tabulate_the_results(Results_struct)
+
+end % function compare_LS_on_shifts(   )
+%---------------------------------------------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------------------------------------------
+
+function plot_SMM(SMM_vals)
+
+if length(SMM_vals) < 9
+SP_inds = [3,3];
+elseif length(SMM_vals) >= 10 &&  length(SMM_vals) < 17
+SP_inds = [4,4];
+elseif length(SMM_vals) >= 17 && length(SMM_vals) <26
+SP_inds = [5,5];
+elseif length(SMM_vals) >= 26
+SP_inds = [7,6];
+end %if length(SMM_vals) < 9
+ 
+
+for index = 1: length(SMM_vals) 
+sph = subplot(SP_inds(1),SP_inds(2),index);
+Plot_single_mode_map(SMM_vals{index}.slice_data,SMM_vals{index}.grid_size_to_plot,SMM_vals{index}.db_range,SMM_vals{index}.filename_ , SMM_vals{index}.grid_data,SMM_vals{index}.x_mult,SMM_vals{index}.y_mult,SMM_vals{index}.mag_fac,sph)
+end %for index = 1 
+
+end %function plot_SMM(SMM_vals)
+
+
+function plot_SNR_indicators(indicator_results)
+
+for index = 1: length(indicator_results)
+snr_bars(index,:) = indicator_results{index}.SNR_vals_float;
+if index <10
+y_labels{index} = ['Test ',num2str(index),' '];
+else
+y_labels{index} = ['Test ',num2str(index)]; 
+end %if index <10
+end %for index = 1: length(indicator_results)
+
+for index2 = 1:12
+if index <10
+x_labels{index2} = ['T#',num2str(index2),' '];
+else
+x_labels{index2} = ['T#',num2str(index2)]; 
+end %if index <10
+
+end %for index2 = 1:12
+
+
+snr_bars(snr_bars<0) = NaN;
+HM_Handle = heatmap(round(snr_bars));
+HM_Handle.ColorLimits = [-1 4];
+HM_Handle.Colormap = jet;
+
+HM_Handle.YDisplayLabels = y_labels;
+HM_Handle.XDisplayLabels = x_labels;
+
+HM_Handle.Title = 'Transducer SNR Values';
+
+end %for index = 1: length(indicator_results)
+
+
+function tabulate_the_results(Results_struct)
+display_group_conditions(Results_struct.group_conditions)
+display_test_conditions(Results_struct.test_conditions)
+display_results_and_predictions(Results_struct.indicator_results,Results_struct.all_predictions,Results_struct.group_conditions)
+end %function tabulate_the_results(Results_struct)
+
+
+function display_results_and_predictions(indicator_results,all_predictions,group_conditions)
+% first    
+fprintf('---------------------------------------------------------------------------------------------------------------------\n')
+fprintf('----------------PRE TEST CHECKS=-------------------------------------------------------------------------------------\n')
+fprintf('---------------------------------------------------------------------------------------------------------------------\n')
+fprintf('Test#\tCap\t\t\tSNR\t\t\t\tDist\t\tSYM\t\t\t\tSNR Vals\n')
+
+for index = 1:length(indicator_results)
+fprintf(['(',num2str(index),'):\t'])
+fprintf([make_X_long(indicator_results{index}.Cap_res,10),'\t'])
+fprintf([make_X_long(indicator_results{index}.SNR_res,15),'\t'])
+fprintf([make_X_long(indicator_results{index}.dist_res,10),'\t'])
+fprintf([make_X_long(indicator_results{index}.sym_res,15),'\t'])
+fprintf([make_X_long(indicator_results{index}.SNR_vals,20),'\n'])
+end %for index = 1:length(indicator_results)
+
+%keyboard
+% group_conditions
+
+fprintf('---------------------------------------------------------------------------------------------------------------------\n')
+fprintf('----------------PREDICTIONS------------------------------------------------------------------------------------------\n')
+fprintf('---------------------------------------------------------------------------------------------------------------------\n')
+%group_conditions.chosen_LS
+fprintf('Test#\tValid\t\t\t\t')
+for index2 = 1:length(group_conditions.chosen_LS)
+%fprintf([ '(LS',num2str(index2),')',group_conditions.chosen_LS{index2},'\t\t'])
+fprintf([ '(LS',num2str(index2),')','\t\t\t'])
+end %for index2 = 1:length(group_conditions.chosen_LS)
+
+
+fprintf('\n')
+for index = 1:length(indicator_results)
+fprintf(['(',num2str(index),'):\t'])
+
+if indicator_results{index}.Cap_bin + indicator_results{index}.SNR_bin+ indicator_results{index}.dist_bin+  indicator_results{index}.sym_bin   ==4
+valid_tag = 'VALID';
+else
+valid_tag = 'INVALID';
+end
+
+
+if indicator_results{index}.Cap_bin  ==0
+valid_tag = [valid_tag,'(C)'];
+end %if indicator_results{index}.Cap_bin  ==0
+if indicator_results{index}.SNR_bin  ==0
+valid_tag = [valid_tag,'(S)'];
+end %if indicator_results{index}.SNR_bin  ==0
+if indicator_results{index}.dist_bin ==0
+valid_tag = [valid_tag,'(D)'];
+end %if indicator_results{index}.dist_bin ==0
+if indicator_results{index}.sym_bin == 0
+valid_tag = [valid_tag,'(Sy)'];
+end %if indicator_results{index}.dist_bin ==0
+
+fprintf([make_X_long(valid_tag,15),'\t\t'])
+
+for index2 = 1:length(group_conditions.chosen_LS)
+fprintf( make_X_long(all_predictions{index}{index2}.Labels{all_predictions{index}{index2}.pred_value},16),'\t\t\t\t\t\t\t');
+end %for index2 = 1:length(indicator_results)
+fprintf('\n')
+
+end %for index = 1:length(indicator_results)
+fprintf('---------------------------------------------------------------------------------------------------------------------\n')
+
+end %function display_results_and_predictions(indicator_results,all_predictions)
+
+function new_str = make_X_long(string_, X)
+if X > length(string_)
+new_str =    [string_,repmat(' ',1,X-length(string_))];
+else
+%disp(['str too long ',num2str(length(string_))])    
+new_str = string_;
+end
+end %function make_X_long (string_, X)
+
+
+function display_test_conditions(test_conditions)
+fprintf('---------------------------------------------------------------------------------------------------------------------\n')
+fprintf('----------------TEST NAMES\\LOCATIONS--------------------------------------------------------------------------------\n')
+fprintf('---------------------------------------------------------------------------------------------------------------------\n')
+fprintf(['Test#\tTest name\t\t\t\t\t\t#Instr\t\tNS name\n'])
+fprintf('---------------------------------------------------------------------------------------------------------------------\n')
+for index = 1 : length(test_conditions)
+fprintf(['(',num2str(index),'):\t'])
+fprintf([make_X_long(test_conditions{index}.test_name(1:end-4),30)    , '\t'      ])
+fprintf([make_X_long(test_conditions{index}.instr_serial_number,10)   , '\t'     ])
+fprintf([make_X_long(test_conditions{index}.NS_name(1:end-1),26)      , '\n'     ])
+end %for index = 1 : length(test_conditions)
+
+fprintf('---------------------------------------------------------------------------------------------------------------------\n')
+fprintf('----------------TEST INFORMATION-------------------------------------------------------------------------------------\n')
+fprintf('---------------------------------------------------------------------------------------------------------------------\n')
+fprintf(['Test#\tClamp Location\tArm?\tTrack ID\tDate\t\t\tTime\t\tTester\t\t\ttag\n'])
+fprintf('---------------------------------------------------------------------------------------------------------------------\n')
+for index = 1 : length(test_conditions)
+fprintf(['(',num2str(index),'):\t'])
+fprintf([make_X_long(test_conditions{index}.Clamp_L,15)              , '\t'     ])
+fprintf([make_X_long(test_conditions{index}.arm_present,5)          , '\t'     ])
+fprintf([make_X_long(test_conditions{index}.Track_id,10)             , '\t'     ])
+DateString_temp = datestr(test_conditions{index}.Test_DT );
+fprintf([make_X_long(DateString_temp(1:strfind(DateString_temp,' ')-1),12) ,'\t'])
+fprintf([make_X_long(DateString_temp(strfind(DateString_temp,' ')+1:end),10),'\t'])
+fprintf([make_X_long(test_conditions{index}.Tester,12), '\t'])
+fprintf([make_X_long(test_conditions{index}.test_num,10), '\n'])
+end %for index = 1 : length(test_conditions)
+
+end %function display_test_conditions(test_conditions)
+
+
+function display_group_conditions(group_conditions)
+fprintf('\n\n\n---------------------------------------------------------------------------------------------------------------------\n')
+fprintf('-----------------GROUP SETTINGS--------------------------------------------------------------------------------------\n')
+fprintf('---------------------------------------------------------------------------------------------------------------------\n')
+fprintf(['Minimum Capacitance val:    ',num2str(group_conditions.cap_min),'\n'])
+fprintf(['Distance pass val(min) :    ',num2str(group_conditions.dist_pass_val*1000),'mm\n'])
+fprintf(['Distance pass val(max) :    ',num2str(group_conditions.dist_pass_val_upper*1000),'mm\n'])
+fprintf(['SNR Threshold          :    ',group_conditions.SNR_THRESH,'\n'])
+fprintf(['sym mean threshold(min) :   ',num2str(group_conditions.sym_mean_val_min),'\n'])
+fprintf(['sym val  threshold(min) :   ',num2str(group_conditions.sym_min_val),'\n'])
+for index = 1:length(group_conditions.chosen_LS)
+fprintf(['Learning set(',num2str(index),')        :    ' ,group_conditions.chosen_LS{index},'\n'])
+end %for index = 1:length(group_conditions.chosen_LS)
+fprintf([ num2str(length(group_conditions.chosen_tests)), ' tests from: \n',strrep(group_conditions.test_dir,'\','\\'), '\n'])
+end %function display_group_conditions(group_conditions)
+
+function indicators = get_indicators(index,cap_result,rejection_indicators,PL_inf,SNR__ , cap_min , DIST__ , SYM__ , pred_temp,all_bars )
+dist_pass_val       =  DIST__.dist_pass_val         ;
+dist_pass_val_upper =  DIST__.dist_pass_val_upper   ;
+% keyboard
+
+%----------------------------------------------------
+% Cap_res
+b_temp = log10((cap_result(1:12,1)./cap_result(1:12,end)))';
+cap_fail_chns = find(b_temp<cap_min );
+if isempty(cap_fail_chns)
+Cap_res = 'PASS';
+Cap_bin = 1;
+else
+Cap_res = ['FAIL(',num2str( length(cap_fail_chns) ),')'];    
+Cap_bin = 0;
+end %if isempty(cap_fail_chns)
+cap_thresh = num2str(cap_min);
+indicators.Cap_res = Cap_res;
+indicators.Cap_bin = Cap_bin;
+
+%----------------------------------------------------
+%----------------------------------------------------
+% SNR_res
+[T_num]= find(rejection_indicators(2,:)==1);
+if isempty(T_num)
+SNR_res = 'PASS';
+SNR_bin = 1;
+else    
+SNR_res = ['FAIL(', num2str(length(T_num)),')'];
+SNR_bin = 0;
+end %if isempty(T_num)
+
+vals_ = all_bars(2,:);
+SNR_vals=[];
+
+for index_ = 1:length(vals_)
+if index_ ~= length(vals_)
+SNR_vals = [SNR_vals,num2str(round(vals_(index_)*10)/10),'|'];
+else
+SNR_vals = [SNR_vals,num2str(round(vals_(index_)*10)/10)];    
+end %if index_ ~= length(vals_)
+end %for index_ = 1:length(vals_)
+SNR_vals = ['[',SNR_vals ,']' ];
+
+
+%----------------------------------------------------
+%----------------------------------------------------
+% DIST
+% now do the distance value--- need the distance vector and the boundaries
+% dist_pass_val, dist_pass_val_upper,PL_inf
+peak_dist = PL_inf.DV(PL_inf.mod_val);
+if peak_dist > dist_pass_val && peak_dist < dist_pass_val_upper
+dist_res = 'PASS';
+dist_bin = 1;
+elseif peak_dist < dist_pass_val
+dist_res = 'FAIL(near)';
+dist_bin = 0;
+elseif peak_dist > dist_pass_val_upper
+dist_res = 'FAIL(far)';
+dist_bin = 0;
+end
+%----------------------------------------------------
+%----------------------------------------------------
+%SYMMETRY
+if pred_temp.Mode_SYM.val < SYM__. MP_sym_min_val && pred_temp.Mode_SYM.mean_val > SYM__.MP_sym_mean_val_min
+sym_res = 'FAIL';
+sym_bin = 0;
+else
+sym_res = 'PASS';
+sym_bin = 1;
+end
+addtxt = ['(',num2str( round(10*pred_temp.Mode_SYM.val)/10 ),'S',',',num2str(round(10*pred_temp.Mode_SYM.mean_val)/10),'M)'];
+sym_res = [sym_res,addtxt];
+%----------------------------------------------------
+%----------------------------------------------------
+
+indicators.Cap_res   = Cap_res;
+indicators.Cap_bin   = Cap_bin;
+indicators.SNR_res   = SNR_res;
+indicators.SNR_bin   = SNR_bin;
+indicators.SNR_vals  = SNR_vals;
+indicators.SNR_vals_float =  vals_;
+indicators.peak_dist = peak_dist;
+indicators.dist_res  = dist_res;
+indicators.dist_bin  = dist_bin;
+indicators.sym_res   = sym_res;
+indicators.sym_bin   = sym_bin;
+
+end %function prediction_structure = get_indicators(index,cap_result,cap_min,rejection_indicators);conditions_(index)
+
+function [proc_file,rejection_indicators,all_bars] = process_data_and_get_rejection_indicators(snr_settings_O,test_data,proc_options,default_options,screen_parameters)
+base_width  =  screen_parameters.base_width        ; 
+base_height =  screen_parameters.base_height       ; 
+mag_fac     =  screen_parameters.mag_fac          ;
+
+[rail_tester , ~ ]       =   create_rail_tester_structure(default_options, test_data, proc_options)             ;
+
+rail_tester              =   fn_process_rail_data(rail_tester, proc_options)                                    ;
+
+[rejection_indicators,Other_stuff]     =   plot_SNR_Raw(test_data,[0,0,0,0],snr_settings_O,base_width,base_height,mag_fac);
+all_bars = Other_stuff.all_bars;
+
+proc_file.rail_tester    =   rail_tester                                                                        ;
+proc_file.test_data      =   test_data;   
+end %function [proc_file,rejection_indicators] = process_data_and_get_rejection_indicators(test_data,proc_options,default_options,screen_parameters)
+
+function screen_parameters = get_screen_parameters()
+screen_parameters.base_width                = 1920                  ; 
+screen_parameters.base_height               = 1080                  ; 
+screen_parameters.mag_fac                   =  1                    ;
+end %function screen_parameters = get_screen_parameters()
+
+function  [conditions_,current_test,test_data  ]  =  get_Individual_test_data_and_conditions(index,chosen_tests,test_dir)
+current_test = chosen_tests{index};
+
+conditions_.test_name = current_test;
+dummy = load([test_dir,'\',current_test]) ; 
+test_data = dummy.test_data  ;
+
+conditions_.instr_serial_number  =   test_data.raw_data.serial_number               ;
+conditions_.NS_name              =   test_data.test_parameters.LU_Label_text        ;
+conditions_.Clamp_L              =   test_data.test_parameters.clamp_location       ;
+conditions_.arm_present          =   test_data.test_parameters.arm_present          ;  
+conditions_.Track_id             =   test_data.test_parameters.Track_id             ;
+conditions_.Test_DT              =   datetime(test_data.date_time)                  ;
+conditions_.Tester               =   test_data.tester_details.Name                  ; 
+inds                             =   find(current_test == '$')                      ;
+conditions_.test_num             =   current_test(inds(1)+1:inds(2)-1)              ;
+
+end %function  [conditions_, current_test,test_data  ]    get_Indidual_test_data_and_conditions(index,chosen_tests )
+
+
+
+%function [SNR_THRESH,SNR_Boundaries,cap_min,dist_pass_val,dist_pass_val_upper]    =    get_pass_fail_boundaries(plot_options,snr_settings)
+function [SNR__,cap_min,DIST__,SYM__]    =    get_pass_fail_boundaries(plot_options,snr_settings)
+
+
+%  Need the SNR threshold to cause failure at the top (Need he actual SNR vals)
+SNR_Boundaries =   snr_settings.SNR_boundaries_options(snr_settings.SNR_boundaries) ;  % which on is the key boudary? 1,2 or 3? 
+
+
+
+%  Need the Cap threshold to cause failure at the top --  which one ofthese
+%  two::
+cap_min           =  plot_options.cap_thresh_options(plot_options.cap_thresh_index);
+%  Need the dist threshold to cause failure at the top 
+dist_pass_val = plot_options.dist_pass_options(plot_options.dist_pass_index)/1000;
+dist_pass_val_upper =  plot_options.dist_pass_val_upper/1000;
+
+SNR_THRESH                              = num2str(snr_settings.SNR_boundaries_options(snr_settings.SNR_boundaries(1)));
+
+MP_sym_mean_val_min =  plot_options.MP_mean_symmetry_options(plot_options.MP_mean_symmetry_choice); % if less than this flag
+MP_sym_min_val      =   plot_options.symmetry_options(plot_options.symmetry_choice);                % if less than this flag 
+
+SNR__.SNR_THRESH             = SNR_THRESH           ;
+SNR__.SNR_Boundaries         = SNR_Boundaries       ;
+DIST__.dist_pass_val         = dist_pass_val        ;
+DIST__.dist_pass_val_upper   = dist_pass_val_upper  ;
+SYM__.MP_sym_mean_val_min    = MP_sym_mean_val_min  ;
+SYM__.MP_sym_min_val         = MP_sym_min_val       ;
+
+
+
+
+
+end %function [SNR_THRESH,SNR_Boundaries,cap_min,dist_pass_val,dist_pass_val_upper]    =    get_pass_fail_boundaries(plot_options,snr_settings)
+
+
+
+
+
+function [proc_options,plot_options,snr_settings,plot_options_O,snr_settings_O,LS_dir,test_dir,default_options]    =    get_all_settings()
+LS_dir        =  [pwd,'\Learning_blocks' ];
+test_dir      =  [getenv('systemDrive'),getenv('homePath'),'\REPORT_data\SHIFT REPORTS\slab_data']  ; 
+settings_dir  =  [pwd,'\SETTINGS_FILES']                                                            ;
+settings_dir2 =  [getenv('APPDATA'),'\SETTINGS_FILES']                                              ; 
+
+default_options_fn =   'default_options3.mat'                                                       ;
+proc_options_fn    =   'proc_options2.mat'                                                          ; 
+snr_settings_fn    =   'snr_settings2.mat'                                                          ;
+plot_options_fn    =   'plot_options3.mat'                                                          ; 
 
 default_options = load([settings_dir,'\',default_options_fn]);
 proc_options    = load([settings_dir2,'\',proc_options_fn]);
 snr_settings    = load([settings_dir2,'\',snr_settings_fn]);
 plot_options    = load([settings_dir2,'\',plot_options_fn]);  
 
-
 plot_options_O  = convert_plot_options2_old_strct(plot_options);
-settings_              = plot_options_O;
 snr_settings_O  = convert_to_snr_struct(snr_settings);
-do_plots   = [0 0 0 0 0 0 0 0 0 0 0 0 0];
 
+
+
+end %function [plot_options_O,snr_settings_O]    =    get_all_settings()
+
+function [group_conditions] = define_the_prediction_conditions(SNR__ , cap_min , DIST__ , SYM__  , chosen_LS,chosen_tests,test_dir)
+
+SNR_THRESH          = SNR__.SNR_THRESH             ;
+SNR_Boundaries      = SNR__.SNR_Boundaries         ;
+dist_pass_val       = DIST__.dist_pass_val         ;
+dist_pass_val_upper = DIST__.dist_pass_val_upper   ;
+MP_sym_mean_val_min = SYM__.MP_sym_mean_val_min    ;
+MP_sym_min_val      = SYM__.MP_sym_min_val         ;
+
+group_conditions = [];
+group_conditions.SNR_THRESH             = SNR_THRESH  ;
+group_conditions.cap_min                = cap_min     ;
+group_conditions.dist_pass_val          = dist_pass_val ;
+group_conditions.dist_pass_val_upper    = dist_pass_val_upper;
+group_conditions.sym_mean_val_min       =   MP_sym_mean_val_min;   
+group_conditions.sym_min_val            = MP_sym_min_val;  
+group_conditions.chosen_LS              = chosen_LS ;
+group_conditions.chosen_tests           = chosen_tests;
+group_conditions.test_dir               = test_dir;
+end %function [test_group_conditions]   = define_the_prediction_conditions(SNR_THRESH,cap_min,dist_past_m, chosen_LS,chosen_tests);
+
+
+function [chosen_LS,chosen_tests]    =   get_the_tests_and_learning_sets(LS_dir,test_dir,choice)
 dum = dir(LS_dir); all_names = {dum.name}; isdirect = [dum.isdir];
 all_LS = {all_names{find(isdirect == 0)}};
 dum = dir(test_dir);all_names = {dum.name}; isdirect = [dum.isdir];
 all_tests = {all_names{find(isdirect == 0)}};
-base_width                = 1920                  ; 
-base_height               = 1080                  ; 
-mag_fac                   =  1                    ;
 
 switch(choice)
     case(1)    
@@ -66,171 +511,167 @@ chosen_inds = listdlg('PromptString',{'Select files to analyse'}, 'ListString',a
 chosen_tests = all_tests(chosen_inds);
 end  %switch(choice)
 
-% Keyboard
-% Table_data
-% RESULTS_STRUCTURE = []; 
-% Structure of the results ?
-% predict all the learning sets
 
-% ----------
-% At start::
-% ----------
-% Put in the thresholds for the rejection indicators
-% define here
-%
-% SNR Boundaries ---- 
-% [num2str(snr_settings.SNR_boundaries_options(snr_settings.SNR_boundaries(1))),',',num2str(snr_settings.SNR_boundaries_options(snr_settings.SNR_boundaries(2))),',',num2str(snr_settings.SNR_boundaries_options(snr_settings.SNR_boundaries(3)))]
-% Cap Boundaries 
-% num2str(cap_min)
-%  Dist boundaries
-% dist_max = num2str(plot_options.dist_pass_val_upper /1000);   
-% dist_min = num2str(plot_options.dist_pass_options(plot_options.dist_pass_index)/1000);
-%
-% Define the Learning sets
-% LS1 = 
-% LS2 = 
-% etc
-% ----------
-% ----------
-% TABLE
-% ----------
-% Identifiers::
-% ----------
-% Test Label / Date / Location / Sublocation / Tester
-% Clamp details
-% Arm (yes/no) / wire size (120/107) / Loc_on_NS (entry/exit)
-
-% Rejection criteria::
-% ----------
-% Capacitance -- Pass/Fail(Result) / SNR -- Pass/Fail(Result) / Distance of peak -- Pass/Fail(Result)
-% Result::
-% ----------
-% For each data set
-% LS_1, LS_2    etc ...
-% AI / DFM / LL  --  Text for each
-% ----------
-
-
-%  Need the SNR threshold to cause failure at the top (Need he actual SNR vals)
-SNR_Boundaries =   snr_settings.SNR_boundaries_options(snr_settings.SNR_boundaries) ;  % which on is the key boudary? 1,2 or 3? 
-
-%  Need the Cap threshold to cause failure at the top --  which one ofthese
-%  two::
-cap_thresh_chosen =  plot_options.cap_thresh_options(plot_options.cap_thresh_index);
-cap_min  = plot_options.cap_thresh_options(plot_options.cap_thresh_index);
-cap_thresh_lower  = plot_options.cap_thresh_lower;
-
-
-%  Need the dist threshold to cause failure at the top 
-
-dist_past_m = plot_options.dist_pass_options(plot_options.dist_pass_index);
-%  Need the assymetry threhold + mean value to cause failure  (e.g. < 0.3(ratio) && >  1 (mean))  
-%----------------------------------------------------------------------------------------------------------------------------------------------------
-%------------------------------
+end %function [chosen_LS,chosen_inds]    =   get_the_tests_and_learning_sets(LS_dir,test_dir);
 
 
 
-for index = 1:length(chosen_tests)
-current_test = chosen_tests{index};
-load([test_dir,'\',current_test]) ;
 
-NS_name{index} =   test_data.test_parameters.LU_Label_text        ;
-Clamp_L        =   test_data.test_parameters.clamp_location       ;
-arm_present    =   test_data.test_parameters.arm_present          ;  
-Track_id       =   test_data.test_parameters.Track_id             ;
-Test_DT        =   datetime(test_data.date_time)                  ;
-Tester         =   test_data.tester_details.Name                  ; 
-inds = find(current_test == '$')                                  ;
-test_num       =     current_test(inds(1)+1:inds(2)-1)                ;
+function  [mod_val,lower_val,upper_val,actual_peak_val]  =  get_peak_vals_and_plot(grid_data,settings_ , do_plot,x_mult,y_mult,mag_fac)
+%--------------------------------------------------------------------------------------------
+% function [mod_val  , lower_val  ,  upper_val  ,  actual_peak_val]  =  get_peak_values( )
+%--------------------------------------------------------------------------------------------
 
-% now process the data
-[rail_tester , ~ ]     =   create_rail_tester_structure(default_options, test_data, proc_options)           ;
-rail_tester           =  fn_process_rail_data(rail_tester, proc_options)                                   ;
+initial_thresh       =   settings_.initial_thresh           ;
+thresh_val           =   settings_.thresh_val               ;
+num_slices           =   settings_.num_slices               ;
+window_start         =   settings_.window_start             ;    
+mode_map             =   grid_data.data_stack               ;
+mm33                 =   squeeze(mode_map(3,3,:))           ;
+dv                   =   grid_data.distance_vector          ;  
+start_val            =   min(find(dv>window_start)) + min(find(mm33(find(dv>window_start))  >   max(mm33(find(dv>window_start)))*initial_thresh))-1;
 
-rejection_indicators   =   plot_SNR_Raw(test_data,[0,0,0,0],snr_settings_O,base_width,base_height,mag_fac)  ;
+mm33_s = mm33(start_val:start_val+200);
+mm33_s_diff = diff(mm33_s);
+dum_ = find(mm33_s_diff>0);
+DV2 = dum_(find(diff(dum_)>1));
+actual_peak_val = DV2(1)+ start_val;
+actual_max_val = mm33(actual_peak_val);
+target_val=  actual_max_val*thresh_val;
 
-proc_file.rail_tester    = rail_tester       ;
-proc_file.test_data      = test_data         ; 
+temp_val = actual_peak_val;
+peak_found =0;
+while peak_found ==0
+temp_val = temp_val -1;
+if mm33(temp_val) <= target_val
+   mod_val = temp_val;
+   peak_found =1;
+end    
 
-% need the key settings in there
-% Rejection indicators to check  -  capacitance  ///   SNR    //   Distance of peak //    
-% If any fail  then give details in Brackets   --  so  PASS  or for peak find its PASS(Value) or FAIL(Value)
+end % while peak_not_found ==1
 
-% FAIL (details) 
-% need the  --   capacity threshold // SNR threshold and the // Peak find
-% threshold   in the table for comparison 
-% also give options to plot some of the plots  (mode map)    
-% do it all here first
-% Cap_res
+lower_val     =   mod_val-floor(num_slices/2);
+upper_val     =   mod_val+floor(num_slices/2);
 
-%----------------------------------------------------
-% Cap_res
+if do_plot ==1
+fig = uifigure('Resize','off','Units','normalized','Position',[0.05,0.05,0.29*mag_fac,0.435*mag_fac],'Name', 'PEAK LOCATION' );
+fig.Icon = 'ICON2.png';
+p1 = uipanel(fig,'Position',[x_mult*27 y_mult*22 x_mult*500 y_mult*430]);
+p1.BorderColor = [0.94,0.94,0.94];
+
+ax = uiaxes(p1,'Position',[x_mult*0  y_mult*0 x_mult*500 y_mult*430]);
+%%ax.XGrid  = 'off' ;
+%ax.YGrid  = 'off' ;
+ax.Box    = 'on' ;
+
+plot(ax,dv,mm33)
+hold(ax,'on')
+plot(ax,dv(actual_peak_val),mm33(actual_peak_val),'g.','markersize',10)
+plot(ax,dv(mod_val),mm33(mod_val),'rs','markersize',10)
+plot(ax,dv(lower_val),mm33(lower_val),'r.','markersize',10)
+plot(ax,dv(upper_val),mm33(upper_val),'r.','markersize',10)
+ax.XLim =[0 round(max(dv))];
+ax.YLim = [0 1.2*max( mm33(find(dv>0)))];
+ax.XLabel.String = 'Dist (m)';
+ax.YLabel.String = 'M33 Amplitude';
+ax.XLabel.FontSize = y_mult*10;
+ax.YLabel.FontSize = y_mult*10;
+plot(ax,[window_start window_start], [ax.YLim(1) ax.YLim(2)], 'r:')
+plot(ax,[ax.XLim(1) ax.XLim(2)], [max(mm33(find(dv>window_start)))*initial_thresh max(mm33(find(dv>window_start)))*initial_thresh], 'b:')
+leg_ =legend(ax,{'M33','Peak','Mode centre val', 'av start','av end','Xgate','Ygate'});
+leg_.FontSize = y_mult*9;
+ax.Title.String = (['Distance from instrument (for mode map): ',num2str(round(1000*dv(mod_val))), 'mm.']);
+ax.Title.FontSize = y_mult*15;
+end % if do_plot ==1
+end % function [mod_val  , lower_val  ,  upper_val  ,  actual_peak_val]  =  get_peak_values(dv,mm33,initial_thresh,thresh_val,num_slices)
 
 
-cap_result= test_data.raw_data.cap_test_result.z;
-b_temp = log10((cap_result(1:12,1)./cap_result(1:12,end)))';
-cap_fail_chns = find(b_temp<cap_min );
+function [ MP_stack,MP_mean,MP_std ] = get_normalised_stack_and_mean_P(lower_val,upper_val,mode_map)    
+MP_stack = zeros(4,4,upper_val-lower_val);
+count = 0;
+for index = lower_val:upper_val
+count = count + 1;
+temp_MM =mode_map(:,:,index);
+MP_stack(:,:,count) = temp_MM;
+MP_stack(:,:,count) = temp_MM/ mean(mean(temp_MM));
+end  % for index = lower_val:upper_val
+MP_mean = mean(MP_stack,3)  ;
+
+MP_std  =  std(MP_stack,[],3)  ;
+end %function [MP_stack,MP_mean] = get_normalised_stack_and_mean(lower_val,upper_val,mode_map)
 
 
-%   need plot_SNR_Raw t output a structure with rejection indicators AND all
-%  bars to extract the  exact SNR  values 
-% ALL_bars(2,:)  is  the SNR vals/channel
 
-%----------------------------------------------------
-----------------------------------------------------------------------------------------------------------------------
 
-keyboard
 
-if isempty(cap_fail_chns)
-Cap_res = 'PASS';
+function  Plot_single_mode_map(slice_data,grid_size_to_plot,db_range,filename_ , grid_data,x_mult,y_mult,mag_fac,sph )
+%,mod_val,grid_data,lower_val,upper_val
+
+axis(sph)
+dv =grid_data.distance_vector;
+
+
+
+if grid_size_to_plot > 4
+    x = linspace(1,size(slice_data,1),grid_size_to_plot);
+    y = linspace(1,size(slice_data,2),grid_size_to_plot);
+     %x = linspace(1,4,grid_size_to_plot);
+    %y = linspace(1,4,grid_size_to_plot);
+     
+    [xi, yi] = meshgrid(x, y);
+    interp_data = interp2([1:size(slice_data,1)],[1:size(slice_data,2)],slice_data,xi,yi);
 else
-Cap_res = ['FAIL(',num2str(cap_fail_chns),')'];    
-end %if isempty(cap_fail_chns)
-cap_thresh = num2str(cap_min);
+    interp_data = slice_data;
+end %if grid_size_to_plot > length(options.modes)
 
-%----------------------------------------------------
-%----------------------------------------------------
-% SNR_res
-[T_num]= find(rejection_indicators(2,:)==1);
-if isempty(T_num)
-SNR_res = 'PASS';
-else    
-SNR_res = ['FAIL(',num2str(T_num),')'];
-end %if isempty(T_num)
-SNR_THRESH = num2str(snr_settings.SNR_boundaries_options(snr_settings.SNR_boundaries(1)));
-%----------------------------------------------------
-%----------------------------------------------------
-
-% now get everything except the prediction and peak find value 
-
-for index2 = 1:length(chosen_LS) % go through the learning sets   
-current_LS = ['P:\GITHUBS\contact_wire_test\Learning_blocks\',chosen_LS{index2}];
-
-%LS_Label_temp
+%fig = uifigure('Resize','off','Units','normalized','Position',[0.05,0.05,0.25*mag_fac,0.4*mag_fac],'Name', 'Mode Map');
+%fig.Icon = 'ICON2.png';
 
 
+%px_LH = 00; py_LH = 0; px_SZ = 470; py_SZ = 470;
+%ax_LH = 0; ay_LH = 20; ax_SZ = 450; ay_SZ = 390;
+%p1 = uipanel(fig,'Position',[x_mult*px_LH y_mult*py_LH x_mult*px_SZ y_mult*py_SZ]);
+%p1.BorderColor = [1,1,1];
+%ax = uiaxes(p1,'Position',[x_mult*ax_LH y_mult*ay_LH x_mult*ax_SZ y_mult*ay_SZ]);
+%ax.Box    = 'on' ;
 
-%------------------------
-%------------------------
+ax = axis(sph);
+interp_data = [interp_data; zeros(1, size(interp_data, 2)) ] ;
+interp_data = [interp_data, zeros(size(interp_data,1), 1)  ] ;
+sf_plotH =surf(ax,interp_data);
+sf_plotH.EdgeColor = 'none';
+ax.View = [0 90];
+ax.Visible = 'off';
+ax.CLim = [0, db_range];
+ax.DataAspectRatio = [1 1 1];
+filename_ = remove_(filename_);
+ax.Title.String = ['MM: ',filename_ '.'];
+ax.Title.FontSize = 15*y_mult;
+ax.Title.Visible = 'on';
 
-[pred_,PL_inf,PFH] = plot_predict_processed(proc_file, settings_ ,do_plots, current_LS ,base_width,base_height,mag_fac);  
+sf = grid_size_to_plot / 4;
+    offset = grid_size_to_plot / grid_size_to_plot;
+modes_temp = [1,2,3,4];
 
-% pred_.Mode_SYM
-% Mode_SYM.val
-% Mode_SYM.mean_val
+for ii = 1:4
+    a = text(ax,(ii - 0.5) * sf + 1, - offset + 1, sprintf('%i',modes_temp(ii)));
+    set(a, 'HorizontalAlignment', 'center');
+    set(a, 'VerticalAlignment', 'top');
 
-end % for index2 = 1:length(chosen_LS)    
+    a = text(ax,-offset + 1, (ii - 0.5) * sf + 1, sprintf('%i',modes_temp(ii)));
+    set(a, 'HorizontalAlignment', 'right');
+    set(a, 'VerticalAlignment', 'middle');
+end % for ii = 1:length(options.modes)
+a.FontSize = 12*y_mult;
 
+ cb = colorbar(ax);
+ cb.Position= [0.86,0.11,0.04,0.7];
+ cb.FontSize = 8*y_mult;
+ 
+  %ax.XLabel.String = 'Mode #';
+  %ax.YLabel.String = 'Mode #';
 
-end % for index = 1:length(chosen_tests)
-% Now create the table....
-
-% Create the tables with results
-% go through each file and produce the required data
-
-end % function compare_LS_on_shifts(   )
-
-
+end %function Plot_single_mode_map(MP_mean)
 
 
 

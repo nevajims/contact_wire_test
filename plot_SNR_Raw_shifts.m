@@ -1,4 +1,4 @@
-function  [rejection_indicators,Other_stuff]   =  plot_SNR_Raw(varargin)
+function  [rejection_indicators,ALL_bars]   =  plot_SNR_Raw_shifts(varargin)
 % ---------------------------------------------------------------------- %
 % for use with single result of Raw data file 
 % Jim 11/7/2024
@@ -153,8 +153,6 @@ end %if do_plots(1) ==1
 % CREATE THE DATA FOR THE BARCHART
 %-----------------------------------------------
 ALL_bars = create_ALL_Bars(ALL_time_d,RMS_mat,SNR_mat_DB,LFN_mat_DB,HFN_mat_DB);
-
-Other_stuff.all_bars = ALL_bars;
 
 
 %------------------------------------------------
@@ -410,7 +408,6 @@ end %function  Plot_REJECTION_INDICATORS (rejection_indicators )
 
 function rejection_indicators = Calcutate_REJECTION_INDICATORS(ALL_bars,RMS_boundaries,SNR_boundaries,LFN_boundaries,HFN_boundaries) 
 rejection_indicators      =     zeros(size(ALL_bars)) ;
-
 all_boundaries = zeros(4,3);
 all_boundaries(1,:) = RMS_boundaries ;
 all_boundaries(2,:) = SNR_boundaries ;

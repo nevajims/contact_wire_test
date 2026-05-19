@@ -1317,7 +1317,7 @@ app.LoadExistingDataButton.BackgroundColor =BackgroundColor_normal;
             if isstruct(app.test_data)  
 
             try    
-            rejection_indicators   = plot_SNR_Raw(app.test_data,[0,0,0,0],snr_settings_O,app.base_width,app.base_height,app.mag_fac);
+            [rejection_indicators,~]   = plot_SNR_Raw(app.test_data,[0,0,0,0],snr_settings_O,app.base_width,app.base_height,app.mag_fac);
             catch ER
             write_error2file(app,ER)    
             end %try   
@@ -1370,7 +1370,7 @@ app.LoadExistingDataButton.BackgroundColor =BackgroundColor_normal;
             if isstruct(app.test_data)  
             snr_settings_O = convert_to_snr_struct(app.snr_settings);
             try
-            [~]   = plot_SNR_Raw(app.test_data,[1,0,0,0],snr_settings_O,app.base_width,app.base_height,app.mag_fac); 
+            [~,~]   = plot_SNR_Raw(app.test_data,[1,0,0,0],snr_settings_O,app.base_width,app.base_height,app.mag_fac); 
             catch ER
             write_error2file(app,ER)    
             end %try
@@ -1538,7 +1538,7 @@ try
 
              snr_settings_O = convert_to_snr_struct(app.snr_settings);
              try
-             rejection_indicators   =  plot_SNR_Raw(app.test_data,[0,0,0,0],snr_settings_O,app.base_width,app.base_height,app.mag_fac);
+             [rejection_indicators,~]   =  plot_SNR_Raw(app.test_data,[0,0,0,0],snr_settings_O,app.base_width,app.base_height,app.mag_fac);
              catch ER
              write_error2file(app,ER)    
              end %try
@@ -1546,7 +1546,7 @@ try
              do_plots   = [0 0 0 0 0 0 0 0 0 0 0 0 0];  
              LF = [pwd,settings_.Data_path_options{settings_.Data_path_choice}];
              try
-             [~,PL_inf,~] = plot_predict_processed(proc_file, settings_ ,do_plots, LF,app.base_width,app.base_height,app.mag_fac);  
+             [~,PL_inf,~,~] = plot_predict_processed(proc_file, settings_ ,do_plots, LF,app.base_width,app.base_height,app.mag_fac);  
              catch ER
              write_error2file(app,ER)    
              end %try
@@ -1581,7 +1581,7 @@ try
              % mag_fac);
              
              try
-             [pred_,PL_inf,PFH] = plot_predict_processed(proc_file, settings_ ,do_plots, LF,app.base_width,app.base_height,app.mag_fac);  
+             [pred_,PL_inf,PFH,~] = plot_predict_processed(proc_file, settings_ ,do_plots, LF,app.base_width,app.base_height,app.mag_fac);  
              catch ER
              write_error2file(app,ER)    
              end %try
@@ -1650,7 +1650,7 @@ try
             if isstruct(app.test_data)  
             snr_settings_O = convert_to_snr_struct(app.snr_settings);
             try
-            [~]   = plot_SNR_Raw(app.test_data,[0,1,0,0],snr_settings_O,app.base_width,app.base_height,app.mag_fac); 
+            [~,~]   = plot_SNR_Raw(app.test_data,[0,1,0,0],snr_settings_O,app.base_width,app.base_height,app.mag_fac); 
             catch ER
             write_error2file(app,ER)    
             end %try
@@ -1667,7 +1667,7 @@ try
             if isstruct(app.test_data)  
             snr_settings_O = convert_to_snr_struct(app.snr_settings);
             try 
-            [~]   = plot_SNR_Raw(app.test_data,[0,0,0,1],snr_settings_O,app.base_width,app.base_height,app.mag_fac); 
+            [~,~]   = plot_SNR_Raw(app.test_data,[0,0,0,1],snr_settings_O,app.base_width,app.base_height,app.mag_fac); 
             catch ER
             write_error2file(app,ER)    
             end %try
@@ -1694,7 +1694,7 @@ try
             switch (app.login_level)
 
                 case(2)                
-            [~]   =         plot_SNR_Raw(app.test_data,[0,0,1,0],snr_settings_O,app.base_width,app.base_height,app.mag_fac); 
+            [~,~]   =         plot_SNR_Raw(app.test_data,[0,0,1,0],snr_settings_O,app.base_width,app.base_height,app.mag_fac); 
                 case(1)  
             [~]   =         plot_SNR_Raw_basicU(app.test_data,[0,0,1,0],snr_settings_O,app.base_width,app.base_height,app.mag_fac); 
                 otherwise 
@@ -2077,14 +2077,14 @@ try
              settings_              = plot_options_O;
              snr_settings_O = convert_to_snr_struct(app.snr_settings);
              try
-             rejection_indicators   =  plot_SNR_Raw(app.test_data,[0,0,0,0],snr_settings_O,app.base_width,app.base_height,app.mag_fac);
+             [rejection_indicators,~]   =  plot_SNR_Raw(app.test_data,[0,0,0,0],snr_settings_O,app.base_width,app.base_height,app.mag_fac);
              catch ER
              write_error2file(app,ER)    
              end %try
 
              do_plots   = [0 0 0 0 0 0 0 0 0 0 0 0 0];  
              LF = [pwd,settings_.Data_path_options{settings_.Data_path_choice}];
-             [PREDICTION_,PL_inf,~] = plot_predict_processed(proc_file, settings_ ,do_plots, LF,app.base_width,app.base_height,app.mag_fac);  
+             [PREDICTION_,PL_inf,~,~] = plot_predict_processed(proc_file, settings_ ,do_plots, LF,app.base_width,app.base_height,app.mag_fac);  
              
              [T_num]= find(rejection_indicators(2,:)==1);
               
