@@ -1,15 +1,20 @@
 function compare_LS_on_shifts(choice)
+% colour the text
+% remove invalid results-  not distance
+% order by arm/ not arm
+
+% Save ouput into a txt file as a structure to reload
 
 %  Allow plotting of any of the graphs (e.g. mode maps)
+%  ***DONE Mode maps plotted
 %  ***DONE   plot the SNR values as well as
-%  Make the functions usable for both the windows and the analysis programs
-%- With an extra oputput   [   ,other_stuff]  =  etcetc  
-%- With an extra oputput   [   , ~ ]  =  etcetc as used in windows program   
-%  (1) ***DONE plot_SNR_Raw  
-%  Save ouput into a txt file as a structure to reload
+%  ***DONE Make the functions usable for both the windows and the analysis programs
+%- ***DONE With an extra oputput   [   ,other_stuff]  =  etcetc  
+%- ***DONE With an extra oputput   [   , ~ ]  =  etcetc as used in windows program   
+%  ***DONE plot_SNR_Raw  
 % Compare_LS_on_shifts(2)
 % Choice = 1 (all) choice = 2 (select)  choice = 3 (load old data)
-do_single_mode_plot = 0 ;
+do_single_mode_plot = 1 ;
 screen_parameters = get_screen_parameters();
 [proc_options,plot_options,snr_settings,plot_options_O,snr_settings_O,LS_dir,test_dir,default_options]    =    get_all_settings();
 [chosen_LS,chosen_tests]    =   get_the_tests_and_learning_sets(LS_dir,test_dir,choice)                        ;
@@ -31,12 +36,8 @@ disp(current_test)
 
 temp_LS = [LS_dir,'\',chosen_LS{1}];
 
+
 if do_single_mode_plot ==1
-% get the values
-% MP_mean,settings_.MM_interp_res , settings_.db_range , FILE_TO_PREDICT(1:end-4) , grid_data , x_mult , y_mult , mag_fac ;
-% slice_data , grid_size_to_plot , db_range , filename_ , grid_data , x_mult , y_mult , mag_fac 
-
-
 grid_data          =  fn_get_grid_data(proc_file.rail_tester , plot_options_O);
 [~,lower_val,upper_val,~]  =  get_peak_vals_and_plot(grid_data , plot_options_O ,0,1,1,1 );
 [ ~ , MP_mean,~] =  get_normalised_stack_and_mean_P(lower_val,upper_val,grid_data.data_stack);
@@ -49,7 +50,10 @@ SMM_vals{index}.grid_data          =  grid_data;
 SMM_vals{index}.x_mult             =  1; 
 SMM_vals{index}.y_mult             =  1;
 SMM_vals{index}.mag_fac            =  1;
-end %if do_mode_plot ==1
+
+end %if do_single_mode_plot ==1
+
+
 
 
 [pred_temp,PL_inf,~,~] = plot_predict_processed(proc_file, plot_options_O ,do_plots, temp_LS, screen_parameters.base_width,screen_parameters.base_height,screen_parameters.mag_fac);  
@@ -86,13 +90,16 @@ end % function compare_LS_on_shifts(   )
 %---------------------------------------------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------------------------------------------
-%---------------------------------------------------------------------------------------------------------------------
-%---------------------------------------------------------------------------------------------------------------------
-%---------------------------------------------------------------------------------------------------------------------
+
+
+
 
 function plot_SMM(SMM_vals)
-
-if length(SMM_vals) < 9
+if length(SMM_vals) ==1
+SP_inds = [1,1];    
+elseif    length(SMM_vals)> 1 && length(SMM_vals) < 5
+SP_inds = [2,2];
+elseif length(SMM_vals) >= 5 && length(SMM_vals)  < 10
 SP_inds = [3,3];
 elseif length(SMM_vals) >= 10 &&  length(SMM_vals) < 17
 SP_inds = [4,4];
@@ -101,11 +108,17 @@ SP_inds = [5,5];
 elseif length(SMM_vals) >= 26
 SP_inds = [7,6];
 end %if length(SMM_vals) < 9
- 
 
+
+
+figure
 for index = 1: length(SMM_vals) 
+filename_ = SMM_vals{index}.filename_;
+filename_ = filename_(1:end-4);
+filename_ = ['(',num2str(index),')',filename_];
 sph = subplot(SP_inds(1),SP_inds(2),index);
-Plot_single_mode_map(SMM_vals{index}.slice_data,SMM_vals{index}.grid_size_to_plot,SMM_vals{index}.db_range,SMM_vals{index}.filename_ , SMM_vals{index}.grid_data,SMM_vals{index}.x_mult,SMM_vals{index}.y_mult,SMM_vals{index}.mag_fac,sph)
+Plot_single_mode_map(SMM_vals{index}.slice_data,SMM_vals{index}.grid_size_to_plot,SMM_vals{index}.db_range,filename_ , SMM_vals{index}.grid_data,SMM_vals{index}.x_mult,SMM_vals{index}.y_mult,SMM_vals{index}.mag_fac,sph)
+
 end %for index = 1 
 
 end %function plot_SMM(SMM_vals)
@@ -113,6 +126,7 @@ end %function plot_SMM(SMM_vals)
 
 function plot_SNR_indicators(indicator_results)
 
+figure
 for index = 1: length(indicator_results)
 snr_bars(index,:) = indicator_results{index}.SNR_vals_float;
 if index <10
@@ -148,11 +162,22 @@ end %for index = 1: length(indicator_results)
 function tabulate_the_results(Results_struct)
 display_group_conditions(Results_struct.group_conditions)
 display_test_conditions(Results_struct.test_conditions)
-display_results_and_predictions(Results_struct.indicator_results,Results_struct.all_predictions,Results_struct.group_conditions)
+display_results_and_predictions(Results_struct)
+show_valid_tests(Results_struct)
+
 end %function tabulate_the_results(Results_struct)
 
 
-function display_results_and_predictions(indicator_results,all_predictions,group_conditions)
+
+
+function display_results_and_predictions(Results_struct)
+% all tests including invalid ones
+
+test_conditions = Results_struct.test_conditions;
+indicator_results = Results_struct.indicator_results;
+all_predictions = Results_struct.all_predictions;
+group_conditions = Results_struct.group_conditions;
+
 % first    
 fprintf('---------------------------------------------------------------------------------------------------------------------\n')
 fprintf('----------------PRE TEST CHECKS=-------------------------------------------------------------------------------------\n')
@@ -191,7 +216,6 @@ valid_tag = 'VALID';
 else
 valid_tag = 'INVALID';
 end
-
 
 if indicator_results{index}.Cap_bin  ==0
 valid_tag = [valid_tag,'(C)'];
@@ -258,7 +282,26 @@ fprintf([make_X_long(test_conditions{index}.Tester,12), '\t'])
 fprintf([make_X_long(test_conditions{index}.test_num,10), '\n'])
 end %for index = 1 : length(test_conditions)
 
+
 end %function display_test_conditions(test_conditions)
+
+
+function show_valid_tests(Results_struct)
+% all tests including invalid ones
+test_conditions = Results_struct.test_conditions;
+indicator_results = Results_struct.indicator_results;
+all_predictions = Results_struct.all_predictions;
+group_conditions = Results_struct.group_conditions;
+
+keyboard
+
+for index = 1: length(indicator_results)
+
+
+end    % for index = 1: length(indicator_results)
+
+
+end %function show_valid_tests(Results_struct)
 
 
 function display_group_conditions(group_conditions)
@@ -321,7 +364,6 @@ end %if index_ ~= length(vals_)
 end %for index_ = 1:length(vals_)
 SNR_vals = ['[',SNR_vals ,']' ];
 
-
 %----------------------------------------------------
 %----------------------------------------------------
 % DIST
@@ -353,17 +395,24 @@ sym_res = [sym_res,addtxt];
 %----------------------------------------------------
 %----------------------------------------------------
 
-indicators.Cap_res   = Cap_res;
-indicators.Cap_bin   = Cap_bin;
-indicators.SNR_res   = SNR_res;
-indicators.SNR_bin   = SNR_bin;
-indicators.SNR_vals  = SNR_vals;
-indicators.SNR_vals_float =  vals_;
-indicators.peak_dist = peak_dist;
-indicators.dist_res  = dist_res;
-indicators.dist_bin  = dist_bin;
-indicators.sym_res   = sym_res;
-indicators.sym_bin   = sym_bin;
+if SNR_bin== 1  && Cap_bin_ ==1 && sym_bin ==1
+show_result_bin = 1;
+else
+show_result_bin = 0;
+end %if SNR_bin== 1  && Cap_bin_ ==1 && sym_bin ==1
+
+indicators.show_result_bin  = show_result_bin;
+indicators.Cap_res          = Cap_res;
+indicators.Cap_bin          = Cap_bin;
+indicators.SNR_res          = SNR_res;
+indicators.SNR_bin          = SNR_bin;
+indicators.SNR_vals         = SNR_vals;
+indicators.SNR_vals_float   =  vals_;
+indicators.peak_dist        = peak_dist;
+indicators.dist_res         = dist_res;
+indicators.dist_bin         = dist_bin;
+indicators.sym_res          = sym_res;
+indicators.sym_bin          = sym_bin;
 
 end %function prediction_structure = get_indicators(index,cap_result,cap_min,rejection_indicators);conditions_(index)
 
@@ -400,6 +449,14 @@ conditions_.instr_serial_number  =   test_data.raw_data.serial_number           
 conditions_.NS_name              =   test_data.test_parameters.LU_Label_text        ;
 conditions_.Clamp_L              =   test_data.test_parameters.clamp_location       ;
 conditions_.arm_present          =   test_data.test_parameters.arm_present          ;  
+if strcmp(conditions_.arm_present,'Yes') == 1
+conditions_.arm_present_bin = 1 ;
+else
+conditions_.arm_present_bin = 0 ;
+end %if strcmp(conditions_.arm_present,'Yes') == 1
+
+
+
 conditions_.Track_id             =   test_data.test_parameters.Track_id             ;
 conditions_.Test_DT              =   datetime(test_data.date_time)                  ;
 conditions_.Tester               =   test_data.tester_details.Name                  ; 
@@ -437,10 +494,6 @@ DIST__.dist_pass_val         = dist_pass_val        ;
 DIST__.dist_pass_val_upper   = dist_pass_val_upper  ;
 SYM__.MP_sym_mean_val_min    = MP_sym_mean_val_min  ;
 SYM__.MP_sym_min_val         = MP_sym_min_val       ;
-
-
-
-
 
 end %function [SNR_THRESH,SNR_Boundaries,cap_min,dist_pass_val,dist_pass_val_upper]    =    get_pass_fail_boundaries(plot_options,snr_settings)
 
@@ -605,13 +658,9 @@ end %function [MP_stack,MP_mean] = get_normalised_stack_and_mean(lower_val,upper
 
 
 function  Plot_single_mode_map(slice_data,grid_size_to_plot,db_range,filename_ , grid_data,x_mult,y_mult,mag_fac,sph )
+
 %,mod_val,grid_data,lower_val,upper_val
-
-axis(sph)
 dv =grid_data.distance_vector;
-
-
-
 if grid_size_to_plot > 4
     x = linspace(1,size(slice_data,1),grid_size_to_plot);
     y = linspace(1,size(slice_data,2),grid_size_to_plot);
@@ -623,55 +672,46 @@ if grid_size_to_plot > 4
 else
     interp_data = slice_data;
 end %if grid_size_to_plot > length(options.modes)
-
-%fig = uifigure('Resize','off','Units','normalized','Position',[0.05,0.05,0.25*mag_fac,0.4*mag_fac],'Name', 'Mode Map');
-%fig.Icon = 'ICON2.png';
-
-
-%px_LH = 00; py_LH = 0; px_SZ = 470; py_SZ = 470;
-%ax_LH = 0; ay_LH = 20; ax_SZ = 450; ay_SZ = 390;
-%p1 = uipanel(fig,'Position',[x_mult*px_LH y_mult*py_LH x_mult*px_SZ y_mult*py_SZ]);
-%p1.BorderColor = [1,1,1];
-%ax = uiaxes(p1,'Position',[x_mult*ax_LH y_mult*ay_LH x_mult*ax_SZ y_mult*ay_SZ]);
-%ax.Box    = 'on' ;
-
-ax = axis(sph);
 interp_data = [interp_data; zeros(1, size(interp_data, 2)) ] ;
 interp_data = [interp_data, zeros(size(interp_data,1), 1)  ] ;
-sf_plotH =surf(ax,interp_data);
-sf_plotH.EdgeColor = 'none';
-ax.View = [0 90];
-ax.Visible = 'off';
-ax.CLim = [0, db_range];
-ax.DataAspectRatio = [1 1 1];
+subplot(sph)
+colormap default;
+surf(interp_data);
+view(2);
+axis equal;
+shading flat;
+axis off;
+caxis([0, db_range]);
+colorbar;
 filename_ = remove_(filename_);
-ax.Title.String = ['MM: ',filename_ '.'];
-ax.Title.FontSize = 15*y_mult;
-ax.Title.Visible = 'on';
-
-sf = grid_size_to_plot / 4;
+title(filename_)
+    sf = grid_size_to_plot / 4;
     offset = grid_size_to_plot / grid_size_to_plot;
 modes_temp = [1,2,3,4];
-
 for ii = 1:4
-    a = text(ax,(ii - 0.5) * sf + 1, - offset + 1, sprintf('%i',modes_temp(ii)));
+    a = text((ii - 0.5) * sf + 1, - offset + 1, sprintf('%i',modes_temp(ii)));
     set(a, 'HorizontalAlignment', 'center');
     set(a, 'VerticalAlignment', 'top');
-
-    a = text(ax,-offset + 1, (ii - 0.5) * sf + 1, sprintf('%i',modes_temp(ii)));
+    a = text(-offset + 1, (ii - 0.5) * sf + 1, sprintf('%i',modes_temp(ii)));
     set(a, 'HorizontalAlignment', 'right');
     set(a, 'VerticalAlignment', 'middle');
 end % for ii = 1:length(options.modes)
-a.FontSize = 12*y_mult;
-
- cb = colorbar(ax);
- cb.Position= [0.86,0.11,0.04,0.7];
- cb.FontSize = 8*y_mult;
- 
-  %ax.XLabel.String = 'Mode #';
-  %ax.YLabel.String = 'Mode #';
-
 end %function Plot_single_mode_map(MP_mean)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
