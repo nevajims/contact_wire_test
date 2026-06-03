@@ -140,7 +140,7 @@ end %if nargin ==2 || nargin ==3
 %------------------------------------------------
 % Calculate matrix properties
 %-----------------------------------------------
-[samp_freq,freq_axis_KHz,fft_d_temp,fft_n_temp ,RMS_mat,SNR_mat_DB,LFN_mat_DB,HFN_mat_DB,SNR_calc_method_uses_noise_channel]  =  calculate_mat_properties(time_,ALL_time_d,time_d,exitation_freq_kHz,SNR_bandwidth_kHz,All_noise_d,noise_d);
+[samp_freq,freq_axis_KHz,fft_d_temp,fft_n_temp ,RMS_mat,SNR_mat_DB,LFN_mat_DB,HFN_mat_DB]  =  calculate_mat_properties(time_,ALL_time_d,time_d,exitation_freq_kHz,SNR_bandwidth_kHz,All_noise_d,noise_d);
 
 %------------------------------------------------
 % PLOT COLORMAPS
@@ -155,7 +155,7 @@ end %if do_plots(1) ==1
 ALL_bars = create_ALL_Bars(ALL_time_d,RMS_mat,SNR_mat_DB,LFN_mat_DB,HFN_mat_DB);
 
 Other_stuff.all_bars = ALL_bars;
-Other_stuff.SNR_calc_method_uses_noise_channel = SNR_calc_method_uses_noise_channel;
+
 
 %------------------------------------------------
 % PLOT BARCHART
@@ -731,7 +731,7 @@ p1.FontWeight = 'bold';
 
 end %plot_colourmaps(RMS_mat,SNR_mat_DB,LFN_mat_DB,HFN_mat_DB)
 
-function [samp_freq,freq_axis_KHz,fft_d_temp,fft_n_temp,RMS_mat,SNR_mat_DB,LFN_mat_DB,HFN_mat_DB,SNR_calc_method_uses_noise_channel]  =  calculate_mat_properties(time_,ALL_time_d,time_d,exitation_freq_kHz,SNR_bandwidth_kHz,All_noise_d,noise_d)
+function [samp_freq,freq_axis_KHz,fft_d_temp,fft_n_temp,RMS_mat,SNR_mat_DB,LFN_mat_DB,HFN_mat_DB]  =  calculate_mat_properties(time_,ALL_time_d,time_d,exitation_freq_kHz,SNR_bandwidth_kHz,All_noise_d,noise_d)
 
 samp_freq  = 1/(time_(2)- time_(1));
 
@@ -773,10 +773,10 @@ sig_tmp = sum(current_fft_tmp(find(freq_axis_KHz< (exitation_freq_kHz +SNR_bandw
 if use_base_noise ==1
 current_fft_n_tmp =  fft_n_temp(:,index_a);
 noise_tmp = sum(current_fft_n_tmp(find(freq_axis_KHz< (exitation_freq_kHz +SNR_bandwidth_kHz)  & freq_axis_KHz> (exitation_freq_kHz -SNR_bandwidth_kHz))));
-SNR_calc_method_uses_noise_channel = 1;
+SNR_calc_method = 
 else
 noise_tmp = sum(current_fft_tmp((find(freq_axis_KHz> (exitation_freq_kHz +SNR_bandwidth_kHz) | freq_axis_KHz < (exitation_freq_kHz -SNR_bandwidth_kHz)))));
-SNR_calc_method_uses_noise_channel = 0;
+
 end
 
 %LFN

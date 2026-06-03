@@ -352,20 +352,12 @@ indicators.Cap_bin = Cap_bin;
 %----------------------------------------------------
 %----------------------------------------------------
 % SNR_res
-
-if SNR_uses_noise_chan ==1
-SNR_insert = ' NC-' ;
-else
-SNR_insert = 'XNC-' ;
-end %if SNR_uses_noise_chan ==1
-
-
 [T_num]= find(rejection_indicators(2,:)==1);
 if isempty(T_num)
-SNR_res = [SNR_insert,'PASS'];
+SNR_res = 'PASS';
 SNR_bin = 1;
 else    
-SNR_res = [SNR_insert,'FAIL(', num2str(length(T_num)),')'];
+SNR_res = ['FAIL(', num2str(length(T_num)),')'];
 SNR_bin = 0;
 end %if isempty(T_num)
 
