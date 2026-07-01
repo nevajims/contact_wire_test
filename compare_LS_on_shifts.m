@@ -1,12 +1,10 @@
 function compare_LS_on_shifts(choice)
+
 % Go throughh the files and get the dates
 %  give the mean SNR and the method of calc
-
-
 % colour the text
 % remove invalid results-  not distance
 % order by arm/ not arm
-
 % Save ouput into a txt file as a structure to reload
 
 %  Allow plotting of any of the graphs (e.g. mode maps)
@@ -57,7 +55,6 @@ SMM_vals{index}.y_mult             =  1;
 SMM_vals{index}.mag_fac            =  1;
 
 end %if do_single_mode_plot ==1
-
 
 
 
@@ -578,6 +575,8 @@ switch(choice)
     case(1)    
 chosen_tests = all_tests;
 chosen_LS    = all_LS;
+chosen_inds = 1:length(chosen_tests);
+
     case(2)
 chosen_inds = listdlg('PromptString',{'Select learning sets to compare'}, 'ListString',all_LS);        
 chosen_LS    = all_LS(chosen_inds);
@@ -585,6 +584,8 @@ chosen_LS    = all_LS(chosen_inds);
 chosen_inds = listdlg('PromptString',{'Select files to analyse'}, 'ListString',all_tests);
 chosen_tests = all_tests(chosen_inds);
 end  %switch(choice)
+
+
 
 % Re-arrange the files to be in date time order and out put it here as 
 disp(['reordering ',num2str(length(chosen_inds))  ,' files in date order....'])
