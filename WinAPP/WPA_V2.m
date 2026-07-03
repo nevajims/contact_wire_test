@@ -989,6 +989,8 @@ app.LOGINButton.Enable = 'off'       ;
 app.plot_options.initial_thresh_index = app.plot_options.initial_thresh_index_C   ;
 app.plot_options.Data_path_choice     = app.plot_options.Data_path_choice_C       ;
 app.plot_options.mode_pairs_to_Use    = app.plot_options.mode_pairs_to_Use_C      ; 
+app.plot_options.dist_pass_index      = app.plot_options.dist_pass_cal_index      ;
+app.plot_options.dist_pass_options    = app.plot_options.dist_pass_cal_options    ;  
 
 app.RunNewTestButton.Enable = 'on';
 app.RunNewTestButton.Text = 'Run Functional Check';
@@ -1005,7 +1007,6 @@ app.LOGINButton.Enable = 'on';
 % go back to the original plot_options
 app.plot_options         =    load_mat_structure_from_file([app.settings_root,app.default_options.plot_options_fname],...
 app.default_options.plot_options_fields);
-
 
 app.get_status
 app.set_status
@@ -1514,9 +1515,7 @@ try
         function PREDICTIONButtonPushed(app, event)
         %----------------------------------------------
         %----------------------------------------------
-
-            app.ShowPeakFindButton.Enable = 1;
-            
+             app.ShowPeakFindButton.Enable = 1;
             
              BackgroundColor_in_use = [0.9600,0.6600,0.6600];
              BackgroundColor_normal = [0.9600,0.9600,0.9600];
@@ -1551,6 +1550,8 @@ try
              write_error2file(app,ER)    
              end %try
 
+             %keyboard
+             
              cap_result= app.test_data.raw_data.cap_test_result.z ;  
                           
              %  ------------------------------------------------------------------

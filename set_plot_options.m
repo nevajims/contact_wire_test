@@ -92,6 +92,9 @@ new_vals_.LL_pred_ind = find(ismember(fig.UserData.inps.DD_9.Items, fig.UserData
 new_vals_.WinStart_ind = find(ismember(fig.UserData.inps.DD_10.Items,  fig.UserData.inps.DD_10.Value));
 new_vals_.cap_thresh_index = find(ismember(fig.UserData.inps.DD_11.Items,  fig.UserData.inps.DD_11.Value));
 new_vals_.dist_pass_index = find(ismember(fig.UserData.inps.DD_12.Items,  fig.UserData.inps.DD_12.Value));
+new_vals_.dist_pass_cal_index = find(ismember(fig.UserData.inps.DD_18.Items,  fig.UserData.inps.DD_18.Value));
+
+
 new_vals_.MPair_ind_C     = find(ismember(fig.UserData.inps.DD_13.Items,  fig.UserData.inps.DD_13.Value));
 new_vals_.DPath_ind_C     = find(ismember(fig.UserData.inps.DD_14.Items,  fig.UserData.inps.DD_14.Value));
 new_vals_.IniStart_ind_C  = find(ismember(fig.UserData.inps.DD_15.Items,  fig.UserData.inps.DD_15.Value));
@@ -99,20 +102,31 @@ new_vals_.symmetry_choice = find(ismember(fig.UserData.inps.DD_16.Items,  fig.Us
 new_vals_.MP_mean_symmetry_choice   = find(ismember(fig.UserData.inps.DD_17.Items,  fig.UserData.inps.DD_17.Value));
 
 
-%Defaults.cap_thresh_index      = dum.cap_thresh_index     ;   
-%Defaults.dist_pass_index       = dum.dist_pass_index      ;
-plot_options.Data_path_choice       = new_vals_.DPath_ind           ;
-plot_options.mode_pairs_to_Use      = new_vals_.MPair_ind           ;
-plot_options.NumNeighbors           = new_vals_.NNeib_ind           ; 
-plot_options.num_slices_index       = new_vals_.NSlice_ind          ;
-plot_options.thresh_val_index       = new_vals_.ThreshV_ind         ;
-plot_options.initial_thresh_index   = new_vals_.IniStart_ind        ;
-plot_options.AI_pred_choice         = new_vals_.AI_pred_ind         ;
-plot_options.DM_pred_choice         = new_vals_.DM_pred_ind         ;
-plot_options.LL_pred_choice         = new_vals_.LL_pred_ind         ;
-plot_options.window_start_index     = new_vals_.WinStart_ind        ;
-plot_options.cap_thresh_index       = new_vals_.cap_thresh_index    ;
-plot_options.dist_pass_index        = new_vals_.dist_pass_index     ;
+%Defaults.cap_thresh_index      = dum.cap_thresh_index                  ;   
+%Defaults.dist_pass_index       = dum.dist_pass_index                   ;
+plot_options.Data_path_choice       = new_vals_.DPath_ind               ;
+plot_options.mode_pairs_to_Use      = new_vals_.MPair_ind               ;
+plot_options.NumNeighbors           = new_vals_.NNeib_ind               ; 
+plot_options.num_slices_index       = new_vals_.NSlice_ind              ;
+plot_options.thresh_val_index       = new_vals_.ThreshV_ind             ;
+plot_options.initial_thresh_index   = new_vals_.IniStart_ind            ;
+plot_options.AI_pred_choice         = new_vals_.AI_pred_ind             ;
+plot_options.DM_pred_choice         = new_vals_.DM_pred_ind             ; 
+plot_options.LL_pred_choice         = new_vals_.LL_pred_ind             ;
+plot_options.window_start_index     = new_vals_.WinStart_ind            ;
+plot_options.cap_thresh_index       = new_vals_.cap_thresh_index        ;
+plot_options.dist_pass_index        = new_vals_.dist_pass_index         ;
+plot_options.dist_pass_cal_index    = new_vals_.dist_pass_cal_index     ;
+
+
+% Options_.dist_pass_cal_options
+% Defaults.dist_pass_cal_index
+% fig.UserData.inps.DD_18
+% dist_pass_cal_index
+% dist_pass_cal_options
+
+
+
 plot_options.mode_pairs_to_Use_C    = new_vals_.MPair_ind_C         ;
 plot_options.Data_path_choice_C     = new_vals_.DPath_ind_C         ;
 plot_options.initial_thresh_index_C = new_vals_.IniStart_ind_C      ;
@@ -139,6 +153,7 @@ Options_.IniStart = cellfun(@num2str, num2cell(dum.initial_thresh_options) , 'Un
 
 Options_.cap_thresh_options = cellfun(@num2str, num2cell(dum.cap_thresh_options) , 'UniformOutput', false)' ;
 Options_.dist_pass_options  = cellfun(@num2str, num2cell(dum.dist_pass_options) , 'UniformOutput', false)' ;
+Options_.dist_pass_cal_options  = cellfun(@num2str, num2cell(dum.dist_pass_cal_options) , 'UniformOutput', false)' ;
 
 Options_.symmetry_options   = cellfun(@num2str, num2cell(dum.symmetry_options) , 'UniformOutput', false)' ;
 Options_.MP_mean_symmetry_options   = cellfun(@num2str, num2cell(dum.MP_mean_symmetry_options) , 'UniformOutput', false)' ;
@@ -154,6 +169,7 @@ Options_.WinStart = cellfun(@num2str, num2cell(dum.window_start_options) , 'Unif
 % Options_.Pred2use            = cellfun(@num2str, num2cell(dum.predictions2use_options) , 'UniformOutput', false)' ;
 Defaults.cap_thresh_index      = dum.cap_thresh_index     ;   
 Defaults.dist_pass_index       = dum.dist_pass_index      ;
+Defaults.dist_pass_cal_index       = dum.dist_pass_cal_index      ;
 
 
 Defaults.NNeib_ind             = dum.NumNeighbors         ;
@@ -258,6 +274,9 @@ lbl16 = uilabel(fig,'Position',[x_mult*15, y_mult*65, x_mult*100, y_mult*28],'Te
 fig.UserData.inps.DD_17 = uidropdown(fig,"Items",[Options_.MP_mean_symmetry_options  ],'Position', [x_mult*145, y_mult*46, x_mult*100, y_mult*24],'FontSize',y_mult*14,'Value',Options_.MP_mean_symmetry_options {Defaults.MP_mean_symmetry_choice});
 lbl17 = uilabel(fig,'Position',[x_mult*145, y_mult*65, x_mult*100, y_mult*28],'Text', 'Sym Mean','FontSize',y_mult*14);  
 
+fig.UserData.inps.DD_18 = uidropdown(fig,"Items",[Options_.dist_pass_cal_options],'Position', [x_mult*275, y_mult*46, x_mult*100, y_mult*24],'FontSize',y_mult*14,'Value',Options_.dist_pass_cal_options{Defaults.dist_pass_cal_index});
+
+lbl18 = uilabel(fig,'Position',[x_mult*275, y_mult*65, x_mult*100, y_mult*28],'Text', 'Dist Pass_cal','FontSize',y_mult*14);  
 
 %----------------------------------------------------------------------------------
 %ROW 7 --  Buttons
@@ -277,9 +296,6 @@ function FD_ButtonPushed(fig,FD_settings_path)
 reset_the_dropdowns(fig , Options_ , Defaults)
 end %function Button1Pushed(fig)
 
-
-
-
 function RD_ButtonPushed(fig,Settings_path)
 %load the defaults data
 %[Test_Settings_default , ~ ] = load_structure_from_file(Settings_path);
@@ -287,9 +303,6 @@ function RD_ButtonPushed(fig,Settings_path)
 [Options_,Defaults] = get_options_Defaults(plot_options_defaault);
 reset_the_dropdowns(fig , Options_ , Defaults)
 end %function Button1Pushed(fig)
-
-
-
 
 function S_ButtonPushed(fig)
 %  Save the data in the structure  
@@ -316,9 +329,9 @@ fig.UserData.inps.DD_12.Value = Options_.dist_pass_options{Defaults.dist_pass_in
 fig.UserData.inps.DD_13.Value = Options_.MPair{Defaults.MPair_ind_C}                    ;
 fig.UserData.inps.DD_14.Value = Options_.DPath{Defaults.DPath_ind_C}                    ;
 fig.UserData.inps.DD_15.Value = Options_.IniStart{Defaults.IniStart_ind_C}              ;
-
 fig.UserData.inps.DD_16.Value = Options_.symmetry_options{Defaults.symmetry_choice}     ;
 fig.UserData.inps.DD_17.Value = Options_.MP_mean_symmetry_options{Defaults.MP_mean_symmetry_choice};
+fig.UserData.inps.DD_18.Value = Options_.dist_pass_cal_options{Defaults.dist_pass_cal_index};
 
 end %function reset_the_dropdowns(fig , Options_ , Defaults)
 

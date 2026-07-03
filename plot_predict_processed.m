@@ -228,6 +228,7 @@ end % if do_plots(6) ==1
 
 Score_vals =  get_Score_vals(SV_temp,Block_DATA , settings_.mode_pairs_to_Use);
 [DFM_table, LL_table, DFM_tag , LL_tag]    = get_tags_and_score_tables(Score_vals,labels,settings_.mode_pairs_to_Use,Block_DATA.Labels_);
+
 prediction_.ai_tag  =  ai_tag{1}         ;
 prediction_.DFM_tag =  DFM_tag            ;
 prediction_.LL_tag  =  LL_tag             ;
