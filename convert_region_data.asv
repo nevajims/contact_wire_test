@@ -8,17 +8,20 @@ function [] = convert_region_data()
 % Make sure correct files are deleted so its updated
 % input_file = uigetfile('*.xls*');
 
+
 input_file ='Region_data';
 [status,sheets_] = xlsfinfo(input_file); 
 if strcmp(status,'Microsoft Excel Spreadsheet')
 [eligable_regions,unused_sheets] = find_eligable_regions(sheets_)                  ;
 [new_data_table_format] =  select_regions_and_load_data(eligable_regions,input_file);
+
 [existing_data,NS_indices] = get_existing_data(new_data_table_format);
+
 
 % check whether the regions are there
 % AS.options.Region_options
 % check region
-% make sure to creat a backup of the replaced files  ******
+
 
 else
 disp('incorrect file format')    
