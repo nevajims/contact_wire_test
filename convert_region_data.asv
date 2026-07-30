@@ -10,7 +10,9 @@ function [] = convert_region_data()
 % save_the_settings_files_and_create_backups
 % create_updated_xls_spreadsheet
 %------------To Do-------------------------To Do-------------------------To Do-------------
-
+settings_dir = 'D:\githubs\contact_wire_test\SETTINGS_FILES'   ; % may need to be changed to pwd
+roaming_settings_dir =  [getenv('APPDATA'),'\SETTINGS_FILES']  ;
+xls_spreadsheet_dir = 'D:\githubs\contact_wire_test'           ; 
 
 input_file ='Region_data';
 [status,sheets_] = xlsfinfo(input_file); 
@@ -23,8 +25,8 @@ if strcmp(status,'Microsoft Excel Spreadsheet')
 updated_data  =   update_settings_files ( existing_data , NS_indices , new_data_table_format )  ;
 
 % TO DO -------------------
- save_the_settings_files_and_create_backups(updated_data)          ;
- create_updated_xls_spreadsheet(updated_data)                      ;
+save_the_settings_files_and_create_backups(updated_data,settings_dir,roaming_settings_dir) ;
+create_updated_xls_spreadsheet(updated_data)                      ;
 % TO DO ------------------- 
 
 else
@@ -35,12 +37,47 @@ end  % function [] = convert_region_data()
 %-------------------------------------------------------------------------------------------
 
 
-function save_the_settings_files_and_create_backups(updated_data)          
+function save_the_settings_files_and_create_backups(updated_data , settings_dir , roaming_settings_dir)          
+
+p_w_d = pwd;
+
+cd(settings_dir);
+
+
+% dos('rename login_options3.mat login_options3_OV.mat')
+% dos('rename advanced_settings.mat advanced_settings_OV.mat')
+% dos('rename NS_Details2.mat NS_Details2_OV.mat')
+% dos('rename test_parameters3.mat test_parameters3_OV.mat')
+
+% save the files
+keyboard
+
+save advanced_settings.mat updated_data.advanced_settings
+save login_options3_test.mat updated_data.login_options
+save test_parameters3.mat updated_data.test_parameters
+save NS_Details2.mat updated_data.NS_Details
+
+
+% save the files
+
+cd(roaming_settings_dir)
+dos('delete login_options3.mat')
+dos('delete advanced_settings.mat')
+dos('delete NS_Details2.mat')
+dos('delete test_parameters3.mat')
+cd(p_w_d)
+
 % To Do
 % (1)  Rename the existing files
+%SETTINGS_FILES\login_options3.mat
+%SETTINGS_FILES\advanced_settings.mat
+%SETTINGS_FILES\NS_Details2.mat
+%SETTINGS_FILES\test_parameters3.mat
+
 % (2)  Save the files 
+
 % (3)  delete the roaming files so they are written over
-disp('To Do')
+
 end %function save_the_settings_files_and_create_backups(updated_data)          
 
 function  create_updated_xls_spreadsheet(updated_data)                      

@@ -10,7 +10,9 @@ function [] = convert_region_data()
 % save_the_settings_files_and_create_backups
 % create_updated_xls_spreadsheet
 %------------To Do-------------------------To Do-------------------------To Do-------------
-
+settings_dir = 'D:\githubs\contact_wire_test\SETTINGS_FILES'   ; % may need to be changed to pwd
+roaming_settings_dir =  [getenv('APPDATA'),'\SETTINGS_FILES']  ;
+xls_spreadsheet_dir = 'D:\githubs\contact_wire_test'           ; 
 
 input_file ='Region_data';
 [status,sheets_] = xlsfinfo(input_file); 
@@ -23,8 +25,10 @@ if strcmp(status,'Microsoft Excel Spreadsheet')
 updated_data  =   update_settings_files ( existing_data , NS_indices , new_data_table_format )  ;
 
 % TO DO -------------------
- save_the_settings_files_and_create_backups(updated_data)          ;
- create_updated_xls_spreadsheet(updated_data)                      ;
+% save_the_settings_files_and_create_backups(updated_data,settings_dir,roaming_settings_dir) ;
+
+create_updated_xls_spreadsheet(updated_data)                      ;
+
 % TO DO ------------------- 
 
 else
@@ -35,18 +39,48 @@ end  % function [] = convert_region_data()
 %-------------------------------------------------------------------------------------------
 
 
-function save_the_settings_files_and_create_backups(updated_data)          
-% To Do
-% (1)  Rename the existing files
+function save_the_settings_files_and_create_backups(updated_data , settings_dir , roaming_settings_dir)          
+
+p_w_d = pwd;
+
+cd(settings_dir);
+
+% dos('rename login_options3.mat login_options3_OV.mat')
+% dos('rename advanced_settings.mat advanced_settings_OV.mat')
+% dos('rename NS_Details2.mat NS_Details2_OV.mat')
+% dos('rename test_parameters3.mat test_parameters3_OV.mat')
+
 % (2)  Save the files 
+
+save advanced_settings.mat updated_data.advanced_settings ;
+save login_options3_test.mat updated_data.login_options   ;
+save test_parameters3.mat updated_data.test_parameters    ;
+save NS_Details2.mat updated_data.NS_Details              ; 
+% save the files
+
 % (3)  delete the roaming files so they are written over
-disp('To Do')
+cd(roaming_settings_dir)
+dos('delete login_options3.mat')
+dos('delete advanced_settings.mat')
+dos('delete NS_Details2.mat')
+dos('delete test_parameters3.mat')
+
+cd(p_w_d)
+
 end %function save_the_settings_files_and_create_backups(updated_data)          
 
 function  create_updated_xls_spreadsheet(updated_data)                      
+keyboard
+% https://www.mathworks.com/help/matlab/import_export/exporting-to-excel-spreadsheets.html
+
+
 % To Do
 % (1)  Rename the existing file (Region_data__old.xlsx')
-% (2)  Save the new file (Region_data.xlsx')
+% (2) create the table
+% (3) identify the section name (as the tab name)
+
+% (4)  Save the new file (Region_data.xlsx')
+
 disp('To Do')
 end %function  create_updated_xls_spreadsheet(updated_data)                      
 
