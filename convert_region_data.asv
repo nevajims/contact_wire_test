@@ -1,52 +1,216 @@
 function [] = convert_region_data()
+%------------To Do-------------------------To Do-------------------------To Do-------------
+% put in an option to remove a region from he existing --  
 
-% add in advanced users withot them being in the excell spreadsheet
-% (1) -  Select the file to convert
-% (2) -  Get the sheet names
-% (3) -  Find and pairs of name_NS and name_operators 
-% [status,sheets] = xlsfinfo('Region_data.xlsx') 
-% Make sure correct files are deleted so its updated
-% input_file = uigetfile('*.xls*');
+% two options 
+%(1) add a new region or replace an existing regioon
+%(2) remove a region from the files and re save the xls spreadsheet
+
+
+% save_the_settings_files_and_create_backups
+% create_updated_xls_spreadsheet
+%------------To Do-------------------------To Do-------------------------To Do-------------
 
 
 input_file ='Region_data';
 [status,sheets_] = xlsfinfo(input_file); 
+
 if strcmp(status,'Microsoft Excel Spreadsheet')
-[eligable_regions,unused_sheets] = find_eligable_regions(sheets_)                  ;
-[new_data_table_format] =  select_regions_and_load_data(eligable_regions,input_file);
 
-[existing_data,NS_indices] = get_existing_data(new_data_table_format);
+[eligable_regions,unused_sheets] = find_eligable_regions(sheets_) ;
+[new_data_table_format] =  select_regions_and_load_data(eligable_regions,input_file)            ; 
+[existing_data,NS_indices] = get_existing_data(new_data_table_format)                           ;
+updated_data  =   update_settings_files ( existing_data , NS_indices , new_data_table_format )  ;
 
-
-% check whether the regions are there
-% AS.options.Region_options
-% check region
-
+% TO DO -------------------
+ save_the_settings_files_and_create_backups(updated_data)          ;
+ create_updated_xls_spreadsheet(updated_data)                      ;
+% TO DO ------------------- 
 
 else
 disp('incorrect file format')    
 end %if strcmp(status,'Microsoft Excel Spreadsheet')
 end  % function [] = convert_region_data()
+%-------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------
 
-function[existing_data,NS_indices] = get_existing_data(new_data_tf)
-existing_data.login_options      = load('SETTINGS_FILES\login_options3.mat')     ;
-existing_data.advanced_settings  = load('SETTINGS_FILES\advanced_settings.mat')  ;
-existing_data.NS_Details         = load('SETTINGS_FILES\NS_Details2.mat')        ;
 
-keyboard
+function save_the_settings_files_and_create_backups(updated_data)          
+% To Do
+% (1)  Rename the existing files
+% (2)  Save the files 
+% (3)  delete the roaming files so they are written over
+disp('To Do')
+end %function save_the_settings_files_and_create_backups(updated_data)          
 
-new_regions = fields(new_data_tf);
-existing_region_options  = existing_data.advanced_settings.options.Region_options;
+function  create_updated_xls_spreadsheet(updated_data)                      
+% To Do
+% (1)  Rename the existing file (Region_data__old.xlsx')
+% (2)  Save the new file (Region_data.xlsx')
+disp('To Do')
+end %function  create_updated_xls_spreadsheet(updated_data)                      
 
+
+function updated_data  =   update_settings_files(existing_data , NS_indices , new_data_table_format)
+% existing_data.advanced_settings
+updated_data.advanced_settings     =    existing_data.advanced_settings          ;
+updated_data.login_options         =    existing_data.login_options              ;
+updated_data.test_parameters       =    existing_data.test_parameters            ;
+updated_data.NS_Details            =    existing_data.NS_Details                 ;
+
+
+for index = 1:length(NS_indices.new_regions)
+updated_data.advanced_settings.options.Region_options{NS_indices.regions_to_use(index,2)} = NS_indices.new_regions{NS_indices.regions_to_use(index,1)};
+eval(['dummy = cell2mat(new_data_table_format.',NS_indices.new_regions{NS_indices.regions_to_use(index,1)},'.op_struct.Sentinal)'';'])
+dummy = [dummy;150270;140968];
+updated_data.login_options.Login_ID_arr{NS_indices.regions_to_use(index,2)} = dummy ;
+
+eval(['dummy = new_data_table_format.',NS_indices.new_regions{NS_indices.regions_to_use(index,1)},'.op_struct.Name'';'])
+dummy{length(dummy) +1} ='Mark Evans';
+dummy{length(dummy) +1} ='Jim Evans';
+updated_data.login_options.Name_arr{NS_indices.regions_to_use(index,2)} = dummy;
+
+eval(['dummy = cell2mat(new_data_table_format.',NS_indices.new_regions{NS_indices.regions_to_use(index,1)},'.op_struct.Level)'';'])
+dummy = [dummy;2;2];
+updated_data.login_options.level_arr{NS_indices.regions_to_use(index,2)} = dummy;
+
+eval(['dummy = new_data_table_format.',NS_indices.new_regions{NS_indices.regions_to_use(index,1)},'.op_struct.PW'';'])
+dummy{length(dummy) +1} ='dh';
+dummy{length(dummy) +1} ='dh';
+updated_data.login_options.PW_arr{NS_indices.regions_to_use(index,2)} = dummy;
+
+
+
+
+eval(['dummy_1 = new_data_table_format.',NS_indices.new_regions{NS_indices.regions_to_use(index,1)},'.NS_struct.neutral_section_names'';'])
+dummy_2 = unique(dummy_1);
+dummy_2 = [dummy_2;{'Unspecified'}];
+updated_data.NS_Details.Locations_arr{NS_indices.regions_to_use(index,2)} = dummy_2;
+
+eval(['dummy_3 = new_data_table_format.',NS_indices.new_regions{NS_indices.regions_to_use(index,1)},'.NS_struct.Sub_Names'';'])
+temp_vals_array = [];
+
+eval(['track_id_temp = new_data_table_format.',NS_indices.new_regions{NS_indices.regions_to_use(index,1)},'.NS_struct.track_ID'';'])
+eval(['wire_size_temp = new_data_table_format.',NS_indices.new_regions{NS_indices.regions_to_use(index,1)},'.NS_struct.wire_size'';'])
+eval(['structure_temp = new_data_table_format.',NS_indices.new_regions{NS_indices.regions_to_use(index,1)},'.NS_struct.structure'';'])
+eval(['ELR_temp = new_data_table_format.',NS_indices.new_regions{NS_indices.regions_to_use(index,1)},'.NS_struct.ELR'';'])
+eval(['Wire_run_number_temp = new_data_table_format.',NS_indices.new_regions{NS_indices.regions_to_use(index,1)},'.NS_struct.Wire_run_number'';'])
+eval(['Asset_Number_temp = new_data_table_format.',NS_indices.new_regions{NS_indices.regions_to_use(index,1)},'.NS_struct.Asset_Number;'])
+
+
+for index_2 = 1: length(dummy_2)
+indices_ = find(ismember(dummy_1,dummy_2{index_2})==1);
+
+if index_2 ~= length(dummy_2)
+updated_data.NS_Details.Sublocations_arr{NS_indices.regions_to_use(index,2)}{index_2} = {dummy_3{indices_}}';
+else
+updated_data.NS_Details.Sublocations_arr{NS_indices.regions_to_use(index,2)}{index_2} = {'Unspecified'};    
+end
+
+for index_3 = 1:length(indices_)
+%  track_ID // wire_size // structure // ELR // Wire_run_number // Asset_Number
+temp_vals_array{index_2}{index_3} = {track_id_temp{indices_(index_3)},wire_size_temp{indices_(index_3)},structure_temp{indices_(index_3)},ELR_temp{indices_(index_3)},Wire_run_number_temp{indices_(index_3)},Asset_Number_temp{indices_(index_3)}}; 
+end %for index_3 = 1:length(indices_)
+
+end %for index_2 = 1: length(dummy_2)
+
+updated_data.test_parameters.data_arr{NS_indices.regions_to_use(index,2)}.Track_id_options                 =  existing_data.test_parameters.data_arr{1}.Track_id_options        ;
+updated_data.test_parameters.data_arr{NS_indices.regions_to_use(index,2)}.clamp_location_options           =  existing_data.test_parameters.data_arr{1}.clamp_location_options  ;
+updated_data.test_parameters.data_arr{NS_indices.regions_to_use(index,2)}.arm_present_options              =  existing_data.test_parameters.data_arr{1}.arm_present_options     ;
+updated_data.test_parameters.data_arr{NS_indices.regions_to_use(index,2)}.contact_wire_options             =  existing_data.test_parameters.data_arr{1}.contact_wire_options    ;
+
+eval(['dummy = new_data_table_format.',NS_indices.new_regions{NS_indices.regions_to_use(index,1)},'.NS_struct.structure'';'])
+dummy = unique(dummy);
+dummy = [{'Unspec'};dummy]';
+
+updated_data.test_parameters.data_arr{NS_indices.regions_to_use(index,2)}.struct_id_options = dummy;
+
+eval(['dummy = new_data_table_format.',NS_indices.new_regions{NS_indices.regions_to_use(index,1)},'.NS_struct.ELR'';'])
+dummy = unique(dummy);
+dummy = [{'Unspec'};dummy]';
+
+updated_data.test_parameters.data_arr{NS_indices.regions_to_use(index,2)}.ELR_options = dummy;
+
+eval(['dummy = new_data_table_format.',NS_indices.new_regions{NS_indices.regions_to_use(index,1)},'.NS_struct.Wire_run_number'';'])
+dummy = unique(dummy)  ;
+dummy = [{'Unspec'};dummy]';
+
+updated_data.test_parameters.data_arr{NS_indices.regions_to_use(index,2)}.WR_options = dummy  ;
+
+eval(['dummy = new_data_table_format.',NS_indices.new_regions{NS_indices.regions_to_use(index,1)},'.NS_struct.Asset_Number;'])
+dummy = unique(dummy);
+dummy = [{'Unspec'} ; dummy]';
+updated_data.test_parameters.data_arr{NS_indices.regions_to_use(index,2)}.Asset_Number_options = dummy                                                               ;
+
+temp_Track_id_options       =  updated_data.test_parameters.data_arr{NS_indices.regions_to_use(index,2)}.Track_id_options                                            ;
+temp_contact_wire_options   =  updated_data.test_parameters.data_arr{NS_indices.regions_to_use(index,2)}.contact_wire_options                                        ;
+temp_struct_id_options      =  updated_data.test_parameters.data_arr{NS_indices.regions_to_use(index,2)}.struct_id_options                                           ;
+temp_ELR_options            =  updated_data.test_parameters.data_arr{NS_indices.regions_to_use(index,2)}.ELR_options                                                 ;
+temp_WR_options             =  updated_data.test_parameters.data_arr{NS_indices.regions_to_use(index,2)}.WR_options                                                  ;
+temp_Asset_Number_options   =  updated_data.test_parameters.data_arr{NS_indices.regions_to_use(index,2)}.Asset_Number_options                                        ;
+temp_options                =  {temp_Track_id_options,temp_contact_wire_options,temp_struct_id_options,temp_ELR_options,temp_WR_options,temp_Asset_Number_options}   ;
+
+for index_1 = 1:length(temp_vals_array)
+
+temp_index_array = zeros(6,length(temp_vals_array{index_1}));
+for index_2 = 1:length(temp_vals_array{index_1})
+for index_3 = 1:length(temp_vals_array{index_1}{index_2})
+temp_index_array(index_3,index_2) = find(ismember(temp_options{index_3},temp_vals_array{index_1}{index_2}{index_3})==1);
+end % for index_3 = 1:length(temp_vals_array{index_1}{index_2})    
+end %^for index_2 = 1:length(temp_vals_array{index_1})
+% assign temp index array into the correct place -  check it with the other
+% carlisle
+
+updated_data.NS_Details.Values_arr{NS_indices.regions_to_use(index,2)}{index_1} = temp_index_array;
+% assign temp index array into the correct place
+end %for index_1 = 1:length(temp_vals_array)    
+% now check the index values are correct
+end %for index = 1:length(NS_indices.new_regions)
+
+
+
+
+end  %function updated_data  =   update_settings_files(existing_data ,NS_indices,new_data_table_format)
+
+
+function[ existing_data , NS_indices ] = get_existing_data(new_data_table_format)
+
+existing_data.login_options      = load('SETTINGS_FILES\login_options3.mat')        ;
+existing_data.advanced_settings  = load('SETTINGS_FILES\advanced_settings.mat')     ;
+existing_data.NS_Details         = load('SETTINGS_FILES\NS_Details2.mat')           ;
+existing_data.test_parameters    = load('SETTINGS_FILES\test_parameters3.mat')           ;
+new_regions = fields(new_data_table_format)                                         ;
+
+existing_region_options  = existing_data.advanced_settings.options.Region_options   ;
+
+regions_to_use = [];
 for index = 1:length(new_regions)
+% create a nx2 matrix of regions to use with (index in new_regions,index in existing_data.advanced_settings.options.Region_options)
 
+if sum(ismember(existing_region_options,new_regions)) == 0
+ans__ =questdlg([new_regions{index}, ': This is a new region, include it?']);
+if strcmp(ans__ ,'Yes')
+%---------------------------------
+regions_to_use(size(regions_to_use,1)+1,:) = [index,length(existing_region_options) + 1 ];
+%---------------------------------
+end %if strcmp(ans__ ,'Yes')
 
+elseif sum(ismember(existing_region_options,new_regions)) == 1
+ans__ =questdlg([new_regions{index}, ': existing region, replce it?']);
+
+if strcmp(ans__ ,'Yes')
+%---------------------------------
+regions_to_use(size(regions_to_use,1)+1,:) = [index, find(ismember(existing_region_options,new_regions)==1)];
+%---------------------------------
+end %if strcmp(ans__ ,'Yes')
+else
+disp('Problem there appears to be tp fields with the same name in existing regions (should get  this)')
+end %if sum(ismember(existing_region_options,new_regions)) == 0
 end %for index = 1:length(new_regions)
-
-
+existing_data.existing_region_options = existing_region_options ;
+NS_indices.new_regions                = new_regions             ;
+NS_indices.regions_to_use             = regions_to_use          ;
 end  %function[existing_data,NS_indices] = get_existing_data(new_data_tf)
-
-
 
 
 function [eligable_regions,unused_sheets] = find_eligable_regions(sheets_)
@@ -82,19 +246,22 @@ end
 end  % function find_eligable_regions(sheets_)
 
 
+
+
 function [data] =  select_regions_and_load_data(eligable_regions,input_file)
 
-[indx,OK] = listdlg('PromptString','Select region(s)','SelectionMode','multiple','ListString',eligable_regions);
+data      =  [];
+[indx,OK] =  listdlg('PromptString','Select region(s)','SelectionMode','multiple','ListString', eligable_regions);
 
 if OK ==1
 for index = 1:length(indx)
 current_region = eligable_regions{indx(index)};
 
-NS_sheet = [current_region,'_NS'];
-op_sheet = [current_region,'_operators'];
+NS_sheet = [ current_region , '_NS'          ];
+op_sheet = [ current_region , '_operators'   ];
+
 % disp(NS_sheet)
 % disp(op_sheet)
-
 % now load the data from the sheets
 
 op_table = readtable(input_file,'UseExcel',true,'Sheet',op_sheet)   ;
@@ -103,25 +270,28 @@ NS_table = readtable(input_file,'UseExcel',true,'Sheet',NS_sheet)   ;
 temp_struct = table2struct(op_table)      ;
 temp_struct2 = table2struct(NS_table)     ;
 
+
 [msg,OK2 ]  = check_correct_fields(temp_struct,temp_struct2);
 
 if OK2 ==1
 op_struct.Level                 = {temp_struct.Level}       ;
 op_struct.PW                    = {temp_struct.PW}          ;
 op_struct.Sentinal              = {temp_struct.Sentinal}    ;
-op_struct.Second_Name           = {temp_struct.Second_Name} ;
-op_struct.First_name            = {temp_struct.First_Name}  ;
+op_struct.Name                  = {temp_struct.Name}        ;
 
 NS_struct.neutral_section_names =  {temp_struct2.neutral_section_names}  ;
 NS_struct.Sub_Names             =  {temp_struct2.Sub_Names}              ;
-NS_struct.track_ID              =  {temp_struct2.track_ID}               ;
-NS_struct.wire_size             =  {temp_struct2.wire_size}              ;
-NS_struct.structure             =  {temp_struct2.structure}              ;
-NS_struct.ELR.Wire_run_number   =  {temp_struct2.Wire_run_number}        ;
-NS_struct.Asset_Number          =  {temp_struct2.Asset_Number}           ;
+
+NS_struct.track_ID              =  arrayfun(@num2str, [temp_struct2.track_ID]', 'UniformOutput', 0)     ;
+NS_struct.wire_size             =  arrayfun(@num2str, [temp_struct2.wire_size]', 'UniformOutput', 0)    ;
+NS_struct.structure             =  {temp_struct2.structure}                                             ;
+NS_struct.ELR                   =  {temp_struct2.ELR}                                                   ;
+NS_struct.Wire_run_number       =  {temp_struct2.Wire_run_number}                                       ;
+NS_struct.Asset_Number          =  arrayfun(@num2str, [temp_struct2.Asset_Number]', 'UniformOutput', 0) ; 
 
 eval(['data.',current_region,'.NS_struct = NS_struct;'])
 eval(['data.',current_region,'.op_struct = op_struct;']) 
+
 clear NS_struct; clear op_struct ; 
 else
 disp(msg)
@@ -195,16 +365,10 @@ end
 
 msg = [msg, 'Missing Fields (login): ']; 
 
-if isfield(temp_struct,'First_Name')
+if isfield(temp_struct,'Name')
 temp_struct_val = temp_struct_val + 1 ;
 else
-msg = [msg,', First_Name'];
-end
-    
-if isfield(temp_struct,'Second_Name')
-temp_struct_val = temp_struct_val + 1 ;
-else
-msg = [msg,', Second_Name'];
+msg = [msg,', Name'];
 end
 
 if isfield(temp_struct,'Sentinal')
@@ -225,18 +389,16 @@ else
 msg = [msg,', PW'];
 end
 
-if temp_struct2_val == 8 && temp_struct_val ==5
+if temp_struct2_val == 8 && temp_struct_val ==4
 OK2 = 1;
 else
 OK2 = 0;
-end %if temp_struct_val == 8 && temp_struct2_val ==5
+end %if temp_struct_val == 8 && temp_struct2_val ==4
 
 else
 msg = '1 or more structure is empty';
 OK2 = 0;
 end %if length(temp_struct) ~= 0 && if length(temp_struct2) ~= 0
-
-
 
 end %function [msg , OK2]  = check_correct_fields(temp_struct,temp_struct2)
 
