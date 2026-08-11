@@ -1,43 +1,46 @@
 function [] = convert_region_data()
+
 %------------To Do-------------------------To Do-------------------------To Do-------------
 % put in an option to remove a region from he existing --  
 
 % two options 
-%(1) add a new region or replace an existing regioon
-%(2) remove a region from the files and re save the xls spreadsheet
+% (1) add a new region or replace an existing region
 
 
+% (2) remove a region from the files and re save the xls spreadsheet
 % save_the_settings_files_and_create_backups
 % create_updated_xls_spreadsheet
 %------------To Do-------------------------To Do-------------------------To Do-------------
+
 settings_dir = 'D:\githubs\contact_wire_test\SETTINGS_FILES'   ; % may need to be changed to pwd
 roaming_settings_dir =  [getenv('APPDATA'),'\SETTINGS_FILES']  ;
-xls_spreadsheet_dir = 'D:\githubs\contact_wire_test'           ; 
+% xls_spreadsheet_dir = 'D:\githubs\contact_wire_test'           ; 
 
 input_file ='Region_data';
 [status,sheets_] = xlsfinfo(input_file); 
 
 if strcmp(status,'Microsoft Excel Spreadsheet')
-
 [eligable_regions,unused_sheets] = find_eligable_regions(sheets_) ;
-[new_data_table_format] =  select_regions_and_load_data(eligable_regions,input_file)            ; 
+[new_data_table_format,done_] =  select_regions_and_load_data(eligable_regions,input_file)            ; 
+if done_ ==1
 [existing_data,NS_indices] = get_existing_data(new_data_table_format)                           ;
 updated_data  =   update_settings_files ( existing_data , NS_indices , new_data_table_format )  ;
 
 % TO DO -------------------
 % save_the_settings_files_and_create_backups(updated_data,settings_dir,roaming_settings_dir) ;
-
 create_updated_xls_spreadsheet(updated_data)                      ;
-
 % TO DO ------------------- 
 
 else
+disp('no data loaded')    
+end% if done_ ==1
+else
 disp('incorrect file format')    
 end %if strcmp(status,'Microsoft Excel Spreadsheet')
+
 end  % function [] = convert_region_data()
 %-------------------------------------------------------------------------------------------
 %-------------------------------------------------------------------------------------------
-
 
 function save_the_settings_files_and_create_backups(updated_data , settings_dir , roaming_settings_dir)          
 
@@ -70,18 +73,57 @@ cd(p_w_d)
 end %function save_the_settings_files_and_create_backups(updated_data)          
 
 function  create_updated_xls_spreadsheet(updated_data)                      
+
 keyboard
+
+Region_options  =  updated_data.advanced_settings.options.Region_options;
+% create the tabs  _NS and _Operators for each and write the data in there
+
+for index = 1:length(Region_options)
+count = 0;
+Name      =    updated_data.login_options.Name_arr{index}      ;
+Sentinal  =    updated_data.login_options.Login_ID_arr{index}  ;
+Level     =    updated_data.login_options.level_arr{index}     ;
+PW        =    updated_data.login_options.PW_arr{index}        ; 
+T         =    table(Name,Sentinal,Level,PW)                   ;
+
+for index_2 = 1:length(updated_data.NS_Details.Locations_arr{index})
+%  go through every sub region
+
+for index_3 = 1 : length(updated_data.NS_Details.Sublocations_arr{index}{index_2})
+count = count + 1 ;
+
+neutral_section_names{count} =  updated_data.NS_Details.Locations_arr{index}{index_2};
+Sub_Names            {count} =  updated_data.NS_Details.Sublocations_arr{index}{index_2}{index_3};
+track_ID             {count} =   ;   
+wire_size            {count} =   ;   
+structure            {count} =   ;   
+ELR                  {count} =   ;   
+Wire_run_number      {count} =   ;   
+Asset_Number         {count} =   ;   
+
+end %for index_3 = 1:length(updated_data.NS_Details.Sublocations_arr{index}{index_2})
+end %for index_2 = 1:length(updated_data.NS_Details.Locations_arr{index})
+
+filename = 'Region_data_UD.xlsx';
+writetable(T,filename,'Sheet',[Region_options{index},'_operators'])
+writetable(T2,filename,'Sheet',[Region_options{index},'_NS'])
+
+
+
+end % for index = 1:length(Region_options)
+
+
 % https://www.mathworks.com/help/matlab/import_export/exporting-to-excel-spreadsheets.html
-
-
 % To Do
 % (1)  Rename the existing file (Region_data__old.xlsx')
 % (2) create the table
 % (3) identify the section name (as the tab name)
-
 % (4)  Save the new file (Region_data.xlsx')
 
 disp('To Do')
+
+
 end %function  create_updated_xls_spreadsheet(updated_data)                      
 
 
@@ -185,7 +227,6 @@ temp_Asset_Number_options   =  updated_data.test_parameters.data_arr{NS_indices.
 temp_options                =  {temp_Track_id_options,temp_contact_wire_options,temp_struct_id_options,temp_ELR_options,temp_WR_options,temp_Asset_Number_options}   ;
 
 for index_1 = 1:length(temp_vals_array)
-
 temp_index_array = zeros(6,length(temp_vals_array{index_1}));
 for index_2 = 1:length(temp_vals_array{index_1})
 for index_3 = 1:length(temp_vals_array{index_1}{index_2})
@@ -200,9 +241,6 @@ updated_data.NS_Details.Values_arr{NS_indices.regions_to_use(index,2)}{index_1} 
 end %for index_1 = 1:length(temp_vals_array)    
 % now check the index values are correct
 end %for index = 1:length(NS_indices.new_regions)
-
-
-
 
 end  %function updated_data  =   update_settings_files(existing_data ,NS_indices,new_data_table_format)
 
@@ -223,6 +261,7 @@ for index = 1:length(new_regions)
 
 if sum(ismember(existing_region_options,new_regions)) == 0
 ans__ =questdlg([new_regions{index}, ': This is a new region, include it?']);
+
 if strcmp(ans__ ,'Yes')
 %---------------------------------
 regions_to_use(size(regions_to_use,1)+1,:) = [index,length(existing_region_options) + 1 ];
@@ -282,8 +321,8 @@ end  % function find_eligable_regions(sheets_)
 
 
 
-function [data] =  select_regions_and_load_data(eligable_regions,input_file)
-
+function [data,done_ ] =  select_regions_and_load_data(eligable_regions,input_file)
+done_ = 0;
 data      =  [];
 [indx,OK] =  listdlg('PromptString','Select region(s)','SelectionMode','multiple','ListString', eligable_regions);
 
@@ -333,11 +372,20 @@ end %if OK2 ==1
 clear temp_struct; clear temp_struct2
 end %for index = 1:length(indx)   
 
+done_ = 1;
+
 else    
+
 disp('no selection made')
+
+
 end % if OK ==1
 
 end %function [data] =  select_regions_and_load_data(eligable_regions)
+
+
+
+
 
 function [msg , OK2]  = check_correct_fields(temp_struct,temp_struct2)
 

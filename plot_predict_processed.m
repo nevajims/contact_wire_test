@@ -650,8 +650,6 @@ function   display_tag_mode_maps(Block_DATA,settings_,MP_mean,FILE_TO_PREDICT,x_
 subplot_inds = [1,1;2,1;2,2;2,2;3,2;3,2];
 LL_ = length(Block_DATA.Labels_);
 
-
-
 fig = uifigure('Resize','off','Units','normalized','Position',[0.05,0.05,0.29*mag_fac,0.435*mag_fac],'Name', 'Tag Mode vs Test');
 fig.Icon = 'ICON2.png';
 px_LH = 10; py_LH = 10; px_SZ = 530; py_SZ = 450;
@@ -780,30 +778,51 @@ plot_data_structure.db_range = db_range;
 plot_data_structure.fig = fig;
 plot_data_structure.ax1  =  ax1;
 plot_data_structure.ax2  =  ax2; 
-plot_data_structure.XL1  =  -0.1;
-plot_data_structure.XL2  =   1.1;
+
+%plot_data_structure.XL1  =  -0.1; 
+%plot_data_structure.XL2  =   1.1;
+plot_data_structure.XL1  =  -3; 
+plot_data_structure.XL2  =   3;
+plot_data_structure.p_scale = 0;
 %--------------------------------------------
+% put in a button to toggle between full range and clamp range
+%--------------------------------------------
+
+
 v_temp = plot_data_structure.dv(plot_data_structure.mod_val);
 
-sld  =  uislider(fig, 'Limits',[-0.1  1.1],'Position',[x_mult*35 y_mult*40 x_mult*400 y_mult*10],'Value', v_temp,'ValueChangingFcn', @(src,event)change_MM_dist(src,event),'MajorTicks', [-0.1:0.1:1.1],'MinorTicks', [] ); 
+sld  =  uislider(fig, 'Limits',[plot_data_structure.XL1  plot_data_structure.XL2],'Position',[x_mult*35 y_mult*40 x_mult*400 y_mult*10],'Value', v_temp,'ValueChangingFcn', @(src,event)change_MM_dist(src,event),'MajorTicks', plot_data_structure.XL1:(plot_data_structure.XL2 - plot_data_structure.XL2)/12:plot_data_structure.XL2,'MinorTicks', [] ); 
 sld.FontSize = 12*y_mult;
 
 txa = uitextarea(fig,'Position',[x_mult*460 y_mult*20 x_mult*70 y_mult*20], 'Value', [num2str(round(v_temp*1000)),' mm.']);
-
 txa.FontSize=12*y_mult;
-btn = uibutton(fig,'Position',[x_mult*5,y_mult*80,x_mult*50,y_mult*40],'Text','Reset','ButtonPushedFcn',@reset_MM_plot);
 
+btn = uibutton(fig,'Position',[x_mult*5,y_mult*80,x_mult*50,y_mult*40],'Text','Reset','ButtonPushedFcn',@reset_MM_plot);
 btn.FontSize=12*y_mult;
+
 btn2 = uibutton(fig,'Position',[x_mult*5,y_mult*120,x_mult*50,y_mult*40],'Text','Update','ButtonPushedFcn',@update_MM_plot);
 btn2.FontSize=12*y_mult;
-plot_data_structure.sld = sld ;
-plot_data_structure.txa = txa ;
-plot_data_structure.btn = btn ; 
-plot_data_structure.btn2 = btn2 ; 
+
+
+tog_but =  uibutton(fig,'Position',[x_mult*5,y_mult*180,x_mult*30,y_mult*20],'Text','Scale','ButtonPushedFcn',@toggle_scale);
+tog_but.FontSize=9*y_mult;
+
+
+
+
+%
+
+plot_data_structure.sld     = sld     ;
+plot_data_structure.txa     = txa     ;
+plot_data_structure.btn     = btn     ; 
+plot_data_structure.btn2    = btn2    ; 
+plot_data_structure.tog_but = tog_but ;
 
 fig.UserData = plot_data_structure ;
+
 update_top_plot(plot_data_structure)    ;
 update_bottom_plot(plot_data_structure) ;
+
 end %function raw_mode_map_viewer(grid_data )
 
 
@@ -887,6 +906,26 @@ end % for ii = 1:length(options.modes)
 a.FontSize = 12*y_mult;
 
 end %function update_bottom_plot(plot_data_structure)
+
+function toggle_scale(hObject, ~)
+plot_data_structure  =  get(get(hObject,'Parent'),'UserData');
+
+if plot_data_structure.p_scale == 1
+plot_data_structure.XL1  =  -3; 
+plot_data_structure.XL2  =   3;
+plot_data_structure.p_scale = 0;
+plot_data_structure.tog_but.BackgroundColor = [0.9 0 0];
+else
+plot_data_structure.XL1  =  -0.1; 
+plot_data_structure.XL2  =   1.1;
+plot_data_structure.tog_but.BackgroundColor = [0.9 0.9 0.9];
+plot_data_structure.p_scale = 1;
+end
+update_top_plot(plot_data_structure)    ;
+update_bottom_plot(plot_data_structure) ;
+set(get(hObject,'Parent'),'UserData',plot_data_structure);
+
+end %function toggle_scale(hObject, ~)
 
 
 function update_MM_plot(hObject, ~)

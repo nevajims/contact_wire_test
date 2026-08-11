@@ -477,7 +477,10 @@ end %if strcmp(conditions_.arm_present,'Yes') == 1
 conditions_.Track_id             =   test_data.test_parameters.Track_id             ;
 conditions_.Test_DT              =   datetime(test_data.date_time)                  ;
 conditions_.Tester               =   test_data.tester_details.Name                  ; 
+
 inds                             =   find(current_test == '$')                      ;
+
+
 conditions_.test_num             =   current_test(inds(1)+1:inds(2)-1)              ;
 
 end %function  [conditions_, current_test,test_data  ]    get_Indidual_test_data_and_conditions(index,chosen_tests )
@@ -504,7 +507,6 @@ SNR_THRESH                              = num2str(snr_settings.SNR_boundaries_op
 
 MP_sym_mean_val_min =  plot_options.MP_mean_symmetry_options(plot_options.MP_mean_symmetry_choice); % if less than this flag
 MP_sym_min_val      =   plot_options.symmetry_options(plot_options.symmetry_choice);                % if less than this flag 
-
 SNR__.SNR_THRESH             = SNR_THRESH           ;
 SNR__.SNR_Boundaries         = SNR_Boundaries       ;
 DIST__.dist_pass_val         = dist_pass_val        ;
@@ -513,10 +515,6 @@ SYM__.MP_sym_mean_val_min    = MP_sym_mean_val_min  ;
 SYM__.MP_sym_min_val         = MP_sym_min_val       ;
 
 end %function [SNR_THRESH,SNR_Boundaries,cap_min,dist_pass_val,dist_pass_val_upper]    =    get_pass_fail_boundaries(plot_options,snr_settings)
-
-
-
-
 
 function [proc_options,plot_options,snr_settings,plot_options_O,snr_settings_O,LS_dir,test_dir,default_options]    =    get_all_settings()
 LS_dir        =  [pwd,'\Learning_blocks' ];
@@ -589,6 +587,7 @@ end  %switch(choice)
 
 % Re-arrange the files to be in date time order and out put it here as 
 disp(['reordering ',num2str(length(chosen_inds))  ,' files in date order....'])
+
 
 for index = 1: length(chosen_inds)
 if index == length(chosen_inds)
