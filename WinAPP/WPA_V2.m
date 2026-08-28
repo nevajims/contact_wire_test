@@ -1095,6 +1095,7 @@ end %function CALButtonPushed(app, event)
             %msgbox('this is the level 1/2 option')
 
             if app.Prog_STATE ~= 3
+            
             dummy__   = set_test_parameters_essential(app.test_parameters   ,  SF_temp  ,app.base_width,app.base_height,   app.mag_fac , app.advanced_settings);
    
             else
@@ -1401,6 +1402,7 @@ app.LoadExistingDataButton.BackgroundColor =BackgroundColor_normal;
           else
           app.rail_tester                                =  fn_process_rail_data(app.rail_tester, app.proc_options);
           
+
           if isstruct(app.rail_tester)
           app.have_processed_data = 1;
           end %if isstruct(app.rail_tester)

@@ -1,7 +1,7 @@
 function compare_LS_on_shifts(choice)
 
 % Go throughh the files and get the dates
-% give the mean SNR and the method of calc
+%  give the mean SNR and the method of calc
 % colour the text
 % remove invalid results-  not distance
 % order by arm/ not arm
@@ -108,8 +108,12 @@ elseif length(SMM_vals) >= 10 &&  length(SMM_vals) < 17
 SP_inds = [4,4];
 elseif length(SMM_vals) >= 17 && length(SMM_vals) <26
 SP_inds = [5,5];
-elseif length(SMM_vals) >= 26
+elseif length(SMM_vals) >= 26 && length(SMM_vals) <43
 SP_inds = [7,6];
+elseif length(SMM_vals) >= 43 && length(SMM_vals) <50
+SP_inds = [7,7];
+elseif length(SMM_vals) >= 50
+SP_inds = [8,7];
 end %if length(SMM_vals) < 9
 
 
@@ -235,7 +239,9 @@ end %if indicator_results{index}.dist_bin ==0
 fprintf([make_X_long(valid_tag,15),'\t\t'])
 
 for index2 = 1:length(group_conditions.chosen_LS)
-fprintf( make_X_long(all_predictions{index}{index2}.Labels{all_predictions{index}{index2}.pred_value},16),'\t\t\t\t\t\t\t');
+
+
+    fprintf( make_X_long(all_predictions{index}{index2}.Labels{all_predictions{index}{index2}.pred_value},16),'\t\t\t\t\t\t\t');
 end %for index2 = 1:length(indicator_results)
 fprintf('\n')
 
@@ -321,8 +327,6 @@ fprintf([ num2str(length(group_conditions.chosen_tests)), ' tests from: \n',strr
 end %function display_group_conditions(group_conditions)
 
 function indicators = get_indicators(index,cap_result,rejection_indicators,PL_inf,SNR__ , cap_min , DIST__ , SYM__ , pred_temp,SNR_details)
-
-
 
 all_bars              = SNR_details.all_bars            ;
 SNR_uses_noise_chan   = SNR_details.SNR_uses_noise_chan ;
@@ -477,10 +481,7 @@ end %if strcmp(conditions_.arm_present,'Yes') == 1
 conditions_.Track_id             =   test_data.test_parameters.Track_id             ;
 conditions_.Test_DT              =   datetime(test_data.date_time)                  ;
 conditions_.Tester               =   test_data.tester_details.Name                  ; 
-
 inds                             =   find(current_test == '$')                      ;
-
-
 conditions_.test_num             =   current_test(inds(1)+1:inds(2)-1)              ;
 
 end %function  [conditions_, current_test,test_data  ]    get_Indidual_test_data_and_conditions(index,chosen_tests )
@@ -507,6 +508,7 @@ SNR_THRESH                              = num2str(snr_settings.SNR_boundaries_op
 
 MP_sym_mean_val_min =  plot_options.MP_mean_symmetry_options(plot_options.MP_mean_symmetry_choice); % if less than this flag
 MP_sym_min_val      =   plot_options.symmetry_options(plot_options.symmetry_choice);                % if less than this flag 
+
 SNR__.SNR_THRESH             = SNR_THRESH           ;
 SNR__.SNR_Boundaries         = SNR_Boundaries       ;
 DIST__.dist_pass_val         = dist_pass_val        ;
@@ -515,6 +517,10 @@ SYM__.MP_sym_mean_val_min    = MP_sym_mean_val_min  ;
 SYM__.MP_sym_min_val         = MP_sym_min_val       ;
 
 end %function [SNR_THRESH,SNR_Boundaries,cap_min,dist_pass_val,dist_pass_val_upper]    =    get_pass_fail_boundaries(plot_options,snr_settings)
+
+
+
+
 
 function [proc_options,plot_options,snr_settings,plot_options_O,snr_settings_O,LS_dir,test_dir,default_options]    =    get_all_settings()
 LS_dir        =  [pwd,'\Learning_blocks' ];
@@ -587,7 +593,6 @@ end  %switch(choice)
 
 % Re-arrange the files to be in date time order and out put it here as 
 disp(['reordering ',num2str(length(chosen_inds))  ,' files in date order....'])
-
 
 for index = 1: length(chosen_inds)
 if index == length(chosen_inds)

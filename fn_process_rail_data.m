@@ -1,6 +1,5 @@
 function rail_tester_out = fn_process_rail_data(rail_tester_in, options)
 
-
 default_options  = get_default_options() ;
 
 if nargin < 2

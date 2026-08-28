@@ -250,8 +250,19 @@ txt_insrt = 'a';
 end %if length(unique(temp_V))==length(temp_V)
 prediction_.pred_value = pred_value;
 prediction_.txt_insrt = txt_insrt;
+%--------------------------------------------
 
-
+% pred_value,Labels
+dum = prediction_.Labels;
+if length(cell2mat(cellfun(@str2num,dum,'un',0)')) == 5
+% if the labels are 0 - 4 then replace the the prediction with the clear/change prediction   
+prediction_.Labels = {'clear(11U)','clear(11U)','change(31U)','change(31U)','change(31U)'} ;
+% prediction_.pred_value = new_cats{prediction_.pred_value};
+% keyboard
+else
+%do nothing
+end %if length(cell2mat(cellfun(@str2num,dum,'un',0)')) == 5
+%--------------------------------------------
 if do_plots(7) ==1
 show_predictions(prediction_ ,settings_.predictions2use,x_mult,y_mult,mag_fac) ;    
 end %if do_plots(7) ==1
@@ -485,8 +496,6 @@ function values_ = get_prediction_values(prediction_)
 
 values_ = zeros(1,3);
 
-
-
 for index = 1:length(prediction_.Labels)
 
 if strcmp(prediction_.ai_tag, prediction_.Labels{index})
@@ -650,6 +659,8 @@ function   display_tag_mode_maps(Block_DATA,settings_,MP_mean,FILE_TO_PREDICT,x_
 subplot_inds = [1,1;2,1;2,2;2,2;3,2;3,2];
 LL_ = length(Block_DATA.Labels_);
 
+
+
 fig = uifigure('Resize','off','Units','normalized','Position',[0.05,0.05,0.29*mag_fac,0.435*mag_fac],'Name', 'Tag Mode vs Test');
 fig.Icon = 'ICON2.png';
 px_LH = 10; py_LH = 10; px_SZ = 530; py_SZ = 450;
@@ -759,7 +770,7 @@ end %function crack_mode_matrix = create_crack_mode_matrix(Block_DATA.crack_mode
 function raw_mode_map_viewer(grid_data,mod_val,MM_interp_res,db_range,x_mult,y_mult,mag_fac)
 warning off
 
-fig = uifigure('Resize','off','Units','normalized','Position', [ 0.05 , 0.05 , 0.29 * mag_fac , 0.435 * mag_fac ],'Name', 'Interactive MM Viewer','AutoResizeChildren','off');
+fig = uifigure('Resize','off','Units','normalized','Position', [ 0.05 , 0.05 , 0.29 * mag_fac , 0.435 * mag_fac ],'Name', 'Mode Pair Comparitor','AutoResizeChildren','off');
 fig.Icon = 'ICON2.png';
 px_LH = 60; py_LH = 60; px_SZ = 490; py_SZ = 410;
 p1 = uipanel(fig,'Position',[x_mult*px_LH y_mult*py_LH x_mult*px_SZ y_mult*py_SZ],'AutoResizeChildren','off');
@@ -778,72 +789,34 @@ plot_data_structure.db_range = db_range;
 plot_data_structure.fig = fig;
 plot_data_structure.ax1  =  ax1;
 plot_data_structure.ax2  =  ax2; 
-
-%--------------------------------------------------------------------------
-%--------------------------------------------------------------------------
-%  Make it so changing the slider updats the plots and the text
-%--------------------------------------------------------------------------
-%  Also make it so updating the text updates the slider and the plots
-%--------------------------------------------------------------------------
-%  Put a csaling on the slider
-%--------------------------------------------------------------------------
-
-tog_but =  uibutton(fig,'Position',[x_mult*460,y_mult*110,x_mult*80,y_mult*20],'Text','Toggle Scale','ButtonPushedFcn',@toggle_scale);
-tog_but.FontSize=9*y_mult;
-
-v_temp = plot_data_structure.dv(plot_data_structure.mod_val);
-if v_temp >= -0.1 && v_temp<= 1.1
-plot_data_structure.XL1  =  -0.1; 
+plot_data_structure.XL1  =  -0.1;
 plot_data_structure.XL2  =   1.1;
-plot_data_structure.p_scale = 1;
-tog_but.BackgroundColor = [0.9 0.9 0.9];
-else 
-plot_data_structure.XL1  =  -3; 
-plot_data_structure.XL2  =   3;
-plot_data_structure.p_scale = 0;
-tog_but.BackgroundColor = [0.9 0 0];
-end
+%--------------------------------------------
+v_temp = plot_data_structure.dv(plot_data_structure.mod_val);
 
-sld  =  uislider(fig,'Position',[x_mult*35 y_mult*40 x_mult*400 y_mult*10],'Value', v_temp,'ValueChangingFcn', @(src,event)change_MM_dist(src,event)); 
-sld.Limits     = [plot_data_structure.XL1  plot_data_structure.XL2];
-sld.MajorTicks = round((plot_data_structure.XL1:(plot_data_structure.XL2 - plot_data_structure.XL1)/12:plot_data_structure.XL2)*10)/10;
+sld  =  uislider(fig, 'Limits',[-0.1  1.1],'Position',[x_mult*35 y_mult*40 x_mult*400 y_mult*10],'Value', v_temp,'ValueChangingFcn', @(src,event)change_MM_dist(src,event),'MajorTicks', [-0.1:0.1:1.1],'MinorTicks', [] ); 
 sld.FontSize = 12*y_mult;
 
-txa = uitextarea(fig,'Position',[x_mult*460 y_mult*50 x_mult*50 y_mult*20], 'Value', [num2str( round(v_temp*10000)/10000 )]) ;
+txa = uitextarea(fig,'Position',[x_mult*460 y_mult*20 x_mult*70 y_mult*20], 'Value', [num2str(round(v_temp*1000)),' mm.']);
+
 txa.FontSize=12*y_mult;
+btn = uibutton(fig,'Position',[x_mult*5,y_mult*80,x_mult*50,y_mult*40],'Text','Reset','ButtonPushedFcn',@reset_MM_plot);
 
-txb = uilabel(fig,'Position',[x_mult*510 y_mult*48 x_mult*50 y_mult*20],'Text',' m');
-txb.FontSize=12*y_mult;
-
-txc = uilabel(fig,'Position',[x_mult*35 y_mult*50 x_mult*150 y_mult*20],'Text',' Mode Map Position (m)');
-txc.FontSize=12*y_mult;
-
-
-btn = uibutton(fig,'Position',[x_mult*460,y_mult*80,x_mult*50,y_mult*20],'Text','Reset','ButtonPushedFcn',@reset_MM_plot);
 btn.FontSize=12*y_mult;
-
-
-btn2 = uibutton(fig,'Position',[x_mult*460,y_mult*20,x_mult*50,y_mult*20],'Text','Submit','ButtonPushedFcn',@update_MM_plot);
+btn2 = uibutton(fig,'Position',[x_mult*5,y_mult*120,x_mult*50,y_mult*40],'Text','Update','ButtonPushedFcn',@update_MM_plot);
 btn2.FontSize=12*y_mult;
-%
-
-plot_data_structure.sld     = sld     ;
-plot_data_structure.txa     = txa     ;
-plot_data_structure.btn     = btn     ; 
-plot_data_structure.btn2    = btn2    ; 
-plot_data_structure.tog_but = tog_but ;
+plot_data_structure.sld = sld ;
+plot_data_structure.txa = txa ;
+plot_data_structure.btn = btn ; 
+plot_data_structure.btn2 = btn2 ; 
 
 fig.UserData = plot_data_structure ;
-
-
 update_top_plot(plot_data_structure)    ;
 update_bottom_plot(plot_data_structure) ;
-
 end %function raw_mode_map_viewer(grid_data )
 
 
 function update_top_plot(plot_data_structure)
-
 XL1 = plot_data_structure.XL1 ; 
 XL2 = plot_data_structure.XL2 ;
 
@@ -859,23 +832,17 @@ ax1              = plot_data_structure.ax1             ;
 hold(ax1,'off')
 plot(ax1 , dv ,mm_33)
 hold(ax1,'on')
-
 plot(ax1,[dv(mod_val) dv(mod_val)] ,[ax1.YLim(1) ax1.YLim(2)],'k')
 plot(ax1,[dv(mod_val_variable) dv(mod_val_variable)] ,[ax1.YLim(1) ax1.YLim(2)],'r')
-
-
 leg_ = legend(ax1,{'M3-3','MM','MM view'});
 ax1.XLabel.String = 'Distance(m)';
 ax1.XLabel.FontSize = y_mult*10;
 ax1.Title.String = 'Mode 3-3 ';
 ax1.Title.FontSize = y_mult*11;
-
 ax1.XLim =[XL1, XL2 ]       ;
-
 leg_ = legend(ax1,{'M3-3','MM','MM view'})   ;
 leg_.Location = 'westoutside';
 leg_.FontSize= 7*y_mult;
-
 end %function update_top_plot(plot_data_structure)
 
 
@@ -930,98 +897,31 @@ a.FontSize = 12*y_mult;
 
 end %function update_bottom_plot(plot_data_structure)
 
-function toggle_scale(hObject, ~)
 
-plot_data_structure  =  get(get(hObject,'Parent'),'UserData');
-if plot_data_structure.p_scale == 1
-plot_data_structure.XL1  =  -3; 
-plot_data_structure.XL2  =   3;
-plot_data_structure.p_scale = 0;
-plot_data_structure.tog_but.BackgroundColor = [0.9 0 0];
-else
-plot_data_structure.XL1  =  -0.1; 
-plot_data_structure.XL2  =   1.1;
-plot_data_structure.tog_but.BackgroundColor = [0.9 0.9 0.9];
-plot_data_structure.p_scale = 1;
-end
-%
-
-update_top_plot(plot_data_structure)    ;
-update_bottom_plot(plot_data_structure) ;
-
-plot_data_structure.sld.Limits     = [plot_data_structure.XL1  plot_data_structure.XL2];
-plot_data_structure.sld.MajorTicks = round((plot_data_structure.XL1:(plot_data_structure.XL2 - plot_data_structure.XL1)/12:plot_data_structure.XL2)*10)/10;
-
-set(get(hObject,'Parent'),'UserData',plot_data_structure);
-
-end %function toggle_scale(hObject, ~)
-
-%-----------------------------------------------------------------------------
 function update_MM_plot(hObject, ~)
 plot_data_structure  =  get(get(hObject,'Parent'),'UserData');
-
-if length(str2num(plot_data_structure.txa.Value{1}))==1
-value_temp = str2num(plot_data_structure.txa.Value{1});
-if value_temp >= plot_data_structure.XL1  && value_temp <= plot_data_structure.XL2
-if value_temp ~= plot_data_structure.sld.Value
-plot_data_structure.sld.Value = value_temp;
-end
-else
-plot_data_structure.txa.Value{1} = num2str(plot_data_structure.sld.Value);
-end % if value_temp >= plot_data_structure.XL1  && value_temp <= plot_data_structure.XL2
-else
-plot_data_structure.txa.Value{1} = num2str(plot_data_structure.sld.Value);
-end %if length(str2num(plot_data_structure.txa.Value{1}))==1
-
-[~ ,plot_data_structure.mod_val_variable]  =  min(abs(  plot_data_structure.dv - plot_data_structure.sld.Value));
-
-update_top_plot(plot_data_structure);
-update_bottom_plot(plot_data_structure);
-set(get(hObject,'Parent'),'UserData',plot_data_structure);
-end %function update_MM_plot(hObject, ~)
-
-%-----------------------------------------------------------------------------
-function reset_MM_plot(hObject, ~)
-plot_data_structure  =  get(get(hObject,'Parent'),'UserData');
-
-v_temp = plot_data_structure.dv(plot_data_structure.mod_val);
-
-if v_temp >= -0.1 && v_temp<= 1.1
-plot_data_structure.XL1  =  -0.1; 
-plot_data_structure.XL2  =   1.1;
-plot_data_structure.p_scale = 1;
-plot_data_structure.tog_but.BackgroundColor = [0.9 0.9 0.9];
-else 
-plot_data_structure.XL1  =  -3; 
-plot_data_structure.XL2  =   3;
-plot_data_structure.p_scale = 0;
-plot_data_structure.tog_but.BackgroundColor = [0.9 0 0];
-end
-
-plot_data_structure.sld.Limits     = [plot_data_structure.XL1  plot_data_structure.XL2];
-plot_data_structure.sld.MajorTicks = round((plot_data_structure.XL1:(plot_data_structure.XL2 - plot_data_structure.XL1)/12:plot_data_structure.XL2)*10)/10;
-
-plot_data_structure.mod_val_variable = plot_data_structure.mod_val;
-plot_data_structure.sld.Value = plot_data_structure.dv(plot_data_structure.mod_val);
-
 update_top_plot(plot_data_structure)    ;
 update_bottom_plot(plot_data_structure) ;
-
-set(get(hObject,'Parent'),'UserData',plot_data_structure);
-
 end
-%-----------------------------------------------------------------------------
 
-%-----------------------------------------------------------------------------
-function change_MM_dist(src,event)   % the slider value
+function reset_MM_plot(hObject, ~)
+plot_data_structure  =  get(get(hObject,'Parent'),'UserData');
+plot_data_structure.mod_val_variable = plot_data_structure.mod_val;
+update_top_plot(plot_data_structure)    ;
+update_bottom_plot(plot_data_structure) ;
+plot_data_structure.sld.Value = plot_data_structure.dv(plot_data_structure.mod_val);
+set(get(hObject,'Parent'),'UserData',plot_data_structure);
+end
+
+
+function change_MM_dist(src,event)
 new_value =  event.Value;
 plot_data_structure  =  get(get(src,'Parent'),'UserData');
-plot_data_structure.txa.Value = [num2str(  round(new_value*10000)/10000 )];
+plot_data_structure.txa.Value = [num2str(round(new_value*1000)),' mm.'];
 [~ ,plot_data_structure.mod_val_variable]  =  min(abs(  plot_data_structure.dv - new_value));
-
-
 set(get(src,'Parent'),'UserData',plot_data_structure);
 end %function change_MM_dist(src,event)
+
 %-----------------------------------------------------------------------------
 
 function Plot_mean_and_std_of_MM (MP_mean,MP_std,mode_pairs_to_Use,file_name,labels,x_mult,y_mult,mag_fac )
@@ -1083,9 +983,6 @@ end %function Plot_mean_and_std_of_MM (MP_mean,MP_std,settings_.mode_pairs_to_Us
 
 function  Plot_single_mode_map(slice_data,grid_size_to_plot,db_range,filename_ , grid_data,x_mult,y_mult,mag_fac )
 %,mod_val,grid_data,lower_val,upper_val
-
-
-
 dv =grid_data.distance_vector;
 
 if grid_size_to_plot > 4
@@ -1147,8 +1044,7 @@ a.FontSize = 12*y_mult;
 
 end %function Plot_single_mode_map(MP_mean)
 
-function [ MP_stack , MP_mean , MP_std ] = get_normalised_stack_and_mean_P(lower_val,upper_val,mode_map)    
-
+function [ MP_stack,MP_mean,MP_std ] = get_normalised_stack_and_mean_P(lower_val,upper_val,mode_map)    
 MP_stack = zeros(4,4,upper_val-lower_val);
 count = 0;
 for index = lower_val:upper_val
@@ -1158,10 +1054,9 @@ MP_stack(:,:,count) = temp_MM;
 MP_stack(:,:,count) = temp_MM/ mean(mean(temp_MM));
 end  % for index = lower_val:upper_val
 MP_mean = mean(MP_stack,3)  ;
+
 MP_std  =  std(MP_stack,[],3)  ;
-
 end %function [MP_stack,MP_mean] = get_normalised_stack_and_mean(lower_val,upper_val,mode_map)
-
 
 function plot_mode_pairs(mod_val, grid_data,labels_,mod_val_inds,x_mult,y_mult,mag_fac) 
 mode_map                   = grid_data.data_stack                   ;
