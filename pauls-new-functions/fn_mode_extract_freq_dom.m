@@ -31,7 +31,7 @@ if length(size(inv_mode_shapes)) < 3;
 			temp = amplitudes .* exp(i * 2 * pi * raw_data.freq(ii) * time_shifts);
 			out.freq_data(ii, :) = raw_data.freq_data(ii, :) * (temp .');
 		end;
-		write_matrix_files(time_shifts, amplitudes, raw_data, proc_data, 'time_shifts_bidi_method2_unrounded.txt', 'amps_bidi_method2.txt', 'modes.txt', 'trans.txt');
+		% write_matrix_files(time_shifts, amplitudes, raw_data, proc_data, 'time_shifts_bidi_method2_unrounded.txt', 'amps_bidi_method2.txt', 'modes.txt', 'trans.txt');
 	end;
 else
 	for fcount = raw_data.freq_i1:raw_data.freq_i2

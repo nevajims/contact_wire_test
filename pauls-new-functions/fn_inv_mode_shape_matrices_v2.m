@@ -1,4 +1,4 @@
-function inv_mode_shapes = fn_inv_mode_shape_matrices(raw_data, proc_data, array, disperse, ms_matrix_calc_freqs, ms_matrix_modes_to_use, suppress_display);
+function inv_mode_shapes = fn_inv_mode_shape_matrices_v2(raw_data, proc_data, array, disperse, ms_matrix_calc_freqs, ms_matrix_modes_to_use, suppress_display);
 tic;
 no_time_traces = size(raw_data.time_data, 2);
 no_mode_combos = length(proc_data.tx_mode);
@@ -26,19 +26,23 @@ disperse.mode = rmfield(disperse.mode, 'vgr');
 
 inv_mode_shapes = zeros(no_mode_combos, no_time_traces, no_freqs);
 mode_shapes = zeros(no_time_traces, no_mode_combos);
+old_style = 0;
 for i = 1:no_freqs
 	for j = 1:no_mode_combos
         tx_md = proc_data.tx_mode(j);
         rx_md = proc_data.rx_mode(j);
         tx_dir = proc_data.tx_dir(j);
         rx_dir = proc_data.rx_dir(j);
-        tx_ms_dir_vev = [1, 1, -tx_dir];
-        rx_ms_dir_vev = [1, 1, -rx_dir];
+        if old_style
+            tx_ms_dir_vev = [1, 1, 1];
+            rx_ms_dir_vev = [1, 1, 1];
+        else
+            tx_ms_dir_vev = [1, 1, -tx_dir];
+            rx_ms_dir_vev = [1, 1, -rx_dir];
+        end
         tx_k = disperse.mode(tx_md).waveno(i);
         rx_k = disperse.mode(rx_md).waveno(i);
         for k = 1:no_time_traces
-            % tx_row = array.trans_row(raw_data.tx(k));
-            % rx_row = array.trans_row(raw_data.rx(k));
             tx_pos = array.trans_pos(raw_data.tx(k));
             rx_pos = array.trans_pos(raw_data.rx(k));
             tx_vec = array.trans_pos_orientations(raw_data.tx(k), :);
