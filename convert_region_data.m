@@ -161,9 +161,8 @@ keep_inds = find((jim_inds+mark_inds)==0);
 
 Name = {Name_{keep_inds}}'; Sentinal = Sentinal_(keep_inds); Level = Level_(keep_inds); PW = {PW_{keep_inds}}';
 
-
-T         =    table(Name,Sentinal,Level,PW)                   ;
-neutral_section_names = [];Sub_Names = [];track_ID_ = [];wire_size_ = [];structure =[];ELR = [];Wire_run_number =[];Asset_Number_ = [];
+T                     = table(Name,Sentinal,Level,PW)                                                                                                      ;
+neutral_section_names = [] ; Sub_Names = [] ; track_ID_ = [] ; wire_size_ = [] ; structure =[] ; ELR = [] ; Wire_run_number =[] ; Asset_Number_ = []       ;
 
 for index_2 = 1:length(updated_data.NS_Details.Locations_arr{index})
 %  go through every sub region
@@ -179,7 +178,7 @@ wire_size_            {count} =  updated_data.test_parameters.data_arr{index}.co
 structure             {count} =  updated_data.test_parameters.data_arr{index}.struct_id_options{updated_data.NS_Details.Values_arr{index}{index_2}(3,index_3)}    ;   
 ELR                   {count} =  updated_data.test_parameters.data_arr{index}.ELR_options{updated_data.NS_Details.Values_arr{index}{index_2}(4,index_3)}          ;   
 Wire_run_number       {count} =  updated_data.test_parameters.data_arr{index}.WR_options{updated_data.NS_Details.Values_arr{index}{index_2}(5,index_3)}           ;   
-Asset_Number_         {count} =   updated_data.test_parameters.data_arr{index}.Asset_Number_options{updated_data.NS_Details.Values_arr{index}{index_2}(6,index_3)};   
+Asset_Number_         {count} =  updated_data.test_parameters.data_arr{index}.Asset_Number_options{updated_data.NS_Details.Values_arr{index}{index_2}(6,index_3)};   
 end %if ~strcmp(updated_data.NS_Details.Locations_arr{index}{index_2},'Unspecified')    
 end %for index_3 = 1:length(updated_data.NS_Details.Sublocations_arr{index}{index_2})
 end %for index_2 = 1:length(updated_data.NS_Details.Locations_arr{index})
@@ -238,12 +237,14 @@ eval(['dummy_3 = new_data_table_format.',NS_indices.new_regions{NS_indices.regio
 temp_vals_array = [];
 
 
-eval(['track_id_temp = new_data_table_format.',NS_indices.new_regions{NS_indices.regions_to_use(index,1)},'.NS_struct.track_ID'';'])
-eval(['wire_size_temp = new_data_table_format.',NS_indices.new_regions{NS_indices.regions_to_use(index,1)},'.NS_struct.wire_size'';'])
+eval(['track_id_temp = new_data_table_format.',NS_indices.new_regions{NS_indices.regions_to_use(index,1)},'.NS_struct.track_ID;'])
+eval(['wire_size_temp = new_data_table_format.',NS_indices.new_regions{NS_indices.regions_to_use(index,1)},'.NS_struct.wire_size;'])
 eval(['structure_temp = new_data_table_format.',NS_indices.new_regions{NS_indices.regions_to_use(index,1)},'.NS_struct.structure'';'])
 eval(['ELR_temp = new_data_table_format.',NS_indices.new_regions{NS_indices.regions_to_use(index,1)},'.NS_struct.ELR'';'])
 eval(['Wire_run_number_temp = new_data_table_format.',NS_indices.new_regions{NS_indices.regions_to_use(index,1)},'.NS_struct.Wire_run_number'';'])
 eval(['Asset_Number_temp = new_data_table_format.',NS_indices.new_regions{NS_indices.regions_to_use(index,1)},'.NS_struct.Asset_Number;'])
+
+
 
 for index_2 = 1: length(dummy_2)
 indices_ = find(ismember(dummy_1,dummy_2{index_2})==1);
@@ -260,27 +261,33 @@ temp_vals_array{index_2}{index_3} = {track_id_temp{indices_(index_3)},wire_size_
 end %for index_3 = 1:length(indices_)
 end %for index_2 = 1: length(dummy_2)
 
-updated_data.test_parameters.data_arr{NS_indices.regions_to_use(index,2)}.Track_id_options                 =  existing_data.test_parameters.data_arr{1}.Track_id_options        ;
+%updated_data.test_parameters.data_arr{NS_indices.regions_to_use(index,2)}.Track_id_options                 =  existing_data.test_parameters.data_arr{1}.Track_id_options        ;
 updated_data.test_parameters.data_arr{NS_indices.regions_to_use(index,2)}.clamp_location_options           =  existing_data.test_parameters.data_arr{1}.clamp_location_options  ;
 updated_data.test_parameters.data_arr{NS_indices.regions_to_use(index,2)}.arm_present_options              =  existing_data.test_parameters.data_arr{1}.arm_present_options     ;
 updated_data.test_parameters.data_arr{NS_indices.regions_to_use(index,2)}.contact_wire_options             =  existing_data.test_parameters.data_arr{1}.contact_wire_options    ;
 
+%--------------------------------------
+%keyboard
+
+eval(['dummy = new_data_table_format.',NS_indices.new_regions{NS_indices.regions_to_use(index,1)},'.NS_struct.track_ID;'])
+dummy = unique(dummy);
+dummy = [{'Unspec'};dummy]';
+updated_data.test_parameters.data_arr{NS_indices.regions_to_use(index,2)}.Track_id_options = dummy;
+%--------------------------------------
+
 eval(['dummy = new_data_table_format.',NS_indices.new_regions{NS_indices.regions_to_use(index,1)},'.NS_struct.structure'';'])
 dummy = unique(dummy);
 dummy = [{'Unspec'};dummy]';
-
 updated_data.test_parameters.data_arr{NS_indices.regions_to_use(index,2)}.struct_id_options = dummy;
 
 eval(['dummy = new_data_table_format.',NS_indices.new_regions{NS_indices.regions_to_use(index,1)},'.NS_struct.ELR'';'])
 dummy = unique(dummy);
 dummy = [{'Unspec'};dummy]';
-
 updated_data.test_parameters.data_arr{NS_indices.regions_to_use(index,2)}.ELR_options = dummy;
 
 eval(['dummy = new_data_table_format.',NS_indices.new_regions{NS_indices.regions_to_use(index,1)},'.NS_struct.Wire_run_number'';'])
 dummy = unique(dummy)  ;
 dummy = [{'Unspec'};dummy]';
-
 updated_data.test_parameters.data_arr{NS_indices.regions_to_use(index,2)}.WR_options = dummy  ;
 
 eval(['dummy = new_data_table_format.',NS_indices.new_regions{NS_indices.regions_to_use(index,1)},'.NS_struct.Asset_Number;'])
@@ -294,6 +301,7 @@ temp_struct_id_options      =  updated_data.test_parameters.data_arr{NS_indices.
 temp_ELR_options            =  updated_data.test_parameters.data_arr{NS_indices.regions_to_use(index,2)}.ELR_options                                                 ;
 temp_WR_options             =  updated_data.test_parameters.data_arr{NS_indices.regions_to_use(index,2)}.WR_options                                                  ;
 temp_Asset_Number_options   =  updated_data.test_parameters.data_arr{NS_indices.regions_to_use(index,2)}.Asset_Number_options                                        ;
+
 temp_options                =  {temp_Track_id_options,temp_contact_wire_options,temp_struct_id_options,temp_ELR_options,temp_WR_options,temp_Asset_Number_options}   ;
 
 
@@ -303,9 +311,11 @@ temp_index_array = zeros(6,length(temp_vals_array{index_1}));
 for index_2 = 1:length(temp_vals_array{index_1})
 for index_3 = 1:length(temp_vals_array{index_1}{index_2})
 
-
 %disp([ num2str(index_1),' ++ ',num2str(index_2),' ++ ',num2str(index_3) ])    
+
 temp_index_array(index_3,index_2) =   find(ismember(temp_options{index_3} , temp_vals_array{index_1}{index_2}{index_3})==1);
+
+
 
 end % for index_3 = 1:length(temp_vals_array{index_1}{index_2})    
 end %^for index_2 = 1:length(temp_vals_array{index_1})
@@ -412,8 +422,8 @@ op_sheet = [ current_region , '_operators'   ];
 op_table = readtable(input_file,'UseExcel',true,'Sheet',op_sheet)   ;
 NS_table = readtable(input_file,'UseExcel',true,'Sheet',NS_sheet)   ;
 
-temp_struct = table2struct(op_table)      ;
-temp_struct2 = table2struct(NS_table)     ;
+temp_struct = table2struct(op_table)  ;
+temp_struct2 = table2struct(NS_table) ;
 
 
 [msg,OK2 ]  = check_correct_fields(temp_struct,temp_struct2);
@@ -433,6 +443,9 @@ NS_struct.structure             =  {temp_struct2.structure}                     
 NS_struct.ELR                   =  {temp_struct2.ELR}                                                   ;
 NS_struct.Wire_run_number       =  {temp_struct2.Wire_run_number}                                       ;
 NS_struct.Asset_Number          =  arrayfun(@num2str, [temp_struct2.Asset_Number]', 'UniformOutput', 0) ; 
+
+%keyboard
+
 
 eval(['data.',current_region,'.NS_struct = NS_struct;'])
 eval(['data.',current_region,'.op_struct = op_struct;']) 
