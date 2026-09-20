@@ -4,14 +4,19 @@ function [value_] = login_window(varargin)
 %  'ICON1.ico'
 %  temp_code
 
+%path_options3 = '\SETTINGS_FILES\login_options3.mat'
+path_options3 = 'C:\Users\Dev\Desktop\Matlab_Dummy\login_options3.mat'
+%path_avd_options = '\SETTINGS_FILES\advanced_settings.mat'
+path_adv_options = 'C:\Users\Dev\Desktop\Matlab_Dummy\\advanced_settings.mat'
+
 switch (nargin)
     case(0)
-login_path =  [pwd,'\SETTINGS_FILES\login_options3.mat']; 
+login_path =  [pwd, path_options3]; 
 fields_ = {'Login_ID_arr','Name_arr','PW_arr','level_arr'};
 
 [data_all , ~] =  load_mat_structure_from_file(login_path,fields_);
 
-login_path_2 =  [pwd,'\SETTINGS_FILES\advanced_settings.mat']; 
+login_path_2 =  [pwd,path_adv_options]; 
 fields_2 =      {'options.mag_labels' ; 'options.mag_values' ; 'options.Region_options' ; 'choices.mag' ; 'choices.Region_index'};
 [advanced_settings  , ~] =  load_mat_structure_from_file(login_path_2,fields_2);
 

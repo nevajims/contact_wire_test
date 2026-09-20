@@ -5,7 +5,7 @@ function [] = convert_region_data()
 % try replacing a region with some bits swapped out to check its working
 %------------To Do-------------------------To Do-------------------------To Do-------------
 
-settings_dir             =    'D:\githubs\contact_wire_test\SETTINGS_FILES'      ;    
+settings_dir             =    'P:\githubs\contact_wire_test\SETTINGS_FILES'      ;    
 roaming_settings_dir     =    [getenv('APPDATA'),'\SETTINGS_FILES']              ;
 
 % xls_spreadsheet_dir = 'D:\githubs\contact_wire_test'           ; 
