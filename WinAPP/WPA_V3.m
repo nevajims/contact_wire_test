@@ -158,7 +158,11 @@ classdef WPA_V3 < matlab.apps.AppBase
         base_height               = 1080                  ;
 
         %Added by PDW 27/10/26
-        proc_data = []; 
+        proc_data = [];
+        options_mode_extraction = [];
+
+        peak_finder = [];
+        options_peak_finder = [];
 
         %status info
     end
@@ -1273,7 +1277,10 @@ classdef WPA_V3 < matlab.apps.AppBase
 
                 app.Label_PL.Text           = '**';
                 app.Label_PL.FontColor = [0 0 0];
-
+                
+                %added by PW
+                app.proc_data = [];
+                app.peak_finder = [];
 
                 if app.login_level == 0
                     app.RunNewTestButton.Enable    =   'off'  ;
@@ -1366,40 +1373,24 @@ classdef WPA_V3 < matlab.apps.AppBase
             if isstruct(app.test_data)
                 if app.USE_NEW_PROC_CODE
                 safe_fname = 'C:\Users\mepdw\Git\Traxion-PW-\Dispersion data\AC-120 (New SAFE 40 EPW).mat';
-                addpath('C:\Users\mepdw\Git\Traxion-PW-\Processing code');
-                addpath('C:\Users\mepdw\Git\Traxion-PW-\SAFE solver');
-                addpath('C:\Users\mepdw\Git\Traxion-PW-\FE simulation code');
-                addpath('C:\Users\mepdw\Git\Traxion-PW-\General functions');
                 [raw_data, array, safe] = fn_convert_test_data(app.test_data, safe_fname);
-                options = [];
 
                 %Following give something close to current processing
                 if app.USE_OLD_OPTIONS_FOR_NEW_PROC_CODE
-                    options.freq_filter_on = 1;
-                    options.freq_filter = 50e3;
-                    options.freq_filter_bandwidth = 40e3;
-                    options.ignore_pulse_echo = 1;
-                    options.suppress_backward = 1;
-                    options.calc_method = 'partial';
-                    options.apply_single_freq_processing_as_time_shifts = 0;
-                    options.coupling_compensation = 0;
-                    options.extraction_freqs = 50e3;
-                    options.dispersion_compensation = 0;
-                    options.taper_width_in_periods = [];
-                    options.taper_down_from_end_in_periods = [];
-                    options.taper_up_from_start_in_periods = [];
-                    tmp = [1.0200 1.0200 1.0200 0.9520];%this is order of manual warps in default settings but mode order is different to
-                    options.modal_warps = tmp([4,3,1,2]);
+                    app.options_mode_extraction = fn_new_proc_options_closest_to_old_ones();
                 end
 
                 %New processing code stores mode vs. distance data in
                 %app.proc data. This is used directly by new code in later
                 %functions, but a copy in old format is made below so that
                 %later functions can still work using old code
-                [app.proc_data, options] = fn_process_raw_data(raw_data, array, safe, options);
+                [app.proc_data, app.options_mode_extraction] = fn_process_raw_data(raw_data, array, safe, app.options_mode_extraction);
+
+                %I reckon you should do the peak find (and mode_map here as
+                %well by default). They can always be updated later if
+                %options change
+                app.peak_finder =  fn_find_peak_for_mode_map(app.proc_data, app.options_peak_finder);
                 
-                %Plot using my tool in separate window for debugging
-                % o.db_scale = 0;o.show_common_modes_only = 1; figure;fn_plot_proc_data(app.proc_data, o);
 
                 %convert proc_data to old format (split directions)
                 app.rail_tester.proc_data = app.proc_data
@@ -1493,8 +1484,8 @@ classdef WPA_V3 < matlab.apps.AppBase
         function ModePairViewerFDButtonPushed(app, event)
             if app.NEW_MODE_PAIR_PLOT
                 plot_options.db_scale = 0;
-                plot_options.show_common_modes_only = 1; 
-                figure;
+                plot_options.show_common_modes_only = 0; 
+                plot_options.parent = uifigure('Resize','off','Units','normalized','Position',[0.2,0.2,0.6,0.6], 'Name', 'MODES', Icon = 'ICON2.png');
                 fn_plot_proc_data(app.proc_data, plot_options);
             else
                 if isstruct(app.rail_tester)
@@ -1797,27 +1788,12 @@ classdef WPA_V3 < matlab.apps.AppBase
         % Button pushed function: ShowPeakFindButton
         function ShowPeakFindButtonPushed(app, event)
             if app.USE_NEW_FIND_PEAK_FOR_MODE_MAP
-                options_peak_find = [];
-                [mod_val,lower_val,upper_val,actual_peak_val, dist_trace, dist_gate_start, amp_threshold]  =  fn_find_peak_for_mode_map(app.proc_data, options_peak_find);
-                % figure;
-                mag_fac = 1.9531;
-                % fig = uifigure('Resize','off','Units','normalized','Position',[0.05,0.05,0.29*mag_fac,0.435*mag_fac], 'Name', 'PEAK LOCATION', Icon = 'ICON2.png');
-                fig = uifigure('Resize','off','Units','normalized','Position',[0.2,0.2,0.6,0.6], 'Name', 'PEAK LOCATION', Icon = 'ICON2.png');
-                ax = uiaxes(fig, 'Units','normalized','OuterPosition',[0.1,0.1,0.8,0.8]);
-                ax.Box    = 'on' ;
-                plot(ax, app.proc_data.dist, dist_trace);
-                hold(ax,'on')
-                plot(ax, app.proc_data.dist(actual_peak_val), dist_trace(actual_peak_val), 'g.', 'markersize',10);
-                plot(ax, app.proc_data.dist(mod_val), dist_trace(mod_val), 'rs', 'markersize',10);
-                plot(ax, app.proc_data.dist(lower_val), dist_trace(lower_val), 'r.', 'markersize',10);
-                plot(ax, app.proc_data.dist(upper_val), dist_trace(upper_val), 'r.', 'markersize',10);
-                ax.XLim = [0, max(app.test_data.fixed_Test_Settings.Model_data.real_length)];
-                xline(ax, dist_gate_start, 'r:');
-                yline(ax, amp_threshold, 'b:');
-                ax.XLabel.String = 'Distance (m)';
-                ax.YLabel.String = 'Amplitude';
-                ax.Title.String =sprintf('Distance from instrument for mode map: %d mm', round(app.proc_data.dist(mod_val) * 1e3));
-                legend(ax, {'','Peak','Mode map centre', 'Mode map start','Mode map end', 'Min distance', 'Amplitude threshold'});
+                if isempty(app.peak_finder)
+                    app.peak_finder =  fn_find_peak_for_mode_map(app.proc_data, app.options_peak_finder);
+                end
+                peak_plot_options = [];
+                peak_plot_options.parent = uifigure('Resize','off','Units','normalized','Position',[0.2,0.2,0.6,0.6], 'Name', 'PEAK LOCATION', Icon = 'ICON2.png');
+                fn_plot_peak_find_result(app.proc_data.dist, app.peak_finder, peak_plot_options)
             else
                 if isstruct(app.rail_tester)
                     plot_options_O  = convert_plot_options2_old_strct(app.plot_options);

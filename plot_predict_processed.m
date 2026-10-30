@@ -991,10 +991,10 @@ function [ MP_stack,MP_mean,MP_std ] = get_normalised_stack_and_mean_P(lower_val
 MP_stack = zeros(4,4,upper_val-lower_val);
 count = 0;
 for index = lower_val:upper_val
-count = count + 1;
-temp_MM =mode_map(:,:,index);
-MP_stack(:,:,count) = temp_MM;
-MP_stack(:,:,count) = temp_MM/ mean(mean(temp_MM));
+    count = count + 1;
+    temp_MM =mode_map(:,:,index);
+    MP_stack(:,:,count) = temp_MM;
+    MP_stack(:,:,count) = temp_MM/ mean(mean(temp_MM));
 end  % for index = lower_val:upper_val
 MP_mean = mean(MP_stack,3)  ;
 
