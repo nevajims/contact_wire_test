@@ -22,7 +22,7 @@ function [grid_data ] = fn_get_grid_data(rail_tester , options)
 % only the first has values
 
 default_options = get_default_options()                    ;                % function defined below %
-options = set_default_fields(options, default_options)     ;
+options = fn_set_default_fields(options, default_options)     ;
 real_length = rail_tester.real_length                      ;
 
 if ~isfield(rail_tester, 'proc_data')

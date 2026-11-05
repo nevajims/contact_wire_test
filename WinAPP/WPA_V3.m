@@ -77,25 +77,6 @@ classdef WPA_V3 < matlab.apps.AppBase
     properties (Access = private)
         Property % Description
 
-        %Following added by PDW for testing purposes
-        
-        %Following shortcuts login screen if not zero (1 gives restricted 
-        %login, 2 gives full login)
-        DEBUG = 1; 
-
-        %Following forces new processing code to be used to extract modes
-        %vs. distance.
-        USE_NEW_PROC_CODE = 1;
-        
-        %Following forces new processing code to use options to emulate
-        %(approximately) the result of old processing code. Hence the
-        %results of USE_NEW_PROC_CODE = 0 should be similar to 
-        %USE_NEW_PROC_CODE = 1 and USE_OLD_OPTIONS_FOR_NEW_PROC_CODE = 1; 
-        USE_OLD_OPTIONS_FOR_NEW_PROC_CODE = 1; 
-
-        NEW_MODE_PAIR_PLOT = 1; %Uses PDW mode pair plotting routine
-
-        USE_NEW_FIND_PEAK_FOR_MODE_MAP = 1;%Uses PDW function for finding where to extract mode map
 
         location_of_default_options =  '\SETTINGS_FILES\default_options3.mat';
         current_test_folder         =  '';
@@ -157,12 +138,36 @@ classdef WPA_V3 < matlab.apps.AppBase
         base_width                = 1920                  ;
         base_height               = 1080                  ;
 
-        %Added by PDW 27/10/26
-        proc_data = [];
-        options_mode_extraction = [];
+        %Following added by PDW
 
-        peak_finder = [];
-        options_peak_finder = [];
+        %Following shortcuts login screen if not zero (1 gives restricted
+        %login, 2 gives full login)
+        DEBUG = 2;
+
+        % USE_NEW_PROC_CODE = 1; %Use new PDW processing code to extract modes vs. distance.
+        % USE_NEW_MODE_PAIR_PLOT = 1; %Use new PDW mode pair plotting function
+        % USE_NEW_FIND_PEAK_FOR_MODE_MAP = 1;%Use new PDW function for finding where to extract mode map
+        % USE_NEW_MODE_MAP_EXTRACTION = 1;%Use PDW mode map extraction function
+        USE_NEW_PROC_CODE = 0; %Use new PDW processing code to extract modes vs. distance.
+        USE_NEW_MODE_PAIR_PLOT = 0; %Use new PDW mode pair plotting function
+        USE_NEW_FIND_PEAK_FOR_MODE_MAP = 0;%Use new PDW function for finding where to extract mode map
+        USE_NEW_MODE_MAP_EXTRACTION = 0;%Use PDW mode map extraction function
+
+        %Following forces new processing code to use options to emulate
+        %(approximately) the result of old processing code. Hence the
+        %results of USE_NEW_PROC_CODE = 0 should be similar to
+        %USE_NEW_PROC_CODE = 1 and USE_OLD_OPTIONS_FOR_NEW_PROC_CODE = 1;
+        USE_OLD_OPTIONS_FOR_NEW_PROC_CODE = 0;
+
+
+        modal_data = [];
+        options_for_mode_extraction = [];
+
+        peak_data = [];
+        options_for_peak_finder = [];
+
+        mode_map = [];
+        options_for_mode_map_extraction = [];
 
         %status info
     end
@@ -873,7 +878,7 @@ classdef WPA_V3 < matlab.apps.AppBase
                             app.login_details.values_set  = 1;
                             app.login_details.Name = 'PW';
                             app.login_details.Sentinal_no = 17;
-                            app.login_details.Level = app.DEBUG; 
+                            app.login_details.Level = app.DEBUG;
                         else
                             app.login_details =  login_window(app.login_options,app.base_width,app.base_height,app.mag_fac,app.advanced_settings);  %run a seperate windows prog to get the login details
                         end
@@ -1277,10 +1282,10 @@ classdef WPA_V3 < matlab.apps.AppBase
 
                 app.Label_PL.Text           = '**';
                 app.Label_PL.FontColor = [0 0 0];
-                
+
                 %added by PW
-                app.proc_data = [];
-                app.peak_finder = [];
+                app.modal_data = [];
+                app.peak_data = [];
 
                 if app.login_level == 0
                     app.RunNewTestButton.Enable    =   'off'  ;
@@ -1372,49 +1377,55 @@ classdef WPA_V3 < matlab.apps.AppBase
             % try
             if isstruct(app.test_data)
                 if app.USE_NEW_PROC_CODE
-                safe_fname = 'C:\Users\mepdw\Git\Traxion-PW-\Dispersion data\AC-120 (New SAFE 40 EPW).mat';
-                [raw_data, array, safe] = fn_convert_test_data(app.test_data, safe_fname);
+                    safe_fname = 'C:\Users\mepdw\Git\Traxion-PW-\Dispersion data\AC-120 (New SAFE 40 EPW).mat';
+                    [raw_data, array, safe] = fn_convert_test_data(app.test_data, safe_fname);
 
-                %Following give something close to current processing
-                if app.USE_OLD_OPTIONS_FOR_NEW_PROC_CODE
-                    app.options_mode_extraction = fn_new_proc_options_closest_to_old_ones();
-                end
+                    %Following give something close to current processing
+                    if app.USE_OLD_OPTIONS_FOR_NEW_PROC_CODE
+                        app.options_for_mode_extraction = fn_new_proc_options_closest_to_old_ones();
+                    end
 
-                %New processing code stores mode vs. distance data in
-                %app.proc data. This is used directly by new code in later
-                %functions, but a copy in old format is made below so that
-                %later functions can still work using old code
-                [app.proc_data, app.options_mode_extraction] = fn_process_raw_data(raw_data, array, safe, app.options_mode_extraction);
+                    %New processing code stores mode vs. distance data in
+                    %app.proc data. This is used directly by new code in later
+                    %functions, but a copy in old format is made below so that
+                    %later functions can still work using old code
+                    [app.modal_data, app.options_for_mode_extraction] = fn_mode_extraction(raw_data, array, safe, app.options_for_mode_extraction);
 
-                %I reckon you should do the peak find (and mode_map here as
-                %well by default). They can always be updated later if
-                %options change
-                app.peak_finder =  fn_find_peak_for_mode_map(app.proc_data, app.options_peak_finder);
-                
+                    %I reckon you should do the peak find (and mode_map here as
+                    %well by default). They can always be updated later if
+                    %options change
+                    app.peak_data =  fn_find_peak_for_mode_map(app.modal_data, app.options_for_peak_finder);
 
-                %convert proc_data to old format (split directions)
-                app.rail_tester.proc_data = app.proc_data
-                pos_i = app.rail_tester.proc_data.dist >=0;
-                neg_i = app.rail_tester.proc_data.dist <=0;
+                    app.mode_map = fn_get_mode_map(app.modal_data, app.peak_data, app.options_for_mode_map_extraction);
 
-                app.rail_tester.proc_data.dist = app.rail_tester.proc_data.dist(pos_i);
-                app.rail_tester.proc_data.dist_data = reshape(app.rail_tester.proc_data.dist_data, size(app.rail_tester.proc_data.dist_data, 1), []);
-                app.rail_tester.proc_data.tx_dir = [ones(size(app.rail_tester.proc_data.tx_mode(:))); -ones(size(app.rail_tester.proc_data.tx_mode(:)))];
-                app.rail_tester.proc_data.rx_dir = [ones(size(app.rail_tester.proc_data.rx_mode(:))); -ones(size(app.rail_tester.proc_data.rx_mode(:)))];
-                app.rail_tester.proc_data.tx_mode = repmat(app.rail_tester.proc_data.tx_mode(:), [2,1]);
-                app.rail_tester.proc_data.rx_mode = repmat(app.rail_tester.proc_data.rx_mode(:), [2,1]);
-                app.rail_tester.proc_data.dist_data = [app.rail_tester.proc_data.dist_data(pos_i, :),flipud(app.rail_tester.proc_data.dist_data(neg_i, :))];
-                app.rail_tester.real_length = [-1, 1] * 3;%max(app.rail_tester.proc_data.dist);
-                
-                %Need to re-order modes to match current ones expected in
-                %GUI. Think 33 is TT.
-                map = [
-                    1, 4
-                    2, 3
-                    3, 1
-                    4, 2];
-                app.rail_tester.proc_data.tx_mode = reshape(map(app.rail_tester.proc_data.tx_mode,2), size(app.rail_tester.proc_data.tx_mode));
-                app.rail_tester.proc_data.rx_mode = reshape(map(app.rail_tester.proc_data.rx_mode,2), size(app.rail_tester.proc_data.rx_mode));
+                    %THIS IS ALL THAT IS NEEDED IF NEW FUNCTIONS ARE USED
+                    %FOR SUBSEQUENT OPERATIONS. ONLY CONVERTING TO
+                    %RAIL_TEST FORMAT SO LEGACY FUNCTIONS CAN STILL BE USED
+                    %FOR SUBSEQUENT OPERATIONS
+
+                    %convert proc_data to old format (split directions)
+                    app.rail_tester.proc_data = app.modal_data;
+                    pos_i = app.rail_tester.proc_data.dist >=0;
+                    neg_i = app.rail_tester.proc_data.dist <=0;
+
+                    app.rail_tester.proc_data.dist = app.rail_tester.proc_data.dist(pos_i);
+                    app.rail_tester.proc_data.dist_data = reshape(app.rail_tester.proc_data.dist_data, size(app.rail_tester.proc_data.dist_data, 1), []);
+                    app.rail_tester.proc_data.tx_dir = [ones(size(app.rail_tester.proc_data.tx_mode(:))); -ones(size(app.rail_tester.proc_data.tx_mode(:)))];
+                    app.rail_tester.proc_data.rx_dir = [ones(size(app.rail_tester.proc_data.rx_mode(:))); -ones(size(app.rail_tester.proc_data.rx_mode(:)))];
+                    app.rail_tester.proc_data.tx_mode = repmat(app.rail_tester.proc_data.tx_mode(:), [2,1]);
+                    app.rail_tester.proc_data.rx_mode = repmat(app.rail_tester.proc_data.rx_mode(:), [2,1]);
+                    app.rail_tester.proc_data.dist_data = [app.rail_tester.proc_data.dist_data(pos_i, :),flipud(app.rail_tester.proc_data.dist_data(neg_i, :))];
+                    app.rail_tester.real_length = [-1, 1] * 3;%max(app.rail_tester.proc_data.dist);
+
+                    %Need to re-order modes to match current ones expected in
+                    %GUI. Think 33 is TT.
+                    map = [
+                        1, 4
+                        2, 3
+                        3, 1
+                        4, 2];
+                    app.rail_tester.proc_data.tx_mode = reshape(map(app.rail_tester.proc_data.tx_mode,2), size(app.rail_tester.proc_data.tx_mode));
+                    app.rail_tester.proc_data.rx_mode = reshape(map(app.rail_tester.proc_data.rx_mode,2), size(app.rail_tester.proc_data.rx_mode));
                 else
                     [app.rail_tester,loaded_fe_file_ok ] =  create_rail_tester_structure(app.default_options,app.test_data,app.proc_options);
 
@@ -1426,10 +1437,14 @@ classdef WPA_V3 < matlab.apps.AppBase
                         % app.rail_tester                                =  fn_process_rail_data_fn_wrapper(app.rail_tester, app.proc_options, 'new matlab');
                         % app.rail_tester                                =  fn_process_rail_data_fn_wrapper(app.rail_tester, app.proc_options, 'new mex');
                     end
+                    %THIS IS ALL THAT IS NEEDED IF USING OLD FUNCTIONS
+                    %SUBSEQUENTLY. ONLY CONVERTING TO NEW FORMAT FOR
+                    %COMPATIBILITY IF NEW FUNCTIONS USED SUBSEQUENTLY
+                    app.modal_data = fn_convert_proc_rail_tester_data_to_rightlines_format(app.rail_tester.proc_data, app.rail_tester.disperse);
                 end
-                    if isstruct(app.rail_tester)
-                        app.have_processed_data = 1;
-                    end %if isstruct(app.rail_tester)
+                if isstruct(app.rail_tester)
+                    app.have_processed_data = 1;
+                end %if isstruct(app.rail_tester)
 
 
                 % end %if loaded_fe_file_ok~= 1
@@ -1482,11 +1497,11 @@ classdef WPA_V3 < matlab.apps.AppBase
 
         % Button pushed function: ModePairViewerFDButton
         function ModePairViewerFDButtonPushed(app, event)
-            if app.NEW_MODE_PAIR_PLOT
+            if app.USE_NEW_MODE_PAIR_PLOT
                 plot_options.db_scale = 0;
-                plot_options.show_common_modes_only = 0; 
+                plot_options.show_common_modes_only = 1;
                 plot_options.parent = uifigure('Resize','off','Units','normalized','Position',[0.2,0.2,0.6,0.6], 'Name', 'MODES', Icon = 'ICON2.png');
-                fn_plot_proc_data(app.proc_data, plot_options);
+                fn_plot_modal_data(app.modal_data, plot_options);
             else
                 if isstruct(app.rail_tester)
                     plot_options_O  = convert_plot_options2_old_strct(app.plot_options);
@@ -1716,26 +1731,39 @@ classdef WPA_V3 < matlab.apps.AppBase
 
         % Button pushed function: ViewModeMapButton
         function ViewModeMapButtonPushed(app, event)
-            if isstruct(app.rail_tester)
-                plot_options_O  = convert_plot_options2_old_strct(app.plot_options);
+            if app.USE_NEW_MODE_MAP_EXTRACTION
+                if isempty(app.peak_data)
+                    app.peak_data =  fn_find_peak_for_mode_map(app.modal_data, app.options_for_peak_finder);
+                end
+                if isempty(app.mode_map)
+                    app.mode_map = fn_get_mode_map(app.modal_data, app.peak_data, app.options_for_mode_map_extraction);
+                end
+                mode_map_plot_options = [];
+                mode_map_plot_options.cmax = app.plot_options.db_range; %just for consistency - fairly sure this isn't a dB value!
+                mode_map_plot_options.parent = uifigure('Resize','off','Units','normalized','Position',[0.2,0.2,0.6,0.6], 'Name', 'MODE MAP', Icon = 'ICON2.png');
+                mode_map_plot_options.image_pts = app.plot_options.MM_interp_res;
+                fn_plot_mode_map2(app.mode_map, mode_map_plot_options)
+            else
+                if isstruct(app.rail_tester)
+                    plot_options_O  = convert_plot_options2_old_strct(app.plot_options);
 
-                proc_file.rail_tester  =  app.rail_tester;
-                proc_file.test_data    =  app.test_data  ;
-                settings_               = plot_options_O;
+                    proc_file.rail_tester  =  app.rail_tester;
+                    proc_file.test_data    =  app.test_data  ;
+                    settings_               = plot_options_O;
 
-                %do_plots = [0 0 1 0 0 0 0 0 0 0];
-                do_plots = [0 0 1 0 0 0 0 0 0 0 0 0];
+                    %do_plots = [0 0 1 0 0 0 0 0 0 0];
+                    do_plots = [0 0 1 0 0 0 0 0 0 0 0 0];
 
-                LF = [pwd,settings_.Data_path_options{settings_.Data_path_choice}];
+                    LF = [pwd,settings_.Data_path_options{settings_.Data_path_choice}];
 
-                try
-                    [~] = plot_predict_processed(proc_file, settings_ ,do_plots, LF,app.base_width,app.base_height,app.mag_fac);
-                catch ER
-                    write_error2file(app,ER)
-                end %try
+                    try
+                        [~] = plot_predict_processed(proc_file, settings_ ,do_plots, LF,app.base_width,app.base_height,app.mag_fac);
+                    catch ER
+                        write_error2file(app,ER)
+                    end %try
 
-            end %if isstruct(app.rail_tester)
-
+                end %if isstruct(app.rail_tester)
+            end
         end
 
         % Button pushed function: MeanSTDmodesButton
@@ -1788,12 +1816,12 @@ classdef WPA_V3 < matlab.apps.AppBase
         % Button pushed function: ShowPeakFindButton
         function ShowPeakFindButtonPushed(app, event)
             if app.USE_NEW_FIND_PEAK_FOR_MODE_MAP
-                if isempty(app.peak_finder)
-                    app.peak_finder =  fn_find_peak_for_mode_map(app.proc_data, app.options_peak_finder);
+                if isempty(app.peak_data)
+                    app.peak_data =  fn_find_peak_for_mode_map(app.modal_data, app.options_for_peak_finder);
                 end
                 peak_plot_options = [];
                 peak_plot_options.parent = uifigure('Resize','off','Units','normalized','Position',[0.2,0.2,0.6,0.6], 'Name', 'PEAK LOCATION', Icon = 'ICON2.png');
-                fn_plot_peak_find_result(app.proc_data.dist, app.peak_finder, peak_plot_options)
+                fn_plot_peak_find_result(app.modal_data.dist, app.peak_data, peak_plot_options);
             else
                 if isstruct(app.rail_tester)
                     plot_options_O  = convert_plot_options2_old_strct(app.plot_options);

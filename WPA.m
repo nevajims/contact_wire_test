@@ -3,9 +3,9 @@
 clear all;
 close all;
 clc;
-if ~RESTOREDEFAULTPATH_EXECUTED
+% if ~RESTOREDEFAULTPATH_EXECUTED
     restoredefaultpath;
-end
+% end
 
 %Folder of new processing code
 addpath('C:\Users\mepdw\Git\Traxion-PW-\Processing code');
